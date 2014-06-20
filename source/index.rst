@@ -11,8 +11,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-    testpage
-
+   testpage
+   grasshopper
+   python
 
 Indices and tables
 ==================
