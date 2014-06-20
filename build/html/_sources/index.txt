@@ -12,7 +12,8 @@ Contents:
    :maxdepth: 2
 
    testpage
-
+   grasshopper
+   python
 
 Indices and tables
 ==================
