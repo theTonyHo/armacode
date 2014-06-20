@@ -1,4 +1,5 @@
-.. contents::
+.. contents:: 
+   :depth: 2
 
 Introduction
 ============

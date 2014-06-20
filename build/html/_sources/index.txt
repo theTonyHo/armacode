@@ -6,14 +6,16 @@
 Welcome to armaCode's documentation!
 ====================================
 
-Grasshopper:
+Grasshopper
+===========
 
 .. toctree::
    :maxdepth: 2
 
    grasshopper
 
-Python:
+Python
+======
 
 .. toctree::
    :maxdepth: 2
