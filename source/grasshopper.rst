@@ -1,5 +1,7 @@
-Grasshopper
-===========
+.. contents::
+
+Introduction
+============
 
 >Grasshopper Definition Library
 

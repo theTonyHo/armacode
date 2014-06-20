@@ -1,41 +1,35 @@
-$project
+
+.. toctree::
+   :maxdepth: 2
+   index.rst
+
+ARMAcode
 ========
 
-$project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+Base repository of Python and Grasshopper code.
 
-Look how easy it is to use:
+URL: http://www.bitbucket.org/ar-ma/armacode
 
-    import project
-    # Get your stuff done
-    project.do_stuff()
+Registration
+------------
 
-Features
---------
-
-- Be awesome
-- Make things faster
+Registration is free at `BitBucket.org <http://www.bitbucket.org/>`__. Consult administrator to gain access to repository through invitations.
 
 Installation
 ------------
 
-Install $project by running:
+1. Install `Git <http://git-scm.com/>`_
 
-    install project
+2. Install `TortoiseGit <https://code.google.com/p/tortoisegit/>`_. Refer to `TortoiseGit Wiki <https://code.google.com/p/tortoisegit/w/list>`_ for installation.
 
-Contribute
-----------
+3. Clone the repository using the URL above.
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+4. When prompt, enter username and password.
 
-Support
--------
+5. `NotesGit <https://github.com/nonoesp/notes-git>`_ from Nono has some useful notes regarding the use of Git.
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
+Wiki
+----
 
-License
--------
+Refer to the `armacode wiki <https://bitbucket.org/ar-ma/armacode/wiki>`_ for documentation.
 
-The project is licensed under the BSD license.

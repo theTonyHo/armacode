@@ -6,14 +6,20 @@
 Welcome to armaCode's documentation!
 ====================================
 
-Contents:
+Grasshopper:
 
 .. toctree::
    :maxdepth: 2
 
-   testpage
    grasshopper
+
+Python:
+
+.. toctree::
+   :maxdepth: 2
+
    python
+
 
 Indices and tables
 ==================

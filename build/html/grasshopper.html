@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Grasshopper &mdash; armaCode 1.0.1 documentation</title>
+    <title>Introduction &mdash; armaCode 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,8 +25,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="armaCode 1.0.1 documentation" href="index.html" />
-    <link rel="next" title="PYTHON" href="python.html" />
-    <link rel="prev" title="Project" href="testpage.html" /> 
+    <link rel="next" title="Introduction" href="python.html" />
+    <link rel="prev" title="Welcome to armaCode’s documentation!" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -36,10 +36,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="python.html" title="PYTHON"
+          <a href="python.html" title="Introduction"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="testpage.html" title="Project"
+          <a href="index.html" title="Welcome to armaCode’s documentation!"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">armaCode 1.0.1 documentation</a> &raquo;</li> 
       </ul>
@@ -50,12 +50,38 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="grasshopper">
-<h1>Grasshopper<a class="headerlink" href="#grasshopper" title="Permalink to this headline">¶</a></h1>
+  <div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#introduction" id="id9">Introduction</a></li>
+<li><a class="reference internal" href="#definitions" id="id10">Definitions</a></li>
+<li><a class="reference internal" href="#user-objects" id="id11">User Objects</a><ul>
+<li><a class="reference internal" href="#clusters" id="id12">Clusters</a></li>
+<li><a class="reference internal" href="#authoring" id="id13">Authoring</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ghpython-user-object" id="id14">GHPython User Object</a><ul>
+<li><a class="reference internal" href="#script-context" id="id15">Script Context</a></li>
+<li><a class="reference internal" href="#data-access" id="id16">Data Access</a></li>
+<li><a class="reference internal" href="#parameters" id="id17">Parameters</a></li>
+<li><a class="reference internal" href="#docstring" id="id18">Docstring</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#advanced" id="id19">Advanced</a><ul>
+<li><a class="reference internal" href="#node-in-code" id="id20">Node-in-code</a></li>
+<li><a class="reference internal" href="#multi-threading" id="id21">Multi-threading</a></li>
+<li><a class="reference internal" href="#outside-the-canvas" id="id22">Outside the canvas</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reference" id="id23">Reference</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h1><a class="toc-backref" href="#id9">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>&gt;Grasshopper Definition Library</p>
 </div>
 <div class="section" id="definitions">
-<h1>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id10">Definitions</a><a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h1>
 <p>&gt;Definitions are workflows which perform a sequence of processes.</p>
 <p>Definitions are often experimental and are still in development.</p>
 <p>All processes inside the definition should be documented thoroughly</p>
@@ -63,12 +89,12 @@
 <p>Definitions can be converted into a <cite>User Object</cite> and should be placed in &#8220;<cite>Workflow</cite> panel.</p>
 </div>
 <div class="section" id="user-objects">
-<h1>User Objects<a class="headerlink" href="#user-objects" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id11">User Objects</a><a class="headerlink" href="#user-objects" title="Permalink to this headline">¶</a></h1>
 <p>&gt;User objects are custom components, may containing a cluster of components, that are saved with user customisation for easy access.</p>
 <p>User objects are placed on the tab of the Grasshopper interface when created.
 User objects can be organised in <cite>panels</cite> under the user defined tab.</p>
 <div class="section" id="clusters">
-<h2>Clusters<a class="headerlink" href="#clusters" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id12">Clusters</a><a class="headerlink" href="#clusters" title="Permalink to this headline">¶</a></h2>
 <p>&gt;Cluster is a component containing a group of connected components which perform a specific routine definition.</p>
 <blockquote>
 <div>Inputs -&gt; Components -&gt; Outputs</div></blockquote>
@@ -77,17 +103,17 @@ User objects can be organised in <cite>panels</cite> under the user defined tab.
 <p>Component with special visual preview such as <cite>Text Tag</cite> or <cite>Custom Preview</cite> that is inside of a cluster can be previewed. They are off by default. Turn this on by right clicking the component and select <cite>Preview Content</cite>.</p>
 </div>
 <div class="section" id="authoring">
-<h2>Authoring<a class="headerlink" href="#authoring" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id13">Authoring</a><a class="headerlink" href="#authoring" title="Permalink to this headline">¶</a></h2>
 <p>All User Objects created from Clusters autofill information from the Author settings in the Grasshopper Preference panel.</p>
 <blockquote>
 <div>File -&gt; Preference - &gt; Author</div></blockquote>
 </div>
 </div>
 <div class="section" id="ghpython-user-object">
-<h1>GHPython User Object<a class="headerlink" href="#ghpython-user-object" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id14">GHPython User Object</a><a class="headerlink" href="#ghpython-user-object" title="Permalink to this headline">¶</a></h1>
 <p>&gt;GHPython allows user to access Python libraries as well as implement any of the available Grasshopper components through Python scripting.</p>
 <div class="section" id="script-context">
-<h2>Script Context<a class="headerlink" href="#script-context" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id15">Script Context</a><a class="headerlink" href="#script-context" title="Permalink to this headline">¶</a></h2>
 <p>The Python script can be executed in multiple scope of context.</p>
 <p>### ghdoc</p>
 <p>As default, ghpython runs in the ghdoc context
@@ -104,7 +130,7 @@ import scriptcontext</p>
 </div></blockquote>
 </div>
 <div class="section" id="data-access">
-<h2>Data Access<a class="headerlink" href="#data-access" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">Data Access</a><a class="headerlink" href="#data-access" title="Permalink to this headline">¶</a></h2>
 <p>&gt;Data Access determines the way script variables are defined from input Parameters</p>
 <p>### Item Access</p>
 <p>The script is executed __once per <a href="#id3"><span class="problematic" id="id7">item__</span></a> in the data tree. The component will treat input parameters with mis-matched item count using Longest List.
@@ -118,7 +144,7 @@ Input variable is defined as a __Grasshopper.DataTree__ object.</p>
 <p>DataTree object contains branch and path information. It is for advanced users to maintain relationship between the data accross branches.</p>
 </div>
 <div class="section" id="parameters">
-<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <p>### Arguments</p>
 <p>&gt;Input Parameters</p>
 <p>Input Parameters can be added as required.</p>
@@ -132,7 +158,7 @@ Return is often an object or a list of objects.
 For nested lists, consider constructing a DataTree structure.</p>
 </div>
 <div class="section" id="docstring">
-<h2>Docstring<a class="headerlink" href="#docstring" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">Docstring</a><a class="headerlink" href="#docstring" title="Permalink to this headline">¶</a></h2>
 <p>&gt;Docstring for GHPython component is useful for user to understand the component.</p>
 <blockquote>
 <div><p>Title
@@ -194,22 +220,22 @@ If F &lt; L, then sum of all numbers (L,F).</dd>
 </div>
 </div>
 <div class="section" id="advanced">
-<h1>Advanced<a class="headerlink" href="#advanced" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id19">Advanced</a><a class="headerlink" href="#advanced" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="node-in-code">
-<h2>Node-in-code<a class="headerlink" href="#node-in-code" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id20">Node-in-code</a><a class="headerlink" href="#node-in-code" title="Permalink to this headline">¶</a></h2>
 <p>Refer to Steve Baer post about [Node-in-code] with new ghPython component</p>
 </div>
 <div class="section" id="multi-threading">
-<h2>Multi-threading<a class="headerlink" href="#multi-threading" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id21">Multi-threading</a><a class="headerlink" href="#multi-threading" title="Permalink to this headline">¶</a></h2>
 <p>GHPython library has a method to utilise Multi-threading technology. Refer to Steve Baer post about multi-threading in [Node-in-code]</p>
 </div>
 <div class="section" id="outside-the-canvas">
-<h2>Outside the canvas<a class="headerlink" href="#outside-the-canvas" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id22">Outside the canvas</a><a class="headerlink" href="#outside-the-canvas" title="Permalink to this headline">¶</a></h2>
 <p>GHPython can be used ouside of the Grasshopper canvas interface. Refer to Steve Baer post about [GHPython Outside-the-canvas]</p>
 </div>
 </div>
 <div class="section" id="reference">
-<h1>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id23">Reference</a><a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h1>
 <p>[GHPython Github](<a class="reference external" href="https://github.com/mcneel/ghpython">https://github.com/mcneel/ghpython</a>)</p>
 <p>[GHPython DocUtil]:<a class="reference external" href="https://github.com/mcneel/ghpython/blob/master/Component/DocStringUtils.cs">https://github.com/mcneel/ghpython/blob/master/Component/DocStringUtils.cs</a>
 [Node-in-code]:<a class="reference external" href="http://stevebaer.wordpress.com/2013/12/11/ghpython-node-in-code/">http://stevebaer.wordpress.com/2013/12/11/ghpython-node-in-code/</a>
@@ -224,7 +250,7 @@ If F &lt; L, then sum of all numbers (L,F).</dd>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Grasshopper</a></li>
+<li><a class="reference internal" href="#">Introduction</a></li>
 <li><a class="reference internal" href="#definitions">Definitions</a></li>
 <li><a class="reference internal" href="#user-objects">User Objects</a><ul>
 <li><a class="reference internal" href="#clusters">Clusters</a></li>
@@ -248,11 +274,11 @@ If F &lt; L, then sum of all numbers (L,F).</dd>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="testpage.html"
-                        title="previous chapter">Project</a></p>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to armaCode&#8217;s documentation!</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="python.html"
-                        title="next chapter">PYTHON</a></p>
+                        title="next chapter">Introduction</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/grasshopper.txt"
@@ -282,10 +308,10 @@ If F &lt; L, then sum of all numbers (L,F).</dd>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="python.html" title="PYTHON"
+          <a href="python.html" title="Introduction"
              >next</a> |</li>
         <li class="right" >
-          <a href="testpage.html" title="Project"
+          <a href="index.html" title="Welcome to armaCode’s documentation!"
              >previous</a> |</li>
         <li><a href="index.html">armaCode 1.0.1 documentation</a> &raquo;</li> 
       </ul>

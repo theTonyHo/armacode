@@ -1,2 +1,3 @@
-make html
-build\html\index.html
+start make html
+echo "Launching site"
+"build\html\index.html" 

@@ -1,5 +1,7 @@
-PYTHON
-======
+.. contents::
+
+Introduction
+============
 
 >Python script library mainly for Rhinoceros 5
 
