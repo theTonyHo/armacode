@@ -14,7 +14,7 @@
 
 import sys
 import os
-import sphinx_bootstrap_theme
+
 # Mock to ignore Modules
 import mock
 autodoc_mock_imports = ['Rhino', 'System', 'rhinoscriptsyntax', 'scriptcontext', 'clr', 'Grasshopper']
@@ -342,7 +342,8 @@ epub_exclude_files = ['search.html']
 #epub_use_index = True
 
 #Bootstrap theme and bootswatch
-
+"""
+#import sphinx_bootstrap_theme
 html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
@@ -415,3 +416,4 @@ html_theme_options = {
     # Values: "3" (default) or "2" (in quotes)
     'bootstrap_version': "3"
 }
+"""
