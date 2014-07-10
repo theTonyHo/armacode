@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ObjectsSortByName &mdash; armacode 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="armacode 1.0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          armacode</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="simple">
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">ObjectsSortByName</a></li>
+<li><a class="reference internal" href="#addlayer">AddLayer</a></li>
+<li><a class="reference internal" href="#arma-info">ARMA_Info</a></li>
+<li><a class="reference internal" href="#layoutdetails">LayoutDetails</a></li>
+<li><a class="reference internal" href="#objectlayer">ObjectLayer</a></li>
+<li><a class="reference internal" href="#printpdfsetup">PrintPDFSetup</a></li>
+<li><a class="reference internal" href="#unfoldsurface">UnfoldSurface</a></li>
+<li><a class="reference internal" href="#dimensionusertext">DimensionUserText</a></li>
+<li><a class="reference internal" href="#setuserattributetoobjects">SetUserAttributeToObjects</a></li>
+<li><a class="reference internal" href="#sortobjectsalongpolyline">SortObjectsAlongPolyline</a></li>
+<li><a class="reference internal" href="#planealign">PlaneAlign</a></li>
+<li><a class="reference internal" href="#printall">PrintAll</a></li>
+<li><a class="reference internal" href="#layoutproperties">LayoutProperties</a></li>
+<li><a class="reference internal" href="#debugcurvedeviation">DebugCurveDeviation</a></li>
+<li><a class="reference internal" href="#objectsbyuserstring">ObjectsByUserString</a></li>
+<li><a class="reference internal" href="#curvesplitoverlap">CurveSplitOverlap</a></li>
+<li><a class="reference internal" href="#matchobjectattributes">MatchObjectAttributes</a></li>
+<li><a class="reference internal" href="#viewradius">ViewRadius</a></li>
+<li><a class="reference internal" href="#csvwrite">CSVWrite</a></li>
+<li><a class="reference internal" href="#isobjectinsidecurve">IsObjectInsideCurve</a></li>
+<li><a class="reference internal" href="#objectgrouplist">ObjectGroupList</a></li>
+<li><a class="reference internal" href="#commonedge">CommonEdge</a></li>
+<li><a class="reference internal" href="#numberpadding">NumberPadding</a></li>
+<li><a class="reference internal" href="#annotationtext">AnnotationText</a></li>
+<li><a class="reference internal" href="#stringfieldnames">StringFieldNames</a></li>
+<li><a class="reference internal" href="#objectnamelist">ObjectNameList</a></li>
+<li><a class="reference internal" href="#vectorfromline">VectorFromLine</a></li>
+<li><a class="reference internal" href="#sortobjectsalongcurve">SortObjectsAlongCurve</a></li>
+<li><a class="reference internal" href="#pullpolylinetoobjects">PullPolylineToObjects</a></li>
+<li><a class="reference internal" href="#valueremap">ValueRemap</a></li>
+<li><a class="reference internal" href="#pointclosestobjects">PointClosestObjects</a></li>
+<li><a class="reference internal" href="#printpdf">PrintPDF</a></li>
+<li><a class="reference internal" href="#getprojectfolder">GetProjectFolder</a></li>
+<li><a class="reference internal" href="#screenshot">ScreenShot</a></li>
+<li><a class="reference internal" href="#stickyget">StickyGet</a></li>
+<li><a class="reference internal" href="#addlineex">AddLineEX</a></li>
+<li><a class="reference internal" href="#addlineardimension">AddLinearDimension</a></li>
+<li><a class="reference internal" href="#inspectobject">InspectObject</a></li>
+<li><a class="reference internal" href="#listpurge">ListPurge</a></li>
+<li><a class="reference internal" href="#objectsbyattributes">ObjectsByAttributes</a></li>
+<li><a class="reference internal" href="#isghpython">IsGHPython</a></li>
+<li><a class="reference internal" href="#parallelrun">ParallelRun</a></li>
+<li><a class="reference internal" href="#setusertext">SetUserText</a></li>
+<li><a class="reference internal" href="#stickyset">StickySet</a></li>
+<li><a class="reference internal" href="#curveduplicates">CurveDuplicates</a></li>
+<li><a class="reference internal" href="#ghparallel">GHParallel</a></li>
+<li><a class="reference internal" href="#processperfile">ProcessPerFile</a></li>
+<li><a class="reference internal" href="#objectsinclosedcurve">ObjectsInClosedCurve</a></li>
+<li><a class="reference internal" href="#progressbar">ProgressBar</a></li>
+<li><a class="reference internal" href="#csvread">CSVRead</a></li>
+<li><a class="reference internal" href="#duplicatelayout">DuplicateLayout</a></li>
+<li><a class="reference internal" href="#csvopen">CSVOpen</a></li>
+<li><a class="reference internal" href="#objectnamefromattributes">ObjectNameFromAttributes</a></li>
+<li><a class="reference internal" href="#getusertext">GetUserText</a></li>
+<li><a class="reference internal" href="#textobjectsbyproperties">TextObjectsByProperties</a></li>
+<li><a class="reference internal" href="#setusertextfromdict">SetUserTextFromDict</a></li>
+<li><a class="reference internal" href="#annotationproperties">AnnotationProperties</a></li>
+<li><a class="reference internal" href="#brepedges">BrepEdges</a></li>
+<li><a class="reference internal" href="#objectsinbrep">ObjectsInBrep</a></li>
+<li><a class="reference internal" href="#debugvalues">DebugValues</a></li>
+<li><a class="reference internal" href="#getusertextall">GetUserTextAll</a></li>
+<li><a class="reference internal" href="#textobjectsbyfont">TextObjectsByFont</a></li>
+<li><a class="reference internal" href="#objectlayerlist">ObjectLayerList</a></li>
+<li><a class="reference internal" href="#isloaded">IsLoaded</a></li>
+<li><a class="reference internal" href="#adddimlinearfromline">AddDimLinearFromLine</a></li>
+<li><a class="reference internal" href="#debugvector2">DebugVector2</a></li>
+<li><a class="reference internal" href="#fileopen">FileOpen</a></li>
+<li><a class="reference internal" href="#layertruncate">LayerTruncate</a></li>
+<li><a class="reference internal" href="#objectrefencepoint">ObjectRefencePoint</a></li>
+<li><a class="reference internal" href="#fileismodifiedwithin">FileIsModifiedWithin</a></li>
+<li><a class="reference internal" href="#textobjecttextformula">TextObjectTextFormula</a></li>
+<li><a class="reference internal" href="#debugvector">DebugVector</a></li>
+<li><a class="reference internal" href="#debugline">DebugLine</a></li>
+<li><a class="reference internal" href="#matchlayerattributes">MatchLayerAttributes</a></li>
+<li><a class="reference internal" href="#adddimalignedfromline">AddDimAlignedFromLine</a></li>
+<li><a class="reference internal" href="#generateplug">GeneratePlug</a></li>
+<li><a class="reference internal" href="#getrelativefolder">GetRelativeFolder</a></li>
+<li><a class="reference internal" href="#loadconfig">LoadConfig</a></li>
+<li><a class="reference internal" href="#objectproperties">ObjectProperties</a></li>
+<li><a class="reference internal" href="#objectsbylayout">ObjectsByLayout</a></li>
+<li><a class="reference internal" href="#creaseangle">CreaseAngle</a></li>
+<li><a class="reference internal" href="#logger">Logger</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/armacode.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="objectssortbyname">
+<h1>ObjectsSortByName<a class="headerlink" href="#objectssortbyname" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectsSortByName(objects)</div></blockquote>
+<p>Sort Objects by its name</p>
+</div>
+<div class="section" id="addlayer">
+<h1>AddLayer<a class="headerlink" href="#addlayer" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>AddLayer(name=None, color=None, visible=True, locked=False)</div></blockquote>
+<p>Add a new layer to the document.
+Extended from Rhinoscript syntax with Full Layer name support
+Parent Layer automatically added if does not exist.
+Parameters:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>name[opt]: The full path of the new layer. If omitted, Rhino automatically</dt>
+<dd>generates the layer name.</dd>
+<dt>color[opt]: A Red-Green-Blue color value or System.Drawing.Color. If</dt>
+<dd>omitted, the color Black is assigned.</dd>
+</dl>
+<p>visible[opt]: layer&#8217;s visibility
+locked[opt]: layer&#8217;s locked state</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>The full name of the new layer if successful.</dd>
+</dl>
+</div>
+<div class="section" id="arma-info">
+<h1>ARMA_Info<a class="headerlink" href="#arma-info" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ARMA_Info()</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="layoutdetails">
+<h1>LayoutDetails<a class="headerlink" href="#layoutdetails" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>LayoutDetails(layout)</div></blockquote>
+<p>Get all detail objects on a layout.
+Args:</p>
+<blockquote>
+<div>layout: Name or ID of Layout</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>List of IDs of all details on success.</dd>
+</dl>
+</div>
+<div class="section" id="objectlayer">
+<h1>ObjectLayer<a class="headerlink" href="#objectlayer" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectLayer(object_id, layer=None)</div></blockquote>
+<p>Returns or modifies the layer of an object
+Parameters:</p>
+<blockquote>
+<div>object_id = the identifier of the object(s)
+layer[opt] = name of an existing layer</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>If a layer is not specified, the object&#8217;s current layer
+If a layer is specified, the object&#8217;s previous layer
+If object_id is a list or tuple, the number of objects modified</dd>
+</dl>
+</div>
+<div class="section" id="printpdfsetup">
+<h1>PrintPDFSetup<a class="headerlink" href="#printpdfsetup" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>PrintPDFSetup()</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="unfoldsurface">
+<h1>UnfoldSurface<a class="headerlink" href="#unfoldsurface" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>UnfoldSurface(srfA, srfB, additionalObjects=None)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="dimensionusertext">
+<h1>DimensionUserText<a class="headerlink" href="#dimensionusertext" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>DimensionUserText(object_id, usertext=None)</div></blockquote>
+<p>Returns of modifies the user text string of a dimension object. The user
+text is the string that gets printed when the dimension is defined
+Parameters:</p>
+<blockquote>
+<div>object_id = identifier of the object
+usertext[opt] = the new user text string value</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>if usertext is not specified, the current usertext string
+if usertext is specified, the previous usertext string</dd>
+</dl>
+</div>
+<div class="section" id="setuserattributetoobjects">
+<h1>SetUserAttributeToObjects<a class="headerlink" href="#setuserattributetoobjects" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>SetUserAttributeToObjects(objects, strFormat, incremental=True)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="sortobjectsalongpolyline">
+<h1>SortObjectsAlongPolyline<a class="headerlink" href="#sortobjectsalongpolyline" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>SortObjectsAlongPolyline(objects, polyline, tag=True)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="planealign">
+<h1>PlaneAlign<a class="headerlink" href="#planealign" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>PlaneAlign(plane, vecTarget)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="printall">
+<h1>PrintAll<a class="headerlink" href="#printall" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>PrintAll(fileNameFormat=&#8217;{0}_{1}.pdf&#8217;, overwrite=True)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="layoutproperties">
+<h1>LayoutProperties<a class="headerlink" href="#layoutproperties" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>LayoutProperties(layoutID, data=None, displayText=False)</div></blockquote>
+<p>Collect properties of a layout using its ID. The Properties are defined by named Text objects on the layout page view.</p>
+</div>
+<div class="section" id="debugcurvedeviation">
+<h1>DebugCurveDeviation<a class="headerlink" href="#debugcurvedeviation" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>DebugCurveDeviation(curve_a, curve_b, name=None, layer=None, color=None)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectsbyuserstring">
+<h1>ObjectsByUserString<a class="headerlink" href="#objectsbyuserstring" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectsByUserString(key, value=&#8217;*&#8217;, caseSensitive=True)</div></blockquote>
+<p>Finds all objects whose UserString matches the search patterns.</p>
+<dl class="docutils">
+<dt>key: Search pattern for UserString keys (supported wildcards are: ? = any single</dt>
+<dd>character, * = any sequence of characters).</dd>
+<dt>value: Search pattern for UserString values (supported wildcards are: ? = any single</dt>
+<dd>character, * = any sequence of characters).</dd>
+</dl>
+<p>caseSensitive: If true, string comparison will be case sensitive.
+Returns: An array of all objects whose UserString matches with the search patterns or</p>
+<blockquote>
+<div>null when no such objects could be found.</div></blockquote>
+</div>
+<div class="section" id="curvesplitoverlap">
+<h1>CurveSplitOverlap<a class="headerlink" href="#curvesplitoverlap" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>CurveSplitOverlap(curve_IDs, tolerance=None)</div></blockquote>
+<p>Detect overlapping of curves and split
+Parameters:</p>
+<blockquote>
+<div>curve_IDs = Input Curve GUIDs
+tolerance [opt] = Tolerance for intersection. If None, document tolerance is used</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>identifier of the splitted curves on success
+input curves on error.</dd>
+</dl>
+</div>
+<div class="section" id="matchobjectattributes">
+<h1>MatchObjectAttributes<a class="headerlink" href="#matchobjectattributes" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>MatchObjectAttributes(target_ids, source_id=None)</div></blockquote>
+<p>Matches, or copies the attributes of a source object to a target object. Retains the User Strings data.
+Parameters:</p>
+<blockquote>
+<div><p>target_ids = identifiers of objects to copy attributes to
+source_id[opt] = identifier of object to copy attributes from. If None,</p>
+<blockquote>
+<div>then the default attributes are copied to the target_ids</div></blockquote>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>number of objects modified</dd>
+</dl>
+</div>
+<div class="section" id="viewradius">
+<h1>ViewRadius<a class="headerlink" href="#viewradius" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ViewRadius(view=None, radius=None)</div></blockquote>
+<p>Returns or sets the radius of a parallel-projected view. Useful
+when you need an absolute zoom factor for a parallel-projected view
+Parameters:</p>
+<blockquote>
+<div>view:[opt] title or id of the view. If omitted, current active view is used
+radius:[opt] the view radius</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>if radius is not specified, the current view radius for the specified view
+if radius is specified, the previous view radius for the specified view</dd>
+</dl>
+</div>
+<div class="section" id="csvwrite">
+<h1>CSVWrite<a class="headerlink" href="#csvwrite" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>CSVWrite(fileName, data, dialect=None, fieldnames=None)</div></blockquote>
+<p>Write data into a new CSV File.
+The data needs to be formated as a list of dictionaries.
+The keys will be the column name.
+Each dictionary represent a row of data</p>
+</div>
+<div class="section" id="isobjectinsidecurve">
+<h1>IsObjectInsideCurve<a class="headerlink" href="#isobjectinsidecurve" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>IsObjectInsideCurve(object, boundary, plane=None, tolerance=None)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectgrouplist">
+<h1>ObjectGroupList<a class="headerlink" href="#objectgrouplist" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectGroupList(objects=None, sort=False)</div></blockquote>
+<p>Returns a list of all the Group Names for the objects
+Parameters:</p>
+<blockquote>
+<div>objects:    If omitted, all objects in the document is used
+sort:       Sort the list if True.</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>List of Group Names
+and a dictionary of all objects with group name as key</dd>
+</dl>
+</div>
+<div class="section" id="commonedge">
+<h1>CommonEdge<a class="headerlink" href="#commonedge" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>CommonEdge(srfA, srfB, tolerance=-1)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="numberpadding">
+<h1>NumberPadding<a class="headerlink" href="#numberpadding" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>NumberPadding(strFormat, value)</div></blockquote>
+<p>Format the value with a string format. the value is represented by the # character.
+The value will be padded by the number of consecutive characters
+### =&gt; 001
+##-### =&gt; 01-001</p>
+</div>
+<div class="section" id="annotationtext">
+<h1>AnnotationText<a class="headerlink" href="#annotationtext" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>AnnotationText(object_id, new_text=None)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="stringfieldnames">
+<h1>StringFieldNames<a class="headerlink" href="#stringfieldnames" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>StringFieldNames(strFormat)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectnamelist">
+<h1>ObjectNameList<a class="headerlink" href="#objectnamelist" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectNameList(objects=None, sort=False)</div></blockquote>
+<p>Returns a list of all the Names for the objects
+Parameters:</p>
+<blockquote>
+<div>objects:    If omitted, the list of all the layers
+sort:       Sort the list if True.</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>List of Names
+and a dictionary of all objects with name as key</dd>
+</dl>
+</div>
+<div class="section" id="vectorfromline">
+<h1>VectorFromLine<a class="headerlink" href="#vectorfromline" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>VectorFromLine(line, reverse=False)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="sortobjectsalongcurve">
+<h1>SortObjectsAlongCurve<a class="headerlink" href="#sortobjectsalongcurve" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>SortObjectsAlongCurve(objects, crv)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="pullpolylinetoobjects">
+<h1>PullPolylineToObjects<a class="headerlink" href="#pullpolylinetoobjects" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>PullPolylineToObjects(objects, polyline)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="valueremap">
+<h1>ValueRemap<a class="headerlink" href="#valueremap" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ValueRemap(valueList, sourceRange=None, targetRange=(0.0, 1.0))</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="pointclosestobjects">
+<h1>PointClosestObjects<a class="headerlink" href="#pointclosestobjects" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>PointClosestObjects(point, object_ids, tolerance=None)</div></blockquote>
+<p>Finds the object that is closest to a test point within a tolerance
+Parameters:</p>
+<blockquote>
+<div>point = point to test
+object_ids = identifiers of one or more objects
+tolerance = distance to test against. If ommitted, Document Model Tolerance is used.</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>A list of object ids</dd>
+</dl>
+</div>
+<div class="section" id="printpdf">
+<h1>PrintPDF<a class="headerlink" href="#printpdf" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>PrintPDF(fileName, overwrite=True, log=False)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="getprojectfolder">
+<h1>GetProjectFolder<a class="headerlink" href="#getprojectfolder" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>GetProjectFolder(folderName=&#8217;PROJECTS&#8217;)</div></blockquote>
+<p>Returns the project folder guided by the folder where all projects are located.
+If the guide folder does not exist, returns the folder of the current document</p>
+</div>
+<div class="section" id="screenshot">
+<h1>ScreenShot<a class="headerlink" href="#screenshot" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ScreenShot(imageSize=(1920, 1080), resetCounter=False)</div></blockquote>
+<p>Capture screenshot using the ViewCapture To File command. Default resolution is HD.
+Captured files are stored in the Documentation folder of each project.</p>
+</div>
+<div class="section" id="stickyget">
+<h1>StickyGet<a class="headerlink" href="#stickyget" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>StickyGet(sectionName, <a href="#id1"><span class="problematic" id="id2">*</span></a>keys)</div></blockquote>
+<p>Get the settings with named key that was stored in the scriptcontext sticky
+Args:</p>
+<blockquote>
+<div>sectionName: Provide a name where all the settings will sit under. This is to separate settings from scripts.
+keys: name of the variable to retrieve. Multiple keys are supported.</div></blockquote>
+<dl class="docutils">
+<dt>Return:</dt>
+<dd>Value if sucessful. List of values if multiple keys are specified.
+None if not found.</dd>
+</dl>
+</div>
+<div class="section" id="addlineex">
+<h1>AddLineEX<a class="headerlink" href="#addlineex" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>AddLineEX(startPoint, endPoint, tolerance=None)</div></blockquote>
+<p>Adds a line curve to the current model.
+Parameters:</p>
+<blockquote>
+<div>start, end = end points of the line</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>id of the new curve object</dd>
+</dl>
+</div>
+<div class="section" id="addlineardimension">
+<h1>AddLinearDimension<a class="headerlink" href="#addlineardimension" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>AddLinearDimension(plane, start_point, end_point, point_on_dimension_line)</div></blockquote>
+<p>Adds a linear dimension to the document
+Returns:</p>
+<blockquote>
+<div>identifier of the new object on success
+None on error</div></blockquote>
+</div>
+<div class="section" id="inspectobject">
+<h1>InspectObject<a class="headerlink" href="#inspectobject" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>InspectObject(object=None)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="listpurge">
+<h1>ListPurge<a class="headerlink" href="#listpurge" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ListPurge(list)</div></blockquote>
+<p>Purge the list and return a list with unique items.</p>
+</div>
+<div class="section" id="objectsbyattributes">
+<h1>ObjectsByAttributes<a class="headerlink" href="#objectsbyattributes" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectsByAttributes(name=None, layerName=None, layout=None, filter=0, include_grips=False, include_lights=False, is_instances=False, include_reference=False, include_selected=True, state=0)</div></blockquote>
+<p>Returns identifiers of all objects based on attributes
+Parameters:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>filter[opt] = The type(s) of geometry (points, curves, surfaces, meshes,...)</dt>
+<dd>that can be selected. Object types can be added together to filter
+several different kinds of geometry. use the filter class to get values</dd>
+</dl>
+<p>select[opt] = Select the objects
+state[opt] = Object state. See help</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>list of identifiers</dd>
+</dl>
+</div>
+<div class="section" id="isghpython">
+<h1>IsGHPython<a class="headerlink" href="#isghpython" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>IsGHPython()</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="parallelrun">
+<h1>ParallelRun<a class="headerlink" href="#parallelrun" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ParallelRun(function, data_list, flatten_results=False)</div></blockquote>
+<p>For each item in data_list execute the input function. Execution is
+done on as many threads as there are CPUs on the computer.
+Note that for function with more than one parameter, a dictionary
+can be used to provide keyword arguments.
+Parameters:</p>
+<blockquote>
+<div><p>function: function to execute for each item in the data_list
+data_list: list, tuple, or other enumerable data structure.
+flatten_list [opt]: if True, when results are lists of lists the</p>
+<blockquote>
+<div>results are flattened into a single list of results. If this is True,
+you cannot depend on the result list being the same size as the input list</div></blockquote>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>list of results containing the return from each call to the input function</dd>
+</dl>
+</div>
+<div class="section" id="setusertext">
+<h1>SetUserText<a class="headerlink" href="#setusertext" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>SetUserText(object_id, key, value=None, attach_to_geometry=False)</div></blockquote>
+<p>Sets or removes user text stored on an object.
+Parameters:</p>
+<blockquote>
+<div><p>object_id = the object&#8217;s identifier
+key = the key name to set
+value[opt] = the string value to set. If omitted, the key/value pair</p>
+<blockquote>
+<div>specified by key will be deleted</div></blockquote>
+<p>attach_to_geometry[opt] = location on the object to store the user text</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>True or False indicating success or failure</dd>
+</dl>
+</div>
+<div class="section" id="stickyset">
+<h1>StickySet<a class="headerlink" href="#stickyset" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>StickySet(sectionName, <a href="#id3"><span class="problematic" id="id4">*</span></a>args, <a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs)</div></blockquote>
+<p>Save the settings to scriptcontext sticky
+Args:</p>
+<blockquote>
+<div>sectionName: Provide a name where all the settings will sit under. This is to separate settings from scripts.
+<a href="#id7"><span class="problematic" id="id8">**</span></a>kwargs: Provide a key=value, pair to assign values to.</div></blockquote>
+<dl class="docutils">
+<dt>Return:</dt>
+<dd>True if sucessful.</dd>
+</dl>
+</div>
+<div class="section" id="curveduplicates">
+<h1>CurveDuplicates<a class="headerlink" href="#curveduplicates" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>CurveDuplicates(curve_IDs, tolerance=None, return_Duplicate=False)</div></blockquote>
+<p>Remove Duplicated curves
+Parameters:</p>
+<blockquote>
+<div>curve_IDs = Input Curve GUIDs
+tolerance [opt] = Tolerance for proximity check. If None, document tolerance is used</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>identifier of the duplicated curves on success</dd>
+</dl>
+</div>
+<div class="section" id="ghparallel">
+<h1>GHParallel<a class="headerlink" href="#ghparallel" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>GHParallel(method, driverInputTree, <a href="#id9"><span class="problematic" id="id10">*</span></a>args)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="processperfile">
+<h1>ProcessPerFile<a class="headerlink" href="#processperfile" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ProcessPerFile(filePath, saveChanges, method, <a href="#id11"><span class="problematic" id="id12">*</span></a>args, <a href="#id13"><span class="problematic" id="id14">**</span></a>kwargs)</div></blockquote>
+<p>Run a function / method on the specified file with the required arguments
+Allows user to save changes after each file</p>
+</div>
+<div class="section" id="objectsinclosedcurve">
+<h1>ObjectsInClosedCurve<a class="headerlink" href="#objectsinclosedcurve" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectsInClosedCurve(objects, curve, plane=None, tolerance=None)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="progressbar">
+<h1>ProgressBar<a class="headerlink" href="#progressbar" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ProgressBar(value, lower, upper, label=&#8217;&#8216;, embed_label=True, show_percent=True)</div></blockquote>
+<p>Display the progress of the script using the built-in Progress Meter in Status Bar.
+Automatically show and hide meter at start and end.
+Parameters:</p>
+<blockquote>
+<div><p>label = short description of the progesss
+value = current value of the progress bar to display
+lower = lower limit of the progress meter&#8217;s range
+upper = upper limit of the progress meter&#8217;s range
+embed_label[opt] = if True, the label will show inside the meter.</p>
+<blockquote>
+<div>If false, the label will show to the left of the meter</div></blockquote>
+<p>show_percent[opt] = show the percent complete</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Previous value on success</dd>
+</dl>
+</div>
+<div class="section" id="csvread">
+<h1>CSVRead<a class="headerlink" href="#csvread" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>CSVRead(fileName, dialect=None)</div></blockquote>
+<p>Read a CSV File, and return the content.
+Return:</p>
+<blockquote>
+<div><p>has_header = Boolean True if the data contains headers.
+data = If the data contains headers, it will return a list of Dictionaries.</p>
+<blockquote>
+<div>If the data does not contain headers, the data return a nested array.</div></blockquote>
+<p>Resources: <a class="reference external" href="http://www.python.org/dev/peps/pep-0305/">http://www.python.org/dev/peps/pep-0305/</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="duplicatelayout">
+<h1>DuplicateLayout<a class="headerlink" href="#duplicatelayout" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>DuplicateLayout(layout, title=None)</div></blockquote>
+<p>Duplicate a Layout
+Args:</p>
+<blockquote>
+<div>layout: Name or ID of layout to duplicate
+title: Title for the new Layout.</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Name of the new layout on success</dd>
+</dl>
+</div>
+<div class="section" id="csvopen">
+<h1>CSVOpen<a class="headerlink" href="#csvopen" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>CSVOpen(fileName)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectnamefromattributes">
+<h1>ObjectNameFromAttributes<a class="headerlink" href="#objectnamefromattributes" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectNameFromAttributes(object_id, strFormat=None)</div></blockquote>
+<p>Evaluate a formatted string by retrieving the values from User Text Attributes
+The string format needs to contain fields referencing other attributes.
+For example: an object should contain the following as attributes.</p>
+<blockquote>
+<div><p>NAME_FORMAT: {NAME}_{INDEX}
+NAME: WP
+INDEX: 002</p>
+<p>This will return a string WP_002. Refer to the wiki page</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Parameters:</dt>
+<dd>object_id = the object&#8217;s identifier
+strFormat = string Format used to evaluate. Default to use the key attribute &#8220;NAME_FORMAT&#8221;</dd>
+<dt>Returns:</dt>
+<dd>A string representing a new name on success. None on error.</dd>
+</dl>
+</div>
+<div class="section" id="getusertext">
+<h1>GetUserText<a class="headerlink" href="#getusertext" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>GetUserText(object_id, key=None, attached_to_geometry=False)</div></blockquote>
+<p>Returns user text stored on an object.
+Parameters:</p>
+<blockquote>
+<div>object_id = the object&#8217;s identifies
+key[opt] = the key name. If omitted all key names for an object are returned
+attached_to_geometry[opt] = location on the object to retrieve the user text.</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>if key is specified, the associated value if successful
+if key is not specified, a dictionary of all user text key and values associated with the location.</dd>
+</dl>
+</div>
+<div class="section" id="textobjectsbyproperties">
+<h1>TextObjectsByProperties<a class="headerlink" href="#textobjectsbyproperties" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>TextObjectsByProperties(fontName=None, height=None, style=None, select=False)</div></blockquote>
+<p>Returns identifiers of all text objects that has the same font property.
+Parameters:</p>
+<blockquote>
+<div>fontName = Font name to search for
+select[opt] = Select the objects</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>A list of Guids identifying the objects.</dd>
+</dl>
+</div>
+<div class="section" id="setusertextfromdict">
+<h1>SetUserTextFromDict<a class="headerlink" href="#setusertextfromdict" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>SetUserTextFromDict(object_id, dataDict, attach_to_geometry=False)</div></blockquote>
+<p>Sets or removes user text stored on an object using a dictionary
+Parameters:</p>
+<blockquote>
+<div>object_id = the object&#8217;s identifier
+dataDict = dictionary of pairs of key and value
+attach_to_geometry[opt] = location on the object to store the user text</div></blockquote>
+</div>
+<div class="section" id="annotationproperties">
+<h1>AnnotationProperties<a class="headerlink" href="#annotationproperties" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>AnnotationProperties(object_id, data=None)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="brepedges">
+<h1>BrepEdges<a class="headerlink" href="#brepedges" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>BrepEdges(object_id, toLayers=True)</div></blockquote>
+<p>Duplicate Brep Edges and place them in the correct layers
+Parameters:</p>
+<blockquote>
+<div>object_id: object extract edges from
+toLayers[opt]: place them in correct layers and grouped based on name of brep</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>dictionary with keys: Naked, Interior, NonManifold. Each key has an associated list of geometry</dd>
+</dl>
+</div>
+<div class="section" id="objectsinbrep">
+<h1>ObjectsInBrep<a class="headerlink" href="#objectsinbrep" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectsInBrep(objects, brep)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="debugvalues">
+<h1>DebugValues<a class="headerlink" href="#debugvalues" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>DebugValues(valueList, syncObjectList=None, colorRange=None, sourceRange=None, steps=10, descending=False)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="getusertextall">
+<h1>GetUserTextAll<a class="headerlink" href="#getusertextall" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>GetUserTextAll(object_id)</div></blockquote>
+<p>Returns user text stored on an object.
+Parameters:</p>
+<blockquote>
+<div>object_id = the object&#8217;s identifies</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Dictionary of all key and value pairs attached on both Geometry and Attribute.</dd>
+</dl>
+</div>
+<div class="section" id="textobjectsbyfont">
+<h1>TextObjectsByFont<a class="headerlink" href="#textobjectsbyfont" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>TextObjectsByFont(fontName, select=False)</div></blockquote>
+<p>Returns identifiers of all text objects that has the same font property.
+Parameters:</p>
+<blockquote>
+<div>fontName = Font name to search for
+select[opt] = Select the objects</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>A list of Guids identifying the objects.</dd>
+</dl>
+</div>
+<div class="section" id="objectlayerlist">
+<h1>ObjectLayerList<a class="headerlink" href="#objectlayerlist" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectLayerList(objects=None, sort=False)</div></blockquote>
+<p>Returns a list of all the Layer Names for the objects
+Parameters:</p>
+<blockquote>
+<div>objects:    If omitted, all objects in the document is used
+sort:       Sort the list if True.</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>List of Layer Names
+and a dictionary of all objects with layer name as key</dd>
+</dl>
+</div>
+<div class="section" id="isloaded">
+<h1>IsLoaded<a class="headerlink" href="#isloaded" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>IsLoaded()</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="adddimlinearfromline">
+<h1>AddDimLinearFromLine<a class="headerlink" href="#adddimlinearfromline" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>AddDimLinearFromLine(curve, dimOffset=100.0, plane=None)</div></blockquote>
+<p>Create an Aligned dimension from a line. Curve needs to be in Clockwise orientation.
+Parameters:</p>
+<blockquote>
+<div>curve = Curve ID
+dimOffset = Offset of dimension text</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>A list of Guids identifying the objects.</dd>
+</dl>
+</div>
+<div class="section" id="debugvector2">
+<h1>DebugVector2<a class="headerlink" href="#debugvector2" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>DebugVector2(start_pt, end_pt, name=None, layer=None, color=None)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="fileopen">
+<h1>FileOpen<a class="headerlink" href="#fileopen" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>FileOpen(filePath)</div></blockquote>
+<p>Open file in the current Rhino instance.
+Make sure the current working file is saved before continue.
+Any modification will be discarded.</p>
+<p>filePath : Path of file to open.</p>
+</div>
+<div class="section" id="layertruncate">
+<h1>LayerTruncate<a class="headerlink" href="#layertruncate" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>LayerTruncate(layer_fullPath, index)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectrefencepoint">
+<h1>ObjectRefencePoint<a class="headerlink" href="#objectrefencepoint" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectRefencePoint(obj, pull=True)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="fileismodifiedwithin">
+<h1>FileIsModifiedWithin<a class="headerlink" href="#fileismodifiedwithin" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>FileIsModifiedWithin(fileName, period)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="textobjecttextformula">
+<h1>TextObjectTextFormula<a class="headerlink" href="#textobjecttextformula" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>TextObjectTextFormula(object_id, textFormula=None)</div></blockquote>
+<p>Returns or modifies the text string of a text object.
+Parameters:</p>
+<blockquote>
+<div>object_id = the identifier of a text object
+text [opt] = a new text string</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>if text is not specified, the current string value if successful
+if text is specified, the previous string value if successful
+None if not successful, or on error</dd>
+</dl>
+</div>
+<div class="section" id="debugvector">
+<h1>DebugVector<a class="headerlink" href="#debugvector" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>DebugVector(start_pt, vector, name=None, layer=None, color=None)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="debugline">
+<h1>DebugLine<a class="headerlink" href="#debugline" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>DebugLine(start_pt, end_pt, name=None, layer=None, color=None)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="matchlayerattributes">
+<h1>MatchLayerAttributes<a class="headerlink" href="#matchlayerattributes" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>MatchLayerAttributes(target_layer_names, source_layer_name, visibility=False, lockState=False, color=True, materialIndex=True, lineType=True, plotColor=True, plotWeight=True)</div></blockquote>
+<p>Matches, or copies the attributes of a source layer to a target layer. Full path is recommended for accurate identification of layers.
+Parameters:</p>
+<blockquote>
+<div>target_layer_names = full path names or identifiers of layers to copy attributes to.
+source_layer_name = full path name or identifier of layer to copy attributes from.</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>number of objects modified</dd>
+</dl>
+</div>
+<div class="section" id="adddimalignedfromline">
+<h1>AddDimAlignedFromLine<a class="headerlink" href="#adddimalignedfromline" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>AddDimAlignedFromLine(curve, dimOffset=100.0, plane=None)</div></blockquote>
+<p>Create an Aligned dimension from a line. Curve needs to be in Clockwise orientation.
+Parameters:</p>
+<blockquote>
+<div>curve = Curve ID
+dimOffset = Offset of dimension text</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>A list of Guids identifying the objects.</dd>
+</dl>
+</div>
+<div class="section" id="generateplug">
+<h1>GeneratePlug<a class="headerlink" href="#generateplug" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>GeneratePlug(matThickness=1.0, plugLength=5.0)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="getrelativefolder">
+<h1>GetRelativeFolder<a class="headerlink" href="#getrelativefolder" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>GetRelativeFolder()</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="loadconfig">
+<h1>LoadConfig<a class="headerlink" href="#loadconfig" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>LoadConfig()</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectproperties">
+<h1>ObjectProperties<a class="headerlink" href="#objectproperties" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectProperties(object_id, data=None)</div></blockquote>
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectsbylayout">
+<h1>ObjectsByLayout<a class="headerlink" href="#objectsbylayout" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>ObjectsByLayout(layout=None, filter=0)</div></blockquote>
+<p>Returns identifiers of all objects based on the objects&#8217; geometry type.
+Parameters:</p>
+<blockquote>
+<div><p>layout = name or guid of the specified layout.
+type = The type(s) of geometry objects (points, curves, surfaces,</p>
+<blockquote>
+<div>meshes, etc.) that can be selected. Object types can be
+added together to filter several different kinds of geometry.
+Please refer to rs.filter or Rhino object type.</div></blockquote>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>A list of Guids identifying the objects.</dd>
+</dl>
+</div>
+<div class="section" id="creaseangle">
+<h1>CreaseAngle<a class="headerlink" href="#creaseangle" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>CreaseAngle(srfA, srfB, normalSegment=1)</div></blockquote>
+<p>Calculate the crease angle between two surfaces. The angle segment is determined by the surface normal.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">srfA: Surface A
+srfB: Surface B
+normalSegment:</p>
+<blockquote class="last">
+<div>If set to True, return the angle segment on the surface normal first.
+If set to False, return the smallest angle first</div></blockquote>
+</dd>
+<dt>Returns:</dt>
+<dd>Common Edge Curve ID, Angle and its Reflex Angle.</dd>
+</dl>
+</div>
+<div class="section" id="logger">
+<h1>Logger<a class="headerlink" href="#logger" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>Logger(loggerName=None, fileName=None, console=False)</div></blockquote>
+<p>Instantiate a logger object with default Formatter.
+Default level is set to WARNING (based on the root logger)
+Args:</p>
+<blockquote>
+<div>loggerName: Name of the logger. Usually __file__ or something sensible.
+fileName: File name of the log file. If ommitted, logger will default to console
+console: Display in console. Only effective when filename is specified.</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Logger Object</dd>
+</dl>
+<p>Reference: <a class="reference external" href="http://stackoverflow.com/questions/13733552/logger-configuration-to-log-to-file-and-print-to-stdout">http://stackoverflow.com/questions/13733552/logger-configuration-to-log-to-file-and-print-to-stdout</a></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, Tony Ho.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

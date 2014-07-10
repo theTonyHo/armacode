@@ -1,0 +1,837 @@
+ 
+ObjectsSortByName
+-----------------
+ 
+    ObjectsSortByName(objects)
+ 
+Sort Objects by its name
+    
+ 
+AddLayer
+--------
+ 
+    AddLayer(name=None, color=None, visible=True, locked=False)
+ 
+Add a new layer to the document. 
+Extended from Rhinoscript syntax with Full Layer name support
+Parent Layer automatically added if does not exist.
+Parameters:
+  name[opt]: The full path of the new layer. If omitted, Rhino automatically
+      generates the layer name.
+  color[opt]: A Red-Green-Blue color value or System.Drawing.Color. If
+      omitted, the color Black is assigned.
+  visible[opt]: layer's visibility
+  locked[opt]: layer's locked state
+Returns:
+  The full name of the new layer if successful.
+ 
+ARMA_Info
+---------
+ 
+    ARMA_Info()
+ 
+Undocumented
+ 
+LayoutDetails
+-------------
+ 
+    LayoutDetails(layout)
+ 
+Get all detail objects on a layout.
+Args:
+    layout: Name or ID of Layout
+Returns:
+    List of IDs of all details on success. 
+ 
+ObjectLayer
+-----------
+ 
+    ObjectLayer(object_id, layer=None)
+ 
+Returns or modifies the layer of an object
+Parameters:
+  object_id = the identifier of the object(s)
+  layer[opt] = name of an existing layer
+Returns:
+  If a layer is not specified, the object's current layer
+  If a layer is specified, the object's previous layer
+  If object_id is a list or tuple, the number of objects modified
+ 
+PrintPDFSetup
+-------------
+ 
+    PrintPDFSetup()
+ 
+Undocumented
+ 
+UnfoldSurface
+-------------
+ 
+    UnfoldSurface(srfA, srfB, additionalObjects=None)
+ 
+Undocumented
+ 
+DimensionUserText
+-----------------
+ 
+    DimensionUserText(object_id, usertext=None)
+ 
+Returns of modifies the user text string of a dimension object. The user
+text is the string that gets printed when the dimension is defined
+Parameters:
+  object_id = identifier of the object
+  usertext[opt] = the new user text string value
+Returns:
+  if usertext is not specified, the current usertext string
+  if usertext is specified, the previous usertext string
+ 
+SetUserAttributeToObjects
+-------------------------
+ 
+    SetUserAttributeToObjects(objects, strFormat, incremental=True)
+ 
+Undocumented
+ 
+SortObjectsAlongPolyline
+------------------------
+ 
+    SortObjectsAlongPolyline(objects, polyline, tag=True)
+ 
+Undocumented
+ 
+PlaneAlign
+----------
+ 
+    PlaneAlign(plane, vecTarget)
+ 
+Undocumented
+ 
+PrintAll
+--------
+ 
+    PrintAll(fileNameFormat='{0}_{1}.pdf', overwrite=True)
+ 
+Undocumented
+ 
+LayoutProperties
+----------------
+ 
+    LayoutProperties(layoutID, data=None, displayText=False)
+ 
+Collect properties of a layout using its ID. The Properties are defined by named Text objects on the layout page view.
+    
+ 
+DebugCurveDeviation
+-------------------
+ 
+    DebugCurveDeviation(curve_a, curve_b, name=None, layer=None, color=None)
+ 
+Undocumented
+ 
+ObjectsByUserString
+-------------------
+ 
+    ObjectsByUserString(key, value='*', caseSensitive=True)
+ 
+Finds all objects whose UserString matches the search patterns.
+
+key: Search pattern for UserString keys (supported wildcards are: ? = any single 
+ character, * = any sequence of characters).
+
+value: Search pattern for UserString values (supported wildcards are: ? = any single 
+ character, * = any sequence of characters).
+
+caseSensitive: If true, string comparison will be case sensitive.
+Returns: An array of all objects whose UserString matches with the search patterns or 
+ null when no such objects could be found.
+ 
+CurveSplitOverlap
+-----------------
+ 
+    CurveSplitOverlap(curve_IDs, tolerance=None)
+ 
+Detect overlapping of curves and split
+Parameters:
+  curve_IDs = Input Curve GUIDs
+  tolerance [opt] = Tolerance for intersection. If None, document tolerance is used
+Returns:
+  identifier of the splitted curves on success
+  input curves on error.
+ 
+MatchObjectAttributes
+---------------------
+ 
+    MatchObjectAttributes(target_ids, source_id=None)
+ 
+Matches, or copies the attributes of a source object to a target object. Retains the User Strings data.
+Parameters:
+  target_ids = identifiers of objects to copy attributes to
+  source_id[opt] = identifier of object to copy attributes from. If None,
+    then the default attributes are copied to the target_ids
+Returns:
+  number of objects modified
+ 
+ViewRadius
+----------
+ 
+    ViewRadius(view=None, radius=None)
+ 
+Returns or sets the radius of a parallel-projected view. Useful
+when you need an absolute zoom factor for a parallel-projected view
+Parameters:
+  view:[opt] title or id of the view. If omitted, current active view is used
+  radius:[opt] the view radius
+Returns:
+  if radius is not specified, the current view radius for the specified view
+  if radius is specified, the previous view radius for the specified view
+ 
+CSVWrite
+--------
+ 
+    CSVWrite(fileName, data, dialect=None, fieldnames=None)
+ 
+Write data into a new CSV File.
+The data needs to be formated as a list of dictionaries. 
+The keys will be the column name.
+Each dictionary represent a row of data    
+ 
+IsObjectInsideCurve
+-------------------
+ 
+    IsObjectInsideCurve(object, boundary, plane=None, tolerance=None)
+ 
+Undocumented
+ 
+ObjectGroupList
+---------------
+ 
+    ObjectGroupList(objects=None, sort=False)
+ 
+Returns a list of all the Group Names for the objects
+Parameters:
+  objects:    If omitted, all objects in the document is used
+  sort:       Sort the list if True.
+Returns:
+  List of Group Names
+  and a dictionary of all objects with group name as key
+ 
+CommonEdge
+----------
+ 
+    CommonEdge(srfA, srfB, tolerance=-1)
+ 
+Undocumented
+ 
+NumberPadding
+-------------
+ 
+    NumberPadding(strFormat, value)
+ 
+Format the value with a string format. the value is represented by the # character.
+The value will be padded by the number of consecutive characters
+### => 001
+##-### => 01-001
+ 
+AnnotationText
+--------------
+ 
+    AnnotationText(object_id, new_text=None)
+ 
+Undocumented
+ 
+StringFieldNames
+----------------
+ 
+    StringFieldNames(strFormat)
+ 
+Undocumented
+ 
+ObjectNameList
+--------------
+ 
+    ObjectNameList(objects=None, sort=False)
+ 
+Returns a list of all the Names for the objects
+Parameters:
+  objects:    If omitted, the list of all the layers
+  sort:       Sort the list if True.
+Returns:
+  List of Names
+  and a dictionary of all objects with name as key
+ 
+VectorFromLine
+--------------
+ 
+    VectorFromLine(line, reverse=False)
+ 
+Undocumented
+ 
+SortObjectsAlongCurve
+---------------------
+ 
+    SortObjectsAlongCurve(objects, crv)
+ 
+Undocumented
+ 
+PullPolylineToObjects
+---------------------
+ 
+    PullPolylineToObjects(objects, polyline)
+ 
+Undocumented
+ 
+ValueRemap
+----------
+ 
+    ValueRemap(valueList, sourceRange=None, targetRange=(0.0, 1.0))
+ 
+Undocumented
+ 
+PointClosestObjects
+-------------------
+ 
+    PointClosestObjects(point, object_ids, tolerance=None)
+ 
+Finds the object that is closest to a test point within a tolerance
+Parameters:
+  point = point to test
+  object_ids = identifiers of one or more objects
+  tolerance = distance to test against. If ommitted, Document Model Tolerance is used.
+Returns:
+  A list of object ids
+ 
+PrintPDF
+--------
+ 
+    PrintPDF(fileName, overwrite=True, log=False)
+ 
+Undocumented
+ 
+GetProjectFolder
+----------------
+ 
+    GetProjectFolder(folderName='PROJECTS')
+ 
+Returns the project folder guided by the folder where all projects are located.
+If the guide folder does not exist, returns the folder of the current document
+ 
+ScreenShot
+----------
+ 
+    ScreenShot(imageSize=(1920, 1080), resetCounter=False)
+ 
+Capture screenshot using the ViewCapture To File command. Default resolution is HD.
+Captured files are stored in the Documentation folder of each project.
+ 
+StickyGet
+---------
+ 
+    StickyGet(sectionName, *keys)
+ 
+Get the settings with named key that was stored in the scriptcontext sticky
+Args:
+    sectionName: Provide a name where all the settings will sit under. This is to separate settings from scripts.
+    keys: name of the variable to retrieve. Multiple keys are supported.
+Return:
+    Value if sucessful. List of values if multiple keys are specified.
+    None if not found.
+ 
+AddLineEX
+---------
+ 
+    AddLineEX(startPoint, endPoint, tolerance=None)
+ 
+Adds a line curve to the current model.
+Parameters:
+  start, end = end points of the line
+Returns:
+  id of the new curve object
+ 
+AddLinearDimension
+------------------
+ 
+    AddLinearDimension(plane, start_point, end_point, point_on_dimension_line)
+ 
+Adds a linear dimension to the document
+Returns:
+  identifier of the new object on success
+  None on error
+ 
+InspectObject
+-------------
+ 
+    InspectObject(object=None)
+ 
+Undocumented
+ 
+ListPurge
+---------
+ 
+    ListPurge(list)
+ 
+Purge the list and return a list with unique items.
+    
+ 
+ObjectsByAttributes
+-------------------
+ 
+    ObjectsByAttributes(name=None, layerName=None, layout=None, filter=0, include_grips=False, include_lights=False, is_instances=False, include_reference=False, include_selected=True, state=0)
+ 
+Returns identifiers of all objects based on attributes
+Parameters:
+  filter[opt] = The type(s) of geometry (points, curves, surfaces, meshes,...)
+                that can be selected. Object types can be added together to filter
+                several different kinds of geometry. use the filter class to get values
+  select[opt] = Select the objects
+  state[opt] = Object state. See help
+Returns:
+  list of identifiers
+ 
+IsGHPython
+----------
+ 
+    IsGHPython()
+ 
+Undocumented
+ 
+ParallelRun
+-----------
+ 
+    ParallelRun(function, data_list, flatten_results=False)
+ 
+For each item in data_list execute the input function. Execution is
+done on as many threads as there are CPUs on the computer.
+Note that for function with more than one parameter, a dictionary 
+can be used to provide keyword arguments.
+Parameters:
+    function: function to execute for each item in the data_list
+    data_list: list, tuple, or other enumerable data structure.
+    flatten_list [opt]: if True, when results are lists of lists the
+      results are flattened into a single list of results. If this is True,
+      you cannot depend on the result list being the same size as the input list
+Returns:
+    list of results containing the return from each call to the input function
+ 
+SetUserText
+-----------
+ 
+    SetUserText(object_id, key, value=None, attach_to_geometry=False)
+ 
+Sets or removes user text stored on an object.
+Parameters:
+  object_id = the object's identifier
+  key = the key name to set
+  value[opt] = the string value to set. If omitted, the key/value pair
+      specified by key will be deleted
+  attach_to_geometry[opt] = location on the object to store the user text
+Returns:
+  True or False indicating success or failure 
+ 
+StickySet
+---------
+ 
+    StickySet(sectionName, *args, **kwargs)
+ 
+Save the settings to scriptcontext sticky
+Args:
+    sectionName: Provide a name where all the settings will sit under. This is to separate settings from scripts.
+    **kwargs: Provide a key=value, pair to assign values to.
+Return:
+    True if sucessful.
+ 
+CurveDuplicates
+---------------
+ 
+    CurveDuplicates(curve_IDs, tolerance=None, return_Duplicate=False)
+ 
+Remove Duplicated curves
+Parameters:
+  curve_IDs = Input Curve GUIDs
+  tolerance [opt] = Tolerance for proximity check. If None, document tolerance is used
+Returns:
+  identifier of the duplicated curves on success
+ 
+GHParallel
+----------
+ 
+    GHParallel(method, driverInputTree, *args)
+ 
+Undocumented
+ 
+ProcessPerFile
+--------------
+ 
+    ProcessPerFile(filePath, saveChanges, method, *args, **kwargs)
+ 
+Run a function / method on the specified file with the required arguments
+Allows user to save changes after each file
+ 
+ObjectsInClosedCurve
+--------------------
+ 
+    ObjectsInClosedCurve(objects, curve, plane=None, tolerance=None)
+ 
+Undocumented
+ 
+ProgressBar
+-----------
+ 
+    ProgressBar(value, lower, upper, label='', embed_label=True, show_percent=True)
+ 
+Display the progress of the script using the built-in Progress Meter in Status Bar. 
+Automatically show and hide meter at start and end.
+Parameters:
+  label = short description of the progesss
+  value = current value of the progress bar to display
+  lower = lower limit of the progress meter's range
+  upper = upper limit of the progress meter's range
+  embed_label[opt] = if True, the label will show inside the meter.
+    If false, the label will show to the left of the meter
+  show_percent[opt] = show the percent complete
+Returns:
+  Previous value on success
+ 
+CSVRead
+-------
+ 
+    CSVRead(fileName, dialect=None)
+ 
+Read a CSV File, and return the content.
+Return:
+    
+    has_header = Boolean True if the data contains headers.
+    data = If the data contains headers, it will return a list of Dictionaries. 
+            If the data does not contain headers, the data return a nested array.
+    
+    Resources: http://www.python.org/dev/peps/pep-0305/
+ 
+DuplicateLayout
+---------------
+ 
+    DuplicateLayout(layout, title=None)
+ 
+Duplicate a Layout
+Args:
+    layout: Name or ID of layout to duplicate
+    title: Title for the new Layout.
+Returns:
+    Name of the new layout on success
+ 
+CSVOpen
+-------
+ 
+    CSVOpen(fileName)
+ 
+Undocumented
+ 
+ObjectNameFromAttributes
+------------------------
+ 
+    ObjectNameFromAttributes(object_id, strFormat=None)
+ 
+Evaluate a formatted string by retrieving the values from User Text Attributes
+The string format needs to contain fields referencing other attributes.
+For example: an object should contain the following as attributes.
+    NAME_FORMAT: {NAME}_{INDEX}
+    NAME: WP
+    INDEX: 002
+    
+    This will return a string WP_002. Refer to the wiki page
+Parameters:
+  object_id = the object's identifier
+  strFormat = string Format used to evaluate. Default to use the key attribute "NAME_FORMAT"
+  
+Returns:
+  A string representing a new name on success. None on error.
+ 
+GetUserText
+-----------
+ 
+    GetUserText(object_id, key=None, attached_to_geometry=False)
+ 
+Returns user text stored on an object.
+Parameters:
+  object_id = the object's identifies
+  key[opt] = the key name. If omitted all key names for an object are returned
+  attached_to_geometry[opt] = location on the object to retrieve the user text.
+Returns:
+  if key is specified, the associated value if successful
+  if key is not specified, a dictionary of all user text key and values associated with the location.
+ 
+TextObjectsByProperties
+-----------------------
+ 
+    TextObjectsByProperties(fontName=None, height=None, style=None, select=False)
+ 
+Returns identifiers of all text objects that has the same font property. 
+Parameters:
+  fontName = Font name to search for
+  select[opt] = Select the objects
+Returns:
+  A list of Guids identifying the objects.
+ 
+SetUserTextFromDict
+-------------------
+ 
+    SetUserTextFromDict(object_id, dataDict, attach_to_geometry=False)
+ 
+Sets or removes user text stored on an object using a dictionary
+Parameters:
+  object_id = the object's identifier
+  dataDict = dictionary of pairs of key and value
+  attach_to_geometry[opt] = location on the object to store the user text
+ 
+AnnotationProperties
+--------------------
+ 
+    AnnotationProperties(object_id, data=None)
+ 
+Undocumented
+ 
+BrepEdges
+---------
+ 
+    BrepEdges(object_id, toLayers=True)
+ 
+Duplicate Brep Edges and place them in the correct layers
+Parameters:
+  object_id: object extract edges from
+  toLayers[opt]: place them in correct layers and grouped based on name of brep
+Returns:
+  dictionary with keys: Naked, Interior, NonManifold. Each key has an associated list of geometry
+  
+ 
+ObjectsInBrep
+-------------
+ 
+    ObjectsInBrep(objects, brep)
+ 
+Undocumented
+ 
+DebugValues
+-----------
+ 
+    DebugValues(valueList, syncObjectList=None, colorRange=None, sourceRange=None, steps=10, descending=False)
+ 
+Undocumented
+ 
+GetUserTextAll
+--------------
+ 
+    GetUserTextAll(object_id)
+ 
+Returns user text stored on an object.
+Parameters:
+  object_id = the object's identifies
+Returns:
+  Dictionary of all key and value pairs attached on both Geometry and Attribute.
+ 
+TextObjectsByFont
+-----------------
+ 
+    TextObjectsByFont(fontName, select=False)
+ 
+Returns identifiers of all text objects that has the same font property. 
+Parameters:
+  fontName = Font name to search for
+  select[opt] = Select the objects
+Returns:
+  A list of Guids identifying the objects.
+ 
+ObjectLayerList
+---------------
+ 
+    ObjectLayerList(objects=None, sort=False)
+ 
+Returns a list of all the Layer Names for the objects
+Parameters:
+  objects:    If omitted, all objects in the document is used
+  sort:       Sort the list if True.
+Returns:
+  List of Layer Names
+  and a dictionary of all objects with layer name as key
+ 
+IsLoaded
+--------
+ 
+    IsLoaded()
+ 
+Undocumented
+ 
+AddDimLinearFromLine
+--------------------
+ 
+    AddDimLinearFromLine(curve, dimOffset=100.0, plane=None)
+ 
+Create an Aligned dimension from a line. Curve needs to be in Clockwise orientation.
+Parameters:
+  curve = Curve ID
+  dimOffset = Offset of dimension text
+Returns:
+  A list of Guids identifying the objects.
+ 
+DebugVector2
+------------
+ 
+    DebugVector2(start_pt, end_pt, name=None, layer=None, color=None)
+ 
+Undocumented
+ 
+FileOpen
+--------
+ 
+    FileOpen(filePath)
+ 
+Open file in the current Rhino instance. 
+Make sure the current working file is saved before continue. 
+Any modification will be discarded.
+
+filePath : Path of file to open.
+ 
+LayerTruncate
+-------------
+ 
+    LayerTruncate(layer_fullPath, index)
+ 
+Undocumented
+ 
+ObjectRefencePoint
+------------------
+ 
+    ObjectRefencePoint(obj, pull=True)
+ 
+Undocumented
+ 
+FileIsModifiedWithin
+--------------------
+ 
+    FileIsModifiedWithin(fileName, period)
+ 
+Undocumented
+ 
+TextObjectTextFormula
+---------------------
+ 
+    TextObjectTextFormula(object_id, textFormula=None)
+ 
+Returns or modifies the text string of a text object.
+Parameters:
+  object_id = the identifier of a text object
+  text [opt] = a new text string
+Returns:
+  if text is not specified, the current string value if successful
+  if text is specified, the previous string value if successful
+  None if not successful, or on error
+ 
+DebugVector
+-----------
+ 
+    DebugVector(start_pt, vector, name=None, layer=None, color=None)
+ 
+Undocumented
+ 
+DebugLine
+---------
+ 
+    DebugLine(start_pt, end_pt, name=None, layer=None, color=None)
+ 
+Undocumented
+ 
+MatchLayerAttributes
+--------------------
+ 
+    MatchLayerAttributes(target_layer_names, source_layer_name, visibility=False, lockState=False, color=True, materialIndex=True, lineType=True, plotColor=True, plotWeight=True)
+ 
+Matches, or copies the attributes of a source layer to a target layer. Full path is recommended for accurate identification of layers.
+Parameters:
+  target_layer_names = full path names or identifiers of layers to copy attributes to.
+  source_layer_name = full path name or identifier of layer to copy attributes from.
+Returns:
+  number of objects modified
+ 
+AddDimAlignedFromLine
+---------------------
+ 
+    AddDimAlignedFromLine(curve, dimOffset=100.0, plane=None)
+ 
+Create an Aligned dimension from a line. Curve needs to be in Clockwise orientation.
+Parameters:
+  curve = Curve ID
+  dimOffset = Offset of dimension text
+Returns:
+  A list of Guids identifying the objects.
+ 
+GeneratePlug
+------------
+ 
+    GeneratePlug(matThickness=1.0, plugLength=5.0)
+ 
+Undocumented
+ 
+GetRelativeFolder
+-----------------
+ 
+    GetRelativeFolder()
+ 
+Undocumented
+ 
+LoadConfig
+----------
+ 
+    LoadConfig()
+ 
+Undocumented
+ 
+ObjectProperties
+----------------
+ 
+    ObjectProperties(object_id, data=None)
+ 
+Undocumented
+ 
+ObjectsByLayout
+---------------
+ 
+    ObjectsByLayout(layout=None, filter=0)
+ 
+Returns identifiers of all objects based on the objects' geometry type.
+Parameters:
+  layout = name or guid of the specified layout.
+  type = The type(s) of geometry objects (points, curves, surfaces,
+         meshes, etc.) that can be selected. Object types can be
+         added together to filter several different kinds of geometry.
+         Please refer to rs.filter or Rhino object type.
+          
+Returns:
+  A list of Guids identifying the objects.
+ 
+CreaseAngle
+-----------
+ 
+    CreaseAngle(srfA, srfB, normalSegment=1)
+ 
+Calculate the crease angle between two surfaces. The angle segment is determined by the surface normal.
+
+Args:
+    srfA: Surface A
+    srfB: Surface B
+    normalSegment: 
+        If set to True, return the angle segment on the surface normal first.
+        If set to False, return the smallest angle first
+Returns:
+    Common Edge Curve ID, Angle and its Reflex Angle.
+ 
+Logger
+------
+ 
+    Logger(loggerName=None, fileName=None, console=False)
+ 
+Instantiate a logger object with default Formatter. 
+Default level is set to WARNING (based on the root logger)
+Args:
+    loggerName: Name of the logger. Usually __file__ or something sensible.
+    fileName: File name of the log file. If ommitted, logger will default to console
+    console: Display in console. Only effective when filename is specified.
+Returns:
+    Logger Object
+Reference: http://stackoverflow.com/questions/13733552/logger-configuration-to-log-to-file-and-print-to-stdout
