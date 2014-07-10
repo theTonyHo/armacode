@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# armaCode documentation build configuration file, created by
-# sphinx-quickstart on Fri Jun 20 15:11:12 2014.
+# armacode documentation build configuration file, created by
+# sphinx-quickstart on Tue Jul 08 13:12:12 2014.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -15,10 +15,16 @@
 import sys
 import os
 
+# Mock to ignore Modules
+import mock
+autodoc_mock_imports = ['Rhino', 'System', 'rhinoscriptsyntax', 'scriptcontext', 'clr', 'Grasshopper']
+for mod_name in autodoc_mock_imports :
+    sys.modules[mod_name] = mock.Mock()
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('..\\..\\..\\armacode\\Python'))
 
 # -- General configuration ------------------------------------------------
 
@@ -30,10 +36,12 @@ import os
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
+    #'sphinx.ext.napoleon', #Required for google style docstrings Sphinx >1.3
+    'sphinxcontrib.napoleon', #Required for google style docstrings
     'sphinx.ext.ifconfig',
+    'sphinx.ext.viewcode'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -49,7 +57,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'armaCode'
+project = u'armacode'
 copyright = u'2014, Tony Ho'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -182,7 +190,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'armaCodedoc'
+htmlhelp_basename = 'armacodedoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -202,7 +210,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'armaCode.tex', u'armaCode Documentation',
+  ('index', 'armacode.tex', u'armacode Documentation',
    u'Tony Ho', 'manual'),
 ]
 
@@ -232,7 +240,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'armacode', u'armaCode Documentation',
+    ('index', 'armacode', u'armacode Documentation',
      [u'Tony Ho'], 1)
 ]
 
@@ -246,8 +254,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'armaCode', u'armaCode Documentation',
-   u'Tony Ho', 'armaCode', 'One line description of project.',
+  ('index', 'armacode', u'armacode Documentation',
+   u'Tony Ho', 'armacode', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -267,13 +275,13 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'armaCode'
+epub_title = u'armacode'
 epub_author = u'Tony Ho'
 epub_publisher = u'Tony Ho'
 epub_copyright = u'2014, Tony Ho'
 
 # The basename for the epub file. It defaults to the project name.
-#epub_basename = u'armaCode'
+#epub_basename = u'armacode'
 
 # The HTML theme for the epub output. Since the default themes are not optimized
 # for small screen space, using the same theme for HTML and epub output is
@@ -333,6 +341,77 @@ epub_exclude_files = ['search.html']
 # If false, no index is generated.
 #epub_use_index = True
 
+#Bootstrap theme and bootswatch
+import sphinx_bootstrap_theme
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
-# Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/': None}
+# (Optional) Logo. Should be small enough to fit the navbar (ideally 24x24).
+# Path should be relative to the ``_static`` files directory.
+html_logo = "ar-ma_logo.png"
+
+# Theme options are theme-specific and customize the look and feel of a
+# theme further.
+html_theme_options = {
+    # Navigation bar title. (Default: ``project`` value)
+    #'navbar_title': "Demo",
+
+    # Tab name for entire site. (Default: "Site")
+    #'navbar_site_name': "Site",
+
+    # A list of tuples containing pages or urls to link to.
+    # Valid tuples should be in the following forms:
+    #    (name, page)                 # a link to a page
+    #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
+    #    (name, "http://example.com", True) # arbitrary absolute url
+    # Note the "1" or "True" value above as the third argument to indicate
+    # an arbitrary url.
+    # 'navbar_links': [
+    #     ("Examples", "examples"),
+    #     ("Link", "http://example.com", True),
+    # ],
+
+    # Render the next and previous page links in navbar. (Default: true)
+    'navbar_sidebarrel': True,
+
+    # Render the current pages TOC in the navbar. (Default: true)
+    'navbar_pagenav': True,
+
+    # Tab name for the current pages TOC. (Default: "Page")
+    #'navbar_pagenav_name': "Page",
+
+    # Global TOC depth for "site" navbar tab. (Default: 1)
+    # Switching to -1 shows all levels.
+    'globaltoc_depth': 2,
+
+    # Include hidden TOCs in Site navbar?
+    #
+    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
+    # non-hidden ``toctree`` directives in the same page, or else the build
+    # will break.
+    #
+    # Values: "true" (default) or "false"
+    'globaltoc_includehidden': "true",
+
+    # HTML navbar class (Default: "navbar") to attach to <div> element.
+    # For black navbar, do "navbar navbar-inverse"
+    #'navbar_class': "navbar navbar-inverse",
+
+    # Fix navigation bar to top of page?
+    # Values: "true" (default) or "false"
+    'navbar_fixed_top': "true",
+
+    # Location of link to source.
+    # Options are "nav" (default), "footer" or anything else to exclude.
+    'source_link_position': "nav",
+
+    # Bootswatch (http://bootswatch.com/) theme.
+    #
+    # Options are nothing with "" (default) or the name of a valid theme
+    # such as "amelia" or "cosmo".
+    'bootswatch_theme': "ar-ma",
+
+    # Choose Bootstrap version.
+    # Values: "3" (default) or "2" (in quotes)
+    'bootstrap_version': "3"
+}

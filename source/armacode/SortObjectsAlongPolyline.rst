@@ -1,0 +1,3 @@
+SortObjectsAlongPolyline
+------------------------
+Undocumented

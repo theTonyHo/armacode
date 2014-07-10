@@ -1,0 +1,3 @@
+AnnotationProperties
+--------------------
+Undocumented

@@ -115,9 +115,9 @@ if "%1" == "qthelp" (
 	echo.
 	echo.Build finished; now you can run "qcollectiongenerator" with the ^
 .qhcp project file in %BUILDDIR%/qthelp, like this:
-	echo.^> qcollectiongenerator %BUILDDIR%\qthelp\armaCode.qhcp
+	echo.^> qcollectiongenerator %BUILDDIR%\qthelp\armacode.qhcp
 	echo.To view the help file:
-	echo.^> assistant -collectionFile %BUILDDIR%\qthelp\armaCode.ghc
+	echo.^> assistant -collectionFile %BUILDDIR%\qthelp\armacode.ghc
 	goto end
 )
 
@@ -240,4 +240,3 @@ if "%1" == "pseudoxml" (
 )
 
 :end
-exit

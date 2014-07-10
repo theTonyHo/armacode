@@ -1,0 +1,10 @@
+Logger
+------
+Instantiate a logger object with default Formatter.
+Default level is set to WARNING (based on the root logger)
+:param loggerName: Name of the logger. Usually __file__ or something sensible.
+:param fileName: File name of the log file. If ommitted, logger will default to console
+:param console: Display in console. Only effective when filename is specified.
+
+:returns: Logger Object
+Reference: http://stackoverflow.com/questions/13733552/logger-configuration-to-log-to-file-and-print-to-stdout

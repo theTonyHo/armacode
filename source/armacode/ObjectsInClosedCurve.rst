@@ -1,0 +1,3 @@
+ObjectsInClosedCurve
+--------------------
+Undocumented

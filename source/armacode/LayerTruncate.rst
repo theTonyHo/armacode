@@ -1,0 +1,3 @@
+LayerTruncate
+-------------
+Undocumented

@@ -1,0 +1,3 @@
+SortObjectsAlongCurve
+---------------------
+Undocumented
