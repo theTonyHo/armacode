@@ -39,7 +39,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     #'sphinx.ext.napoleon', #Required for google style docstrings Sphinx >1.3
-    'sphinxcontrib.napoleon', #Required for google style docstrings
+    #'sphinxcontrib.napoleon', #Required for google style docstrings
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode'
 ]
