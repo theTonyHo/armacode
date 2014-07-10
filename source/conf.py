@@ -21,6 +21,31 @@ autodoc_mock_imports = ['Rhino', 'System', 'rhinoscriptsyntax', 'scriptcontext',
 for mod_name in autodoc_mock_imports :
     sys.modules[mod_name] = mock.Mock()
 
+class Mock(object):
+
+    __all__ = []
+
+    def __init__(self, *args, **kwargs):
+        pass
+
+    def __call__(self, *args, **kwargs):
+        return Mock()
+
+    @classmethod
+    def __getattr__(cls, name):
+        if name in ('__file__', '__path__'):
+            return '/dev/null'
+        elif name[0] == name[0].upper():
+            mockType = type(name, (), {})
+            mockType.__module__ = __name__
+            return mockType
+        else:
+            return Mock()
+
+MOCK_MODULES = ['Rhino', 'System', 'rhinoscriptsyntax', 'scriptcontext', 'clr', 'Grasshopper']
+for mod_name in MOCK_MODULES:
+    sys.modules[mod_name] = Mock()
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -341,79 +366,82 @@ epub_exclude_files = ['search.html']
 # If false, no index is generated.
 #epub_use_index = True
 
-#Bootstrap theme and bootswatch
-"""
-#import sphinx_bootstrap_theme
-html_theme = 'bootstrap'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+# Read the docs stuff
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if not on_rtd:
+    import sphinx_bootstrap_theme
+    #Bootstrap theme and bootswatch
 
-# (Optional) Logo. Should be small enough to fit the navbar (ideally 24x24).
-# Path should be relative to the ``_static`` files directory.
-html_logo = "ar-ma_logo.png"
+    #import sphinx_bootstrap_theme
+    html_theme = 'bootstrap'
+    html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
-# Theme options are theme-specific and customize the look and feel of a
-# theme further.
-html_theme_options = {
-    # Navigation bar title. (Default: ``project`` value)
-    #'navbar_title': "Demo",
+    # (Optional) Logo. Should be small enough to fit the navbar (ideally 24x24).
+    # Path should be relative to the ``_static`` files directory.
+    html_logo = "ar-ma_logo.png"
 
-    # Tab name for entire site. (Default: "Site")
-    #'navbar_site_name': "Site",
+    # Theme options are theme-specific and customize the look and feel of a
+    # theme further.
+    html_theme_options = {
+        # Navigation bar title. (Default: ``project`` value)
+        #'navbar_title': "Demo",
 
-    # A list of tuples containing pages or urls to link to.
-    # Valid tuples should be in the following forms:
-    #    (name, page)                 # a link to a page
-    #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
-    #    (name, "http://example.com", True) # arbitrary absolute url
-    # Note the "1" or "True" value above as the third argument to indicate
-    # an arbitrary url.
-    # 'navbar_links': [
-    #     ("Examples", "examples"),
-    #     ("Link", "http://example.com", True),
-    # ],
+        # Tab name for entire site. (Default: "Site")
+        #'navbar_site_name': "Site",
 
-    # Render the next and previous page links in navbar. (Default: true)
-    'navbar_sidebarrel': True,
+        # A list of tuples containing pages or urls to link to.
+        # Valid tuples should be in the following forms:
+        #    (name, page)                 # a link to a page
+        #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
+        #    (name, "http://example.com", True) # arbitrary absolute url
+        # Note the "1" or "True" value above as the third argument to indicate
+        # an arbitrary url.
+        # 'navbar_links': [
+        #     ("Examples", "examples"),
+        #     ("Link", "http://example.com", True),
+        # ],
 
-    # Render the current pages TOC in the navbar. (Default: true)
-    'navbar_pagenav': True,
+        # Render the next and previous page links in navbar. (Default: true)
+        'navbar_sidebarrel': True,
 
-    # Tab name for the current pages TOC. (Default: "Page")
-    #'navbar_pagenav_name': "Page",
+        # Render the current pages TOC in the navbar. (Default: true)
+        'navbar_pagenav': True,
 
-    # Global TOC depth for "site" navbar tab. (Default: 1)
-    # Switching to -1 shows all levels.
-    'globaltoc_depth': 2,
+        # Tab name for the current pages TOC. (Default: "Page")
+        #'navbar_pagenav_name': "Page",
 
-    # Include hidden TOCs in Site navbar?
-    #
-    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
-    # non-hidden ``toctree`` directives in the same page, or else the build
-    # will break.
-    #
-    # Values: "true" (default) or "false"
-    'globaltoc_includehidden': "true",
+        # Global TOC depth for "site" navbar tab. (Default: 1)
+        # Switching to -1 shows all levels.
+        'globaltoc_depth': 2,
 
-    # HTML navbar class (Default: "navbar") to attach to <div> element.
-    # For black navbar, do "navbar navbar-inverse"
-    #'navbar_class': "navbar navbar-inverse",
+        # Include hidden TOCs in Site navbar?
+        #
+        # Note: If this is "false", you cannot have mixed ``:hidden:`` and
+        # non-hidden ``toctree`` directives in the same page, or else the build
+        # will break.
+        #
+        # Values: "true" (default) or "false"
+        'globaltoc_includehidden': "true",
 
-    # Fix navigation bar to top of page?
-    # Values: "true" (default) or "false"
-    'navbar_fixed_top': "true",
+        # HTML navbar class (Default: "navbar") to attach to <div> element.
+        # For black navbar, do "navbar navbar-inverse"
+        #'navbar_class': "navbar navbar-inverse",
 
-    # Location of link to source.
-    # Options are "nav" (default), "footer" or anything else to exclude.
-    'source_link_position': "nav",
+        # Fix navigation bar to top of page?
+        # Values: "true" (default) or "false"
+        'navbar_fixed_top': "true",
 
-    # Bootswatch (http://bootswatch.com/) theme.
-    #
-    # Options are nothing with "" (default) or the name of a valid theme
-    # such as "amelia" or "cosmo".
-    'bootswatch_theme': "ar-ma",
+        # Location of link to source.
+        # Options are "nav" (default), "footer" or anything else to exclude.
+        'source_link_position': "nav",
 
-    # Choose Bootstrap version.
-    # Values: "3" (default) or "2" (in quotes)
-    'bootstrap_version': "3"
-}
-"""
+        # Bootswatch (http://bootswatch.com/) theme.
+        #
+        # Options are nothing with "" (default) or the name of a valid theme
+        # such as "amelia" or "cosmo".
+        'bootswatch_theme': "ar-ma",
+
+        # Choose Bootstrap version.
+        # Values: "3" (default) or "2" (in quotes)
+        'bootstrap_version': "3"
+    }
