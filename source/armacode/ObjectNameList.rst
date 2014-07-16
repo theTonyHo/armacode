@@ -1,5 +1,9 @@
 ObjectNameList
 --------------
+
+.. py:function:: ObjectNameList(objects=None, sort=False)
+
+
 Returns a list of all the Names for the objects
 :param objects: If omitted, the list of all the layers
 :param sort: Sort the list if True.

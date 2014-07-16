@@ -1,5 +1,9 @@
 SetUserText
 -----------
+
+.. py:function:: SetUserText(object_id, key, value=None, attach_to_geometry=False)
+
+
 Sets or removes user text stored on an object.
 
 

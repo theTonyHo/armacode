@@ -378,7 +378,7 @@ if not on_rtd:
 
     # (Optional) Logo. Should be small enough to fit the navbar (ideally 24x24).
     # Path should be relative to the ``_static`` files directory.
-    html_logo = "ar-ma_logo.png"
+    html_logo = "_static\\ar-ma_logo.png"
 
     # Theme options are theme-specific and customize the look and feel of a
     # theme further.

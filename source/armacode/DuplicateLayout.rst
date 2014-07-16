@@ -1,5 +1,9 @@
 DuplicateLayout
 ---------------
+
+.. py:function:: DuplicateLayout(layout, title=None)
+
+
 Duplicate a Layout
 :param layout: Name or ID of layout to duplicate
 :param title: Title for the new Layout.

@@ -1,5 +1,9 @@
 ObjectGroupList
 ---------------
+
+.. py:function:: ObjectGroupList(objects=None, sort=False)
+
+
 Returns a list of all the Group Names for the objects
 :param objects: If omitted, all objects in the document is used
 :param sort: Sort the list if True.

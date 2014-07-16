@@ -1,5 +1,9 @@
 ProgressBar
 -----------
+
+.. py:function:: ProgressBar(value, lower, upper, label='', embed_label=True, show_percent=True)
+
+
 Display the progress of the script using the built-in Progress Meter in Status Bar.
 Automatically show and hide meter at start and end.
 

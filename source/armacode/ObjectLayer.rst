@@ -1,5 +1,9 @@
 ObjectLayer
 -----------
+
+.. py:function:: ObjectLayer(object_id, layer=None)
+
+
 Returns or modifies the layer of an object
 
 

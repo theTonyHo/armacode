@@ -30,7 +30,7 @@
     <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="armacode 1.0.1 documentation" href="#" />
-    <link rel="next" title="ARMA_Info" href="armacode/ARMA_Info.html" />
+    <link rel="next" title="AddDimAlignedFromLine" href="armacode/AddDimAlignedFromLine.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -67,7 +67,6 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="armacode/ARMA_Info.html">ARMA_Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/AddDimAlignedFromLine.html">AddDimAlignedFromLine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/AddDimLinearFromLine.html">AddDimLinearFromLine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/AddLayer.html">AddLayer</a></li>
@@ -88,8 +87,10 @@
 <li class="toctree-l1"><a class="reference internal" href="armacode/DebugValues.html">DebugValues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/DebugVector.html">DebugVector</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/DebugVector2.html">DebugVector2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/DictionaryMerge.html">DictionaryMerge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/DimensionUserText.html">DimensionUserText</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/DuplicateLayout.html">DuplicateLayout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/ExplodeBlockInstance.html">ExplodeBlockInstance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/FileIsModifiedWithin.html">FileIsModifiedWithin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/FileOpen.html">FileOpen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/GHParallel.html">GHParallel</a></li>
@@ -110,6 +111,7 @@
 <li class="toctree-l1"><a class="reference internal" href="armacode/Logger.html">Logger</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/MatchLayerAttributes.html">MatchLayerAttributes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/MatchObjectAttributes.html">MatchObjectAttributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/MergeUserText.html">MergeUserText</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/NumberPadding.html">NumberPadding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/ObjectGroupList.html">ObjectGroupList</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/ObjectLayer.html">ObjectLayer</a></li>
@@ -173,7 +175,7 @@
               
                 
   <li>
-    <a href="armacode/ARMA_Info.html" title="Next Chapter: ARMA_Info"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">ARMA_Info &raquo;</span>
+    <a href="armacode/AddDimAlignedFromLine.html" title="Next Chapter: AddDimAlignedFromLine"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">AddDimAlignedFro... &raquo;</span>
     </a>
   </li>
               
@@ -212,7 +214,6 @@
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="armacode/ARMA_Info.html">ARMA_Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/AddDimAlignedFromLine.html">AddDimAlignedFromLine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/AddDimLinearFromLine.html">AddDimLinearFromLine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/AddLayer.html">AddLayer</a></li>
@@ -233,8 +234,10 @@
 <li class="toctree-l1"><a class="reference internal" href="armacode/DebugValues.html">DebugValues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/DebugVector.html">DebugVector</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/DebugVector2.html">DebugVector2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/DictionaryMerge.html">DictionaryMerge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/DimensionUserText.html">DimensionUserText</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/DuplicateLayout.html">DuplicateLayout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/ExplodeBlockInstance.html">ExplodeBlockInstance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/FileIsModifiedWithin.html">FileIsModifiedWithin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/FileOpen.html">FileOpen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/GHParallel.html">GHParallel</a></li>
@@ -255,6 +258,7 @@
 <li class="toctree-l1"><a class="reference internal" href="armacode/Logger.html">Logger</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/MatchLayerAttributes.html">MatchLayerAttributes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/MatchObjectAttributes.html">MatchObjectAttributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/MergeUserText.html">MergeUserText</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/NumberPadding.html">NumberPadding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/ObjectGroupList.html">ObjectGroupList</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/ObjectLayer.html">ObjectLayer</a></li>

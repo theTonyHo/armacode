@@ -1,5 +1,9 @@
 ParallelRun
 -----------
+
+.. py:function:: ParallelRun(function, data_list, flatten_results=False)
+
+
 For each item in data_list execute the input function. Execution is
 done on as many threads as there are CPUs on the computer.
 Note that for function with more than one parameter, a dictionary

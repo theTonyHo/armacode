@@ -1,15 +1,24 @@
 ObjectNameFromAttributes
 ------------------------
-Evaluate a formatted string by retrieving the values from User Text Attributes
-The string format needs to contain fields referencing other attributes.
-For example: an object should contain the following as attributes.
-    NAME_FORMAT: {NAME}_{INDEX}
-    NAME: WP
-    INDEX: 002
 
-    This will return a string WP_002. Refer to the wiki page
+.. py:function:: ObjectNameFromAttributes(object_id, strFormat=None)
+
+
+Set an object name by evaluating a formatted string
+The string format needs to contain fields referencing other attributes.
+Fields provided in the formatted string are substrituted by the values from User Text Attributes
+
 
 
 
 
 :returns: A string representing a new name on success. None on error.
+
+.. rubric:: Example
+
+An object should contain the following as attributes.
+    NAME_FORMAT: {NAME}_{INDEX}
+    NAME: WP
+    INDEX: 002
+
+This will return a string ``WP_002``. Refer to the wiki page

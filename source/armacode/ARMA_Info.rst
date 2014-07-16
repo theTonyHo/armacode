@@ -1,3 +1,0 @@
-ARMA_Info
----------
-Undocumented

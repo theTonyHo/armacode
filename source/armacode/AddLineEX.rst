@@ -1,5 +1,9 @@
 AddLineEX
 ---------
+
+.. py:function:: AddLineEX(startPoint, endPoint, tolerance=None)
+
+
 Adds a line curve to the current model.
 
 
