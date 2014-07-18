@@ -6,19 +6,22 @@
 Welcome to armacode's documentation!
 ====================================
 
-Contents:
+Table of Content
 
 .. toctree::
-   :maxdepth: 5
-   :glob:
+   :maxdepth: 2
    
-   armacode/*
+   ./armacode.rst
+   ./python.rst
+   ./conventions.rst
 
 
-Indices and tables
-==================
+Index
+=====
 
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+
+
+.. :ref:`modindex`
+.. :ref:`search`
 

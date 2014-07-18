@@ -1,7 +1,7 @@
-ObjectNameFromAttributes
-------------------------
+StringFromAttributes
+--------------------
 
-.. py:function:: ObjectNameFromAttributes(object_id, strFormat=None)
+.. py:function:: StringFromAttributes(object_id, strFormat=None)
 
 
 Set an object name by evaluating a formatted string
@@ -14,11 +14,12 @@ Fields provided in the formatted string are substrituted by the values from User
 
 :returns: A string representing a new name on success. None on error.
 
-.. rubric:: Example
+.. rubric:: Notes
 
-An object should contain the following as attributes.
+An object should contain the following as attributes.::
+
     NAME_FORMAT: {NAME}_{INDEX}
     NAME: WP
     INDEX: 002
 
-This will return a string ``WP_002``. Refer to the wiki page
+This will return a string ``WP_002``. Refer naming automation workflow.
