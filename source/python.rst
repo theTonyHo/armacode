@@ -32,7 +32,7 @@ Docstring
     Help:
         remarks content
     
-    **TODO and Additional Sections
+    TODO and Additional Sections (See Napoleon readthedocs)
     """
 
 .. note :: 
@@ -47,7 +47,7 @@ Docstring
 
 * `Sphinx compatible examples <http://sphinx-doc.org/latest/ext/example_google.html>`_
 
-* `Napoleon Google Docstrings Example <http://sphinxcontrib-napoleon.readthedocs.org/en/latest/example_google.html>`_
+* `Napoleon Google Docstrings <http://sphinxcontrib-napoleon.readthedocs.org/en/latest/#docstring-sections>`_
 
 Folder structure
 ================
@@ -55,6 +55,7 @@ Folder structure
 The folder structure for armacode should be organised following the following structure::
 
         armacode/
+            __init__.py
             classes/
                     __init__.py
                     ClassBaseOne/
@@ -76,7 +77,6 @@ The folder structure for armacode should be organised following the following st
                     toolOne.py
                     toolTwo.py
                     toolThree.py
-            __init__.py
 
 
 
@@ -90,7 +90,7 @@ Each class should be in their own ClassBase folder. For example, Particle, Movin
 Access the classes with the following::
 
     import armacode
-    p = armacode.classes.Particle()
+    p = armacode.classes.ParticleSystem.Particle()
 
 
 Libraries

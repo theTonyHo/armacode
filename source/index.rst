@@ -14,6 +14,7 @@ Table of Content
    ./armacode.rst
    ./python.rst
    ./conventions.rst
+   ./howto.rst
 
 
 Index
