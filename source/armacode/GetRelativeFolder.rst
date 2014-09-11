@@ -1,7 +1,7 @@
 GetRelativeFolder
 -----------------
 
-.. py:method:: GetRelativeFolder()
+.. py:function:: GetRelativeFolder()
 
 
 Undocumented

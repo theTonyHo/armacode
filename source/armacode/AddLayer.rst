@@ -1,7 +1,7 @@
 AddLayer
 --------
 
-.. py:method:: AddLayer(name=None, color=None, visible=True, locked=False)
+.. py:function:: AddLayer(name=None, color=None, visible=True, locked=False)
 
 
 Add a new layer to the document.

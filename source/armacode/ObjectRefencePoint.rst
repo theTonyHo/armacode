@@ -1,7 +1,7 @@
 ObjectRefencePoint
 ------------------
 
-.. py:method:: ObjectRefencePoint(obj, pull=True)
+.. py:function:: ObjectRefencePoint(obj, pull=True)
 
 
 Undocumented

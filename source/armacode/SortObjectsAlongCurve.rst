@@ -1,7 +1,7 @@
 SortObjectsAlongCurve
 ---------------------
 
-.. py:method:: SortObjectsAlongCurve(objects, crv)
+.. py:function:: SortObjectsAlongCurve(objects, crv)
 
 
 Undocumented

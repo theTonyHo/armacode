@@ -1,7 +1,7 @@
 GetProjectFolder
 ----------------
 
-.. py:method:: GetProjectFolder(folderName='PROJECTS')
+.. py:function:: GetProjectFolder(folderName='PROJECTS')
 
 
 Returns the project folder guided by the folder where all projects are located.

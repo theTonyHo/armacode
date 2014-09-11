@@ -1,7 +1,7 @@
 IsLoaded
 --------
 
-.. py:method:: IsLoaded()
+.. py:function:: IsLoaded()
 
 
 Undocumented

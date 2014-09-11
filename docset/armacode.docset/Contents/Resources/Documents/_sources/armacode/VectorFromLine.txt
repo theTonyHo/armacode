@@ -1,7 +1,7 @@
 VectorFromLine
 --------------
 
-.. py:method:: VectorFromLine(line, reverse=False)
+.. py:function:: VectorFromLine(line, reverse=False)
 
 
 Undocumented

@@ -1,7 +1,7 @@
 LayerTruncate
 -------------
 
-.. py:method:: LayerTruncate(layer_fullPath, index)
+.. py:function:: LayerTruncate(layer_fullPath, index)
 
 
 Undocumented

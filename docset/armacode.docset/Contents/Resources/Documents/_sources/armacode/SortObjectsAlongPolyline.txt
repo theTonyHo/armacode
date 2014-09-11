@@ -1,7 +1,7 @@
 SortObjectsAlongPolyline
 ------------------------
 
-.. py:method:: SortObjectsAlongPolyline(objects, polyline, tag=True)
+.. py:function:: SortObjectsAlongPolyline(objects, polyline, tag=True)
 
 
 Undocumented

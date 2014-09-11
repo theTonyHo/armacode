@@ -1,7 +1,7 @@
 GHLockAfterSolve
 ----------------
 
-.. py:method:: GHLockAfterSolve(ghPythonComponent, activate, message='Solution Solved')
+.. py:function:: GHLockAfterSolve(ghPythonComponent, activate, message='Solution Solved')
 
 
 Lock the GHPython component after solve to prevent further looping.

@@ -1,7 +1,7 @@
 PointClosestObjects
 -------------------
 
-.. py:method:: PointClosestObjects(point, object_ids, tolerance=None)
+.. py:function:: PointClosestObjects(point, object_ids, tolerance=None)
 
 
 Finds the object that is closest to a test point within a tolerance

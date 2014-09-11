@@ -1,7 +1,7 @@
 myexcepthook
 ------------
 
-.. py:method:: myexcepthook(exctype, value, traceback)
+.. py:function:: myexcepthook(exctype, value, traceback)
 
 
 Undocumented

@@ -1,7 +1,7 @@
 IsGHPython
 ----------
 
-.. py:method:: IsGHPython(debug=False)
+.. py:function:: IsGHPython(debug=False)
 
 
 Undocumented

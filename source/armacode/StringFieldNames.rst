@@ -1,7 +1,7 @@
 StringFieldNames
 ----------------
 
-.. py:method:: StringFieldNames(strFormat)
+.. py:function:: StringFieldNames(strFormat)
 
 
 Undocumented

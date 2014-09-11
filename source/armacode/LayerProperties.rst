@@ -1,7 +1,7 @@
 LayerProperties
 ---------------
 
-.. py:method:: LayerProperties(layer_id, data=None)
+.. py:function:: LayerProperties(layer_id, data=None)
 
 
 Undocumented

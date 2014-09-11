@@ -1,7 +1,7 @@
 UnfoldSurface
 -------------
 
-.. py:method:: UnfoldSurface(srfA, srfB, additionalObjects=None)
+.. py:function:: UnfoldSurface(srfA, srfB, additionalObjects=None)
 
 
 Undocumented

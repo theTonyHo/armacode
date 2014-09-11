@@ -1,7 +1,7 @@
 ObjectsInBrep
 -------------
 
-.. py:method:: ObjectsInBrep(objects, brep)
+.. py:function:: ObjectsInBrep(objects, brep)
 
 
 Undocumented

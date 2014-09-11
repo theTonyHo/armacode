@@ -1,7 +1,7 @@
 BrepEdges
 ---------
 
-.. py:method:: BrepEdges(object_id, toLayers=True)
+.. py:function:: BrepEdges(object_id, toLayers=True)
 
 
 Duplicate Brep Edges and place them in the correct layers

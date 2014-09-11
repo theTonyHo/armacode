@@ -1,7 +1,7 @@
 MatchObjectAttributes
 ---------------------
 
-.. py:method:: MatchObjectAttributes(target_ids, source_id=None)
+.. py:function:: MatchObjectAttributes(target_ids, source_id=None)
 
 
 Matches, or copies the attributes of a source object to a target object. Retains the User Strings data.

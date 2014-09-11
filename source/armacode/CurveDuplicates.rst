@@ -1,7 +1,7 @@
 CurveDuplicates
 ---------------
 
-.. py:method:: CurveDuplicates(curve_IDs, tolerance=None, return_Duplicate=False)
+.. py:function:: CurveDuplicates(curve_IDs, tolerance=None, return_Duplicate=False)
 
 
 Remove Duplicated curves

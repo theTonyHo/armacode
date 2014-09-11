@@ -1,7 +1,7 @@
 InspectObject
 -------------
 
-.. py:method:: InspectObject(object=None)
+.. py:function:: InspectObject(object=None)
 
 
 Undocumented

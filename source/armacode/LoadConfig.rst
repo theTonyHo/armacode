@@ -1,7 +1,7 @@
 LoadConfig
 ----------
 
-.. py:method:: LoadConfig()
+.. py:function:: LoadConfig()
 
 
 Undocumented

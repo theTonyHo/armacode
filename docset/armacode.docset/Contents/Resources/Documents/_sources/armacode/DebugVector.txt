@@ -1,7 +1,7 @@
 DebugVector
 -----------
 
-.. py:method:: DebugVector(start_pt, vector, name=None, layer=None, color=None)
+.. py:function:: DebugVector(start_pt, vector, name=None, layer=None, color=None)
 
 
 Add a line with end arrow for visualisation.

@@ -1,7 +1,7 @@
 main
 ----
 
-.. py:method:: main()
+.. py:function:: main()
 
 
 Undocumented

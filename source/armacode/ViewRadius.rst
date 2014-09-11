@@ -1,7 +1,7 @@
 ViewRadius
 ----------
 
-.. py:method:: ViewRadius(view=None, radius=None)
+.. py:function:: ViewRadius(view=None, radius=None)
 
 
 Returns or sets the radius of a parallel-projected view. Useful

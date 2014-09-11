@@ -1,7 +1,7 @@
 ProcessPerFile
 --------------
 
-.. py:method:: ProcessPerFile(filePath, saveChanges, method, *args, **kwargs)
+.. py:function:: ProcessPerFile(filePath, saveChanges, method, *args, **kwargs)
 
 
 Run a function / method on the specified file with the required arguments

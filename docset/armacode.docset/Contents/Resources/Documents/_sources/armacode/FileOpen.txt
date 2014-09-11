@@ -1,7 +1,7 @@
 FileOpen
 --------
 
-.. py:method:: FileOpen(filePath)
+.. py:function:: FileOpen(filePath)
 
 
 Open file in the current Rhino instance.

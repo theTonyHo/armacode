@@ -1,7 +1,7 @@
 TextObjectTextFormula
 ---------------------
 
-.. py:method:: TextObjectTextFormula(object_id, textFormula=None)
+.. py:function:: TextObjectTextFormula(object_id, textFormula=None)
 
 
 Returns or modifies the text string of a text object.

@@ -1,7 +1,7 @@
 ExplodeBlockInstance
 --------------------
 
-.. py:method:: ExplodeBlockInstance(block_id, onlyVisible=False)
+.. py:function:: ExplodeBlockInstance(block_id, onlyVisible=False)
 
 
 Explode Block Instance recursively to a list of geometries.

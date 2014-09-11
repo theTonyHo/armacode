@@ -1,7 +1,7 @@
 SetUserAttributeToObjects
 -------------------------
 
-.. py:method:: SetUserAttributeToObjects(objects, strFormat, incremental=True)
+.. py:function:: SetUserAttributeToObjects(objects, strFormat, incremental=True)
 
 
 Undocumented

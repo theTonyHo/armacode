@@ -1,7 +1,7 @@
 AddLinearDimension
 ------------------
 
-.. py:method:: AddLinearDimension(plane, start_point, end_point, point_on_dimension_line)
+.. py:function:: AddLinearDimension(plane, start_point, end_point, point_on_dimension_line)
 
 
 Adds a linear dimension to the document

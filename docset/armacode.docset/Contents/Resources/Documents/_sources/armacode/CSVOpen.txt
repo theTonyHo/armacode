@@ -1,7 +1,7 @@
 CSVOpen
 -------
 
-.. py:method:: CSVOpen(fileName)
+.. py:function:: CSVOpen(fileName)
 
 
 Undocumented

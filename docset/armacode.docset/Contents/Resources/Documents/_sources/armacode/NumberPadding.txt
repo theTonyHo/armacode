@@ -1,7 +1,7 @@
 NumberPadding
 -------------
 
-.. py:method:: NumberPadding(strFormat, value)
+.. py:function:: NumberPadding(strFormat, value)
 
 
 Format the value with a string format. the value is represented by the # character.

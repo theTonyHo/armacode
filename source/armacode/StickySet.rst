@@ -1,7 +1,7 @@
 StickySet
 ---------
 
-.. py:method:: StickySet(name, *args, **kwargs)
+.. py:function:: StickySet(name, *args, **kwargs)
 
 
 Save the settings to scriptcontext sticky
