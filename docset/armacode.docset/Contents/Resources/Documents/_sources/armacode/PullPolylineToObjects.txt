@@ -1,7 +1,7 @@
 PullPolylineToObjects
 ---------------------
 
-.. py:function:: PullPolylineToObjects(objects, polyline)
+.. py:Function:: PullPolylineToObjects(objects, polyline)
 
 
 Undocumented

@@ -1,7 +1,7 @@
 ViewSize
 --------
 
-.. py:function:: ViewSize(view=None)
+.. py:Function:: ViewSize(view=None)
 
 
 Returns the width and height in pixels of the specified view

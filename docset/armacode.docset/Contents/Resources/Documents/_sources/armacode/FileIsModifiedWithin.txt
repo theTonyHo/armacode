@@ -1,7 +1,7 @@
 FileIsModifiedWithin
 --------------------
 
-.. py:function:: FileIsModifiedWithin(fileName, period)
+.. py:Function:: FileIsModifiedWithin(fileName, period)
 
 
 Undocumented

@@ -1,7 +1,7 @@
 ObjectsInView
 -------------
 
-.. py:function:: ObjectsInView(view=None, select=False, in_window=True)
+.. py:Function:: ObjectsInView(view=None, select=False, in_window=True)
 
 
 Return Objects visible in the viewport

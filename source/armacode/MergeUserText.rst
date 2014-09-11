@@ -1,7 +1,7 @@
 MergeUserText
 -------------
 
-.. py:function:: MergeUserText(objA, otherObject, overwrite=True)
+.. py:Function:: MergeUserText(objA, otherObject, overwrite=True)
 
 
 Undocumented

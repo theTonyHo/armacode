@@ -1,7 +1,7 @@
 ParallelRun
 -----------
 
-.. py:function:: ParallelRun(function, data_list, flatten_results=False)
+.. py:Function:: ParallelRun(function, data_list, flatten_results=False)
 
 
 For each item in data_list execute the input function. Execution is

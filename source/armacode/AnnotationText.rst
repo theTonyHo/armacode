@@ -1,7 +1,7 @@
 AnnotationText
 --------------
 
-.. py:function:: AnnotationText(object_id, usertext=None)
+.. py:Function:: AnnotationText(object_id, usertext=None)
 
 
 Returns of modifies the user text string of a dimension object.

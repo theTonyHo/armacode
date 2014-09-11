@@ -1,7 +1,7 @@
 LayerIds
 --------
 
-.. py:function:: LayerIds()
+.. py:Function:: LayerIds()
 
 
 Undocumented

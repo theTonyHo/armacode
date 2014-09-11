@@ -1,7 +1,7 @@
 RandomColor
 -----------
 
-.. py:function:: RandomColor()
+.. py:Function:: RandomColor()
 
 
 Pick a random color from the list of default colors.

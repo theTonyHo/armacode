@@ -74,7 +74,7 @@ def DescribeMethod(_object):
     methodSyntax = MethodSyntax(_object)
     
     if methodSyntax:
-        methodSyntax = "\n.. py:function:: {}\n\n".format(methodSyntax)
+        methodSyntax = "\n.. py:Function:: {}\n\n".format(methodSyntax)
     
     restDocstring = MethodDoc(_object)
     
@@ -122,7 +122,7 @@ def ProcessMethods(dataDict, writeToDirectory=None, sortMembers=True, indexFile=
         indexFilename = "{}\\index.rst".format(writeToDirectory)
         indexContent = CombineFiles(allMemberNames)
         rc = StringToFile(indexContent, indexFilename)
-
+    print "Processed {} Methods !".format(len(allMemberNames))
 def Toctree(includePaths, maxdepth=2):
     
     toctreeString = []

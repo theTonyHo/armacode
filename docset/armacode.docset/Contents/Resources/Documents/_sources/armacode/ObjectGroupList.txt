@@ -1,7 +1,7 @@
 ObjectGroupList
 ---------------
 
-.. py:function:: ObjectGroupList(objects=None, sort=False)
+.. py:Function:: ObjectGroupList(objects=None, sort=False)
 
 
 Returns a list of all the Group Names for the objects

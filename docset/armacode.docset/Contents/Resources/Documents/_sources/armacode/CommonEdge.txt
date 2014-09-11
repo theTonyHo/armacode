@@ -1,7 +1,7 @@
 CommonEdge
 ----------
 
-.. py:function:: CommonEdge(srfA, srfB, tolerance=-1)
+.. py:Function:: CommonEdge(srfA, srfB, tolerance=-1)
 
 
 Undocumented

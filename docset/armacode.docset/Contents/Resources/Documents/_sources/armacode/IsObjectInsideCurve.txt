@@ -1,7 +1,7 @@
 IsObjectInsideCurve
 -------------------
 
-.. py:function:: IsObjectInsideCurve(object, boundary, plane=None, tolerance=None)
+.. py:Function:: IsObjectInsideCurve(object, boundary, plane=None, tolerance=None)
 
 
 Undocumented

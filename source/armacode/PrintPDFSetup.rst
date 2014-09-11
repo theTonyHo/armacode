@@ -1,7 +1,7 @@
 PrintPDFSetup
 -------------
 
-.. py:function:: PrintPDFSetup()
+.. py:Function:: PrintPDFSetup()
 
 
 Undocumented

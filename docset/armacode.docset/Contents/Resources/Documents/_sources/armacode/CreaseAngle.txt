@@ -1,7 +1,7 @@
 CreaseAngle
 -----------
 
-.. py:function:: CreaseAngle(srfA, srfB, normalSegment=1)
+.. py:Function:: CreaseAngle(srfA, srfB, normalSegment=1)
 
 
 Calculate the crease angle between two surfaces. The angle segment is determined by the surface normal.

@@ -1,7 +1,7 @@
 ObjectLayerList
 ---------------
 
-.. py:function:: ObjectLayerList(objects=None, sort=False)
+.. py:Function:: ObjectLayerList(objects=None, sort=False)
 
 
 Returns a list of all the Layer Names for the objects

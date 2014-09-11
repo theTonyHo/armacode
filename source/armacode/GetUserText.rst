@@ -1,7 +1,7 @@
 GetUserText
 -----------
 
-.. py:function:: GetUserText(object_id, key=None, attached_to_geometry=False)
+.. py:Function:: GetUserText(object_id, key=None, attached_to_geometry=False)
 
 
 Returns user text stored on an object.

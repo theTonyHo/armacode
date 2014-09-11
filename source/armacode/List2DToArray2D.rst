@@ -1,7 +1,7 @@
 List2DToArray2D
 ---------------
 
-.. py:function:: List2DToArray2D(listObject)
+.. py:Function:: List2DToArray2D(listObject)
 
 
 Undocumented

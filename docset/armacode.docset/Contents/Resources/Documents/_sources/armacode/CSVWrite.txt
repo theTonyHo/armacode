@@ -1,7 +1,7 @@
 CSVWrite
 --------
 
-.. py:function:: CSVWrite(fileName, data, dialect=None, fieldnames=None)
+.. py:Function:: CSVWrite(fileName, data, dialect=None, fieldnames=None)
 
 
 Write data into a new CSV File.

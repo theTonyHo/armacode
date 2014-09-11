@@ -1,7 +1,7 @@
 ObjectsSortByName
 -----------------
 
-.. py:function:: ObjectsSortByName(objects)
+.. py:Function:: ObjectsSortByName(objects)
 
 
 Sort Objects by its name

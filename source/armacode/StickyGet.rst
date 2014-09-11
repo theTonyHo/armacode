@@ -1,7 +1,7 @@
 StickyGet
 ---------
 
-.. py:function:: StickyGet(name, *keys)
+.. py:Function:: StickyGet(name, *keys)
 
 
 Get the settings with named key that was stored in the scriptcontext sticky.

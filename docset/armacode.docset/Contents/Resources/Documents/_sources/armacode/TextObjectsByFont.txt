@@ -1,7 +1,7 @@
 TextObjectsByFont
 -----------------
 
-.. py:function:: TextObjectsByFont(fontName, select=False)
+.. py:Function:: TextObjectsByFont(fontName, select=False)
 
 
 Returns identifiers of all text objects that has the same font property.

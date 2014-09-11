@@ -1,7 +1,7 @@
 GetUserTextAll
 --------------
 
-.. py:function:: GetUserTextAll(object_id)
+.. py:Function:: GetUserTextAll(object_id)
 
 
 Returns user text stored on an object.

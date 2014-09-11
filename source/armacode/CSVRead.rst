@@ -1,7 +1,7 @@
 CSVRead
 -------
 
-.. py:function:: CSVRead(fileName, dialect=None)
+.. py:Function:: CSVRead(fileName, dialect=None)
 
 
 Read a CSV File, and return the content.

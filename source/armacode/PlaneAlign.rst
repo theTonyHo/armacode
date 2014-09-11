@@ -1,7 +1,7 @@
 PlaneAlign
 ----------
 
-.. py:function:: PlaneAlign(plane, vecTarget)
+.. py:Function:: PlaneAlign(plane, vecTarget)
 
 
 Undocumented

@@ -1,4 +1,4 @@
 @ECHO OFF
-%~dp0make.bat html
+start make.bat html
 echo "Launching site"
 "build\html\index.html" 
