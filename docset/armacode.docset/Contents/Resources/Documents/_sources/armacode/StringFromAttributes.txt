@@ -1,7 +1,7 @@
 StringFromAttributes
 --------------------
 
-.. py:function:: StringFromAttributes(object_id, strFormat=None)
+.. py:method:: StringFromAttributes(object_id, strFormat=None)
 
 
 Set an object name by evaluating a formatted string

@@ -1,7 +1,7 @@
 ObjectProperties
 ----------------
 
-.. py:function:: ObjectProperties(object_id, data=None)
+.. py:method:: ObjectProperties(object_id, data=None)
 
 
 Undocumented

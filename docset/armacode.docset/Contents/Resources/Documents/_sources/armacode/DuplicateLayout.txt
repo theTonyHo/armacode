@@ -1,7 +1,7 @@
 DuplicateLayout
 ---------------
 
-.. py:function:: DuplicateLayout(layout, title=None)
+.. py:method:: DuplicateLayout(layout, title=None)
 
 
 Duplicate a Layout

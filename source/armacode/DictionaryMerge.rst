@@ -1,7 +1,7 @@
 DictionaryMerge
 ---------------
 
-.. py:function:: DictionaryMerge(dictA, dictB, overwrite=True)
+.. py:method:: DictionaryMerge(dictA, dictB, overwrite=True)
 
 
 Merge two dictionaries into one.

@@ -1,7 +1,7 @@
 GHParallel
 ----------
 
-.. py:function:: GHParallel(method, driverInputTree, *args)
+.. py:method:: GHParallel(method, driverInputTree, *args)
 
 
 Undocumented

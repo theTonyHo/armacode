@@ -1,7 +1,7 @@
 ObjectsByUserString
 -------------------
 
-.. py:function:: ObjectsByUserString(key, value='*', caseSensitive=True)
+.. py:method:: ObjectsByUserString(key, value='*', caseSensitive=True)
 
 
 Finds all objects whose UserString matches the search patterns.

@@ -1,7 +1,7 @@
 CurveSplitOverlap
 -----------------
 
-.. py:function:: CurveSplitOverlap(curve_IDs, tolerance=None)
+.. py:method:: CurveSplitOverlap(curve_IDs, tolerance=None)
 
 
 Detect overlapping of curves and split

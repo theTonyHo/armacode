@@ -1,7 +1,7 @@
 LayoutDetails
 -------------
 
-.. py:function:: LayoutDetails(layout)
+.. py:method:: LayoutDetails(layout)
 
 
 Get all detail objects on a layout.

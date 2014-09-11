@@ -1,7 +1,7 @@
 Logger
 ------
 
-.. py:function:: Logger(loggerName=None, fileName=None, console=False)
+.. py:method:: Logger(loggerName=None, fileName=None, console=False)
 
 
 Instantiate a logger object with default Formatter.

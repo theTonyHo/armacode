@@ -74,7 +74,7 @@ def DescribeMethod(_object):
     methodSyntax = MethodSyntax(_object)
     
     if methodSyntax:
-        methodSyntax = "\n.. py:function:: {}\n\n".format(methodSyntax)
+        methodSyntax = "\n.. py:method:: {}\n\n".format(methodSyntax)
     
     restDocstring = MethodDoc(_object)
     

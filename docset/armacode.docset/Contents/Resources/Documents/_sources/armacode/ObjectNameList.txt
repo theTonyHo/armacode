@@ -1,7 +1,7 @@
 ObjectNameList
 --------------
 
-.. py:function:: ObjectNameList(objects=None, sort=False)
+.. py:method:: ObjectNameList(objects=None, sort=False)
 
 
 Returns a list of all the Names for the objects

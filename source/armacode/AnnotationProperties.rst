@@ -1,7 +1,7 @@
 AnnotationProperties
 --------------------
 
-.. py:function:: AnnotationProperties(object_id, data=None)
+.. py:method:: AnnotationProperties(object_id, data=None)
 
 
 Return or Modifies properties of an annotation object.
