@@ -12,6 +12,7 @@ Table of Content
    :maxdepth: 2
    
    ./armacode.rst
+   ./plugins.rst
    ./python.rst
    ./conventions.rst
    ./howto.rst
