@@ -6,6 +6,7 @@ import inspect
 import math
 import armacode
 import os
+import ast
 
 def StringToFile(string, fileName):
     
@@ -48,7 +49,6 @@ def MethodSyntax(_object):
     """
     memberName = _object.__name__
     functionSyntax = inspect.formatargspec(*inspect.getargspec(_object))
-    functionSyntax = memberName + functionSyntax
     resultString = functionSyntax
     return resultString
     
@@ -65,16 +65,18 @@ def MethodDoc(_object):
     
     return restDocString
 
-def DescribeMethod(_object):
+def DescribeMethod(_object, customName=None):
     """
     Return the string describing the method.
     """
     # Get Values
     memberName = _object.__name__
+    if customName:
+        memberName = customName
     methodSyntax = MethodSyntax(_object)
     
     if methodSyntax:
-        methodSyntax = "\n.. py:Function:: {}\n\n".format(methodSyntax)
+        methodSyntax = "\n.. py:Function:: {}{}\n\n".format(memberName, methodSyntax)
     
     restDocstring = MethodDoc(_object)
     
@@ -97,7 +99,7 @@ def DescribeObject(_objectName, _object):
         #Property
         return None
 
-def ProcessMethods(dataDict, writeToDirectory=None, sortMembers=True, indexFile=False):
+def ProcessMethods(dataDict, writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
     
     memberData = dataDict
     allMemberNames = dataDict.keys()
@@ -107,8 +109,9 @@ def ProcessMethods(dataDict, writeToDirectory=None, sortMembers=True, indexFile=
     
     for memberName in allMemberNames:
         member = memberData[memberName]
-        
-        resultString = DescribeMethod(member)
+        if useCustomNames:
+            useCustomNames = memberName
+        resultString = DescribeMethod(member, useCustomNames)
         
         if writeToDirectory:
             if isinstance(writeToDirectory, str):
@@ -198,7 +201,12 @@ def main():
     
     moduleDirectory = moduleToDocument.__path__
     #docDirectory = moduleDirectory[0] + "\\source" + "\\" + moduleName
+    
+    # Documentation director for all generated docs.
     docDirectory = "source" + "\\" + moduleName
+    
+    # Reference directory for methods to include in index but not to list out.
+    refDirectory = docDirectory + "\\" + "reference"
     
     includeModules = ["classes", ""]
     
@@ -213,10 +221,23 @@ def main():
     
     allData = InspectObject(armacode)
     
+    #Additional methods to include in index
+    additionalMethods = {   "armacode.config.SetOption" : armacode.config.SetOption,
+                            "armacode.config.GetOption" : armacode.config.GetOption,
+                            "armacode.config.Save" : armacode.config.Save
+                        }
+    
+    def get_class_that_defined_method(meth):
+        for cls in inspect.getmro(meth.im_class):
+            if meth.__name__ in cls.__dict__: 
+                return cls
+        return None
+    
     # Methods
     proceed = True
     if proceed:
         ProcessMethods(allData["methods"], docDirectory)
+        ProcessMethods(additionalMethods, refDirectory, useCustomNames=True)
         print "Document generated for armacode Methods"
 
 

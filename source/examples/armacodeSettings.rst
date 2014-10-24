@@ -42,19 +42,19 @@ Name and value of the option
 Set value to Settings
 ---------------------
 
-Values can be set to sticky by calling the :py:func:`armacode.config.SetOption()` function.
+Values can be set to sticky by calling the :py:func:`armacode.config.SetOption` function.
 
 
 Get value from Settings
 -----------------------
 
-Stored values can be retrieved from sticky by calling the :py:func:`armacode.config.GetOption()` function.
+Stored values can be retrieved from sticky by calling the :py:func:`armacode.config.GetOption` function.
 
 
 Save Settings to configuration (.ini) file
 ------------------------------------------
 
-Stored settings in armacode.config can be saved to file by calling :py:func:`armacode.config.Save()` function.
+Stored settings in armacode.config can be saved to file by calling :py:func:`armacode.config.Save` function.
 
 
 Example
