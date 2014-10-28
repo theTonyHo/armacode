@@ -240,6 +240,31 @@ def main():
         ProcessMethods(additionalMethods, refDirectory, useCustomNames=True)
         print "Document generated for armacode Methods"
 
+def GenerateDocsetFeed():
+    feedFilePath = "feed\\armacode.xml"
+    feedTemplate = ["<entry>",
+                    "    <version>{versionNumber}</version>",
+                    "    <url>https://github.com/theTonyHo/armacode/raw/master/docset/armacode.tgz</url>",
+                    "</entry>"]
+    feedTemplate = str.join("\n", feedTemplate)
+    feedContent = feedTemplate.format(versionNumber=armacode.__Version__)
+    
+    with open(feedFilePath, 'w') as f:
+        f.write(feedContent)
+    print "Docset Feed Generated"
+
+def GenerateVersionFile():
+    versionFilePath = "VERSION.txt"
+    
+    with open(versionFilePath, 'w') as f:
+        f.write(armacode.__Version__)
+        f.write("\n")
+        f.write(armacode.__ReleaseDate__)
+    
+    print "Version File Generated"
 
 if __name__ == "__main__":
-    main()
+    #main()
+    GenerateDocsetFeed()
+    GenerateVersionFile()
+    
