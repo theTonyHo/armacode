@@ -1,4 +1,4 @@
-@echo off
+echo 
 echo ----------------------------------------------------------------------------
 echo Automatically add all files, commit and publish to remote repository
 echo ----------------------------------------------------------------------------
