@@ -17,7 +17,7 @@ versionFile="${PWD}""/VERSION"
 
 # Read the first line to determine current version
 currentVersion=$(head -n 1 $versionFile)
-
+echo $currentVersion
 # Establish variables
 version=$(echo $currentVersion | cut -f1 -d ' '  )
 buildNumber=$(echo $currentVersion | cut -f3 -d ' ' )
