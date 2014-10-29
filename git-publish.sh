@@ -5,7 +5,7 @@ echo ---------------------------------------------------------------------------
 
 # Check if there is any unstaged
 dirtyFiles=`git status --porcelain 2>/dev/null| egrep "^??" | wc -l`
-
+echo "${PWD##*/}"
 if [ $dirtyFiles == 0 ] ; then
     echo "Nothing to commit"
     read -p "Press any key to continue... " -n1 -s
@@ -13,7 +13,7 @@ if [ $dirtyFiles == 0 ] ; then
 fi
 
 # Path of the version file
-versionFile=".\VERSION.txt"
+versionFile=".\VERSION"
 
 # Read the first line to determine current version
 currentVersion=$(head -n 1 $versionFile)
@@ -40,7 +40,6 @@ do
 done
 
 # Add tag if not found
-doAddTag=1
 if [ $doAddTag == 1 ] ; then
     echo 
     echo "Version incremented, adding new tag"
