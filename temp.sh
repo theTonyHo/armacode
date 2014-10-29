@@ -8,6 +8,7 @@ dirtyFiles=`git status --porcelain 2>/dev/null| egrep "^??" | wc -l`
 
 if [ $dirtyFiles == 0 ] ; then
     echo "Nothing to commit"
+    read -p "Press any key to continue... "
     exit 1
 fi
 
@@ -52,3 +53,5 @@ git add --all
 git commit -m "\"$pushMessage\""
 git push origin master
 git push --tags
+
+read -p "Press any key to continue... "
