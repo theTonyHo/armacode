@@ -7,9 +7,9 @@ setLocal EnableDelayedExpansion
 
 REM Check if there is any unstaged
 for /f %%i in ('git status --porcelain 2^>/dev/null^| egrep "^??" ^| wc -l') do set changedFiles=%%i
-
+echo %changedFiles%
 REM If nothing changed abort
-if "%changedFiles%" == 0 goto end
+if "%changedFiles%" == "0" goto end
 
 REM Set location of Version file.
 set VFILE=".\VERSION.txt"
