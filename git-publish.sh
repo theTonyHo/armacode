@@ -5,7 +5,7 @@ echo ---------------------------------------------------------------------------
 
 # Check if there is any unstaged
 dirtyFiles=`git status --porcelain 2>/dev/null| egrep "^??" | wc -l`
-echo "${PWD}"
+
 if [ $dirtyFiles == 0 ] ; then
     echo "Nothing to commit"
     read -p "Press any key to continue... " -n1 -s
@@ -14,10 +14,10 @@ fi
 
 # Path of the version file
 versionFile="${PWD}/VERSION"
-echo "$versionFile"
+
 # Read the first line to determine current version
 currentVersion=$(head -n 1 $versionFile)
-echo $currentVersion
+
 # Establish variables
 version=$(echo $currentVersion | cut -f1 -d ' '  )
 buildNumber=$(echo $currentVersion | cut -f3 -d ' ' )
