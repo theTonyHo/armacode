@@ -5,7 +5,7 @@ echo ---------------------------------------------------------------------------
 
 # Check if there is any unstaged
 dirtyFiles=`git status --porcelain 2>/dev/null| egrep "^??" | wc -l`
-echo "${PWD##*/}"
+echo "${PWD}"
 if [ $dirtyFiles == 0 ] ; then
     echo "Nothing to commit"
     read -p "Press any key to continue... " -n1 -s
