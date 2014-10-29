@@ -6,7 +6,7 @@
 ARMAcode
 ========
 
-armaCode Wiki Repository
+armaCode Documentation Repository
 
 
 Documentation
