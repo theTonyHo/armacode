@@ -39,6 +39,18 @@ do
         fi
 done
 
+
+
+# Perform commit and push
+echo 
+echo "Uploading Changes to GitHub"
+echo -----------------------------
+echo 
+
+git add --all
+git commit -m "\"$pushMessage\""
+git push origin master
+
 # Add tag if not found
 if [ $doAddTag == 1 ] ; then
     echo 
@@ -46,11 +58,7 @@ if [ $doAddTag == 1 ] ; then
     echo -------------------------------------
     echo 
     git tag -a "$version" -m "Version $version"
+    git push --tags
 fi
-
-git add --all
-git commit -m "\"$pushMessage\""
-git push origin master
-git push --tags
 
 read -p "Press any key to continue... " -n1 -s
