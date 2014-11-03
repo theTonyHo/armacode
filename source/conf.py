@@ -91,12 +91,12 @@ copyright = u'2014, Tony Ho'
 #
 
 # The short X.Y version.
-version = '1.0'
+version = 'Unknown'
 # The full version, including alpha/beta/rc tags.
-release = '1.0.1410'
+release = 'Unknown'
 
 # Auto detect version from Version file.
-with open ("..\\VERSION", "r") as myfile:
+with open ("..\\VERSION.txt", "r") as myfile:
     data = []
     data.append(myfile.readline().strip("\n"))
     release = data[0]
