@@ -96,7 +96,8 @@ version = 'Unknown'
 release = 'Unknown'
 
 # Auto detect version from Version file.
-with open (os.getcwd()+"\..\VERSION.txt", "r") as myfile:
+
+with open (os.getcwd()+"\..\VERSION", "r") as myfile:
     data = []
     data.append(myfile.readline().strip("\n"))
     release = data[0]

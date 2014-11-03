@@ -13,7 +13,7 @@ if [ $dirtyFiles == 0 ] ; then
 fi
 
 # Path of the version file
-versionFile="${PWD}/VERSION.txt"
+versionFile="${PWD}/VERSION"
 
 # Read the first line to determine current version
 currentVersion=$(head -n 1 $versionFile)

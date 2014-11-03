@@ -254,7 +254,7 @@ def GenerateDocsetFeed():
     print "Docset Feed Generated"
 
 def GenerateVersionFile():
-    versionFilePath = "VERSION.txt"
+    versionFilePath = os.getcwd()+"\\VERSION"
     
     with open(versionFilePath, 'w') as f:
         f.write(armacode.__Version__)
