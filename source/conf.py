@@ -99,7 +99,7 @@ release = 'Unknown'
 
 with open (os.getcwd()+"/../VERSION", "r") as myfile:
     data = []
-    data.append(myfile.readline().strip("\n"))
+    data.append(myfile.readline().strip("\r\n"))
     release = str.strip(data[0])
     version = str.strip(str.split(data[0])[0])
     print repr(release)
