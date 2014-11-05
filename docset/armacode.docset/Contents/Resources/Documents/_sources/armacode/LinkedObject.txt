@@ -1,0 +1,13 @@
+LinkedObject
+------------
+
+.. py:Function:: LinkedObject(object_id, key='LINKED_OBJECT')
+
+
+Get Linked Object based on the specified key.
+
+:param object_id: Identifier of the object
+:param key: Link key name.
+
+
+:returns: (guid) Identifier of the linked object.

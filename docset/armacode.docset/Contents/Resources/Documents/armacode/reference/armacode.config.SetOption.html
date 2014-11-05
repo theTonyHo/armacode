@@ -101,6 +101,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../LayerTruncate.html">LayerTruncate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../LayoutDetails.html">LayoutDetails</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../LayoutProperties.html">LayoutProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LinkToObject.html">LinkToObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LinkedObject.html">LinkedObject</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../List2DToArray2D.html">List2DToArray2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ListPurge.html">ListPurge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../LoadConfig.html">LoadConfig</a></li>
@@ -148,6 +150,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../TextObjectTextFormula.html">TextObjectTextFormula</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../TextObjectsByFont.html">TextObjectsByFont</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../TextObjectsByProperties.html">TextObjectsByProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnfoldBrep.html">UnfoldBrep</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../UnfoldSurface.html">UnfoldSurface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ValueRemap.html">ValueRemap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../VectorFromLine.html">VectorFromLine</a></li>
@@ -212,7 +215,7 @@
 <h1>armacode.config.SetOption<a class="headerlink" href="#armacode-config-setoption" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="armacode.config.SetOption"><a name="//apple_ref/cpp/func/armacode.config.SetOption"></a>
-<tt class="descclassname">armacode.config.</tt><tt class="descname">SetOption</tt><big>(</big><em>self</em>, <em>section</em>, <em>key</em>, <em>value=None</em><big>)</big><a class="headerlink" href="#armacode.config.SetOption" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">armacode.config.</tt><tt class="descname">SetOption</tt><big>(</big><em>self</em>, <em>section</em>, <em>key</em>, <em>value</em><big>)</big><a class="headerlink" href="#armacode.config.SetOption" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <p>Add key value pair to the config, automatically create section if it does not exist.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -223,7 +226,7 @@
 </tr>
 <tr class="field-even field"><th class="field-name">param key:</th><td class="field-body">Name of the option</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">param value:</th><td class="field-body">Value of the option. Can be null.</td>
+<tr class="field-odd field"><th class="field-name">param value:</th><td class="field-body">Value of the option.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">True on success.</td>
 </tr>

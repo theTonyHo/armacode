@@ -239,6 +239,9 @@ def main():
         ProcessMethods(allData["methods"], docDirectory)
         ProcessMethods(additionalMethods, refDirectory, useCustomNames=True)
         print "Document generated for armacode Methods"
+    
+    GenerateDocsetFeed()
+    GenerateVersionFile()
 
 def GenerateDocsetFeed():
     feedFilePath = "feed\\armacode.xml"
@@ -264,7 +267,5 @@ def GenerateVersionFile():
     print "Version File Generated"
 
 if __name__ == "__main__":
-    #main()
-    GenerateDocsetFeed()
-    GenerateVersionFile()
+    main()
     
