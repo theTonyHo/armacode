@@ -16,10 +16,10 @@ import sys
 import os
 
 # Mock to ignore Modules
-import mock
-autodoc_mock_imports = ['Rhino', 'System', 'rhinoscriptsyntax', 'scriptcontext', 'clr', 'Grasshopper']
-for mod_name in autodoc_mock_imports :
-    sys.modules[mod_name] = mock.Mock()
+#import mock
+#autodoc_mock_imports = ['Rhino', 'System', 'rhinoscriptsyntax', 'scriptcontext', 'clr', 'Grasshopper']
+#for mod_name in autodoc_mock_imports :
+#    sys.modules[mod_name] = mock.Mock()
 
 class Mock(object):
 
