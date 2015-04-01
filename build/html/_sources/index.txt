@@ -10,7 +10,6 @@ Table of Content
 
 .. toctree::
    :maxdepth: 2
-   :glob:
    
    ./classes.rst
    ./libraries.rst
@@ -20,6 +19,7 @@ Table of Content
    ./grasshopper.rst
    ./conventions.rst
    ./howto.rst
+
 
 Index
 =====
