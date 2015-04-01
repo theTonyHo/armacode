@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>CSVRead &mdash; armacode Documentation</title>
-    
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootswatch-3.2.0/ar-ma/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
-    
-    <script type="text/javascript">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>CSVRead — armacode Documentation</title>
+<link href="../../_static/basic.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/bootswatch-3.2.0/ar-ma/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/bootstrap-sphinx.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
         VERSION:     'v1.1.1 Build 317.0401',
@@ -21,63 +16,169 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <link rel="shortcut icon" href="../../_static/ar-ma_favicon.ico"/>
-    <link rel="top" title="armacode Documentation" href="../../index.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
-
-  </head>
-  <body role="document">
-
-  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../index.html"><img src="../../_static/ar-ma_logo.png">
+<script src="../../_static/jquery.js" type="text/javascript"></script>
+<script src="../../_static/underscore.js" type="text/javascript"></script>
+<script src="../../_static/doctools.js" type="text/javascript"></script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script src="../../_static/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="../../_static/js/jquery-fix.js" type="text/javascript"></script>
+<script src="../../_static/bootstrap-3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../_static/bootstrap-sphinx.js" type="text/javascript"></script>
+<link href="../../_static/ar-ma_favicon.ico" rel="shortcut icon"/>
+<link href="../../index.html" rel="top" title="armacode Documentation"/>
+<link href="../../libraries.html" rel="up" title="Libraries"/>
+<link href="CSVWrite.html" rel="next" title="CSVWrite"/>
+<link href="CSVOpen.html" rel="prev" title="CSVOpen"/>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" id="navbar">
+<div class="container">
+<div class="navbar-header">
+<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+<button class="navbar-toggle" data-target=".nav-collapse" data-toggle="collapse" type="button">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="../../index.html"><img src="../../_static/ar-ma_logo.png"/>
           armacode</a>
-        <span class="navbar-text navbar-version pull-left"><b>v1.1.1</b></span>
-      </div>
-
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="../../classes.html">Classes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../classes/index.html">&lt;empty&gt;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/index.html#empty-2">&lt;empty&gt; 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/index.html#empty-3">&lt;empty&gt; 3</a></li>
+<span class="navbar-text navbar-version pull-left"><b>v1.1.1</b></span>
+</div>
+<div class="collapse navbar-collapse nav-collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown globaltoc-container">
+<a data-target="#" data-toggle="dropdown" href="../../index.html" id="dLabelGlobalToc" role="button">Site <b class="caret"></b></a>
+<ul aria-labelledby="dLabelGlobalToc" class="dropdown-menu globaltoc" role="menu"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../classes.html">Classes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../libraries.html">Libraries</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="AddBlock.html">AddBlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddDimAlignedFromLine.html">AddDimAlignedFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddDimLinearFromLine.html">AddDimLinearFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddLayer.html">AddLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddLineEX.html">AddLineEX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddLinearDimension.html">AddLinearDimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddObjectsToBlock.html">AddObjectsToBlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddPlaneSurfaceCenter.html">AddPlaneSurfaceCenter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnnotationProperties.html">AnnotationProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnnotationText.html">AnnotationText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BlockInstanceBasePlane.html">BlockInstanceBasePlane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BlockModify.html">BlockModify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BlockProperties.html">BlockProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BrepEdgeCreaseAngle.html">BrepEdgeCreaseAngle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BrepEdges.html">BrepEdges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BrepReorderFaces.html">BrepReorderFaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BrepSplitWithCurves.html">BrepSplitWithCurves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CSVOpen.html">CSVOpen</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">CSVRead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CSVWrite.html">CSVWrite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ClearUserText.html">ClearUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CommonEdge.html">CommonEdge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CreaseAngle.html">CreaseAngle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CurveDuplicates.html">CurveDuplicates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CurveSplitOverlap.html">CurveSplitOverlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugArray2D.html">DebugArray2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugCurveDeviation.html">DebugCurveDeviation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugLine.html">DebugLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugValues.html">DebugValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugVector.html">DebugVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugVector2.html">DebugVector2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DictionaryMerge.html">DictionaryMerge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DimensionValue.html">DimensionValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DuplicateLayout.html">DuplicateLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditBox_EX.html">EditBox_EX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelRead.html">ExcelRead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelReload.html">ExcelReload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelRun.html">ExcelRun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExplodeBlockInstance.html">ExplodeBlockInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FileIsModifiedWithin.html">FileIsModifiedWithin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FileOpen.html">FileOpen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GHLockAfterSolve.html">GHLockAfterSolve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GHParallel.html">GHParallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneratePlug.html">GeneratePlug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetProjectFolder.html">GetProjectFolder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetRelativeFolder.html">GetRelativeFolder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetUserText.html">GetUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetUserTextAll.html">GetUserTextAll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InspectObject.html">InspectObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IsGHPython.html">IsGHPython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IsLoaded.html">IsLoaded</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IsObjectInsideCurve.html">IsObjectInsideCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LayerIds.html">LayerIds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LayerProperties.html">LayerProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LayerTruncate.html">LayerTruncate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LayoutDetails.html">LayoutDetails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LayoutProperties.html">LayoutProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LinkToObject.html">LinkToObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LinkedObject.html">LinkedObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="List2DToArray2D.html">List2DToArray2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ListPurge.html">ListPurge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LoadConfig.html">LoadConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Logger.html">Logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MatchLayerAttributes.html">MatchLayerAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MatchObjectAttributes.html">MatchObjectAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NumberPadding.html">NumberPadding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectGroupList.html">ObjectGroupList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectLayer.html">ObjectLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectLayerList.html">ObjectLayerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectNameList.html">ObjectNameList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectProperties.html">ObjectProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectPropertiesMerge.html">ObjectPropertiesMerge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectReferencePoint.html">ObjectReferencePoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsByAttributes.html">ObjectsByAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsByLayout.html">ObjectsByLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsByQuery.html">ObjectsByQuery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsByUserString.html">ObjectsByUserString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsInBrep.html">ObjectsInBrep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsInClosedCurve.html">ObjectsInClosedCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsInView.html">ObjectsInView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsSortByName.html">ObjectsSortByName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OffsetCurve.html">OffsetCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OrientObjects.html">OrientObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ParallelRun.html">ParallelRun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlaneAlign.html">PlaneAlign</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlaneFromObject.html">PlaneFromObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlaneFromPolyline.html">PlaneFromPolyline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlaneFromSurface.html">PlaneFromSurface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PointClosestObjects.html">PointClosestObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PrintAll.html">PrintAll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PrintPDF.html">PrintPDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PrintPDFSetup.html">PrintPDFSetup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProcessPerFile.html">ProcessPerFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProgressBar.html">ProgressBar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PullPolylineToObjects.html">PullPolylineToObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RandomColor.html">RandomColor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RangeFormat.html">RangeFormat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SaveFileName.html">SaveFileName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ScreenShot.html">ScreenShot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SelectedObjects.html">SelectedObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SetUserAttributeToObjects.html">SetUserAttributeToObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SetUserText.html">SetUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SetUserTextFromDict.html">SetUserTextFromDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SortByIndices.html">SortByIndices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SortObjectsAlongCurve.html">SortObjectsAlongCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SortObjectsAlongPolyline.html">SortObjectsAlongPolyline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SortSynchronous.html">SortSynchronous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StickyGet.html">StickyGet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StickySet.html">StickySet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StringFieldNames.html">StringFieldNames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StringFromAttributes.html">StringFromAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextObjectTextFormula.html">TextObjectTextFormula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextObjectsByFont.html">TextObjectsByFont</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextObjectsByProperties.html">TextObjectsByProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UnfoldBrep.html">UnfoldBrep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UnfoldBrepAuto.html">UnfoldBrepAuto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UnfoldSurface.html">UnfoldSurface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ValueRemap.html">ValueRemap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VectorFromLine.html">VectorFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ViewRadius.html">ViewRadius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ViewSize.html">ViewSize</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../libraries.html">Libraries</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools.html">Tools</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plug-ins</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/Tables.html">Tables</a></li>
 </ul>
@@ -91,7 +192,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../conventions.html#command">Command</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../howto.html">How-To&#8217;s</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../howto.html">How-To’s</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/armacodeSettings.html">Global Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/armacodeSettings.html#user-configuration-settings">User Configuration Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/scriptcontextSticky.html">Scriptcontext Sticky</a></li>
@@ -100,67 +201,49 @@
 </ul>
 </ul>
 </li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
+<li class="dropdown">
+<a data-target="#" data-toggle="dropdown" href="#" id="dLabelLocalToc" role="button">Page <b class="caret"></b></a>
+<ul aria-labelledby="dLabelLocalToc" class="dropdown-menu localtoc" role="menu"><ul>
 <li><a class="reference internal" href="#">CSVRead</a></li>
 </ul>
 </ul>
 </li>
-              
-            
-            
-              
-                
-              
-            
-            
-            
-            
-              <li class="hidden-sm">
+<li>
+<a href="CSVOpen.html" title="Previous Chapter: CSVOpen"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">« CSVOpen</span>
+</a>
+</li>
+<li>
+<a href="CSVWrite.html" title="Next Chapter: CSVWrite"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">CSVWrite »</span>
+</a>
+</li>
+<li class="hidden-sm">
 <div id="sourcelink">
-  <a href="../../_sources/armacode/libraries/CSVRead.txt"
-     rel="nofollow">Source</a>
+<a href="../../_sources/armacode/libraries/CSVRead.txt" rel="nofollow">Source</a>
 </div></li>
-            
-          </ul>
-
-          
-            
-<form class="navbar-form navbar-right" action="../../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
+</ul>
+<form action="../../search.html" class="navbar-form navbar-right" method="get">
+<div class="form-group">
+<input class="form-control" name="q" placeholder="Search" type="text"/>
+</div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
 </form>
-          
-        </div>
-    </div>
-  </div>
-
+</div>
+</div>
+</div>
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      
-  <div class="section" id="csvread">
+<div class="row">
+<div class="col-md-12">
+<div class="section" id="csvread">
 <h1>CSVRead<a class="headerlink" href="#csvread" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="CSVRead">
-<code class="descname">CSVRead</code><span class="sig-paren">(</span><em>fileName</em>, <em>dialect=None</em><span class="sig-paren">)</span><a class="headerlink" href="#CSVRead" title="Permalink to this definition">¶</a></dt>
+<dt id="CSVRead"><a name="//apple_ref/cpp/Function/CSVRead"></a>
+<tt class="descname">CSVRead</tt><big>(</big><em>fileName</em>, <em>dialect=None</em><big>)</big><a class="headerlink" href="#CSVRead" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
 <p>Read a CSV File, and return the content.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
+<col class="field-name"></col>
+<col class="field-body"></col>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">data = If the data contains headers, it will return a list of Dictionaries.
 If the data does not contain headers, the data return a nested array.</td>
@@ -171,23 +254,19 @@ If the data does not contain headers, the data return a nested array.</td>
 .. rubric:: References</p>
 <p><a class="reference external" href="http://www.python.org/dev/peps/pep-0305/">PEP-0305</a></p>
 </div>
-
-
-    </div>
-      
-  </div>
+</div>
+</div>
 </div>
 <footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2014, Tony Ho.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.<br/>
-    </p>
-  </div>
+<div class="container">
+<p class="pull-right">
+<a href="#">Back to top</a>
+</p>
+<p>
+        © Copyright 2014, Tony Ho.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+</p>
+</div>
 </footer>
-  </body>
+</body>
 </html>

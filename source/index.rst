@@ -6,8 +6,6 @@
 Welcome to armacode's documentation!
 ====================================
 
-Table of Content
-
 .. toctree::
    :maxdepth: 2
    
@@ -19,7 +17,6 @@ Table of Content
    ./grasshopper.rst
    ./conventions.rst
    ./howto.rst
-
 
 Index
 =====

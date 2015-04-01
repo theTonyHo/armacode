@@ -1,3 +1,5 @@
+.. A few words
+
 Conventions
 ===========
 

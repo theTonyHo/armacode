@@ -1,9 +1,11 @@
+.. A few words
+
 Python
 ======
 
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 2
 
 
 Docstring
@@ -48,36 +50,5 @@ Docstring
 * `Sphinx compatible examples <http://sphinx-doc.org/latest/ext/example_google.html>`_
 
 * `Napoleon Google Docstrings <http://sphinxcontrib-napoleon.readthedocs.org/en/latest/#docstring-sections>`_
-
-
-.. Folder structure
-.. ================
-
-.. The folder structure for armacode should be organised following the following structure
-
-..         armacode/
-..             __init__.py
-..             classes/
-..                     __init__.py
-..                     ClassBaseOne/
-..                             __init__.py
-..                             ClassOne.py
-..                     ClassBaseTwo/
-..                             __init__.py
-..                             ClassTwo.py
-..                     ClassBaseThree/
-..                             __init__.py
-..                             ClassThree.py
-..             libraries/
-..                     __init__.py
-..                     ModuleOne.py
-..                     ModuleTwo.py
-..                     ModuleThree.py
-..             tools/
-..                     __init__.py
-..                     toolOne.py
-..                     toolTwo.py
-..                     toolThree.py
-
 
 

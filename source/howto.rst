@@ -1,4 +1,4 @@
-.. Contain all the How-To's
+.. A few words
 
 How-To's
 ========

@@ -12,9 +12,3 @@ Access the classes with the following::
     import armacode
     p = armacode.classes.ParticleSystem.Particle()
 
-
-.. toctree::
-   :maxdepth: 2
-   :glob:
-   
-   armacode/classes/*
