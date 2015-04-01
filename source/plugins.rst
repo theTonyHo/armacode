@@ -7,5 +7,5 @@ Plug-ins
    :maxdepth: 2
    :glob:
    
-   plugins/*
+   armacode/plugins/*
 

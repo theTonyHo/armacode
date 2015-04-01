@@ -1,12 +1,27 @@
+"""
+Generate Documentation for armacode to ReadTheDocs.
+Since this requires Rhino libraries, sphinx can not parse the module. This is a work around to export all documentation to .rst files.
+
+Dependencies:
+    - Python27. Remember to set PATH Environment System variables
+    - pip
+    - Sphinx
+    - Sphinxcontrib.napoleon
+    - pockets
+
+"""
+
 import sys
 sys.path.insert(0, "C:\\Python27\\lib\\site-packages")
 
-import sphinxcontrib.napoleon
+import sphinxcontrib.napoleon as sphinxNP
 import inspect
 import math
 import armacode
 import os
 import ast
+
+#import sphinx.ext.napoleon #This does not work in IronPython ?
 
 def StringToFile(string, fileName):
     
@@ -39,8 +54,8 @@ def StringIndent(multilineString, indent=4, delimiter="\n"):
     return resultStrings
 
 def DocStringFromGoogle(docstring):
-    config = sphinxcontrib.napoleon.Config(napoleon_use_param=True, napoleon_use_rtype=True)
-    restDocString = sphinxcontrib.napoleon.GoogleDocstring(docstring, config)
+    config = sphinxNP.Config(napoleon_use_param=True, napoleon_use_rtype=True)
+    restDocString = sphinxNP.GoogleDocstring(docstring, config)
     return restDocString
 
 def MethodSyntax(_object):
@@ -149,6 +164,7 @@ def CombineFiles(includePaths):
     content = []
     for item in includePaths:
         content.append(".. include:: {}.rst".format(item))
+        #content.append("   :end-before: :param")
     resultString = str.join("\n", content)
     return resultString
 
@@ -204,7 +220,7 @@ def main():
     
     # Documentation director for all generated docs.
     docDirectory = "source" + "\\" + moduleName
-    
+    moduleDocDirectory = docDirectory + "\\libraries"
     # Reference directory for methods to include in index but not to list out.
     refDirectory = docDirectory + "\\" + "reference"
     
@@ -236,7 +252,7 @@ def main():
     # Methods
     proceed = True
     if proceed:
-        ProcessMethods(allData["methods"], docDirectory)
+        ProcessMethods(allData["methods"], moduleDocDirectory)
         ProcessMethods(additionalMethods, refDirectory, useCustomNames=True)
         print "Document generated for armacode Methods"
     

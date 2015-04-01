@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Libraries — armacode Documentation</title>
+<link href="_static/basic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="_static/bootswatch-3.2.0/ar-ma/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="_static/bootstrap-sphinx.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v1.1.1 Build 317.0401',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script src="_static/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="_static/js/jquery-fix.js" type="text/javascript"></script>
+<script src="_static/bootstrap-3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="_static/bootstrap-sphinx.js" type="text/javascript"></script>
+<link href="_static/ar-ma_favicon.ico" rel="shortcut icon"/>
+<link href="index.html" rel="top" title="armacode Documentation"/>
+<link href="tools.html" rel="next" title="Tools"/>
+<link href="armacode/classes/index.html" rel="prev" title="&lt;empty&gt;"/>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+</head>
+<body role="document">
+<div class="navbar navbar-default navbar-fixed-top" id="navbar">
+<div class="container">
+<div class="navbar-header">
+<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+<button class="navbar-toggle" data-target=".nav-collapse" data-toggle="collapse" type="button">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="index.html"><img src="_static/ar-ma_logo.png"/>
+          armacode</a>
+<span class="navbar-text navbar-version pull-left"><b>v1.1.1</b></span>
+</div>
+<div class="collapse navbar-collapse nav-collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown globaltoc-container">
+<a data-target="#" data-toggle="dropdown" href="index.html" id="dLabelGlobalToc" role="button">Site <b class="caret"></b></a>
+<ul aria-labelledby="dLabelGlobalToc" class="dropdown-menu globaltoc" role="menu"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="armacode/classes/index.html">&lt;empty&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/classes/index.html#empty-2">&lt;empty&gt; 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/classes/index.html#empty-3">&lt;empty&gt; 3</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Libraries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#addblock">AddBlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adddimalignedfromline">AddDimAlignedFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adddimlinearfromline">AddDimLinearFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addlayer">AddLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addlineex">AddLineEX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addlineardimension">AddLinearDimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addobjectstoblock">AddObjectsToBlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addplanesurfacecenter">AddPlaneSurfaceCenter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#annotationproperties">AnnotationProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#annotationtext">AnnotationText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blockinstancebaseplane">BlockInstanceBasePlane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blockmodify">BlockModify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blockproperties">BlockProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brepedgecreaseangle">BrepEdgeCreaseAngle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brepedges">BrepEdges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brepreorderfaces">BrepReorderFaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brepsplitwithcurves">BrepSplitWithCurves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csvopen">CSVOpen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csvread">CSVRead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csvwrite">CSVWrite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clearusertext">ClearUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commonedge">CommonEdge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creaseangle">CreaseAngle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#curveduplicates">CurveDuplicates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#curvesplitoverlap">CurveSplitOverlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugarray2d">DebugArray2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugcurvedeviation">DebugCurveDeviation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugline">DebugLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugvalues">DebugValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugvector">DebugVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugvector2">DebugVector2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dictionarymerge">DictionaryMerge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dimensionvalue">DimensionValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#duplicatelayout">DuplicateLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editbox-ex">EditBox_EX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#excelread">ExcelRead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#excelreload">ExcelReload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#excelrun">ExcelRun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#explodeblockinstance">ExplodeBlockInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fileismodifiedwithin">FileIsModifiedWithin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fileopen">FileOpen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ghlockaftersolve">GHLockAfterSolve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ghparallel">GHParallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generateplug">GeneratePlug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getprojectfolder">GetProjectFolder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getrelativefolder">GetRelativeFolder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getusertext">GetUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getusertextall">GetUserTextAll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inspectobject">InspectObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#isghpython">IsGHPython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#isloaded">IsLoaded</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#isobjectinsidecurve">IsObjectInsideCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layerids">LayerIds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layerproperties">LayerProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layertruncate">LayerTruncate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layoutdetails">LayoutDetails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layoutproperties">LayoutProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linktoobject">LinkToObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linkedobject">LinkedObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list2dtoarray2d">List2DToArray2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listpurge">ListPurge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loadconfig">LoadConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logger">Logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#matchlayerattributes">MatchLayerAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#matchobjectattributes">MatchObjectAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#numberpadding">NumberPadding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectgrouplist">ObjectGroupList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectlayer">ObjectLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectlayerlist">ObjectLayerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectnamelist">ObjectNameList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectproperties">ObjectProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectpropertiesmerge">ObjectPropertiesMerge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectreferencepoint">ObjectReferencePoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsbyattributes">ObjectsByAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsbylayout">ObjectsByLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsbyquery">ObjectsByQuery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsbyuserstring">ObjectsByUserString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsinbrep">ObjectsInBrep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsinclosedcurve">ObjectsInClosedCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsinview">ObjectsInView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectssortbyname">ObjectsSortByName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#offsetcurve">OffsetCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#orientobjects">OrientObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parallelrun">ParallelRun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#planealign">PlaneAlign</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#planefromobject">PlaneFromObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#planefrompolyline">PlaneFromPolyline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#planefromsurface">PlaneFromSurface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pointclosestobjects">PointClosestObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#printall">PrintAll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#printpdf">PrintPDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#printpdfsetup">PrintPDFSetup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#processperfile">ProcessPerFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#progressbar">ProgressBar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pullpolylinetoobjects">PullPolylineToObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#randomcolor">RandomColor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rangeformat">RangeFormat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#savefilename">SaveFileName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#screenshot">ScreenShot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#selectedobjects">SelectedObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setuserattributetoobjects">SetUserAttributeToObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setusertext">SetUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setusertextfromdict">SetUserTextFromDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sortbyindices">SortByIndices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sortobjectsalongcurve">SortObjectsAlongCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sortobjectsalongpolyline">SortObjectsAlongPolyline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sortsynchronous">SortSynchronous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stickyget">StickyGet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stickyset">StickySet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stringfieldnames">StringFieldNames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stringfromattributes">StringFromAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#textobjecttextformula">TextObjectTextFormula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#textobjectsbyfont">TextObjectsByFont</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#textobjectsbyproperties">TextObjectsByProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unfoldbrep">UnfoldBrep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unfoldbrepauto">UnfoldBrepAuto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unfoldsurface">UnfoldSurface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#valueremap">ValueRemap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vectorfromline">VectorFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#viewradius">ViewRadius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#viewsize">ViewSize</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">Plug-ins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plugins/Tables.html">Tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#docstring">Docstring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conventions.html">Conventions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="conventions.html#workflow">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conventions.html#command">Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="howto.html">How-To’s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/armacodeSettings.html">Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/armacodeSettings.html#user-configuration-settings">User Configuration Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/scriptcontextSticky.html">Scriptcontext Sticky</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+<li class="dropdown">
+<a data-target="#" data-toggle="dropdown" href="#" id="dLabelLocalToc" role="button">Page <b class="caret"></b></a>
+<ul aria-labelledby="dLabelLocalToc" class="dropdown-menu localtoc" role="menu"><ul>
+<li><a class="reference internal" href="#">Libraries</a><ul>
+<li><a class="reference internal" href="#addblock">AddBlock</a></li>
+<li><a class="reference internal" href="#adddimalignedfromline">AddDimAlignedFromLine</a></li>
+<li><a class="reference internal" href="#adddimlinearfromline">AddDimLinearFromLine</a></li>
+<li><a class="reference internal" href="#addlayer">AddLayer</a></li>
+<li><a class="reference internal" href="#addlineex">AddLineEX</a></li>
+<li><a class="reference internal" href="#addlineardimension">AddLinearDimension</a></li>
+<li><a class="reference internal" href="#addobjectstoblock">AddObjectsToBlock</a></li>
+<li><a class="reference internal" href="#addplanesurfacecenter">AddPlaneSurfaceCenter</a></li>
+<li><a class="reference internal" href="#annotationproperties">AnnotationProperties</a></li>
+<li><a class="reference internal" href="#annotationtext">AnnotationText</a></li>
+<li><a class="reference internal" href="#blockinstancebaseplane">BlockInstanceBasePlane</a></li>
+<li><a class="reference internal" href="#blockmodify">BlockModify</a></li>
+<li><a class="reference internal" href="#blockproperties">BlockProperties</a></li>
+<li><a class="reference internal" href="#brepedgecreaseangle">BrepEdgeCreaseAngle</a></li>
+<li><a class="reference internal" href="#brepedges">BrepEdges</a></li>
+<li><a class="reference internal" href="#brepreorderfaces">BrepReorderFaces</a></li>
+<li><a class="reference internal" href="#brepsplitwithcurves">BrepSplitWithCurves</a></li>
+<li><a class="reference internal" href="#csvopen">CSVOpen</a></li>
+<li><a class="reference internal" href="#csvread">CSVRead</a></li>
+<li><a class="reference internal" href="#csvwrite">CSVWrite</a></li>
+<li><a class="reference internal" href="#clearusertext">ClearUserText</a></li>
+<li><a class="reference internal" href="#commonedge">CommonEdge</a></li>
+<li><a class="reference internal" href="#creaseangle">CreaseAngle</a></li>
+<li><a class="reference internal" href="#curveduplicates">CurveDuplicates</a></li>
+<li><a class="reference internal" href="#curvesplitoverlap">CurveSplitOverlap</a></li>
+<li><a class="reference internal" href="#debugarray2d">DebugArray2D</a></li>
+<li><a class="reference internal" href="#debugcurvedeviation">DebugCurveDeviation</a></li>
+<li><a class="reference internal" href="#debugline">DebugLine</a></li>
+<li><a class="reference internal" href="#debugvalues">DebugValues</a></li>
+<li><a class="reference internal" href="#debugvector">DebugVector</a></li>
+<li><a class="reference internal" href="#debugvector2">DebugVector2</a></li>
+<li><a class="reference internal" href="#dictionarymerge">DictionaryMerge</a></li>
+<li><a class="reference internal" href="#dimensionvalue">DimensionValue</a></li>
+<li><a class="reference internal" href="#duplicatelayout">DuplicateLayout</a></li>
+<li><a class="reference internal" href="#editbox-ex">EditBox_EX</a></li>
+<li><a class="reference internal" href="#excelread">ExcelRead</a></li>
+<li><a class="reference internal" href="#excelreload">ExcelReload</a></li>
+<li><a class="reference internal" href="#excelrun">ExcelRun</a></li>
+<li><a class="reference internal" href="#explodeblockinstance">ExplodeBlockInstance</a></li>
+<li><a class="reference internal" href="#fileismodifiedwithin">FileIsModifiedWithin</a></li>
+<li><a class="reference internal" href="#fileopen">FileOpen</a></li>
+<li><a class="reference internal" href="#ghlockaftersolve">GHLockAfterSolve</a></li>
+<li><a class="reference internal" href="#ghparallel">GHParallel</a></li>
+<li><a class="reference internal" href="#generateplug">GeneratePlug</a></li>
+<li><a class="reference internal" href="#getprojectfolder">GetProjectFolder</a></li>
+<li><a class="reference internal" href="#getrelativefolder">GetRelativeFolder</a></li>
+<li><a class="reference internal" href="#getusertext">GetUserText</a></li>
+<li><a class="reference internal" href="#getusertextall">GetUserTextAll</a></li>
+<li><a class="reference internal" href="#inspectobject">InspectObject</a></li>
+<li><a class="reference internal" href="#isghpython">IsGHPython</a></li>
+<li><a class="reference internal" href="#isloaded">IsLoaded</a></li>
+<li><a class="reference internal" href="#isobjectinsidecurve">IsObjectInsideCurve</a></li>
+<li><a class="reference internal" href="#layerids">LayerIds</a></li>
+<li><a class="reference internal" href="#layerproperties">LayerProperties</a></li>
+<li><a class="reference internal" href="#layertruncate">LayerTruncate</a></li>
+<li><a class="reference internal" href="#layoutdetails">LayoutDetails</a></li>
+<li><a class="reference internal" href="#layoutproperties">LayoutProperties</a></li>
+<li><a class="reference internal" href="#linktoobject">LinkToObject</a></li>
+<li><a class="reference internal" href="#linkedobject">LinkedObject</a></li>
+<li><a class="reference internal" href="#list2dtoarray2d">List2DToArray2D</a></li>
+<li><a class="reference internal" href="#listpurge">ListPurge</a></li>
+<li><a class="reference internal" href="#loadconfig">LoadConfig</a></li>
+<li><a class="reference internal" href="#logger">Logger</a></li>
+<li><a class="reference internal" href="#matchlayerattributes">MatchLayerAttributes</a></li>
+<li><a class="reference internal" href="#matchobjectattributes">MatchObjectAttributes</a></li>
+<li><a class="reference internal" href="#numberpadding">NumberPadding</a></li>
+<li><a class="reference internal" href="#objectgrouplist">ObjectGroupList</a></li>
+<li><a class="reference internal" href="#objectlayer">ObjectLayer</a></li>
+<li><a class="reference internal" href="#objectlayerlist">ObjectLayerList</a></li>
+<li><a class="reference internal" href="#objectnamelist">ObjectNameList</a></li>
+<li><a class="reference internal" href="#objectproperties">ObjectProperties</a></li>
+<li><a class="reference internal" href="#objectpropertiesmerge">ObjectPropertiesMerge</a></li>
+<li><a class="reference internal" href="#objectreferencepoint">ObjectReferencePoint</a></li>
+<li><a class="reference internal" href="#objectsbyattributes">ObjectsByAttributes</a></li>
+<li><a class="reference internal" href="#objectsbylayout">ObjectsByLayout</a></li>
+<li><a class="reference internal" href="#objectsbyquery">ObjectsByQuery</a></li>
+<li><a class="reference internal" href="#objectsbyuserstring">ObjectsByUserString</a></li>
+<li><a class="reference internal" href="#objectsinbrep">ObjectsInBrep</a></li>
+<li><a class="reference internal" href="#objectsinclosedcurve">ObjectsInClosedCurve</a></li>
+<li><a class="reference internal" href="#objectsinview">ObjectsInView</a></li>
+<li><a class="reference internal" href="#objectssortbyname">ObjectsSortByName</a></li>
+<li><a class="reference internal" href="#offsetcurve">OffsetCurve</a></li>
+<li><a class="reference internal" href="#orientobjects">OrientObjects</a></li>
+<li><a class="reference internal" href="#parallelrun">ParallelRun</a></li>
+<li><a class="reference internal" href="#planealign">PlaneAlign</a></li>
+<li><a class="reference internal" href="#planefromobject">PlaneFromObject</a></li>
+<li><a class="reference internal" href="#planefrompolyline">PlaneFromPolyline</a></li>
+<li><a class="reference internal" href="#planefromsurface">PlaneFromSurface</a></li>
+<li><a class="reference internal" href="#pointclosestobjects">PointClosestObjects</a></li>
+<li><a class="reference internal" href="#printall">PrintAll</a></li>
+<li><a class="reference internal" href="#printpdf">PrintPDF</a></li>
+<li><a class="reference internal" href="#printpdfsetup">PrintPDFSetup</a></li>
+<li><a class="reference internal" href="#processperfile">ProcessPerFile</a></li>
+<li><a class="reference internal" href="#progressbar">ProgressBar</a></li>
+<li><a class="reference internal" href="#pullpolylinetoobjects">PullPolylineToObjects</a></li>
+<li><a class="reference internal" href="#randomcolor">RandomColor</a></li>
+<li><a class="reference internal" href="#rangeformat">RangeFormat</a></li>
+<li><a class="reference internal" href="#savefilename">SaveFileName</a></li>
+<li><a class="reference internal" href="#screenshot">ScreenShot</a></li>
+<li><a class="reference internal" href="#selectedobjects">SelectedObjects</a></li>
+<li><a class="reference internal" href="#setuserattributetoobjects">SetUserAttributeToObjects</a></li>
+<li><a class="reference internal" href="#setusertext">SetUserText</a></li>
+<li><a class="reference internal" href="#setusertextfromdict">SetUserTextFromDict</a></li>
+<li><a class="reference internal" href="#sortbyindices">SortByIndices</a></li>
+<li><a class="reference internal" href="#sortobjectsalongcurve">SortObjectsAlongCurve</a></li>
+<li><a class="reference internal" href="#sortobjectsalongpolyline">SortObjectsAlongPolyline</a></li>
+<li><a class="reference internal" href="#sortsynchronous">SortSynchronous</a></li>
+<li><a class="reference internal" href="#stickyget">StickyGet</a></li>
+<li><a class="reference internal" href="#stickyset">StickySet</a></li>
+<li><a class="reference internal" href="#stringfieldnames">StringFieldNames</a></li>
+<li><a class="reference internal" href="#stringfromattributes">StringFromAttributes</a></li>
+<li><a class="reference internal" href="#textobjecttextformula">TextObjectTextFormula</a></li>
+<li><a class="reference internal" href="#textobjectsbyfont">TextObjectsByFont</a></li>
+<li><a class="reference internal" href="#textobjectsbyproperties">TextObjectsByProperties</a></li>
+<li><a class="reference internal" href="#unfoldbrep">UnfoldBrep</a></li>
+<li><a class="reference internal" href="#unfoldbrepauto">UnfoldBrepAuto</a></li>
+<li><a class="reference internal" href="#unfoldsurface">UnfoldSurface</a></li>
+<li><a class="reference internal" href="#valueremap">ValueRemap</a></li>
+<li><a class="reference internal" href="#vectorfromline">VectorFromLine</a></li>
+<li><a class="reference internal" href="#viewradius">ViewRadius</a></li>
+<li><a class="reference internal" href="#viewsize">ViewSize</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+<li>
+<a href="armacode/classes/index.html" title="Previous Chapter: &lt;empty&gt;"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">« <empty></empty></span>
+</a>
+</li>
+<li>
+<a href="tools.html" title="Next Chapter: Tools"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Tools »</span>
+</a>
+</li>
+<li class="hidden-sm">
+<div id="sourcelink">
+<a href="_sources/libraries.txt" rel="nofollow">Source</a>
+</div></li>
+</ul>
+<form action="search.html" class="navbar-form navbar-right" method="get">
+<div class="form-group">
+<input class="form-control" name="q" placeholder="Search" type="text"/>
+</div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="section" id="libraries">
+<h1>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>Library of all the useful methods which can be used during the development of a script or a workflow sequence.</div></blockquote>
+<p>Each of the method should Only perform one small single purpose. For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>Add(x,y):
+    result = x + y
+    return result
+
+Average(x,y):
+    result = Add(x,y) / 2
+    return result
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Average function reuses Add function to reduce data redundancy and help code management.</p>
+</div>
+<p>Access the method with the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">armacode</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">armacode</span><span class="o">.</span><span class="n">AddLine</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="addblock">
+<h2>AddBlock<a class="headerlink" href="#addblock" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AddBlock"><a name="//apple_ref/cpp/Function/AddBlock"></a>
+<code class="descname">AddBlock</code><span class="sig-paren">(</span><em>objectIDs</em>, <em>idef_name</em>, <em>base_Plane=None</em>, <em>idef_desc=''</em><span class="sig-paren">)</span><a class="headerlink" href="#AddBlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="adddimalignedfromline">
+<h2>AddDimAlignedFromLine<a class="headerlink" href="#adddimalignedfromline" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AddDimAlignedFromLine"><a name="//apple_ref/cpp/Function/AddDimAlignedFromLine"></a>
+<code class="descname">AddDimAlignedFromLine</code><span class="sig-paren">(</span><em>curve</em>, <em>dimOffset=100.0</em>, <em>plane=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AddDimAlignedFromLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Create an Aligned dimension from a line. Curve needs to be in Clockwise orientation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param curve = Curve ID:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param dimOffset = Offset of dimension text:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">A list of Guids identifying the objects.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="adddimlinearfromline">
+<h2>AddDimLinearFromLine<a class="headerlink" href="#adddimlinearfromline" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AddDimLinearFromLine"><a name="//apple_ref/cpp/Function/AddDimLinearFromLine"></a>
+<code class="descname">AddDimLinearFromLine</code><span class="sig-paren">(</span><em>curve</em>, <em>dimOffset=100.0</em>, <em>plane=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AddDimLinearFromLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Create an Aligned dimension from a line. Curve needs to be in Clockwise orientation.
+:param curve = Curve ID:
+:param dimOffset = Offset of dimension text:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">A list of Guids identifying the objects.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="addlayer">
+<h2>AddLayer<a class="headerlink" href="#addlayer" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AddLayer"><a name="//apple_ref/cpp/Function/AddLayer"></a>
+<code class="descname">AddLayer</code><span class="sig-paren">(</span><em>name=None</em>, <em>color=None</em>, <em>visible=True</em>, <em>locked=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AddLayer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Add a new layer to the document.
+Extended from Rhinoscript syntax with Full Layer name support
+Parent Layer automatically added if does not exist.
+:param name[opt]: The full path of the new layer. If omitted, Rhino automatically</p>
+<blockquote>
+<div>generates the layer name.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param color[opt]:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">A Red-Green-Blue color value or System.Drawing.Color. If
+omitted, the color Black is assigned.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param visible[opt]:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body">layer’s visibility</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param locked[opt]:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">layer’s locked state</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">The full name of the new layer if successful.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="addlineex">
+<h2>AddLineEX<a class="headerlink" href="#addlineex" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AddLineEX"><a name="//apple_ref/cpp/Function/AddLineEX"></a>
+<code class="descname">AddLineEX</code><span class="sig-paren">(</span><em>startPoint</em>, <em>endPoint</em>, <em>tolerance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AddLineEX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Adds a line curve to the current model.
+:param start, end = end points of the line:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">id of the new curve object</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="addlineardimension">
+<h2>AddLinearDimension<a class="headerlink" href="#addlineardimension" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AddLinearDimension"><a name="//apple_ref/cpp/Function/AddLinearDimension"></a>
+<code class="descname">AddLinearDimension</code><span class="sig-paren">(</span><em>plane</em>, <em>start_point</em>, <em>end_point</em>, <em>point_on_dimension_line</em><span class="sig-paren">)</span><a class="headerlink" href="#AddLinearDimension" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Adds a linear dimension to the document</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Identifier of the new object on success.None on error</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="addobjectstoblock">
+<h2>AddObjectsToBlock<a class="headerlink" href="#addobjectstoblock" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AddObjectsToBlock"><a name="//apple_ref/cpp/Function/AddObjectsToBlock"></a>
+<code class="descname">AddObjectsToBlock</code><span class="sig-paren">(</span><em>object_ids</em>, <em>block_id</em>, <em>delete_input=False</em>, <em>replaceAll=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AddObjectsToBlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Add objects to a Block instance.</p>
+</div>
+<div class="section" id="addplanesurfacecenter">
+<h2>AddPlaneSurfaceCenter<a class="headerlink" href="#addplanesurfacecenter" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AddPlaneSurfaceCenter"><a name="//apple_ref/cpp/Function/AddPlaneSurfaceCenter"></a>
+<code class="descname">AddPlaneSurfaceCenter</code><span class="sig-paren">(</span><em>plane</em>, <em>u_dir</em>, <em>v_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#AddPlaneSurfaceCenter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Create a plane surface with center at plane origin and add it to the document.
+:param plane = The plane.:
+:param u_dir = The magnitude in the U direction.:
+:param v_dir = The magnitude in the V direction.:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">The identifier of the new object if successful.
+None if not successful, or on error.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="annotationproperties">
+<h2>AnnotationProperties<a class="headerlink" href="#annotationproperties" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AnnotationProperties"><a name="//apple_ref/cpp/Function/AnnotationProperties"></a>
+<code class="descname">AnnotationProperties</code><span class="sig-paren">(</span><em>object_id</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AnnotationProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Return or Modifies properties of an annotation object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">Identifier of Rhino object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type object_id:</th><td class="field-body">guid</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param data:</th><td class="field-body">New properties values as a dictionary .</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type data:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Dictionary of the object properties.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="annotationtext">
+<h2>AnnotationText<a class="headerlink" href="#annotationtext" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AnnotationText"><a name="//apple_ref/cpp/Function/AnnotationText"></a>
+<code class="descname">AnnotationText</code><span class="sig-paren">(</span><em>object_id</em>, <em>usertext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AnnotationText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Returns of modifies the user text string of a dimension object.
+The usertext is the string that gets printed when the dimension is defined.
+If the provided usertext is the same as the display text. Nothing will</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id = identifier of the object:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param usertext[opt] = new user text string value:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">False if usertext is provided but unchanged. If usertext is not specified, the current usertext string. If usertext is specified, the previous usertext string.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Comparing the new user text to the current display text is critical. This is to prevent the user from replacing a formula with a static text which has the same display value.</p>
+<p class="rubric">References</p>
+<p>Extended from rs.DimensionUserText()</p>
+</div>
+<div class="section" id="blockinstancebaseplane">
+<h2>BlockInstanceBasePlane<a class="headerlink" href="#blockinstancebaseplane" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="BlockInstanceBasePlane"><a name="//apple_ref/cpp/Function/BlockInstanceBasePlane"></a>
+<code class="descname">BlockInstanceBasePlane</code><span class="sig-paren">(</span><em>block_id</em><span class="sig-paren">)</span><a class="headerlink" href="#BlockInstanceBasePlane" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Return the base plane of a block instance object.</p>
+</div>
+<div class="section" id="blockmodify">
+<h2>BlockModify<a class="headerlink" href="#blockmodify" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="BlockModify"><a name="//apple_ref/cpp/Function/BlockModify"></a>
+<code class="descname">BlockModify</code><span class="sig-paren">(</span><em>objectIDs</em>, <em>idef_name</em>, <em>base_Plane=None</em>, <em>idef_desc=''</em>, <em>modify=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BlockModify" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="blockproperties">
+<h2>BlockProperties<a class="headerlink" href="#blockproperties" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="BlockProperties"><a name="//apple_ref/cpp/Function/BlockProperties"></a>
+<code class="descname">BlockProperties</code><span class="sig-paren">(</span><em>block_name</em>, <em>dataDict=None</em>, <em>sortKeys=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BlockProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Read/modify properties embeded in block description. If a dictionary is provided, the dictionary will update the description.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param block_name:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">Name of the block defintion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param dataDict:</th><td class="field-body">Dictionary of properties.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="brepedgecreaseangle">
+<h2>BrepEdgeCreaseAngle<a class="headerlink" href="#brepedgecreaseangle" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="BrepEdgeCreaseAngle"><a name="//apple_ref/cpp/Function/BrepEdgeCreaseAngle"></a>
+<code class="descname">BrepEdgeCreaseAngle</code><span class="sig-paren">(</span><em>edge</em>, <em>parameter=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#BrepEdgeCreaseAngle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Calculate the crease angle between two adjacent faces of an Brep Edge.
+Angle is measured at normalised parameter of edge.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param edge:</th><td class="field-body">BrepEdge object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param param:</th><td class="field-body">Normalised parameter to evaluate</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Crease angle at that point.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="brepedges">
+<h2>BrepEdges<a class="headerlink" href="#brepedges" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="BrepEdges"><a name="//apple_ref/cpp/Function/BrepEdges"></a>
+<code class="descname">BrepEdges</code><span class="sig-paren">(</span><em>object_id</em>, <em>as_CurveObjects=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BrepEdges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Duplicate Brep Edges and place them in the correct layers</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">object extract edges from</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param as_CurveObjects[opt]:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body">Return as Curve Objects if True. Otherwise return BrepEdge objects.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Naked, Interior, NonManifold, ValleyFold, and ValleyFold.Each key has an associated list of geometry.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">dictionary with keys</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="brepreorderfaces">
+<h2>BrepReorderFaces<a class="headerlink" href="#brepreorderfaces" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="BrepReorderFaces"><a name="//apple_ref/cpp/Function/BrepReorderFaces"></a>
+<code class="descname">BrepReorderFaces</code><span class="sig-paren">(</span><em>brep_id</em>, <em>newIndices</em>, <em>replace=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BrepReorderFaces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="brepsplitwithcurves">
+<h2>BrepSplitWithCurves<a class="headerlink" href="#brepsplitwithcurves" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="BrepSplitWithCurves"><a name="//apple_ref/cpp/Function/BrepSplitWithCurves"></a>
+<code class="descname">BrepSplitWithCurves</code><span class="sig-paren">(</span><em>brep_id</em>, <em>curve_ids</em>, <em>delete_input=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BrepSplitWithCurves" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Splits a brep with a list of curves.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param brep_id:</th><td class="field-body">Identifier of the brep to split.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param curve_ids:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body">Identifiers of the curves to split the brep with.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param delete_input:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">Delete the input identifier if True.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">List of Identifiers of the new brep faces on success. If a brep geometry is provided, a modified brep is returned .</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="csvopen">
+<h2>CSVOpen<a class="headerlink" href="#csvopen" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="CSVOpen"><a name="//apple_ref/cpp/Function/CSVOpen"></a>
+<code class="descname">CSVOpen</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#CSVOpen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="csvread">
+<h2>CSVRead<a class="headerlink" href="#csvread" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="CSVRead"><a name="//apple_ref/cpp/Function/CSVRead"></a>
+<code class="descname">CSVRead</code><span class="sig-paren">(</span><em>fileName</em>, <em>dialect=None</em><span class="sig-paren">)</span><a class="headerlink" href="#CSVRead" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Read a CSV File, and return the content.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">data = If the data contains headers, it will return a list of Dictionaries.
+If the data does not contain headers, the data return a nested array.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Require csv module from IronPython 2.7.4
+.. rubric:: References</p>
+<p><a class="reference external" href="http://www.python.org/dev/peps/pep-0305/">PEP-0305</a></p>
+</div>
+<div class="section" id="csvwrite">
+<h2>CSVWrite<a class="headerlink" href="#csvwrite" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="CSVWrite"><a name="//apple_ref/cpp/Function/CSVWrite"></a>
+<code class="descname">CSVWrite</code><span class="sig-paren">(</span><em>fileName</em>, <em>data</em>, <em>dialect=None</em>, <em>fieldnames=None</em><span class="sig-paren">)</span><a class="headerlink" href="#CSVWrite" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Write data into a new CSV File.
+The data needs to be formated as a list of dictionaries.
+The keys will be the column name.
+Each dictionary represent a row of data</p>
+<p><a href="#id3"><span class="problematic" id="id4">**</span></a>Require csv module from IronPython 2.7.4</p>
+</div>
+<div class="section" id="clearusertext">
+<h2>ClearUserText<a class="headerlink" href="#clearusertext" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ClearUserText"><a name="//apple_ref/cpp/Function/ClearUserText"></a>
+<code class="descname">ClearUserText</code><span class="sig-paren">(</span><em>object_id</em>, <em>mode=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ClearUserText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Clear User Text stored in an object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">Identifier of an object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param mode:</th><td class="field-body">Mode to clear.
+0 : Clear User Text attached to Attributes
+1 : Clear User Text attached to Geometry
+2 : Clear All User Text</td>
+</tr>
+</tbody>
+</table>
+<p>Returns: None</p>
+</div>
+<div class="section" id="commonedge">
+<h2>CommonEdge<a class="headerlink" href="#commonedge" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="CommonEdge"><a name="//apple_ref/cpp/Function/CommonEdge"></a>
+<code class="descname">CommonEdge</code><span class="sig-paren">(</span><em>srfA</em>, <em>srfB</em>, <em>tolerance=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#CommonEdge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="creaseangle">
+<h2>CreaseAngle<a class="headerlink" href="#creaseangle" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="CreaseAngle"><a name="//apple_ref/cpp/Function/CreaseAngle"></a>
+<code class="descname">CreaseAngle</code><span class="sig-paren">(</span><em>srfA</em>, <em>srfB</em>, <em>normalSegment=1</em><span class="sig-paren">)</span><a class="headerlink" href="#CreaseAngle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Calculate the crease angle between two surfaces. The angle segment is determined by the surface normal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param srfA:</th><td class="field-body">Surface A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param srfB:</th><td class="field-body">Surface B</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param normalSegment:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">If set to True, return the angle segment on the surface normal first. If set to False, return the smallest angle first</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">Common Edge Curve ID, Angle and its Reflex Angle.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="curveduplicates">
+<h2>CurveDuplicates<a class="headerlink" href="#curveduplicates" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="CurveDuplicates"><a name="//apple_ref/cpp/Function/CurveDuplicates"></a>
+<code class="descname">CurveDuplicates</code><span class="sig-paren">(</span><em>curve_IDs</em>, <em>tolerance=None</em>, <em>return_Duplicate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#CurveDuplicates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Remove Duplicated curves
+:param curve_IDs = Input Curve GUIDs:
+:param tolerance [opt] = Tolerance for proximity check. If None, document tolerance is used:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">identifier of the duplicated curves on success</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="curvesplitoverlap">
+<h2>CurveSplitOverlap<a class="headerlink" href="#curvesplitoverlap" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="CurveSplitOverlap"><a name="//apple_ref/cpp/Function/CurveSplitOverlap"></a>
+<code class="descname">CurveSplitOverlap</code><span class="sig-paren">(</span><em>curve_IDs</em>, <em>tolerance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#CurveSplitOverlap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Detect overlapping of curves and split
+:param curve_IDs = Input Curve GUIDs:
+:param tolerance [opt] = Tolerance for intersection. If None, document tolerance is used:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">identifier of the splitted curves on success
+input curves on error.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="debugarray2d">
+<h2>DebugArray2D<a class="headerlink" href="#debugarray2d" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="DebugArray2D"><a name="//apple_ref/cpp/Function/DebugArray2D"></a>
+<code class="descname">DebugArray2D</code><span class="sig-paren">(</span><em>array2D</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugArray2D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Convert Object data Dictionary to a 2D list.</p>
+</div>
+<div class="section" id="debugcurvedeviation">
+<h2>DebugCurveDeviation<a class="headerlink" href="#debugcurvedeviation" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="DebugCurveDeviation"><a name="//apple_ref/cpp/Function/DebugCurveDeviation"></a>
+<code class="descname">DebugCurveDeviation</code><span class="sig-paren">(</span><em>curve_a</em>, <em>curve_b</em>, <em>name=None</em>, <em>layer=None</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugCurveDeviation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Analyse two curves for deviations and add debug geometries for visualisation.</p>
+</div>
+<div class="section" id="debugline">
+<h2>DebugLine<a class="headerlink" href="#debugline" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="DebugLine"><a name="//apple_ref/cpp/Function/DebugLine"></a>
+<code class="descname">DebugLine</code><span class="sig-paren">(</span><em>start_pt</em>, <em>end_pt</em>, <em>name=None</em>, <em>layer=None</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Add a line for visualisation.</p>
+</div>
+<div class="section" id="debugvalues">
+<h2>DebugValues<a class="headerlink" href="#debugvalues" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="DebugValues"><a name="//apple_ref/cpp/Function/DebugValues"></a>
+<code class="descname">DebugValues</code><span class="sig-paren">(</span><em>valueList</em>, <em>syncObjectList=None</em>, <em>colorRange=None</em>, <em>sourceRange=None</em>, <em>steps=10</em>, <em>descending=False</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugValues" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Analyse a set of numeric values and add debug geometries for visualisation.</p>
+</div>
+<div class="section" id="debugvector">
+<h2>DebugVector<a class="headerlink" href="#debugvector" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="DebugVector"><a name="//apple_ref/cpp/Function/DebugVector"></a>
+<code class="descname">DebugVector</code><span class="sig-paren">(</span><em>start_pt</em>, <em>vector</em>, <em>name=None</em>, <em>layer=None</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugVector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Add a line with end arrow for visualisation.</p>
+</div>
+<div class="section" id="debugvector2">
+<h2>DebugVector2<a class="headerlink" href="#debugvector2" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="DebugVector2"><a name="//apple_ref/cpp/Function/DebugVector2"></a>
+<code class="descname">DebugVector2</code><span class="sig-paren">(</span><em>start_pt</em>, <em>end_pt</em>, <em>name=None</em>, <em>layer=None</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugVector2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Add a line with end arrow for visualisation.</p>
+</div>
+<div class="section" id="dictionarymerge">
+<h2>DictionaryMerge<a class="headerlink" href="#dictionarymerge" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="DictionaryMerge"><a name="//apple_ref/cpp/Function/DictionaryMerge"></a>
+<code class="descname">DictionaryMerge</code><span class="sig-paren">(</span><em>dictA</em>, <em>dictB</em>, <em>overwrite=False</em>, <em>updateMode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#DictionaryMerge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Merge and update a dictionary with another dictionary by merge two dictionaries into one.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param dictA:</th><td class="field-body">dictionary object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param dictB:</th><td class="field-body">dictionary object to merge with.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param overwrite:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">If True, the values in dictB will replace the value in dictA if the same key is found.
+If multiple values found for the same key, the value will be replaced with “(varies)”</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param updateMode:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body">Update the dictA object. This is useful if input is an OrderedDict.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">The merged dictionary on success.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>a = {“a”:1, “b”:4}
+b = {“b”:1, “c”:16}
+z = DictionaryMerge(a, b)
+print z
+&gt;&gt;&gt;&gt;{‘a’: 1, ‘c’: 16, ‘b’: 1}</p>
+</div>
+<div class="section" id="dimensionvalue">
+<h2>DimensionValue<a class="headerlink" href="#dimensionvalue" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="DimensionValue"><a name="//apple_ref/cpp/Function/DimensionValue"></a>
+<code class="descname">DimensionValue</code><span class="sig-paren">(</span><em>object_id</em>, <em>as_displayed=False</em><span class="sig-paren">)</span><a class="headerlink" href="#DimensionValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Returns the value of a dimension object
+:param object_id = identifier of the object:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">numeric value of the dimension if successful</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="duplicatelayout">
+<h2>DuplicateLayout<a class="headerlink" href="#duplicatelayout" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="DuplicateLayout"><a name="//apple_ref/cpp/Function/DuplicateLayout"></a>
+<code class="descname">DuplicateLayout</code><span class="sig-paren">(</span><em>layout</em>, <em>title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#DuplicateLayout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Duplicate a Layout
+:param layout: Name or ID of layout to duplicate
+:param title: Title for the new Layout.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Name of the new layout on success</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="editbox-ex">
+<h2>EditBox_EX<a class="headerlink" href="#editbox-ex" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="EditBox_EX"><a name="//apple_ref/cpp/Function/EditBox_EX"></a>
+<code class="descname">EditBox_EX</code><span class="sig-paren">(</span><em>items=None</em>, <em>message=None</em>, <em>title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EditBox_EX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Extended version of EditBox.
+Display dialog box prompting the user to enter a string value. The string value may span multiple lines.
+Dialog will Always ensure the number of lines is the same compared to the original value.
+This is useful to replace a list of items with a new list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param list of items:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">List of items.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="excelread">
+<h2>ExcelRead<a class="headerlink" href="#excelread" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ExcelRead"><a name="//apple_ref/cpp/Function/ExcelRead"></a>
+<code class="descname">ExcelRead</code><span class="sig-paren">(</span><em>fileName</em>, <em>sheetName=None</em>, <em>range=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelRead" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="excelreload">
+<h2>ExcelReload<a class="headerlink" href="#excelreload" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ExcelReload"><a name="//apple_ref/cpp/Function/ExcelReload"></a>
+<code class="descname">ExcelReload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ExcelReload" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Helper method to reload this script when testing or debuging</p>
+</div>
+<div class="section" id="excelrun">
+<h2>ExcelRun<a class="headerlink" href="#excelrun" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ExcelRun"><a name="//apple_ref/cpp/Function/ExcelRun"></a>
+<code class="descname">ExcelRun</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ExcelRun" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Sample method for how to use the Excel Manager</p>
+</div>
+<div class="section" id="explodeblockinstance">
+<h2>ExplodeBlockInstance<a class="headerlink" href="#explodeblockinstance" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ExplodeBlockInstance"><a name="//apple_ref/cpp/Function/ExplodeBlockInstance"></a>
+<code class="descname">ExplodeBlockInstance</code><span class="sig-paren">(</span><em>block_id</em>, <em>onlyVisible=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ExplodeBlockInstance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Explode Block Instance recursively to a list of geometries.
+Block in worksession files are also supported. Objects inside the block will retain their layer structure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param block_id:</th><td class="field-body">Identifiers of block object</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param onlyVisible:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body">Optional. If set to True, only copy visible objects.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">List of exploded objects.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fileismodifiedwithin">
+<h2>FileIsModifiedWithin<a class="headerlink" href="#fileismodifiedwithin" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="FileIsModifiedWithin"><a name="//apple_ref/cpp/Function/FileIsModifiedWithin"></a>
+<code class="descname">FileIsModifiedWithin</code><span class="sig-paren">(</span><em>fileName</em>, <em>period</em><span class="sig-paren">)</span><a class="headerlink" href="#FileIsModifiedWithin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="fileopen">
+<h2>FileOpen<a class="headerlink" href="#fileopen" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="FileOpen"><a name="//apple_ref/cpp/Function/FileOpen"></a>
+<code class="descname">FileOpen</code><span class="sig-paren">(</span><em>filePath</em><span class="sig-paren">)</span><a class="headerlink" href="#FileOpen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Open file in the current Rhino instance.
+Make sure the current working file is saved before continue.
+Any modification will be discarded.</p>
+<p>filePath : Path of file to open.</p>
+<p><a href="#id5"><span class="problematic" id="id6">**</span></a>Require csv module from IronPython 2.7.4</p>
+</div>
+<div class="section" id="ghlockaftersolve">
+<h2>GHLockAfterSolve<a class="headerlink" href="#ghlockaftersolve" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="GHLockAfterSolve"><a name="//apple_ref/cpp/Function/GHLockAfterSolve"></a>
+<code class="descname">GHLockAfterSolve</code><span class="sig-paren">(</span><em>ghPythonComponent</em>, <em>activate</em>, <em>message='Solution Solved'</em><span class="sig-paren">)</span><a class="headerlink" href="#GHLockAfterSolve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Lock the GHPython component after solve to prevent further looping.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param ghPythonComponent:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">The component to apply Lock state to. use “ghenv.Component” to reference itself.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param activate:</th><td class="field-body">Activate Locking after solving this with the activate trigger input</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>import armacode
+armacode.GHLockAfterSolve(ghenv.Component, activate )</p>
+</div>
+<div class="section" id="ghparallel">
+<h2>GHParallel<a class="headerlink" href="#ghparallel" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="GHParallel"><a name="//apple_ref/cpp/Function/GHParallel"></a>
+<code class="descname">GHParallel</code><span class="sig-paren">(</span><em>method</em>, <em>driverInputTree</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#GHParallel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="generateplug">
+<h2>GeneratePlug<a class="headerlink" href="#generateplug" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="GeneratePlug"><a name="//apple_ref/cpp/Function/GeneratePlug"></a>
+<code class="descname">GeneratePlug</code><span class="sig-paren">(</span><em>matThickness=1.0</em>, <em>plugLength=5.0</em><span class="sig-paren">)</span><a class="headerlink" href="#GeneratePlug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="getprojectfolder">
+<h2>GetProjectFolder<a class="headerlink" href="#getprojectfolder" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="GetProjectFolder"><a name="//apple_ref/cpp/Function/GetProjectFolder"></a>
+<code class="descname">GetProjectFolder</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetProjectFolder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Returns the project folder folder of the current document.
+Compares all the parent folders if any of them contains the same folder structure as the project folder.</p>
+</div>
+<div class="section" id="getrelativefolder">
+<h2>GetRelativeFolder<a class="headerlink" href="#getrelativefolder" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="GetRelativeFolder"><a name="//apple_ref/cpp/Function/GetRelativeFolder"></a>
+<code class="descname">GetRelativeFolder</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetRelativeFolder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="getusertext">
+<h2>GetUserText<a class="headerlink" href="#getusertext" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="GetUserText"><a name="//apple_ref/cpp/Function/GetUserText"></a>
+<code class="descname">GetUserText</code><span class="sig-paren">(</span><em>object_id</em>, <em>key=None</em>, <em>attached_to_geometry=False</em><span class="sig-paren">)</span><a class="headerlink" href="#GetUserText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Returns user text stored on an object.
+:param object_id = the object’s identifies:
+:param key[opt] = the key name. If omitted all key names for an object are returned:
+:param attached_to_geometry[opt] = location on the object to retrieve the user text.:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">if key is specified, the associated value if successful
+if key is not specified, a dictionary of all user text key and values associated with the location.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="getusertextall">
+<h2>GetUserTextAll<a class="headerlink" href="#getusertextall" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="GetUserTextAll"><a name="//apple_ref/cpp/Function/GetUserTextAll"></a>
+<code class="descname">GetUserTextAll</code><span class="sig-paren">(</span><em>object_id</em><span class="sig-paren">)</span><a class="headerlink" href="#GetUserTextAll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Returns user text stored on an object.
+:param object_id = the object’s identifies:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Dictionary of all key and value pairs attached on both Geometry and Attribute.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="inspectobject">
+<h2>InspectObject<a class="headerlink" href="#inspectobject" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="InspectObject"><a name="//apple_ref/cpp/Function/InspectObject"></a>
+<code class="descname">InspectObject</code><span class="sig-paren">(</span><em>object=None</em><span class="sig-paren">)</span><a class="headerlink" href="#InspectObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="isghpython">
+<h2>IsGHPython<a class="headerlink" href="#isghpython" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="IsGHPython"><a name="//apple_ref/cpp/Function/IsGHPython"></a>
+<code class="descname">IsGHPython</code><span class="sig-paren">(</span><em>debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#IsGHPython" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="isloaded">
+<h2>IsLoaded<a class="headerlink" href="#isloaded" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="IsLoaded"><a name="//apple_ref/cpp/Function/IsLoaded"></a>
+<code class="descname">IsLoaded</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#IsLoaded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="isobjectinsidecurve">
+<h2>IsObjectInsideCurve<a class="headerlink" href="#isobjectinsidecurve" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="IsObjectInsideCurve"><a name="//apple_ref/cpp/Function/IsObjectInsideCurve"></a>
+<code class="descname">IsObjectInsideCurve</code><span class="sig-paren">(</span><em>object</em>, <em>boundary</em>, <em>plane=None</em>, <em>tolerance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#IsObjectInsideCurve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Test if an object is inside a closed curve.</p>
+</div>
+<div class="section" id="layerids">
+<h2>LayerIds<a class="headerlink" href="#layerids" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="LayerIds"><a name="//apple_ref/cpp/Function/LayerIds"></a>
+<code class="descname">LayerIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LayerIds" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="layerproperties">
+<h2>LayerProperties<a class="headerlink" href="#layerproperties" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="LayerProperties"><a name="//apple_ref/cpp/Function/LayerProperties"></a>
+<code class="descname">LayerProperties</code><span class="sig-paren">(</span><em>layer_id</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#LayerProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="layertruncate">
+<h2>LayerTruncate<a class="headerlink" href="#layertruncate" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="LayerTruncate"><a name="//apple_ref/cpp/Function/LayerTruncate"></a>
+<code class="descname">LayerTruncate</code><span class="sig-paren">(</span><em>layer_fullPath</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#LayerTruncate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="layoutdetails">
+<h2>LayoutDetails<a class="headerlink" href="#layoutdetails" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="LayoutDetails"><a name="//apple_ref/cpp/Function/LayoutDetails"></a>
+<code class="descname">LayoutDetails</code><span class="sig-paren">(</span><em>layout</em><span class="sig-paren">)</span><a class="headerlink" href="#LayoutDetails" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Get all detail objects on a layout.
+:param layout: Name or ID of Layout</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">List of IDs of all details on success.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="layoutproperties">
+<h2>LayoutProperties<a class="headerlink" href="#layoutproperties" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="LayoutProperties"><a name="//apple_ref/cpp/Function/LayoutProperties"></a>
+<code class="descname">LayoutProperties</code><span class="sig-paren">(</span><em>layoutID</em>, <em>data=None</em>, <em>displayText=False</em><span class="sig-paren">)</span><a class="headerlink" href="#LayoutProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Collect properties of a layout using its ID. The Properties are defined by named Text objects on the layout page view.</p>
+</div>
+<div class="section" id="linktoobject">
+<h2>LinkToObject<a class="headerlink" href="#linktoobject" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="LinkToObject"><a name="//apple_ref/cpp/Function/LinkToObject"></a>
+<code class="descname">LinkToObject</code><span class="sig-paren">(</span><em>object_ids</em>, <em>linkObject_id</em>, <em>key='LINKED_OBJECT'</em><span class="sig-paren">)</span><a class="headerlink" href="#LinkToObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Link multiple objects to another object using User Text Attributes.
+All objects will have a User Attribute with key and Id of Link Object as value.
+This is useful for identifying another object with direct relationship.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_ids:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">Identifiers of objects to apply</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param linkObject_id:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body">Identifier of the object to link with.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param key:</th><td class="field-body">Name of the key to associate with</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">(int) Number of objects applied.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="linkedobject">
+<h2>LinkedObject<a class="headerlink" href="#linkedobject" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="LinkedObject"><a name="//apple_ref/cpp/Function/LinkedObject"></a>
+<code class="descname">LinkedObject</code><span class="sig-paren">(</span><em>object_id</em>, <em>key='LINKED_OBJECT'</em><span class="sig-paren">)</span><a class="headerlink" href="#LinkedObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Get Linked Object based on the specified key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">Identifier of the object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param key:</th><td class="field-body">Link key name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">(guid) Identifier of the linked object.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="list2dtoarray2d">
+<h2>List2DToArray2D<a class="headerlink" href="#list2dtoarray2d" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="List2DToArray2D"><a name="//apple_ref/cpp/Function/List2DToArray2D"></a>
+<code class="descname">List2DToArray2D</code><span class="sig-paren">(</span><em>listObject</em><span class="sig-paren">)</span><a class="headerlink" href="#List2DToArray2D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="listpurge">
+<h2>ListPurge<a class="headerlink" href="#listpurge" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ListPurge"><a name="//apple_ref/cpp/Function/ListPurge"></a>
+<code class="descname">ListPurge</code><span class="sig-paren">(</span><em>list</em><span class="sig-paren">)</span><a class="headerlink" href="#ListPurge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Purge the list and return a list with unique items.</p>
+</div>
+<div class="section" id="loadconfig">
+<h2>LoadConfig<a class="headerlink" href="#loadconfig" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="LoadConfig"><a name="//apple_ref/cpp/Function/LoadConfig"></a>
+<code class="descname">LoadConfig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LoadConfig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="logger">
+<h2>Logger<a class="headerlink" href="#logger" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Logger"><a name="//apple_ref/cpp/Function/Logger"></a>
+<code class="descname">Logger</code><span class="sig-paren">(</span><em>loggerName=None</em>, <em>fileName=None</em>, <em>console=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Logger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Instantiate a logger object with default Formatter.
+Default level is set to WARNING (based on the root logger)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param loggerName:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">Name of the logger. Usually __file__ or something sensible.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param fileName:</th><td class="field-body">File name of the log file. If ommitted, logger will default to console</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param console:</th><td class="field-body">Display in console. Only effective when filename is specified.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">Logger Object</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>import armacode
+logger = armacode.Logger(__file__)
+logger.debug(“This is a debug message”)</p>
+<dl class="docutils">
+<dt>Reference:</dt>
+<dd><a class="reference external" href="http://stackoverflow.com/questions/13733552/logger-configuration-to-log-to-file-and-print-to-stdout">http://stackoverflow.com/questions/13733552/logger-configuration-to-log-to-file-and-print-to-stdout</a></dd>
+</dl>
+</div>
+<div class="section" id="matchlayerattributes">
+<h2>MatchLayerAttributes<a class="headerlink" href="#matchlayerattributes" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="MatchLayerAttributes"><a name="//apple_ref/cpp/Function/MatchLayerAttributes"></a>
+<code class="descname">MatchLayerAttributes</code><span class="sig-paren">(</span><em>target_layer_names</em>, <em>source_layer_name</em>, <em>visibility=False</em>, <em>lockState=False</em>, <em>color=True</em>, <em>materialIndex=True</em>, <em>lineType=True</em>, <em>plotColor=True</em>, <em>plotWeight=True</em><span class="sig-paren">)</span><a class="headerlink" href="#MatchLayerAttributes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Matches, or copies the attributes of a source layer to a target layer. Full path is recommended for accurate identification of layers.
+:param target_layer_names = full path names or identifiers of layers to copy attributes to.:
+:param source_layer_name = full path name or identifier of layer to copy attributes from.:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">number of objects modified</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="matchobjectattributes">
+<h2>MatchObjectAttributes<a class="headerlink" href="#matchobjectattributes" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="MatchObjectAttributes"><a name="//apple_ref/cpp/Function/MatchObjectAttributes"></a>
+<code class="descname">MatchObjectAttributes</code><span class="sig-paren">(</span><em>target_ids</em>, <em>source_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#MatchObjectAttributes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Matches, or copies the attributes of a source object to a target object. Retains the User Strings data.
+Objects on Reference layer will have their layer name truncated and added to document.
+Also work with objects inside a block definition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param target_ids = identifiers of objects to copy attributes to:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param source_id[opt] = identifier of object to copy attributes from. If None,:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param then the default attributes are copied to the target_ids:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">number of objects modified</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">rhinoscriptsyntax</span> <span class="kn">as</span> <span class="nn">rs</span>
+<span class="kn">import</span> <span class="nn">armacode</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">GetObjects</span><span class="p">(</span><span class="s">"Select Objects to match attributes"</span><span class="p">)</span>
+<span class="n">sourceObj</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">GetObject</span><span class="p">(</span><span class="s">"Source object to match attributes to"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">obj</span> <span class="ow">and</span> <span class="n">sourceObj</span><span class="p">:</span>
+    <span class="n">armacode</span><span class="o">.</span><span class="n">MatchObjectAttributes</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">sourceObj</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="numberpadding">
+<h2>NumberPadding<a class="headerlink" href="#numberpadding" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="NumberPadding"><a name="//apple_ref/cpp/Function/NumberPadding"></a>
+<code class="descname">NumberPadding</code><span class="sig-paren">(</span><em>strFormat</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#NumberPadding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Format the value with a string format. the value is represented by the # character.
+The value will be padded by the number of consecutive characters
+### =&gt; 001
+##-### =&gt; 01-001</p>
+</div>
+<div class="section" id="objectgrouplist">
+<h2>ObjectGroupList<a class="headerlink" href="#objectgrouplist" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ObjectGroupList"><a name="//apple_ref/cpp/Function/ObjectGroupList"></a>
+<code class="descname">ObjectGroupList</code><span class="sig-paren">(</span><em>objects=None</em>, <em>sort=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectGroupList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Returns a list of all the Group Names for the objects
+:param objects: If omitted, all objects in the document is used
+:param sort: Sort the list if True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">List of Group Names
+and a dictionary of all objects with group name as key</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectlayer">
+<h2>ObjectLayer<a class="headerlink" href="#objectlayer" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ObjectLayer"><a name="//apple_ref/cpp/Function/ObjectLayer"></a>
+<code class="descname">ObjectLayer</code><span class="sig-paren">(</span><em>object_id</em>, <em>layer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectLayer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Returns or modifies the layer of an object
+:param object_id = the identifier of the object(s):
+:param layer[opt] = name of an existing layer:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">If a layer is not specified, the object’s current layer
+If a layer is specified, the object’s previous layer
+If object_id is a list or tuple, the number of objects modified</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectlayerlist">
+<h2>ObjectLayerList<a class="headerlink" href="#objectlayerlist" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ObjectLayerList"><a name="//apple_ref/cpp/Function/ObjectLayerList"></a>
+<code class="descname">ObjectLayerList</code><span class="sig-paren">(</span><em>objects=None</em>, <em>sort=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectLayerList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Returns a list of all the Layer Names for the objects
+:param objects: If omitted, all objects in the document is used
+:param sort: Sort the list if True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">List of Layer Names
+and a dictionary of all objects with layer name as key</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectnamelist">
+<h2>ObjectNameList<a class="headerlink" href="#objectnamelist" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ObjectNameList"><a name="//apple_ref/cpp/Function/ObjectNameList"></a>
+<code class="descname">ObjectNameList</code><span class="sig-paren">(</span><em>objects=None</em>, <em>sort=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectNameList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Returns a list of all the Names for the objects
+:param objects: If omitted, the list of all the layers
+:param sort: Sort the list if True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">List of Names
+and a dictionary of all objects with name as key</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectproperties">
+<h2>ObjectProperties<a class="headerlink" href="#objectproperties" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ObjectProperties"><a name="//apple_ref/cpp/Function/ObjectProperties"></a>
+<code class="descname">ObjectProperties</code><span class="sig-paren">(</span><em>object_id</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectpropertiesmerge">
+<h2>ObjectPropertiesMerge<a class="headerlink" href="#objectpropertiesmerge" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ObjectPropertiesMerge"><a name="//apple_ref/cpp/Function/ObjectPropertiesMerge"></a>
+<code class="descname">ObjectPropertiesMerge</code><span class="sig-paren">(</span><em>object_ids</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectPropertiesMerge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Merge two Properties dictionaries into one.
+Properties dictionary contains all properties for an object. Refer to ObjectProperties method for more information.
+A value string “(varies)” will replace if multiple values found for a property.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_ids:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">Two or more property dictionaries</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">The merged dictionary on success.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectreferencepoint">
+<h2>ObjectReferencePoint<a class="headerlink" href="#objectreferencepoint" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ObjectReferencePoint"><a name="//apple_ref/cpp/Function/ObjectReferencePoint"></a>
+<code class="descname">ObjectReferencePoint</code><span class="sig-paren">(</span><em>object_id</em>, <em>pull=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectReferencePoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Evaluate a reference point for a object.
+Reference point is a point indicate where the object is in model space.
+It is calculated by the center of the bounding box in World XY Plane.
+If pull is set to True, and an object is a Block instance, the insertion point is returned.
+:param object_id: Identifier of an object.
+:param pull: Optional, If True, the point is pulled to sit on the object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">point in World coordinates.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectsbyattributes">
+<h2>ObjectsByAttributes<a class="headerlink" href="#objectsbyattributes" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ObjectsByAttributes"><a name="//apple_ref/cpp/Function/ObjectsByAttributes"></a>
+<code class="descname">ObjectsByAttributes</code><span class="sig-paren">(</span><em>name=None</em>, <em>layerName=None</em>, <em>layout=None</em>, <em>filter=0</em>, <em>include_grips=False</em>, <em>include_lights=False</em>, <em>is_instances=False</em>, <em>include_reference=False</em>, <em>include_selected=False</em>, <em>state=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsByAttributes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Returns identifiers of all objects based on attributes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param filter[opt] = The type(s) of geometry (points, curves, surfaces, meshes,...):</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body">that can be selected. Object types can be added together to filter
+several different kinds of geometry. use the filter class to get values</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param select[opt] = Select the objects:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param state[opt] = Object state. See help:</th></tr>
+<tr class="field-odd field"><td> </td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">List of identifiers.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectsbylayout">
+<h2>ObjectsByLayout<a class="headerlink" href="#objectsbylayout" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ObjectsByLayout"><a name="//apple_ref/cpp/Function/ObjectsByLayout"></a>
+<code class="descname">ObjectsByLayout</code><span class="sig-paren">(</span><em>layout=None</em>, <em>filter=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsByLayout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Returns identifiers of all objects based on the objects’ geometry type.
+:param layout = name or guid of the specified layout.:
+:param filter = Object type filter.:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">A list of Guids identifying the objects.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectsbyquery">
+<h2>ObjectsByQuery<a class="headerlink" href="#objectsbyquery" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ObjectsByQuery"><a name="//apple_ref/cpp/Function/ObjectsByQuery"></a>
+<code class="descname">ObjectsByQuery</code><span class="sig-paren">(</span><em>name=None</em>, <em>layerName=None</em>, <em>layout=None</em>, <em>filter=0</em>, <em>include_grips=False</em>, <em>include_lights=False</em>, <em>is_instances=False</em>, <em>include_reference=False</em>, <em>include_selected=False</em>, <em>state=0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsByQuery" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectsbyuserstring">
+<h2>ObjectsByUserString<a class="headerlink" href="#objectsbyuserstring" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ObjectsByUserString"><a name="//apple_ref/cpp/Function/ObjectsByUserString"></a>
+<code class="descname">ObjectsByUserString</code><span class="sig-paren">(</span><em>key</em>, <em>value='*'</em>, <em>caseSensitive=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsByUserString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<p>Finds all objects whose UserString matches the search patterns.</p>
+<table class="docutils field-list" frame="void" rules="non"></table></div></div></div></div></div></body></html>

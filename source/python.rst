@@ -49,82 +49,35 @@ Docstring
 
 * `Napoleon Google Docstrings <http://sphinxcontrib-napoleon.readthedocs.org/en/latest/#docstring-sections>`_
 
-Folder structure
-================
 
-The folder structure for armacode should be organised following the following structure::
+.. Folder structure
+.. ================
 
-        armacode/
-            __init__.py
-            classes/
-                    __init__.py
-                    ClassBaseOne/
-                            __init__.py
-                            ClassOne.py
-                    ClassBaseTwo/
-                            __init__.py
-                            ClassTwo.py
-                    ClassBaseThree/
-                            __init__.py
-                            ClassThree.py
-            libraries/
-                    __init__.py
-                    ModuleOne.py
-                    ModuleTwo.py
-                    ModuleThree.py
-            tools/
-                    __init__.py
-                    toolOne.py
-                    toolTwo.py
-                    toolThree.py
+.. The folder structure for armacode should be organised following the following structure
 
-
-
-Classes
--------
-
-    Classes are predefined objects which can be used in future projects for Research, and possibly Production, purposes.
-
-Each class should be in their own ClassBase folder. For example, Particle, MovingParticle, FlockingParticle would be part of the ParticleSystem Class.
-
-Access the classes with the following::
-
-    import armacode
-    p = armacode.classes.ParticleSystem.Particle()
+..         armacode/
+..             __init__.py
+..             classes/
+..                     __init__.py
+..                     ClassBaseOne/
+..                             __init__.py
+..                             ClassOne.py
+..                     ClassBaseTwo/
+..                             __init__.py
+..                             ClassTwo.py
+..                     ClassBaseThree/
+..                             __init__.py
+..                             ClassThree.py
+..             libraries/
+..                     __init__.py
+..                     ModuleOne.py
+..                     ModuleTwo.py
+..                     ModuleThree.py
+..             tools/
+..                     __init__.py
+..                     toolOne.py
+..                     toolTwo.py
+..                     toolThree.py
 
 
-Libraries
----------
-
-    Library of all the useful methods which can be used during the development of a script or a workflow sequence. 
-
-Each of the method should Only perform one small single purpose. For example::
-
-    Add(x,y):
-        result = x + y
-        return result
-    
-    Average(x,y):
-        result = Add(x,y) / 2 
-        return result
-
-.. Note:: Average function reuses Add function to reduce data redundancy and help code management.
-
-Access the method with the following::
-
-    import armacode
-    line = armacode.AddLine()
-
-
-Tools
------
-
-    Tools are workflow-based scripts which represent a sequence of steps to produce a desired output.
-
-A workflow usually involve interactive user inputs where decisions need to be made during the execution of a script.
-
-Access the tool with the following::
-
-    import armacode
-    line = armacode.tools.AddNameTags.main()
 

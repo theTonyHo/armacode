@@ -1,0 +1,7 @@
+AddObjectsToBlock
+-----------------
+
+.. py:Function:: AddObjectsToBlock(object_ids, block_id, delete_input=False, replaceAll=False)
+
+
+Add objects to a Block instance.

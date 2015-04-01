@@ -1,0 +1,2601 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AddBlock &mdash; armacode Documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.2.0/ar-ma/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'v1.1.1 Build 317.0401',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/ar-ma_favicon.ico"/>
+    <link rel="top" title="armacode Documentation" href="../../index.html" />
+    <link rel="up" title="Libraries" href="../../libraries.html" />
+    <link rel="next" title="Tools" href="../../tools.html" />
+    <link rel="prev" title="ViewSize" href="ViewSize.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/ar-ma_logo.png">
+          armacode</a>
+        <span class="navbar-text navbar-version pull-left"><b>v1.1.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../classes.html">Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/index.html">&lt;empty&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/index.html#empty-2">&lt;empty&gt; 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/index.html#empty-3">&lt;empty&gt; 3</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../libraries.html">Libraries</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="AddBlock.html">AddBlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddDimAlignedFromLine.html">AddDimAlignedFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddDimLinearFromLine.html">AddDimLinearFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddLayer.html">AddLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddLineEX.html">AddLineEX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddLinearDimension.html">AddLinearDimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddObjectsToBlock.html">AddObjectsToBlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AddPlaneSurfaceCenter.html">AddPlaneSurfaceCenter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnnotationProperties.html">AnnotationProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnnotationText.html">AnnotationText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BlockInstanceBasePlane.html">BlockInstanceBasePlane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BlockModify.html">BlockModify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BlockProperties.html">BlockProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BrepEdgeCreaseAngle.html">BrepEdgeCreaseAngle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BrepEdges.html">BrepEdges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BrepReorderFaces.html">BrepReorderFaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BrepSplitWithCurves.html">BrepSplitWithCurves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CSVOpen.html">CSVOpen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CSVRead.html">CSVRead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CSVWrite.html">CSVWrite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ClearUserText.html">ClearUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CommonEdge.html">CommonEdge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CreaseAngle.html">CreaseAngle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CurveDuplicates.html">CurveDuplicates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CurveSplitOverlap.html">CurveSplitOverlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugArray2D.html">DebugArray2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugCurveDeviation.html">DebugCurveDeviation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugLine.html">DebugLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugValues.html">DebugValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugVector.html">DebugVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DebugVector2.html">DebugVector2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DictionaryMerge.html">DictionaryMerge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DimensionValue.html">DimensionValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DuplicateLayout.html">DuplicateLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditBox_EX.html">EditBox_EX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelRead.html">ExcelRead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelReload.html">ExcelReload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelRun.html">ExcelRun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExplodeBlockInstance.html">ExplodeBlockInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FileIsModifiedWithin.html">FileIsModifiedWithin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FileOpen.html">FileOpen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GHLockAfterSolve.html">GHLockAfterSolve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GHParallel.html">GHParallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneratePlug.html">GeneratePlug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetProjectFolder.html">GetProjectFolder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetRelativeFolder.html">GetRelativeFolder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetUserText.html">GetUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetUserTextAll.html">GetUserTextAll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InspectObject.html">InspectObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IsGHPython.html">IsGHPython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IsLoaded.html">IsLoaded</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IsObjectInsideCurve.html">IsObjectInsideCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LayerIds.html">LayerIds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LayerProperties.html">LayerProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LayerTruncate.html">LayerTruncate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LayoutDetails.html">LayoutDetails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LayoutProperties.html">LayoutProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LinkToObject.html">LinkToObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LinkedObject.html">LinkedObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="List2DToArray2D.html">List2DToArray2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ListPurge.html">ListPurge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LoadConfig.html">LoadConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Logger.html">Logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MatchLayerAttributes.html">MatchLayerAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MatchObjectAttributes.html">MatchObjectAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NumberPadding.html">NumberPadding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectGroupList.html">ObjectGroupList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectLayer.html">ObjectLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectLayerList.html">ObjectLayerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectNameList.html">ObjectNameList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectProperties.html">ObjectProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectPropertiesMerge.html">ObjectPropertiesMerge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectReferencePoint.html">ObjectReferencePoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsByAttributes.html">ObjectsByAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsByLayout.html">ObjectsByLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsByQuery.html">ObjectsByQuery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsByUserString.html">ObjectsByUserString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsInBrep.html">ObjectsInBrep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsInClosedCurve.html">ObjectsInClosedCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsInView.html">ObjectsInView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjectsSortByName.html">ObjectsSortByName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OffsetCurve.html">OffsetCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OrientObjects.html">OrientObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ParallelRun.html">ParallelRun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlaneAlign.html">PlaneAlign</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlaneFromObject.html">PlaneFromObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlaneFromPolyline.html">PlaneFromPolyline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlaneFromSurface.html">PlaneFromSurface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PointClosestObjects.html">PointClosestObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PrintAll.html">PrintAll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PrintPDF.html">PrintPDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PrintPDFSetup.html">PrintPDFSetup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProcessPerFile.html">ProcessPerFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProgressBar.html">ProgressBar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PullPolylineToObjects.html">PullPolylineToObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RandomColor.html">RandomColor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RangeFormat.html">RangeFormat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SaveFileName.html">SaveFileName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ScreenShot.html">ScreenShot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SelectedObjects.html">SelectedObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SetUserAttributeToObjects.html">SetUserAttributeToObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SetUserText.html">SetUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SetUserTextFromDict.html">SetUserTextFromDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SortByIndices.html">SortByIndices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SortObjectsAlongCurve.html">SortObjectsAlongCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SortObjectsAlongPolyline.html">SortObjectsAlongPolyline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SortSynchronous.html">SortSynchronous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StickyGet.html">StickyGet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StickySet.html">StickySet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StringFieldNames.html">StringFieldNames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StringFromAttributes.html">StringFromAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextObjectTextFormula.html">TextObjectTextFormula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextObjectsByFont.html">TextObjectsByFont</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TextObjectsByProperties.html">TextObjectsByProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UnfoldBrep.html">UnfoldBrep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UnfoldBrepAuto.html">UnfoldBrepAuto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UnfoldSurface.html">UnfoldSurface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ValueRemap.html">ValueRemap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VectorFromLine.html">VectorFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ViewRadius.html">ViewRadius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ViewSize.html">ViewSize</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">AddBlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adddimalignedfromline">AddDimAlignedFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adddimlinearfromline">AddDimLinearFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addlayer">AddLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addlineex">AddLineEX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addlineardimension">AddLinearDimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addobjectstoblock">AddObjectsToBlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addplanesurfacecenter">AddPlaneSurfaceCenter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#annotationproperties">AnnotationProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#annotationtext">AnnotationText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blockinstancebaseplane">BlockInstanceBasePlane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blockmodify">BlockModify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blockproperties">BlockProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brepedgecreaseangle">BrepEdgeCreaseAngle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brepedges">BrepEdges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brepreorderfaces">BrepReorderFaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brepsplitwithcurves">BrepSplitWithCurves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csvopen">CSVOpen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csvread">CSVRead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csvwrite">CSVWrite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clearusertext">ClearUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commonedge">CommonEdge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creaseangle">CreaseAngle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#curveduplicates">CurveDuplicates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#curvesplitoverlap">CurveSplitOverlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugarray2d">DebugArray2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugcurvedeviation">DebugCurveDeviation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugline">DebugLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugvalues">DebugValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugvector">DebugVector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugvector2">DebugVector2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dictionarymerge">DictionaryMerge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dimensionvalue">DimensionValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#duplicatelayout">DuplicateLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editbox-ex">EditBox_EX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#excelread">ExcelRead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#excelreload">ExcelReload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#excelrun">ExcelRun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#explodeblockinstance">ExplodeBlockInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fileismodifiedwithin">FileIsModifiedWithin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fileopen">FileOpen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ghlockaftersolve">GHLockAfterSolve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ghparallel">GHParallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generateplug">GeneratePlug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getprojectfolder">GetProjectFolder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getrelativefolder">GetRelativeFolder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getusertext">GetUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getusertextall">GetUserTextAll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inspectobject">InspectObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#isghpython">IsGHPython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#isloaded">IsLoaded</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#isobjectinsidecurve">IsObjectInsideCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layerids">LayerIds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layerproperties">LayerProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layertruncate">LayerTruncate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layoutdetails">LayoutDetails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layoutproperties">LayoutProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linktoobject">LinkToObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linkedobject">LinkedObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list2dtoarray2d">List2DToArray2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listpurge">ListPurge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loadconfig">LoadConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logger">Logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#matchlayerattributes">MatchLayerAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#matchobjectattributes">MatchObjectAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#numberpadding">NumberPadding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectgrouplist">ObjectGroupList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectlayer">ObjectLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectlayerlist">ObjectLayerList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectnamelist">ObjectNameList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectproperties">ObjectProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectpropertiesmerge">ObjectPropertiesMerge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectreferencepoint">ObjectReferencePoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsbyattributes">ObjectsByAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsbylayout">ObjectsByLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsbyquery">ObjectsByQuery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsbyuserstring">ObjectsByUserString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsinbrep">ObjectsInBrep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsinclosedcurve">ObjectsInClosedCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectsinview">ObjectsInView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objectssortbyname">ObjectsSortByName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#offsetcurve">OffsetCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#orientobjects">OrientObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parallelrun">ParallelRun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#planealign">PlaneAlign</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#planefromobject">PlaneFromObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#planefrompolyline">PlaneFromPolyline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#planefromsurface">PlaneFromSurface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pointclosestobjects">PointClosestObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#printall">PrintAll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#printpdf">PrintPDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#printpdfsetup">PrintPDFSetup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#processperfile">ProcessPerFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#progressbar">ProgressBar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pullpolylinetoobjects">PullPolylineToObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#randomcolor">RandomColor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rangeformat">RangeFormat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#savefilename">SaveFileName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#screenshot">ScreenShot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#selectedobjects">SelectedObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setuserattributetoobjects">SetUserAttributeToObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setusertext">SetUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setusertextfromdict">SetUserTextFromDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sortbyindices">SortByIndices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sortobjectsalongcurve">SortObjectsAlongCurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sortobjectsalongpolyline">SortObjectsAlongPolyline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sortsynchronous">SortSynchronous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stickyget">StickyGet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stickyset">StickySet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stringfieldnames">StringFieldNames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stringfromattributes">StringFromAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#textobjecttextformula">TextObjectTextFormula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#textobjectsbyfont">TextObjectsByFont</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#textobjectsbyproperties">TextObjectsByProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unfoldbrep">UnfoldBrep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unfoldbrepauto">UnfoldBrepAuto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unfoldsurface">UnfoldSurface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#valueremap">ValueRemap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vectorfromline">VectorFromLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#viewradius">ViewRadius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#viewsize">ViewSize</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools.html">Tools</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plug-ins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/Tables.html">Tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../python.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../python.html#docstring">Docstring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../conventions.html">Conventions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions.html#workflow">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions.html#command">Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../howto.html">How-To&#8217;s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/armacodeSettings.html">Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/armacodeSettings.html#user-configuration-settings">User Configuration Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/scriptcontextSticky.html">Scriptcontext Sticky</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">AddBlock</a></li>
+<li><a class="reference internal" href="#adddimalignedfromline">AddDimAlignedFromLine</a></li>
+<li><a class="reference internal" href="#adddimlinearfromline">AddDimLinearFromLine</a></li>
+<li><a class="reference internal" href="#addlayer">AddLayer</a></li>
+<li><a class="reference internal" href="#addlineex">AddLineEX</a></li>
+<li><a class="reference internal" href="#addlineardimension">AddLinearDimension</a></li>
+<li><a class="reference internal" href="#addobjectstoblock">AddObjectsToBlock</a></li>
+<li><a class="reference internal" href="#addplanesurfacecenter">AddPlaneSurfaceCenter</a></li>
+<li><a class="reference internal" href="#annotationproperties">AnnotationProperties</a></li>
+<li><a class="reference internal" href="#annotationtext">AnnotationText</a></li>
+<li><a class="reference internal" href="#blockinstancebaseplane">BlockInstanceBasePlane</a></li>
+<li><a class="reference internal" href="#blockmodify">BlockModify</a></li>
+<li><a class="reference internal" href="#blockproperties">BlockProperties</a></li>
+<li><a class="reference internal" href="#brepedgecreaseangle">BrepEdgeCreaseAngle</a></li>
+<li><a class="reference internal" href="#brepedges">BrepEdges</a></li>
+<li><a class="reference internal" href="#brepreorderfaces">BrepReorderFaces</a></li>
+<li><a class="reference internal" href="#brepsplitwithcurves">BrepSplitWithCurves</a></li>
+<li><a class="reference internal" href="#csvopen">CSVOpen</a></li>
+<li><a class="reference internal" href="#csvread">CSVRead</a></li>
+<li><a class="reference internal" href="#csvwrite">CSVWrite</a></li>
+<li><a class="reference internal" href="#clearusertext">ClearUserText</a></li>
+<li><a class="reference internal" href="#commonedge">CommonEdge</a></li>
+<li><a class="reference internal" href="#creaseangle">CreaseAngle</a></li>
+<li><a class="reference internal" href="#curveduplicates">CurveDuplicates</a></li>
+<li><a class="reference internal" href="#curvesplitoverlap">CurveSplitOverlap</a></li>
+<li><a class="reference internal" href="#debugarray2d">DebugArray2D</a></li>
+<li><a class="reference internal" href="#debugcurvedeviation">DebugCurveDeviation</a></li>
+<li><a class="reference internal" href="#debugline">DebugLine</a></li>
+<li><a class="reference internal" href="#debugvalues">DebugValues</a></li>
+<li><a class="reference internal" href="#debugvector">DebugVector</a></li>
+<li><a class="reference internal" href="#debugvector2">DebugVector2</a></li>
+<li><a class="reference internal" href="#dictionarymerge">DictionaryMerge</a></li>
+<li><a class="reference internal" href="#dimensionvalue">DimensionValue</a></li>
+<li><a class="reference internal" href="#duplicatelayout">DuplicateLayout</a></li>
+<li><a class="reference internal" href="#editbox-ex">EditBox_EX</a></li>
+<li><a class="reference internal" href="#excelread">ExcelRead</a></li>
+<li><a class="reference internal" href="#excelreload">ExcelReload</a></li>
+<li><a class="reference internal" href="#excelrun">ExcelRun</a></li>
+<li><a class="reference internal" href="#explodeblockinstance">ExplodeBlockInstance</a></li>
+<li><a class="reference internal" href="#fileismodifiedwithin">FileIsModifiedWithin</a></li>
+<li><a class="reference internal" href="#fileopen">FileOpen</a></li>
+<li><a class="reference internal" href="#ghlockaftersolve">GHLockAfterSolve</a></li>
+<li><a class="reference internal" href="#ghparallel">GHParallel</a></li>
+<li><a class="reference internal" href="#generateplug">GeneratePlug</a></li>
+<li><a class="reference internal" href="#getprojectfolder">GetProjectFolder</a></li>
+<li><a class="reference internal" href="#getrelativefolder">GetRelativeFolder</a></li>
+<li><a class="reference internal" href="#getusertext">GetUserText</a></li>
+<li><a class="reference internal" href="#getusertextall">GetUserTextAll</a></li>
+<li><a class="reference internal" href="#inspectobject">InspectObject</a></li>
+<li><a class="reference internal" href="#isghpython">IsGHPython</a></li>
+<li><a class="reference internal" href="#isloaded">IsLoaded</a></li>
+<li><a class="reference internal" href="#isobjectinsidecurve">IsObjectInsideCurve</a></li>
+<li><a class="reference internal" href="#layerids">LayerIds</a></li>
+<li><a class="reference internal" href="#layerproperties">LayerProperties</a></li>
+<li><a class="reference internal" href="#layertruncate">LayerTruncate</a></li>
+<li><a class="reference internal" href="#layoutdetails">LayoutDetails</a></li>
+<li><a class="reference internal" href="#layoutproperties">LayoutProperties</a></li>
+<li><a class="reference internal" href="#linktoobject">LinkToObject</a></li>
+<li><a class="reference internal" href="#linkedobject">LinkedObject</a></li>
+<li><a class="reference internal" href="#list2dtoarray2d">List2DToArray2D</a></li>
+<li><a class="reference internal" href="#listpurge">ListPurge</a></li>
+<li><a class="reference internal" href="#loadconfig">LoadConfig</a></li>
+<li><a class="reference internal" href="#logger">Logger</a></li>
+<li><a class="reference internal" href="#matchlayerattributes">MatchLayerAttributes</a></li>
+<li><a class="reference internal" href="#matchobjectattributes">MatchObjectAttributes</a></li>
+<li><a class="reference internal" href="#numberpadding">NumberPadding</a></li>
+<li><a class="reference internal" href="#objectgrouplist">ObjectGroupList</a></li>
+<li><a class="reference internal" href="#objectlayer">ObjectLayer</a></li>
+<li><a class="reference internal" href="#objectlayerlist">ObjectLayerList</a></li>
+<li><a class="reference internal" href="#objectnamelist">ObjectNameList</a></li>
+<li><a class="reference internal" href="#objectproperties">ObjectProperties</a></li>
+<li><a class="reference internal" href="#objectpropertiesmerge">ObjectPropertiesMerge</a></li>
+<li><a class="reference internal" href="#objectreferencepoint">ObjectReferencePoint</a></li>
+<li><a class="reference internal" href="#objectsbyattributes">ObjectsByAttributes</a></li>
+<li><a class="reference internal" href="#objectsbylayout">ObjectsByLayout</a></li>
+<li><a class="reference internal" href="#objectsbyquery">ObjectsByQuery</a></li>
+<li><a class="reference internal" href="#objectsbyuserstring">ObjectsByUserString</a></li>
+<li><a class="reference internal" href="#objectsinbrep">ObjectsInBrep</a></li>
+<li><a class="reference internal" href="#objectsinclosedcurve">ObjectsInClosedCurve</a></li>
+<li><a class="reference internal" href="#objectsinview">ObjectsInView</a></li>
+<li><a class="reference internal" href="#objectssortbyname">ObjectsSortByName</a></li>
+<li><a class="reference internal" href="#offsetcurve">OffsetCurve</a></li>
+<li><a class="reference internal" href="#orientobjects">OrientObjects</a></li>
+<li><a class="reference internal" href="#parallelrun">ParallelRun</a></li>
+<li><a class="reference internal" href="#planealign">PlaneAlign</a></li>
+<li><a class="reference internal" href="#planefromobject">PlaneFromObject</a></li>
+<li><a class="reference internal" href="#planefrompolyline">PlaneFromPolyline</a></li>
+<li><a class="reference internal" href="#planefromsurface">PlaneFromSurface</a></li>
+<li><a class="reference internal" href="#pointclosestobjects">PointClosestObjects</a></li>
+<li><a class="reference internal" href="#printall">PrintAll</a></li>
+<li><a class="reference internal" href="#printpdf">PrintPDF</a></li>
+<li><a class="reference internal" href="#printpdfsetup">PrintPDFSetup</a></li>
+<li><a class="reference internal" href="#processperfile">ProcessPerFile</a></li>
+<li><a class="reference internal" href="#progressbar">ProgressBar</a></li>
+<li><a class="reference internal" href="#pullpolylinetoobjects">PullPolylineToObjects</a></li>
+<li><a class="reference internal" href="#randomcolor">RandomColor</a></li>
+<li><a class="reference internal" href="#rangeformat">RangeFormat</a></li>
+<li><a class="reference internal" href="#savefilename">SaveFileName</a></li>
+<li><a class="reference internal" href="#screenshot">ScreenShot</a></li>
+<li><a class="reference internal" href="#selectedobjects">SelectedObjects</a></li>
+<li><a class="reference internal" href="#setuserattributetoobjects">SetUserAttributeToObjects</a></li>
+<li><a class="reference internal" href="#setusertext">SetUserText</a></li>
+<li><a class="reference internal" href="#setusertextfromdict">SetUserTextFromDict</a></li>
+<li><a class="reference internal" href="#sortbyindices">SortByIndices</a></li>
+<li><a class="reference internal" href="#sortobjectsalongcurve">SortObjectsAlongCurve</a></li>
+<li><a class="reference internal" href="#sortobjectsalongpolyline">SortObjectsAlongPolyline</a></li>
+<li><a class="reference internal" href="#sortsynchronous">SortSynchronous</a></li>
+<li><a class="reference internal" href="#stickyget">StickyGet</a></li>
+<li><a class="reference internal" href="#stickyset">StickySet</a></li>
+<li><a class="reference internal" href="#stringfieldnames">StringFieldNames</a></li>
+<li><a class="reference internal" href="#stringfromattributes">StringFromAttributes</a></li>
+<li><a class="reference internal" href="#textobjecttextformula">TextObjectTextFormula</a></li>
+<li><a class="reference internal" href="#textobjectsbyfont">TextObjectsByFont</a></li>
+<li><a class="reference internal" href="#textobjectsbyproperties">TextObjectsByProperties</a></li>
+<li><a class="reference internal" href="#unfoldbrep">UnfoldBrep</a></li>
+<li><a class="reference internal" href="#unfoldbrepauto">UnfoldBrepAuto</a></li>
+<li><a class="reference internal" href="#unfoldsurface">UnfoldSurface</a></li>
+<li><a class="reference internal" href="#valueremap">ValueRemap</a></li>
+<li><a class="reference internal" href="#vectorfromline">VectorFromLine</a></li>
+<li><a class="reference internal" href="#viewradius">ViewRadius</a></li>
+<li><a class="reference internal" href="#viewsize">ViewSize</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="ViewSize.html" title="Previous Chapter: ViewSize"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ViewSize</span>
+    </a>
+  </li>
+  <li>
+    <a href="../../tools.html" title="Next Chapter: Tools"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Tools &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../../_sources/armacode/libraries/index.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="addblock">
+<h1>AddBlock<a class="headerlink" href="#addblock" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="AddBlock">
+<code class="descname">AddBlock</code><span class="sig-paren">(</span><em>objectIDs</em>, <em>idef_name</em>, <em>base_Plane=None</em>, <em>idef_desc=''</em><span class="sig-paren">)</span><a class="headerlink" href="#AddBlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="adddimalignedfromline">
+<h1>AddDimAlignedFromLine<a class="headerlink" href="#adddimalignedfromline" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="AddDimAlignedFromLine">
+<code class="descname">AddDimAlignedFromLine</code><span class="sig-paren">(</span><em>curve</em>, <em>dimOffset=100.0</em>, <em>plane=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AddDimAlignedFromLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Create an Aligned dimension from a line. Curve needs to be in Clockwise orientation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param curve = Curve ID:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param dimOffset = Offset of dimension text:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">A list of Guids identifying the objects.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="adddimlinearfromline">
+<h1>AddDimLinearFromLine<a class="headerlink" href="#adddimlinearfromline" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="AddDimLinearFromLine">
+<code class="descname">AddDimLinearFromLine</code><span class="sig-paren">(</span><em>curve</em>, <em>dimOffset=100.0</em>, <em>plane=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AddDimLinearFromLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Create an Aligned dimension from a line. Curve needs to be in Clockwise orientation.
+:param curve = Curve ID:
+:param dimOffset = Offset of dimension text:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">A list of Guids identifying the objects.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="addlayer">
+<h1>AddLayer<a class="headerlink" href="#addlayer" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="AddLayer">
+<code class="descname">AddLayer</code><span class="sig-paren">(</span><em>name=None</em>, <em>color=None</em>, <em>visible=True</em>, <em>locked=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AddLayer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Add a new layer to the document.
+Extended from Rhinoscript syntax with Full Layer name support
+Parent Layer automatically added if does not exist.
+:param name[opt]: The full path of the new layer. If omitted, Rhino automatically</p>
+<blockquote>
+<div>generates the layer name.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param color[opt]:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">A Red-Green-Blue color value or System.Drawing.Color. If
+omitted, the color Black is assigned.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param visible[opt]:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">layer&#8217;s visibility</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param locked[opt]:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">layer&#8217;s locked state</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">The full name of the new layer if successful.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="addlineex">
+<h1>AddLineEX<a class="headerlink" href="#addlineex" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="AddLineEX">
+<code class="descname">AddLineEX</code><span class="sig-paren">(</span><em>startPoint</em>, <em>endPoint</em>, <em>tolerance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AddLineEX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Adds a line curve to the current model.
+:param start, end = end points of the line:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">id of the new curve object</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="addlineardimension">
+<h1>AddLinearDimension<a class="headerlink" href="#addlineardimension" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="AddLinearDimension">
+<code class="descname">AddLinearDimension</code><span class="sig-paren">(</span><em>plane</em>, <em>start_point</em>, <em>end_point</em>, <em>point_on_dimension_line</em><span class="sig-paren">)</span><a class="headerlink" href="#AddLinearDimension" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Adds a linear dimension to the document</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Identifier of the new object on success.None on error</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="addobjectstoblock">
+<h1>AddObjectsToBlock<a class="headerlink" href="#addobjectstoblock" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="AddObjectsToBlock">
+<code class="descname">AddObjectsToBlock</code><span class="sig-paren">(</span><em>object_ids</em>, <em>block_id</em>, <em>delete_input=False</em>, <em>replaceAll=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AddObjectsToBlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Add objects to a Block instance.</p>
+</div>
+<div class="section" id="addplanesurfacecenter">
+<h1>AddPlaneSurfaceCenter<a class="headerlink" href="#addplanesurfacecenter" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="AddPlaneSurfaceCenter">
+<code class="descname">AddPlaneSurfaceCenter</code><span class="sig-paren">(</span><em>plane</em>, <em>u_dir</em>, <em>v_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#AddPlaneSurfaceCenter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Create a plane surface with center at plane origin and add it to the document.
+:param plane = The plane.:
+:param u_dir = The magnitude in the U direction.:
+:param v_dir = The magnitude in the V direction.:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">The identifier of the new object if successful.
+None if not successful, or on error.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="annotationproperties">
+<h1>AnnotationProperties<a class="headerlink" href="#annotationproperties" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="AnnotationProperties">
+<code class="descname">AnnotationProperties</code><span class="sig-paren">(</span><em>object_id</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AnnotationProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Return or Modifies properties of an annotation object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Identifier of Rhino object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type object_id:</th><td class="field-body">guid</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param data:</th><td class="field-body">New properties values as a dictionary .</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type data:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Dictionary of the object properties.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="annotationtext">
+<h1>AnnotationText<a class="headerlink" href="#annotationtext" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="AnnotationText">
+<code class="descname">AnnotationText</code><span class="sig-paren">(</span><em>object_id</em>, <em>usertext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AnnotationText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns of modifies the user text string of a dimension object.
+The usertext is the string that gets printed when the dimension is defined.
+If the provided usertext is the same as the display text. Nothing will</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id = identifier of the object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param usertext[opt] = new user text string value:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">False if usertext is provided but unchanged. If usertext is not specified, the current usertext string. If usertext is specified, the previous usertext string.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Comparing the new user text to the current display text is critical. This is to prevent the user from replacing a formula with a static text which has the same display value.</p>
+<p class="rubric">References</p>
+<p>Extended from rs.DimensionUserText()</p>
+</div>
+<div class="section" id="blockinstancebaseplane">
+<h1>BlockInstanceBasePlane<a class="headerlink" href="#blockinstancebaseplane" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="BlockInstanceBasePlane">
+<code class="descname">BlockInstanceBasePlane</code><span class="sig-paren">(</span><em>block_id</em><span class="sig-paren">)</span><a class="headerlink" href="#BlockInstanceBasePlane" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Return the base plane of a block instance object.</p>
+</div>
+<div class="section" id="blockmodify">
+<h1>BlockModify<a class="headerlink" href="#blockmodify" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="BlockModify">
+<code class="descname">BlockModify</code><span class="sig-paren">(</span><em>objectIDs</em>, <em>idef_name</em>, <em>base_Plane=None</em>, <em>idef_desc=''</em>, <em>modify=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BlockModify" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="blockproperties">
+<h1>BlockProperties<a class="headerlink" href="#blockproperties" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="BlockProperties">
+<code class="descname">BlockProperties</code><span class="sig-paren">(</span><em>block_name</em>, <em>dataDict=None</em>, <em>sortKeys=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BlockProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Read/modify properties embeded in block description. If a dictionary is provided, the dictionary will update the description.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param block_name:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Name of the block defintion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param dataDict:</th><td class="field-body">Dictionary of properties.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="brepedgecreaseangle">
+<h1>BrepEdgeCreaseAngle<a class="headerlink" href="#brepedgecreaseangle" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="BrepEdgeCreaseAngle">
+<code class="descname">BrepEdgeCreaseAngle</code><span class="sig-paren">(</span><em>edge</em>, <em>parameter=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#BrepEdgeCreaseAngle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Calculate the crease angle between two adjacent faces of an Brep Edge.
+Angle is measured at normalised parameter of edge.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param edge:</th><td class="field-body">BrepEdge object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param param:</th><td class="field-body">Normalised parameter to evaluate</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Crease angle at that point.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="brepedges">
+<h1>BrepEdges<a class="headerlink" href="#brepedges" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="BrepEdges">
+<code class="descname">BrepEdges</code><span class="sig-paren">(</span><em>object_id</em>, <em>as_CurveObjects=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BrepEdges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Duplicate Brep Edges and place them in the correct layers</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">object extract edges from</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param as_CurveObjects[opt]:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Return as Curve Objects if True. Otherwise return BrepEdge objects.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Naked, Interior, NonManifold, ValleyFold, and ValleyFold.Each key has an associated list of geometry.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">dictionary with keys</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="brepreorderfaces">
+<h1>BrepReorderFaces<a class="headerlink" href="#brepreorderfaces" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="BrepReorderFaces">
+<code class="descname">BrepReorderFaces</code><span class="sig-paren">(</span><em>brep_id</em>, <em>newIndices</em>, <em>replace=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BrepReorderFaces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="brepsplitwithcurves">
+<h1>BrepSplitWithCurves<a class="headerlink" href="#brepsplitwithcurves" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="BrepSplitWithCurves">
+<code class="descname">BrepSplitWithCurves</code><span class="sig-paren">(</span><em>brep_id</em>, <em>curve_ids</em>, <em>delete_input=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BrepSplitWithCurves" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Splits a brep with a list of curves.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param brep_id:</th><td class="field-body">Identifier of the brep to split.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param curve_ids:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Identifiers of the curves to split the brep with.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param delete_input:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Delete the input identifier if True.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">List of Identifiers of the new brep faces on success. If a brep geometry is provided, a modified brep is returned .</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="csvopen">
+<h1>CSVOpen<a class="headerlink" href="#csvopen" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="CSVOpen">
+<code class="descname">CSVOpen</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#CSVOpen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="csvread">
+<h1>CSVRead<a class="headerlink" href="#csvread" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="CSVRead">
+<code class="descname">CSVRead</code><span class="sig-paren">(</span><em>fileName</em>, <em>dialect=None</em><span class="sig-paren">)</span><a class="headerlink" href="#CSVRead" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Read a CSV File, and return the content.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">data = If the data contains headers, it will return a list of Dictionaries.
+If the data does not contain headers, the data return a nested array.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Require csv module from IronPython 2.7.4
+.. rubric:: References</p>
+<p><a class="reference external" href="http://www.python.org/dev/peps/pep-0305/">PEP-0305</a></p>
+</div>
+<div class="section" id="csvwrite">
+<h1>CSVWrite<a class="headerlink" href="#csvwrite" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="CSVWrite">
+<code class="descname">CSVWrite</code><span class="sig-paren">(</span><em>fileName</em>, <em>data</em>, <em>dialect=None</em>, <em>fieldnames=None</em><span class="sig-paren">)</span><a class="headerlink" href="#CSVWrite" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Write data into a new CSV File.
+The data needs to be formated as a list of dictionaries.
+The keys will be the column name.
+Each dictionary represent a row of data</p>
+<p><a href="#id3"><span class="problematic" id="id4">**</span></a>Require csv module from IronPython 2.7.4</p>
+</div>
+<div class="section" id="clearusertext">
+<h1>ClearUserText<a class="headerlink" href="#clearusertext" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ClearUserText">
+<code class="descname">ClearUserText</code><span class="sig-paren">(</span><em>object_id</em>, <em>mode=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ClearUserText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Clear User Text stored in an object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Identifier of an object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param mode:</th><td class="field-body">Mode to clear.
+0 : Clear User Text attached to Attributes
+1 : Clear User Text attached to Geometry
+2 : Clear All User Text</td>
+</tr>
+</tbody>
+</table>
+<p>Returns: None</p>
+</div>
+<div class="section" id="commonedge">
+<h1>CommonEdge<a class="headerlink" href="#commonedge" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="CommonEdge">
+<code class="descname">CommonEdge</code><span class="sig-paren">(</span><em>srfA</em>, <em>srfB</em>, <em>tolerance=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#CommonEdge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="creaseangle">
+<h1>CreaseAngle<a class="headerlink" href="#creaseangle" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="CreaseAngle">
+<code class="descname">CreaseAngle</code><span class="sig-paren">(</span><em>srfA</em>, <em>srfB</em>, <em>normalSegment=1</em><span class="sig-paren">)</span><a class="headerlink" href="#CreaseAngle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Calculate the crease angle between two surfaces. The angle segment is determined by the surface normal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param srfA:</th><td class="field-body">Surface A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param srfB:</th><td class="field-body">Surface B</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param normalSegment:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">If set to True, return the angle segment on the surface normal first. If set to False, return the smallest angle first</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">Common Edge Curve ID, Angle and its Reflex Angle.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="curveduplicates">
+<h1>CurveDuplicates<a class="headerlink" href="#curveduplicates" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="CurveDuplicates">
+<code class="descname">CurveDuplicates</code><span class="sig-paren">(</span><em>curve_IDs</em>, <em>tolerance=None</em>, <em>return_Duplicate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#CurveDuplicates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Remove Duplicated curves
+:param curve_IDs = Input Curve GUIDs:
+:param tolerance [opt] = Tolerance for proximity check. If None, document tolerance is used:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">identifier of the duplicated curves on success</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="curvesplitoverlap">
+<h1>CurveSplitOverlap<a class="headerlink" href="#curvesplitoverlap" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="CurveSplitOverlap">
+<code class="descname">CurveSplitOverlap</code><span class="sig-paren">(</span><em>curve_IDs</em>, <em>tolerance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#CurveSplitOverlap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Detect overlapping of curves and split
+:param curve_IDs = Input Curve GUIDs:
+:param tolerance [opt] = Tolerance for intersection. If None, document tolerance is used:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">identifier of the splitted curves on success
+input curves on error.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="debugarray2d">
+<h1>DebugArray2D<a class="headerlink" href="#debugarray2d" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="DebugArray2D">
+<code class="descname">DebugArray2D</code><span class="sig-paren">(</span><em>array2D</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugArray2D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Convert Object data Dictionary to a 2D list.</p>
+</div>
+<div class="section" id="debugcurvedeviation">
+<h1>DebugCurveDeviation<a class="headerlink" href="#debugcurvedeviation" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="DebugCurveDeviation">
+<code class="descname">DebugCurveDeviation</code><span class="sig-paren">(</span><em>curve_a</em>, <em>curve_b</em>, <em>name=None</em>, <em>layer=None</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugCurveDeviation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Analyse two curves for deviations and add debug geometries for visualisation.</p>
+</div>
+<div class="section" id="debugline">
+<h1>DebugLine<a class="headerlink" href="#debugline" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="DebugLine">
+<code class="descname">DebugLine</code><span class="sig-paren">(</span><em>start_pt</em>, <em>end_pt</em>, <em>name=None</em>, <em>layer=None</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Add a line for visualisation.</p>
+</div>
+<div class="section" id="debugvalues">
+<h1>DebugValues<a class="headerlink" href="#debugvalues" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="DebugValues">
+<code class="descname">DebugValues</code><span class="sig-paren">(</span><em>valueList</em>, <em>syncObjectList=None</em>, <em>colorRange=None</em>, <em>sourceRange=None</em>, <em>steps=10</em>, <em>descending=False</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugValues" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Analyse a set of numeric values and add debug geometries for visualisation.</p>
+</div>
+<div class="section" id="debugvector">
+<h1>DebugVector<a class="headerlink" href="#debugvector" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="DebugVector">
+<code class="descname">DebugVector</code><span class="sig-paren">(</span><em>start_pt</em>, <em>vector</em>, <em>name=None</em>, <em>layer=None</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugVector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Add a line with end arrow for visualisation.</p>
+</div>
+<div class="section" id="debugvector2">
+<h1>DebugVector2<a class="headerlink" href="#debugvector2" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="DebugVector2">
+<code class="descname">DebugVector2</code><span class="sig-paren">(</span><em>start_pt</em>, <em>end_pt</em>, <em>name=None</em>, <em>layer=None</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#DebugVector2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Add a line with end arrow for visualisation.</p>
+</div>
+<div class="section" id="dictionarymerge">
+<h1>DictionaryMerge<a class="headerlink" href="#dictionarymerge" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="DictionaryMerge">
+<code class="descname">DictionaryMerge</code><span class="sig-paren">(</span><em>dictA</em>, <em>dictB</em>, <em>overwrite=False</em>, <em>updateMode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#DictionaryMerge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Merge and update a dictionary with another dictionary by merge two dictionaries into one.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param dictA:</th><td class="field-body">dictionary object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param dictB:</th><td class="field-body">dictionary object to merge with.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param overwrite:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">If True, the values in dictB will replace the value in dictA if the same key is found.
+If multiple values found for the same key, the value will be replaced with &#8220;(varies)&#8221;</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param updateMode:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Update the dictA object. This is useful if input is an OrderedDict.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">The merged dictionary on success.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>a = {&#8220;a&#8221;:1, &#8220;b&#8221;:4}
+b = {&#8220;b&#8221;:1, &#8220;c&#8221;:16}
+z = DictionaryMerge(a, b)
+print z
+&gt;&gt;&gt;&gt;{&#8216;a&#8217;: 1, &#8216;c&#8217;: 16, &#8216;b&#8217;: 1}</p>
+</div>
+<div class="section" id="dimensionvalue">
+<h1>DimensionValue<a class="headerlink" href="#dimensionvalue" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="DimensionValue">
+<code class="descname">DimensionValue</code><span class="sig-paren">(</span><em>object_id</em>, <em>as_displayed=False</em><span class="sig-paren">)</span><a class="headerlink" href="#DimensionValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns the value of a dimension object
+:param object_id = identifier of the object:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">numeric value of the dimension if successful</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="duplicatelayout">
+<h1>DuplicateLayout<a class="headerlink" href="#duplicatelayout" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="DuplicateLayout">
+<code class="descname">DuplicateLayout</code><span class="sig-paren">(</span><em>layout</em>, <em>title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#DuplicateLayout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Duplicate a Layout
+:param layout: Name or ID of layout to duplicate
+:param title: Title for the new Layout.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Name of the new layout on success</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="editbox-ex">
+<h1>EditBox_EX<a class="headerlink" href="#editbox-ex" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="EditBox_EX">
+<code class="descname">EditBox_EX</code><span class="sig-paren">(</span><em>items=None</em>, <em>message=None</em>, <em>title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EditBox_EX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Extended version of EditBox.
+Display dialog box prompting the user to enter a string value. The string value may span multiple lines.
+Dialog will Always ensure the number of lines is the same compared to the original value.
+This is useful to replace a list of items with a new list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param list of items:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">List of items.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="excelread">
+<h1>ExcelRead<a class="headerlink" href="#excelread" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ExcelRead">
+<code class="descname">ExcelRead</code><span class="sig-paren">(</span><em>fileName</em>, <em>sheetName=None</em>, <em>range=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelRead" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="excelreload">
+<h1>ExcelReload<a class="headerlink" href="#excelreload" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ExcelReload">
+<code class="descname">ExcelReload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ExcelReload" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Helper method to reload this script when testing or debuging</p>
+</div>
+<div class="section" id="excelrun">
+<h1>ExcelRun<a class="headerlink" href="#excelrun" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ExcelRun">
+<code class="descname">ExcelRun</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ExcelRun" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Sample method for how to use the Excel Manager</p>
+</div>
+<div class="section" id="explodeblockinstance">
+<h1>ExplodeBlockInstance<a class="headerlink" href="#explodeblockinstance" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ExplodeBlockInstance">
+<code class="descname">ExplodeBlockInstance</code><span class="sig-paren">(</span><em>block_id</em>, <em>onlyVisible=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ExplodeBlockInstance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Explode Block Instance recursively to a list of geometries.
+Block in worksession files are also supported. Objects inside the block will retain their layer structure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param block_id:</th><td class="field-body">Identifiers of block object</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param onlyVisible:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Optional. If set to True, only copy visible objects.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">List of exploded objects.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fileismodifiedwithin">
+<h1>FileIsModifiedWithin<a class="headerlink" href="#fileismodifiedwithin" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="FileIsModifiedWithin">
+<code class="descname">FileIsModifiedWithin</code><span class="sig-paren">(</span><em>fileName</em>, <em>period</em><span class="sig-paren">)</span><a class="headerlink" href="#FileIsModifiedWithin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="fileopen">
+<h1>FileOpen<a class="headerlink" href="#fileopen" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="FileOpen">
+<code class="descname">FileOpen</code><span class="sig-paren">(</span><em>filePath</em><span class="sig-paren">)</span><a class="headerlink" href="#FileOpen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Open file in the current Rhino instance.
+Make sure the current working file is saved before continue.
+Any modification will be discarded.</p>
+<p>filePath : Path of file to open.</p>
+<p><a href="#id5"><span class="problematic" id="id6">**</span></a>Require csv module from IronPython 2.7.4</p>
+</div>
+<div class="section" id="ghlockaftersolve">
+<h1>GHLockAfterSolve<a class="headerlink" href="#ghlockaftersolve" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="GHLockAfterSolve">
+<code class="descname">GHLockAfterSolve</code><span class="sig-paren">(</span><em>ghPythonComponent</em>, <em>activate</em>, <em>message='Solution Solved'</em><span class="sig-paren">)</span><a class="headerlink" href="#GHLockAfterSolve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Lock the GHPython component after solve to prevent further looping.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param ghPythonComponent:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">The component to apply Lock state to. use &#8220;ghenv.Component&#8221; to reference itself.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param activate:</th><td class="field-body">Activate Locking after solving this with the activate trigger input</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>import armacode
+armacode.GHLockAfterSolve(ghenv.Component, activate )</p>
+</div>
+<div class="section" id="ghparallel">
+<h1>GHParallel<a class="headerlink" href="#ghparallel" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="GHParallel">
+<code class="descname">GHParallel</code><span class="sig-paren">(</span><em>method</em>, <em>driverInputTree</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#GHParallel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="generateplug">
+<h1>GeneratePlug<a class="headerlink" href="#generateplug" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="GeneratePlug">
+<code class="descname">GeneratePlug</code><span class="sig-paren">(</span><em>matThickness=1.0</em>, <em>plugLength=5.0</em><span class="sig-paren">)</span><a class="headerlink" href="#GeneratePlug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="getprojectfolder">
+<h1>GetProjectFolder<a class="headerlink" href="#getprojectfolder" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="GetProjectFolder">
+<code class="descname">GetProjectFolder</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetProjectFolder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns the project folder folder of the current document.
+Compares all the parent folders if any of them contains the same folder structure as the project folder.</p>
+</div>
+<div class="section" id="getrelativefolder">
+<h1>GetRelativeFolder<a class="headerlink" href="#getrelativefolder" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="GetRelativeFolder">
+<code class="descname">GetRelativeFolder</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GetRelativeFolder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="getusertext">
+<h1>GetUserText<a class="headerlink" href="#getusertext" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="GetUserText">
+<code class="descname">GetUserText</code><span class="sig-paren">(</span><em>object_id</em>, <em>key=None</em>, <em>attached_to_geometry=False</em><span class="sig-paren">)</span><a class="headerlink" href="#GetUserText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns user text stored on an object.
+:param object_id = the object&#8217;s identifies:
+:param key[opt] = the key name. If omitted all key names for an object are returned:
+:param attached_to_geometry[opt] = location on the object to retrieve the user text.:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">if key is specified, the associated value if successful
+if key is not specified, a dictionary of all user text key and values associated with the location.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="getusertextall">
+<h1>GetUserTextAll<a class="headerlink" href="#getusertextall" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="GetUserTextAll">
+<code class="descname">GetUserTextAll</code><span class="sig-paren">(</span><em>object_id</em><span class="sig-paren">)</span><a class="headerlink" href="#GetUserTextAll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns user text stored on an object.
+:param object_id = the object&#8217;s identifies:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Dictionary of all key and value pairs attached on both Geometry and Attribute.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="inspectobject">
+<h1>InspectObject<a class="headerlink" href="#inspectobject" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="InspectObject">
+<code class="descname">InspectObject</code><span class="sig-paren">(</span><em>object=None</em><span class="sig-paren">)</span><a class="headerlink" href="#InspectObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="isghpython">
+<h1>IsGHPython<a class="headerlink" href="#isghpython" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="IsGHPython">
+<code class="descname">IsGHPython</code><span class="sig-paren">(</span><em>debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#IsGHPython" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="isloaded">
+<h1>IsLoaded<a class="headerlink" href="#isloaded" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="IsLoaded">
+<code class="descname">IsLoaded</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#IsLoaded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="isobjectinsidecurve">
+<h1>IsObjectInsideCurve<a class="headerlink" href="#isobjectinsidecurve" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="IsObjectInsideCurve">
+<code class="descname">IsObjectInsideCurve</code><span class="sig-paren">(</span><em>object</em>, <em>boundary</em>, <em>plane=None</em>, <em>tolerance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#IsObjectInsideCurve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Test if an object is inside a closed curve.</p>
+</div>
+<div class="section" id="layerids">
+<h1>LayerIds<a class="headerlink" href="#layerids" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="LayerIds">
+<code class="descname">LayerIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LayerIds" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="layerproperties">
+<h1>LayerProperties<a class="headerlink" href="#layerproperties" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="LayerProperties">
+<code class="descname">LayerProperties</code><span class="sig-paren">(</span><em>layer_id</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#LayerProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="layertruncate">
+<h1>LayerTruncate<a class="headerlink" href="#layertruncate" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="LayerTruncate">
+<code class="descname">LayerTruncate</code><span class="sig-paren">(</span><em>layer_fullPath</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#LayerTruncate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="layoutdetails">
+<h1>LayoutDetails<a class="headerlink" href="#layoutdetails" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="LayoutDetails">
+<code class="descname">LayoutDetails</code><span class="sig-paren">(</span><em>layout</em><span class="sig-paren">)</span><a class="headerlink" href="#LayoutDetails" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Get all detail objects on a layout.
+:param layout: Name or ID of Layout</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">List of IDs of all details on success.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="layoutproperties">
+<h1>LayoutProperties<a class="headerlink" href="#layoutproperties" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="LayoutProperties">
+<code class="descname">LayoutProperties</code><span class="sig-paren">(</span><em>layoutID</em>, <em>data=None</em>, <em>displayText=False</em><span class="sig-paren">)</span><a class="headerlink" href="#LayoutProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Collect properties of a layout using its ID. The Properties are defined by named Text objects on the layout page view.</p>
+</div>
+<div class="section" id="linktoobject">
+<h1>LinkToObject<a class="headerlink" href="#linktoobject" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="LinkToObject">
+<code class="descname">LinkToObject</code><span class="sig-paren">(</span><em>object_ids</em>, <em>linkObject_id</em>, <em>key='LINKED_OBJECT'</em><span class="sig-paren">)</span><a class="headerlink" href="#LinkToObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Link multiple objects to another object using User Text Attributes.
+All objects will have a User Attribute with key and Id of Link Object as value.
+This is useful for identifying another object with direct relationship.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_ids:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Identifiers of objects to apply</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param linkObject_id:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Identifier of the object to link with.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param key:</th><td class="field-body">Name of the key to associate with</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">(int) Number of objects applied.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="linkedobject">
+<h1>LinkedObject<a class="headerlink" href="#linkedobject" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="LinkedObject">
+<code class="descname">LinkedObject</code><span class="sig-paren">(</span><em>object_id</em>, <em>key='LINKED_OBJECT'</em><span class="sig-paren">)</span><a class="headerlink" href="#LinkedObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Get Linked Object based on the specified key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Identifier of the object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param key:</th><td class="field-body">Link key name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">(guid) Identifier of the linked object.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="list2dtoarray2d">
+<h1>List2DToArray2D<a class="headerlink" href="#list2dtoarray2d" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="List2DToArray2D">
+<code class="descname">List2DToArray2D</code><span class="sig-paren">(</span><em>listObject</em><span class="sig-paren">)</span><a class="headerlink" href="#List2DToArray2D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="listpurge">
+<h1>ListPurge<a class="headerlink" href="#listpurge" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ListPurge">
+<code class="descname">ListPurge</code><span class="sig-paren">(</span><em>list</em><span class="sig-paren">)</span><a class="headerlink" href="#ListPurge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Purge the list and return a list with unique items.</p>
+</div>
+<div class="section" id="loadconfig">
+<h1>LoadConfig<a class="headerlink" href="#loadconfig" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="LoadConfig">
+<code class="descname">LoadConfig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LoadConfig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="logger">
+<h1>Logger<a class="headerlink" href="#logger" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="Logger">
+<code class="descname">Logger</code><span class="sig-paren">(</span><em>loggerName=None</em>, <em>fileName=None</em>, <em>console=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Logger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Instantiate a logger object with default Formatter.
+Default level is set to WARNING (based on the root logger)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param loggerName:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Name of the logger. Usually __file__ or something sensible.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param fileName:</th><td class="field-body">File name of the log file. If ommitted, logger will default to console</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param console:</th><td class="field-body">Display in console. Only effective when filename is specified.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">Logger Object</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<p>import armacode
+logger = armacode.Logger(__file__)
+logger.debug(&#8220;This is a debug message&#8221;)</p>
+<dl class="docutils">
+<dt>Reference:</dt>
+<dd><a class="reference external" href="http://stackoverflow.com/questions/13733552/logger-configuration-to-log-to-file-and-print-to-stdout">http://stackoverflow.com/questions/13733552/logger-configuration-to-log-to-file-and-print-to-stdout</a></dd>
+</dl>
+</div>
+<div class="section" id="matchlayerattributes">
+<h1>MatchLayerAttributes<a class="headerlink" href="#matchlayerattributes" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="MatchLayerAttributes">
+<code class="descname">MatchLayerAttributes</code><span class="sig-paren">(</span><em>target_layer_names</em>, <em>source_layer_name</em>, <em>visibility=False</em>, <em>lockState=False</em>, <em>color=True</em>, <em>materialIndex=True</em>, <em>lineType=True</em>, <em>plotColor=True</em>, <em>plotWeight=True</em><span class="sig-paren">)</span><a class="headerlink" href="#MatchLayerAttributes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Matches, or copies the attributes of a source layer to a target layer. Full path is recommended for accurate identification of layers.
+:param target_layer_names = full path names or identifiers of layers to copy attributes to.:
+:param source_layer_name = full path name or identifier of layer to copy attributes from.:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">number of objects modified</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="matchobjectattributes">
+<h1>MatchObjectAttributes<a class="headerlink" href="#matchobjectattributes" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="MatchObjectAttributes">
+<code class="descname">MatchObjectAttributes</code><span class="sig-paren">(</span><em>target_ids</em>, <em>source_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#MatchObjectAttributes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Matches, or copies the attributes of a source object to a target object. Retains the User Strings data.
+Objects on Reference layer will have their layer name truncated and added to document.
+Also work with objects inside a block definition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param target_ids = identifiers of objects to copy attributes to:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param source_id[opt] = identifier of object to copy attributes from. If None,:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param then the default attributes are copied to the target_ids:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">number of objects modified</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">rhinoscriptsyntax</span> <span class="kn">as</span> <span class="nn">rs</span>
+<span class="kn">import</span> <span class="nn">armacode</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">GetObjects</span><span class="p">(</span><span class="s">&quot;Select Objects to match attributes&quot;</span><span class="p">)</span>
+<span class="n">sourceObj</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">GetObject</span><span class="p">(</span><span class="s">&quot;Source object to match attributes to&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">obj</span> <span class="ow">and</span> <span class="n">sourceObj</span><span class="p">:</span>
+    <span class="n">armacode</span><span class="o">.</span><span class="n">MatchObjectAttributes</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">sourceObj</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="numberpadding">
+<h1>NumberPadding<a class="headerlink" href="#numberpadding" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="NumberPadding">
+<code class="descname">NumberPadding</code><span class="sig-paren">(</span><em>strFormat</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#NumberPadding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Format the value with a string format. the value is represented by the # character.
+The value will be padded by the number of consecutive characters
+### =&gt; 001
+##-### =&gt; 01-001</p>
+</div>
+<div class="section" id="objectgrouplist">
+<h1>ObjectGroupList<a class="headerlink" href="#objectgrouplist" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectGroupList">
+<code class="descname">ObjectGroupList</code><span class="sig-paren">(</span><em>objects=None</em>, <em>sort=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectGroupList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns a list of all the Group Names for the objects
+:param objects: If omitted, all objects in the document is used
+:param sort: Sort the list if True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">List of Group Names
+and a dictionary of all objects with group name as key</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectlayer">
+<h1>ObjectLayer<a class="headerlink" href="#objectlayer" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectLayer">
+<code class="descname">ObjectLayer</code><span class="sig-paren">(</span><em>object_id</em>, <em>layer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectLayer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns or modifies the layer of an object
+:param object_id = the identifier of the object(s):
+:param layer[opt] = name of an existing layer:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">If a layer is not specified, the object&#8217;s current layer
+If a layer is specified, the object&#8217;s previous layer
+If object_id is a list or tuple, the number of objects modified</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectlayerlist">
+<h1>ObjectLayerList<a class="headerlink" href="#objectlayerlist" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectLayerList">
+<code class="descname">ObjectLayerList</code><span class="sig-paren">(</span><em>objects=None</em>, <em>sort=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectLayerList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns a list of all the Layer Names for the objects
+:param objects: If omitted, all objects in the document is used
+:param sort: Sort the list if True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">List of Layer Names
+and a dictionary of all objects with layer name as key</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectnamelist">
+<h1>ObjectNameList<a class="headerlink" href="#objectnamelist" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectNameList">
+<code class="descname">ObjectNameList</code><span class="sig-paren">(</span><em>objects=None</em>, <em>sort=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectNameList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns a list of all the Names for the objects
+:param objects: If omitted, the list of all the layers
+:param sort: Sort the list if True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">List of Names
+and a dictionary of all objects with name as key</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectproperties">
+<h1>ObjectProperties<a class="headerlink" href="#objectproperties" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectProperties">
+<code class="descname">ObjectProperties</code><span class="sig-paren">(</span><em>object_id</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectpropertiesmerge">
+<h1>ObjectPropertiesMerge<a class="headerlink" href="#objectpropertiesmerge" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectPropertiesMerge">
+<code class="descname">ObjectPropertiesMerge</code><span class="sig-paren">(</span><em>object_ids</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectPropertiesMerge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Merge two Properties dictionaries into one.
+Properties dictionary contains all properties for an object. Refer to ObjectProperties method for more information.
+A value string &#8220;(varies)&#8221; will replace if multiple values found for a property.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_ids:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Two or more property dictionaries</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">The merged dictionary on success.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectreferencepoint">
+<h1>ObjectReferencePoint<a class="headerlink" href="#objectreferencepoint" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectReferencePoint">
+<code class="descname">ObjectReferencePoint</code><span class="sig-paren">(</span><em>object_id</em>, <em>pull=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectReferencePoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Evaluate a reference point for a object.
+Reference point is a point indicate where the object is in model space.
+It is calculated by the center of the bounding box in World XY Plane.
+If pull is set to True, and an object is a Block instance, the insertion point is returned.
+:param object_id: Identifier of an object.
+:param pull: Optional, If True, the point is pulled to sit on the object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">point in World coordinates.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectsbyattributes">
+<h1>ObjectsByAttributes<a class="headerlink" href="#objectsbyattributes" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectsByAttributes">
+<code class="descname">ObjectsByAttributes</code><span class="sig-paren">(</span><em>name=None</em>, <em>layerName=None</em>, <em>layout=None</em>, <em>filter=0</em>, <em>include_grips=False</em>, <em>include_lights=False</em>, <em>is_instances=False</em>, <em>include_reference=False</em>, <em>include_selected=False</em>, <em>state=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsByAttributes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns identifiers of all objects based on attributes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param filter[opt] = The type(s) of geometry (points, curves, surfaces, meshes,...):</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">that can be selected. Object types can be added together to filter
+several different kinds of geometry. use the filter class to get values</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param select[opt] = Select the objects:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param state[opt] = Object state. See help:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">List of identifiers.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectsbylayout">
+<h1>ObjectsByLayout<a class="headerlink" href="#objectsbylayout" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectsByLayout">
+<code class="descname">ObjectsByLayout</code><span class="sig-paren">(</span><em>layout=None</em>, <em>filter=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsByLayout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns identifiers of all objects based on the objects&#8217; geometry type.
+:param layout = name or guid of the specified layout.:
+:param filter = Object type filter.:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">A list of Guids identifying the objects.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectsbyquery">
+<h1>ObjectsByQuery<a class="headerlink" href="#objectsbyquery" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectsByQuery">
+<code class="descname">ObjectsByQuery</code><span class="sig-paren">(</span><em>name=None</em>, <em>layerName=None</em>, <em>layout=None</em>, <em>filter=0</em>, <em>include_grips=False</em>, <em>include_lights=False</em>, <em>is_instances=False</em>, <em>include_reference=False</em>, <em>include_selected=False</em>, <em>state=0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsByQuery" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectsbyuserstring">
+<h1>ObjectsByUserString<a class="headerlink" href="#objectsbyuserstring" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectsByUserString">
+<code class="descname">ObjectsByUserString</code><span class="sig-paren">(</span><em>key</em>, <em>value='*'</em>, <em>caseSensitive=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsByUserString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Finds all objects whose UserString matches the search patterns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param key:</th><td class="field-body">Search pattern for UserString keys (supported wildcards are: ? = any single
+character, * = any sequence of characters).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param value:</th><td class="field-body">Search pattern for UserString values (supported wildcards are: ? = any single
+character, * = any sequence of characters).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param caseSensitive:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">If true, string comparison will be case sensitive.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">An array of all objects whose UserString matches with the search patterns or
+null when no such objects could be found.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectsinbrep">
+<h1>ObjectsInBrep<a class="headerlink" href="#objectsinbrep" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectsInBrep">
+<code class="descname">ObjectsInBrep</code><span class="sig-paren">(</span><em>objects</em>, <em>brep</em>, <em>strict=False</em>, <em>tolerance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsInBrep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectsinclosedcurve">
+<h1>ObjectsInClosedCurve<a class="headerlink" href="#objectsinclosedcurve" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectsInClosedCurve">
+<code class="descname">ObjectsInClosedCurve</code><span class="sig-paren">(</span><em>objects</em>, <em>curve</em>, <em>plane=None</em>, <em>tolerance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsInClosedCurve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="objectsinview">
+<h1>ObjectsInView<a class="headerlink" href="#objectsinview" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectsInView">
+<code class="descname">ObjectsInView</code><span class="sig-paren">(</span><em>view=None</em>, <em>select=False</em>, <em>in_window=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsInView" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Return Objects visible in the viewport
+:param view[opt] = view to perform the selection in. Active viewport is used if omitted:
+:param select[opt] = select picked objects:
+:param in_window[opt] = if False, then a crossing window selection is performed:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">list of object ids on success</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectssortbyname">
+<h1>ObjectsSortByName<a class="headerlink" href="#objectssortbyname" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ObjectsSortByName">
+<code class="descname">ObjectsSortByName</code><span class="sig-paren">(</span><em>objects</em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectsSortByName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Sort Objects by its name</p>
+</div>
+<div class="section" id="offsetcurve">
+<h1>OffsetCurve<a class="headerlink" href="#offsetcurve" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="OffsetCurve">
+<code class="descname">OffsetCurve</code><span class="sig-paren">(</span><em>object_id</em>, <em>plane</em>, <em>distance</em>, <em>bothside=0</em>, <em>cornerStyle=1</em>, <em>capStyle=0</em><span class="sig-paren">)</span><a class="headerlink" href="#OffsetCurve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Offsets a curve by a distance. The offset curve will be added to Rhino if the input is guid.
+Extended from rhinoscript syntax to allow bothside and capping style.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id = Identifier of a curve object. Can be a curve object (compatible with Grasshopper):</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param plane = Plane to offset on:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param distance = Distance of the offset:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param cornerStyle[opt] = the corner style:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">0 = None, 1 = Sharp, 2 = Round, 3 = Smooth, 4 = Chamfer</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param capStyle[opt] = capping style:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">0 = None, 1 = Flat, 2 = Round</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param List of ids for the new curves on success:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param None on error:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="orientobjects">
+<h1>OrientObjects<a class="headerlink" href="#orientobjects" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="OrientObjects">
+<code class="descname">OrientObjects</code><span class="sig-paren">(</span><em>object_ids</em>, <em>referencePlane</em>, <em>targetPlane</em>, <em>copy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#OrientObjects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Orients a single object based on input points</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_ids:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">List of Guid. The identifiers of an object</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param referencePlane:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">list of 3-D reference points</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param targetPlane:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">list of 3-D target points</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param copy[opt]:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">True = copy object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Transformed Object Ids on success.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="parallelrun">
+<h1>ParallelRun<a class="headerlink" href="#parallelrun" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ParallelRun">
+<code class="descname">ParallelRun</code><span class="sig-paren">(</span><em>function</em>, <em>data_list</em>, <em>flatten_results=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ParallelRun" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>For each item in data_list execute the input function. Execution is
+done on as many threads as there are CPUs on the computer.
+Note that for function with more than one parameter, a dictionary
+can be used to provide keyword arguments.
+:param function: function to execute for each item in the data_list
+:param data_list: list, tuple, or other enumerable data structure.
+:param flatten_list [opt]: if True, when results are lists of lists the</p>
+<blockquote>
+<div>results are flattened into a single list of results. If this is True,
+you cannot depend on the result list being the same size as the input list</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">list of results containing the return from each call to the input function</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="planealign">
+<h1>PlaneAlign<a class="headerlink" href="#planealign" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="PlaneAlign">
+<code class="descname">PlaneAlign</code><span class="sig-paren">(</span><em>plane</em>, <em>vecTarget</em><span class="sig-paren">)</span><a class="headerlink" href="#PlaneAlign" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Align the X-Axis of a plane with a specified vector through rotation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param plane:</th><td class="field-body">Plane to align</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param vecTarget:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Vector to align the plane to.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Tuple of data on success
+(plane, xform)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="planefromobject">
+<h1>PlaneFromObject<a class="headerlink" href="#planefromobject" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="PlaneFromObject">
+<code class="descname">PlaneFromObject</code><span class="sig-paren">(</span><em>object_id</em><span class="sig-paren">)</span><a class="headerlink" href="#PlaneFromObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Return a plane based on the type of object.
+Polyline Curve, 3 points, aligned to the vector of the last segment.
+Surface : Evaluated at normalised parameter (0.5,0.5)
+Block Instance : Block instance base plane.</p>
+</div>
+<div class="section" id="planefrompolyline">
+<h1>PlaneFromPolyline<a class="headerlink" href="#planefrompolyline" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="PlaneFromPolyline">
+<code class="descname">PlaneFromPolyline</code><span class="sig-paren">(</span><em>pline</em><span class="sig-paren">)</span><a class="headerlink" href="#PlaneFromPolyline" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Calculate a plane from a polyline.
+A Polyline Curve must have exactly 3 points.
+The plane origin at middle point and x-axis aligned to the end point. X-Axis aligned with the tangent direction of the polyline.
+The motion of writing a capital &#8216;L&#8217;.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param pline:</th><td class="field-body">Polyline curve</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">Plane on success</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="planefromsurface">
+<h1>PlaneFromSurface<a class="headerlink" href="#planefromsurface" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="PlaneFromSurface">
+<code class="descname">PlaneFromSurface</code><span class="sig-paren">(</span><em>srf</em>, <em>normParam=(0.5</em>, <em>0.5)</em><span class="sig-paren">)</span><a class="headerlink" href="#PlaneFromSurface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Evaluate a plane from a Surface.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param normParam:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Normalised uv parameter. Default is (0.5,0.5)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type normParam:</th><td class="field-body">tuple) (Optional</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Plane on success.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pointclosestobjects">
+<h1>PointClosestObjects<a class="headerlink" href="#pointclosestobjects" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="PointClosestObjects">
+<code class="descname">PointClosestObjects</code><span class="sig-paren">(</span><em>point</em>, <em>object_ids</em>, <em>tolerance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#PointClosestObjects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Finds the object that is closest to a test point within a tolerance
+:param point = point to test:
+:param object_ids = identifiers of one or more objects:
+:param tolerance = distance to test against. If ommitted, Document Model Tolerance is used.:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">A list of object ids</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="printall">
+<h1>PrintAll<a class="headerlink" href="#printall" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="PrintAll">
+<code class="descname">PrintAll</code><span class="sig-paren">(</span><em>fileNameFormat='{0}_{1}.pdf'</em>, <em>overwrite=True</em><span class="sig-paren">)</span><a class="headerlink" href="#PrintAll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="printpdf">
+<h1>PrintPDF<a class="headerlink" href="#printpdf" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="PrintPDF">
+<code class="descname">PrintPDF</code><span class="sig-paren">(</span><em>fileName</em>, <em>overwrite=True</em>, <em>log=False</em><span class="sig-paren">)</span><a class="headerlink" href="#PrintPDF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="printpdfsetup">
+<h1>PrintPDFSetup<a class="headerlink" href="#printpdfsetup" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="PrintPDFSetup">
+<code class="descname">PrintPDFSetup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PrintPDFSetup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="processperfile">
+<h1>ProcessPerFile<a class="headerlink" href="#processperfile" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ProcessPerFile">
+<code class="descname">ProcessPerFile</code><span class="sig-paren">(</span><em>filePath</em>, <em>saveChanges</em>, <em>method</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ProcessPerFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Run a function / method on the specified file with the required arguments
+Allows user to save changes after each file</p>
+</div>
+<div class="section" id="progressbar">
+<h1>ProgressBar<a class="headerlink" href="#progressbar" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ProgressBar">
+<code class="descname">ProgressBar</code><span class="sig-paren">(</span><em>value</em>, <em>lower</em>, <em>upper</em>, <em>label=''</em>, <em>embed_label=True</em>, <em>show_percent=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ProgressBar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Display the progress of the script using the built-in Progress Meter in Status Bar.
+Automatically show and hide meter at start and end.
+:param label = short description of the progesss:
+:param value = current value of the progress bar to display:
+:param lower = lower limit of the progress meter&#8217;s range:
+:param upper = upper limit of the progress meter&#8217;s range:
+:param embed_label[opt] = if True, the label will show inside the meter.:</p>
+<blockquote>
+<div>If false, the label will show to the left of the meter</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param show_percent[opt] = show the percent complete:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">Previous value on success</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pullpolylinetoobjects">
+<h1>PullPolylineToObjects<a class="headerlink" href="#pullpolylinetoobjects" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="PullPolylineToObjects">
+<code class="descname">PullPolylineToObjects</code><span class="sig-paren">(</span><em>objects</em>, <em>polyline</em><span class="sig-paren">)</span><a class="headerlink" href="#PullPolylineToObjects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="randomcolor">
+<h1>RandomColor<a class="headerlink" href="#randomcolor" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="RandomColor">
+<code class="descname">RandomColor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RandomColor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Pick a random color from the list of default colors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Random Color</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">color</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rangeformat">
+<h1>RangeFormat<a class="headerlink" href="#rangeformat" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="RangeFormat">
+<code class="descname">RangeFormat</code><span class="sig-paren">(</span><em>excelRange</em><span class="sig-paren">)</span><a class="headerlink" href="#RangeFormat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Convert a Range to an Array (List of lists). Only work for contiguous range (single area.)</p>
+</div>
+<div class="section" id="savefilename">
+<h1>SaveFileName<a class="headerlink" href="#savefilename" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="SaveFileName">
+<code class="descname">SaveFileName</code><span class="sig-paren">(</span><em>title=None</em>, <em>filter=None</em>, <em>folder=None</em>, <em>filename=None</em>, <em>extension=None</em><span class="sig-paren">)</span><a class="headerlink" href="#SaveFileName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Display a save dialog box allowing the user to enter a file name.
+Note, this function does not save the file.
+Has ability to detect file name and switch the filter index.
+:param title[opt] = A dialog box title.:
+:param filter[opt] = A filter string. The filter must be in the following form:</p>
+<blockquote>
+<div>&#8220;Description1|Filter1|Description2|Filter2||&#8221;, where &#8220;||&#8221; terminates filter string.
+If omitted, the filter (<em>.</em>) is used.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param folder[opt] = A default folder.:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param filename[opt] = a default file name. Extension can be provided here.:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param extension[opt] = a default file extension. This overrides extension in filename:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">the file name is successful
+None if not successful, or on error</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="screenshot">
+<h1>ScreenShot<a class="headerlink" href="#screenshot" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ScreenShot">
+<code class="descname">ScreenShot</code><span class="sig-paren">(</span><em>imageSize=(1920</em>, <em>1080)</em>, <em>resetCounter=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ScreenShot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Capture screenshot using the ViewCapture To File command. Default resolution is HD.
+Captured files are stored in the Documentation folder of each project.</p>
+</div>
+<div class="section" id="selectedobjects">
+<h1>SelectedObjects<a class="headerlink" href="#selectedobjects" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="SelectedObjects">
+<code class="descname">SelectedObjects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SelectedObjects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns the identifiers of all objects that are currently selected. Additionally, include reference objects
+:param include_lights [opt] = include light objects:
+:param include_grips [opt] = include grip objects:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">list of Guids identifying the objects</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="setuserattributetoobjects">
+<h1>SetUserAttributeToObjects<a class="headerlink" href="#setuserattributetoobjects" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="SetUserAttributeToObjects">
+<code class="descname">SetUserAttributeToObjects</code><span class="sig-paren">(</span><em>objects</em>, <em>strFormat</em>, <em>incremental=True</em><span class="sig-paren">)</span><a class="headerlink" href="#SetUserAttributeToObjects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="setusertext">
+<h1>SetUserText<a class="headerlink" href="#setusertext" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="SetUserText">
+<code class="descname">SetUserText</code><span class="sig-paren">(</span><em>object_id</em>, <em>key</em>, <em>value=None</em>, <em>attach_to_geometry=False</em><span class="sig-paren">)</span><a class="headerlink" href="#SetUserText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Sets or removes user text stored on an object.
+:param object_id = the object&#8217;s identifier:
+:param key = the key name to set:
+:param value[opt] = the string value to set. If omitted, the key/value pair:</p>
+<blockquote>
+<div>specified by key will be deleted</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param attach_to_geometry[opt] = location on the object to store the user text:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">True or False indicating success or failure</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="setusertextfromdict">
+<h1>SetUserTextFromDict<a class="headerlink" href="#setusertextfromdict" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="SetUserTextFromDict">
+<code class="descname">SetUserTextFromDict</code><span class="sig-paren">(</span><em>object_id</em>, <em>dataDict</em>, <em>attach_to_geometry=False</em><span class="sig-paren">)</span><a class="headerlink" href="#SetUserTextFromDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Sets or removes user text stored on an object using a dictionary
+:param object_id = the object&#8217;s identifier:
+:param dataDict = dictionary of pairs of key and value:
+:param attach_to_geometry[opt] = location on the object to store the user text:</p>
+</div>
+<div class="section" id="sortbyindices">
+<h1>SortByIndices<a class="headerlink" href="#sortbyindices" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="SortByIndices">
+<code class="descname">SortByIndices</code><span class="sig-paren">(</span><em>data</em>, <em>*keyIndices</em><span class="sig-paren">)</span><a class="headerlink" href="#SortByIndices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Sort Data based on the indices of the entry.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param data:</th><td class="field-body">Nested List of data to sort.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type data:</th><td class="field-body">list</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param keyIndices:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">The order of the indices to sort.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">type keyIndices:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Sorted Data in the same structure.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sortobjectsalongcurve">
+<h1>SortObjectsAlongCurve<a class="headerlink" href="#sortobjectsalongcurve" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="SortObjectsAlongCurve">
+<code class="descname">SortObjectsAlongCurve</code><span class="sig-paren">(</span><em>objects</em>, <em>crv</em><span class="sig-paren">)</span><a class="headerlink" href="#SortObjectsAlongCurve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="sortobjectsalongpolyline">
+<h1>SortObjectsAlongPolyline<a class="headerlink" href="#sortobjectsalongpolyline" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="SortObjectsAlongPolyline">
+<code class="descname">SortObjectsAlongPolyline</code><span class="sig-paren">(</span><em>objects</em>, <em>polyline</em>, <em>tag=True</em><span class="sig-paren">)</span><a class="headerlink" href="#SortObjectsAlongPolyline" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="sortsynchronous">
+<h1>SortSynchronous<a class="headerlink" href="#sortsynchronous" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="SortSynchronous">
+<code class="descname">SortSynchronous</code><span class="sig-paren">(</span><em>keys</em>, <em>*values</em><span class="sig-paren">)</span><a class="headerlink" href="#SortSynchronous" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Sort data Synchronously based on the provided keys.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param keys:</th><td class="field-body">List of data to sort. Suitable for int, float, string data.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param values:</th><td class="field-body">Lists of data to synchronously sort with the key values.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type values:</th><td class="field-body">Optional</td>
+</tr>
+<tr class="field-even field"><th class="field-name">returns:</th><td class="field-body">Sorted Data in the same structure.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="stickyget">
+<h1>StickyGet<a class="headerlink" href="#stickyget" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="StickyGet">
+<code class="descname">StickyGet</code><span class="sig-paren">(</span><em>name</em>, <em>*keys</em><span class="sig-paren">)</span><a class="headerlink" href="#StickyGet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Get the settings with named key that was stored in the scriptcontext sticky.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param name:</th><td class="field-body"><p class="first">Provide a name where all the settings will sit under. This is to separate settings from scripts.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param keys:</th><td class="field-body"><p class="first">name of the variable to retrieve. Multiple keys are supported.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body"><p class="first">Value : If one key is provided.</p>
+<p>Value List : If keys provided, list of values for corresponding key. Value is returned None if not found.</p>
+<p>Value Dictionary : If keys not specified, a dictionary of all settings is returned.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body"><p class="first last">Object</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="stickyset">
+<h1>StickySet<a class="headerlink" href="#stickyset" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="StickySet">
+<code class="descname">StickySet</code><span class="sig-paren">(</span><em>name</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#StickySet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Save the settings to scriptcontext sticky</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param name:</th><td class="field-body">Provide a name where all the settings will sit under. This is to separate settings from scripts.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param kwargs:</th><td class="field-body">Provide a key=value, pair to assign values to.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">If sucessful.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="stringfieldnames">
+<h1>StringFieldNames<a class="headerlink" href="#stringfieldnames" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="StringFieldNames">
+<code class="descname">StringFieldNames</code><span class="sig-paren">(</span><em>strFormat</em><span class="sig-paren">)</span><a class="headerlink" href="#StringFieldNames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="stringfromattributes">
+<h1>StringFromAttributes<a class="headerlink" href="#stringfromattributes" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="StringFromAttributes">
+<code class="descname">StringFromAttributes</code><span class="sig-paren">(</span><em>object_id</em>, <em>strFormat=None</em><span class="sig-paren">)</span><a class="headerlink" href="#StringFromAttributes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Set an object name by evaluating a formatted string
+The string format needs to contain fields referencing other attributes.
+Fields provided in the formatted string are substrituted by the values from User Text Attributes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param object_id = the object&#8217;s identifier:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param strFormat = string Format used to evaluate. Default to use the key attribute &#8220;NAME_FORMAT&#8221;:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">A string representing a new name on success. None on error.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>An object should contain the following as attributes.:</p>
+<div class="highlight-python"><div class="highlight"><pre>NAME_FORMAT: {NAME}_{INDEX}
+NAME: WP
+INDEX: 002
+</pre></div>
+</div>
+<p>This will return a string <code class="docutils literal"><span class="pre">WP_002</span></code>. Refer naming automation workflow.</p>
+</div>
+<div class="section" id="textobjecttextformula">
+<h1>TextObjectTextFormula<a class="headerlink" href="#textobjecttextformula" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="TextObjectTextFormula">
+<code class="descname">TextObjectTextFormula</code><span class="sig-paren">(</span><em>object_id</em>, <em>textFormula=None</em><span class="sig-paren">)</span><a class="headerlink" href="#TextObjectTextFormula" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns or modifies the text string of a text object.
+:param object_id = the identifier of a text object:
+:param text [opt] = a new text string:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">if text is not specified, the current string value if successful
+if text is specified, the previous string value if successful
+None if not successful, or on error</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="textobjectsbyfont">
+<h1>TextObjectsByFont<a class="headerlink" href="#textobjectsbyfont" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="TextObjectsByFont">
+<code class="descname">TextObjectsByFont</code><span class="sig-paren">(</span><em>fontName</em>, <em>select=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TextObjectsByFont" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns identifiers of all text objects that has the same font property.
+:param fontName = Font name to search for:
+:param select[opt] = Select the objects:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">A list of Guids identifying the objects.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="textobjectsbyproperties">
+<h1>TextObjectsByProperties<a class="headerlink" href="#textobjectsbyproperties" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="TextObjectsByProperties">
+<code class="descname">TextObjectsByProperties</code><span class="sig-paren">(</span><em>fontName=None</em>, <em>height=None</em>, <em>style=None</em>, <em>select=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TextObjectsByProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns identifiers of all text objects that has the same font property.
+:param fontName = Font name to search for:
+:param select[opt] = Select the objects:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">A list of Guids identifying the objects.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="unfoldbrep">
+<h1>UnfoldBrep<a class="headerlink" href="#unfoldbrep" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="UnfoldBrep">
+<code class="descname">UnfoldBrep</code><span class="sig-paren">(</span><em>brep_id</em>, <em>indexA</em>, <em>indexB</em>, <em>*otherIndices</em><span class="sig-paren">)</span><a class="headerlink" href="#UnfoldBrep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Unfold a Polysurface by providing face indices.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param brep_id:</th><td class="field-body">Brep or Identifier of Brep to unfold.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param indexA:</th><td class="field-body">Index of Base Brep Face. (Static)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param indexB:</th><td class="field-body">Index of Target Brep Face</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param otherIndices:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Additional Indices of faces to unfold together with target face.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Unfolded Brep geometry. If Identifier is provided, the object is modified and identifier is returned.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">brep</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="unfoldbrepauto">
+<h1>UnfoldBrepAuto<a class="headerlink" href="#unfoldbrepauto" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="UnfoldBrepAuto">
+<code class="descname">UnfoldBrepAuto</code><span class="sig-paren">(</span><em>brep_id</em>, <em>*staticIndices</em><span class="sig-paren">)</span><a class="headerlink" href="#UnfoldBrepAuto" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Automatically Unfold a Brep with a set of static face indices.</p>
+<p>Generate one sequence at a time.
+Working with Static, Remaining Indices.
+Associate all remaining faces to the immediate level. i.e. adjacent faces of the current static face.</p>
+<p>The order off association is calculated by the order of the face indices.
+It is best to have important faces with the lowest index. I.e. Most obvious base static face should have index of 0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param brep_id:</th><td class="field-body">Indentifier of the brep to unfold.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param staticIndices:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Index of each static face as separate parameter.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Unfolded Brep on success. Unfold progress may stop at ambiguous solutions.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="unfoldsurface">
+<h1>UnfoldSurface<a class="headerlink" href="#unfoldsurface" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="UnfoldSurface">
+<code class="descname">UnfoldSurface</code><span class="sig-paren">(</span><em>srfA</em>, <em>srfB</em>, <em>additionalObjects=None</em><span class="sig-paren">)</span><a class="headerlink" href="#UnfoldSurface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="valueremap">
+<h1>ValueRemap<a class="headerlink" href="#valueremap" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ValueRemap">
+<code class="descname">ValueRemap</code><span class="sig-paren">(</span><em>valueList</em>, <em>sourceRange=None</em>, <em>targetRange=(0.0</em>, <em>1.0)</em><span class="sig-paren">)</span><a class="headerlink" href="#ValueRemap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="vectorfromline">
+<h1>VectorFromLine<a class="headerlink" href="#vectorfromline" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="VectorFromLine">
+<code class="descname">VectorFromLine</code><span class="sig-paren">(</span><em>line</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#VectorFromLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Undocumented</p>
+</div>
+<div class="section" id="viewradius">
+<h1>ViewRadius<a class="headerlink" href="#viewradius" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ViewRadius">
+<code class="descname">ViewRadius</code><span class="sig-paren">(</span><em>view=None</em>, <em>radius=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ViewRadius" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns or sets the radius of a parallel-projected view. Useful
+when you need an absolute zoom factor for a parallel-projected view
+:param view: [opt] title or id of the view. If omitted, current active view is used
+:param radius: [opt] the view radius</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">if radius is not specified, the current view radius for the specified view
+if radius is specified, the previous view radius for the specified view</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="viewsize">
+<h1>ViewSize<a class="headerlink" href="#viewsize" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ViewSize">
+<code class="descname">ViewSize</code><span class="sig-paren">(</span><em>view=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ViewSize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Returns the width and height in pixels of the specified view
+:param view: [opt] title or id of the view. If omitted, current active view is used</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">tuple of two numbers idenfitying width and height</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, Tony Ho.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

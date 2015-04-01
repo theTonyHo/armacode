@@ -1,10 +1,12 @@
 .. List all functions / methods in the armacode package
 
-armacode Package
-================
+armacode
+========
 
 .. toctree::
    :maxdepth: 5
    :glob:
    
-   armacode/*
+   ./classes.rst
+   ./libraries.rst
+   ./tools.rst

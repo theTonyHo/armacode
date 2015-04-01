@@ -10,13 +10,16 @@ Table of Content
 
 .. toctree::
    :maxdepth: 2
+   :glob:
    
-   ./armacode.rst
+   ./classes.rst
+   ./libraries.rst
+   ./tools.rst
    ./plugins.rst
    ./python.rst
+   ./grasshopper.rst
    ./conventions.rst
    ./howto.rst
-
 
 Index
 =====
