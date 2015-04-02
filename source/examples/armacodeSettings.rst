@@ -4,17 +4,18 @@ Global Variables
     armacode has global settings which can can be configured by modifying ``armacode.ini`` to the user's preference.
 
 
-.. rubric:: armacode.debug:
-    bool : Useful during the development of a script.
+.. py:data:: armacode.debug
 
-.. rubric:: armacode.parallel:
-    bool : Toggle multithreading on or off globally.
+bool : Useful during the development of a script.
 
-.. rubric:: armacode.logfile:
-    str : Location of the global log file.
+.. py:data:: armacode.parallel
+bool : Toggle multithreading on or off globally.
 
-.. rubric:: armacode.defaultColors:
-    list[color] : List of default low-saturation colors
+.. py:data:: armacode.logfile
+str : Location of the global log file.
+
+.. py:data:: armacode.defaultColors
+list[color] : List of default low-saturation colors
 
 To use the new settings, Rhino Python scripting engine needs to be reset. This can be achieved by ``_RunPythonScript ResetEngine``
 

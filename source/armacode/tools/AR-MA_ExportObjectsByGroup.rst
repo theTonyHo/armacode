@@ -1,0 +1,13 @@
+
+Tool Name: ``AR-MA_ExportObjectsByGroup``
+
+.. index:: AR-MA_ExportObjectsByGroup (Tool)
+
+.. _tools.ar-ma_exportobjectsbygroup:
+
+Title:          ExportObjectsByLayer
+Author:         Tony HO @ AR-MA
+Date:           2011-06-24
+Description:    This plugin allows the user to Export objects based on its layer
+                GHPython can input prefix, file extension, and scheme if format is DWG
+                Default settings are set on line 72

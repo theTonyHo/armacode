@@ -1,0 +1,7 @@
+.. index:: GroupDistribute (Tool)
+
+.. _tools.groupdistribute:
+
+GroupDistribute
+---------------
+Undocumented.

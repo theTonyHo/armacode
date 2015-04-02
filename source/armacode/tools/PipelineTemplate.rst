@@ -1,0 +1,7 @@
+.. index:: PipelineTemplate (Tool)
+
+.. _tools.pipelinetemplate:
+
+PipelineTemplate
+----------------
+Undocumented.

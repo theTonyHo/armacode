@@ -1,0 +1,21 @@
+
+Tool Name: ``BatchConvertFiles``
+
+.. index:: BatchConvertFiles (Tool)
+
+.. _tools.batchconvertfiles:
+
+//INPUT
+source directory
+target directory
+extension
+
+//OUTPUT
+converted files
+
+//OPTIONS
+per format settings
+
+//PSEUDOCODE
+get list of files
+__filter by source extension

@@ -1,0 +1,13 @@
+
+Tool Name: ``SectionTool``
+
+.. index:: SectionTool (Tool)
+
+.. _tools.sectiontool:
+
+Section Tool
+Generate section views in Rhino.
+Each section view is stored as a block definition.
+Section view is created from a surface. Plane of the surface is crucial. Section is limited to the inverse of the plane's Z Axis, i.e. looking through.
+User is able to update the section views by clickin on the existing section instance.
+User can update the bounds of the section by clicking on the surface.

@@ -7,22 +7,21 @@ Welcome to armacode's documentation!
 ====================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    ./classes.rst
    ./libraries.rst
    ./tools.rst
-   ./plugins.rst
-   ./python.rst
+   ./plug-ins.rst
    ./grasshopper.rst
    ./conventions.rst
    ./howto.rst
+   
 
 Index
 =====
 
 * :ref:`genindex`
-
 
 .. :ref:`modindex`
 .. :ref:`search`

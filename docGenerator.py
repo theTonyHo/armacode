@@ -58,6 +58,27 @@ def DocStringFromGoogle(docstring):
     restDocString = sphinxNP.GoogleDocstring(docstring, config)
     return restDocString
 
+def FileDoc(filename):
+    """
+    Return the restructuredText docstring in a python file
+    """
+    file_contents = None
+    with open(filename) as f:
+        file_contents = f.read()
+        
+    
+    try:
+        mod = ast.parse(file_contents)
+        
+    except:
+        return
+    
+    docString = ast.get_docstring(mod)
+    if docString:
+        docString = inspect.cleandoc(docString)
+        restDocString = DocStringFromGoogle(docString)
+        return restDocString
+
 def MethodSyntax(_object):
     """
     Return the call syntax for a method member.
@@ -105,6 +126,71 @@ def DescribeMethod(_object, customName=None):
     
     return resultMessage
 
+def DescribeTool(filename, customName=None):
+    """
+    Return the string describing the method.
+    """
+    # Get Values
+    
+    fpath, fname = os.path.split(filename)
+    memberName = fname[:-3]
+    
+    restDocstring = FileDoc(filename)
+    
+    message = []
+    
+    # Only add default headers to undocumented member
+    if not restDocstring:
+        # Indexing
+        message.append(".. index:: {} (Tool)\n".format(memberName))
+        # Reference Label
+        message.append(".. _tools.{}:\n".format(str.lower(memberName)))
+        message.append(memberName)
+        message.append("-" * len(memberName))
+        restDocstring = "Undocumented."
+    else:
+        message.append("\nTool Name: ``{}``\n".format(memberName))
+        # Indexing
+        message.append(".. index:: {} (Tool)\n".format(memberName))
+        # Reference Label
+        message.append(".. _tools.{}:\n".format(str.lower(memberName)))
+    
+    message.append(restDocstring)
+    
+    resultMessage = str.join("\n", message)
+    
+    return resultMessage
+
+def DescribeCommand(filename, customName=None):
+    """
+    Return the string describing the method.
+    """
+    # Get Values
+    
+    fpath, fname = os.path.split(filename)
+    memberName = fname[:-7]
+    
+    restDocstring = FileDoc(filename)
+    
+    message = []
+    
+    # Indexing
+    message.append(".. index:: {} (Command)\n".format(memberName))
+    # Reference label
+    message.append(".. _{}_cmd:\n".format(str.lower(memberName)))
+    
+    # Only add headers to undocumented commands.
+    
+    message.append(memberName)
+    message.append("-" * len(memberName))
+    if not restDocstring:
+        restDocstring = "Undocumented."
+    message.append(restDocstring)
+    
+    resultMessage = str.join("\n", message)
+    
+    return resultMessage
+
 def DescribeObject(_objectName, _object):
     
     if inspect.isbuiltin(_object) or inspect.isfunction(_object) or inspect.ismethod(_object):
@@ -141,6 +227,68 @@ def ProcessMethods(dataDict, writeToDirectory=None, sortMembers=True, indexFile=
         indexContent = CombineFiles(allMemberNames)
         rc = StringToFile(indexContent, indexFilename)
     print "Processed {} Methods !".format(len(allMemberNames))
+
+def ProcessCommands(dirPath, writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
+    
+    #Get filenames of all tools.
+    fileList = []
+    for (dirpath, dirname, filenames) in os.walk(dirPath):
+        for fname in filenames:
+            if fname.endswith("_cmd.py") and not fname.startswith("_"):
+                fPath = dirpath+"\\"+fname
+                fileList.append(fPath)
+    if sortMembers:
+        fileList.sort()
+    for item in fileList:
+        resultString = DescribeCommand(item)
+        fpath, fname = os.path.split(item)
+        memberName = fname[:-7]
+        
+        if writeToDirectory:
+            if isinstance(writeToDirectory, str):
+                fileName = "{}\\{}.rst".format(writeToDirectory, memberName)
+            else:
+                fileName = "{}.rst".format(memberName)
+            rc = StringToFile(resultString, fileName)
+            
+    if writeToDirectory and indexFile:
+        
+        indexFilename = "{}\\index.rst".format(writeToDirectory)
+        indexContent = CombineFiles(allMemberNames)
+        rc = StringToFile(indexContent, indexFilename)
+    print "Processed {} Commands !".format(len(fileList))
+
+def ProcessTools(dirPath, writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
+    
+    #Get filenames of all tools.
+    fileList = []
+    for (dirpath, dirname, filenames) in os.walk(dirPath):
+        for fname in filenames:
+            if fname.endswith(".py") and not fname.startswith("_"):
+                fPath = dirpath+"\\"+fname
+                fileList.append(fPath)
+    if sortMembers:
+        fileList.sort()
+    for item in fileList:
+        resultString = DescribeTool(item)
+        fpath, fname = os.path.split(item)
+        memberName, ext = os.path.splitext(fname)
+        
+        if writeToDirectory:
+            if isinstance(writeToDirectory, str):
+                fileName = "{}\\{}.rst".format(writeToDirectory, memberName)
+            else:
+                fileName = "{}.rst".format(memberName)
+            rc = StringToFile(resultString, fileName)
+            
+    if writeToDirectory and indexFile:
+        
+        indexFilename = "{}\\index.rst".format(writeToDirectory)
+        indexContent = CombineFiles(allMemberNames)
+        rc = StringToFile(indexContent, indexFilename)
+    print "Processed {} Tools !".format(len(fileList))
+
+
 def Toctree(includePaths, maxdepth=2):
     
     toctreeString = []
@@ -224,6 +372,14 @@ def main():
     # Reference directory for methods to include in index but not to list out.
     refDirectory = docDirectory + "\\" + "reference"
     
+    # Commands
+    commandPath = armacode.__path__[0] + "\\plug-in\\AR-MA {4dbb1598-76ef-4560-8b04-fd01de706e43}\\dev"
+    commandDocDirectory = "source" + "\\armacode\\plug-ins\\commands"
+    
+    # Tools
+    toolPath = armacode.__path__[0] + "\\tools"
+    toolDocDirectory = "source" + "\\armacode\\tools"
+    
     includeModules = ["classes", ""]
     
     # Go through module
@@ -254,10 +410,13 @@ def main():
     if proceed:
         ProcessMethods(allData["methods"], moduleDocDirectory)
         ProcessMethods(additionalMethods, refDirectory, useCustomNames=True)
-        print "Document generated for armacode Methods"
+        
+        ProcessCommands(commandPath, commandDocDirectory)
+        ProcessTools(toolPath, toolDocDirectory)
+        GenerateDocsetFeed()
+        GenerateVersionFile()
+        print "Document generated for armacode"
     
-    GenerateDocsetFeed()
-    GenerateVersionFile()
 
 def GenerateDocsetFeed():
     feedFilePath = "feed\\armacode.xml"
@@ -284,4 +443,3 @@ def GenerateVersionFile():
 
 if __name__ == "__main__":
     main()
-    

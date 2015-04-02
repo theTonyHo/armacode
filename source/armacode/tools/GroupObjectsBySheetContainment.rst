@@ -1,0 +1,7 @@
+.. index:: GroupObjectsBySheetContainment (Tool)
+
+.. _tools.groupobjectsbysheetcontainment:
+
+GroupObjectsBySheetContainment
+------------------------------
+Undocumented.

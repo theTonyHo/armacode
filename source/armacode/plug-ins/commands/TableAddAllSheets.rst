@@ -1,0 +1,9 @@
+.. index:: TableAddAllSheets (Command)
+
+.. _tableaddallsheets_cmd:
+
+TableAddAllSheets
+-----------------
+Create a table for every sheet in an Excel supported file.
+The Table contains all used range in a sheet.
+Tables will be batch created, user is to insert accordingly.

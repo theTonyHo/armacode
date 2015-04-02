@@ -1,0 +1,10 @@
+.. index:: TableUpdateAll (Command)
+
+.. _tableupdateall_cmd:
+
+TableUpdateAll
+--------------
+Update multiple tables in the document.
+To update all tables, deselect all objects and run the command.
+To update specific table(s), select the desired table objects and run the command.
+User will be prompted to confirm with a list of tables to update.

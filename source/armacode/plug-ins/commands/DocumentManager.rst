@@ -1,0 +1,47 @@
+.. index:: DocumentManager (Command)
+
+.. _documentmanager_cmd:
+
+DocumentManager
+---------------
+Document Manager
+Features:
+    Read Object Properties to Excel
+    Read Layout Properties to Excel
+    Manipulate and Update Objects and Layout from Excel File
+
+Document Manager can be used in the following scenarios:
+
+1. The user can use the RDM workbook to quickly manipulate the properties of the Rhino document. (Non=Associated Link)
+2. The user can use the RDM to manage quanity of objects and also drawing register.(Associated Link)
+
+Read from Rhino document to Excel file.
+Save the workbook to the temporary folder.
+
+If the user wants to maintain the association between the workbook and the Rhino document,
+the workbook needs to be saved to a more permanent location, preferrably
+the same folder as the Rhino document:
+
+For Example:
+
+    Model_3D.3dm
+    Model_3D_RDM.xlsx
+
+Working with unassociated workbooks, best practice is to close the Rhino Document Manager workbook after update
+
+RDM Open the workbook in this order, :
+
+    Associated workbook
+    Active workbook with title "Rhino Document Manager"
+    armacode Excel Template.
+
+Association link will only be created on Update.
+Association link will NOT be created if the Excel file is located in the temporary folder
+
+Update:
+    21/10/2014:
+        Command Line Interface.
+        Option to maintain table columns. Useful for retaining the formulas.
+    22/10/2014:
+        Command Line Interface. Fix Excel Opening before prompt finishes.
+        Update Tables to auto fit after read operation.

@@ -1,0 +1,14 @@
+
+Tool Name: ``ExportObjectsByName``
+
+.. index:: ExportObjectsByName (Tool)
+
+.. _tools.exportobjectsbyname:
+
+Export Objects By Name
+All objects with the same name are exported as a separate file using name as filename. Un-named objects are exported together as one file.
+
+BoundingBox origin:
+    Use the bottm left corner of the bounding box of exported objects as origin for exported file.
+In Place:
+    Use Current Model Origin.
