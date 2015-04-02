@@ -56,11 +56,10 @@ Commands
 --------
 
 
-:ref:`table_cmd`
+* :ref:`table_cmd`
+* :ref:`tableaddallSheets_cmd`
+* :ref:`tableupdateall_cmd`
 
-:ref:`tableaddallSheets_cmd`
-
-:ref:`tableupdateall_cmd`
 
 The following operations are available after **Table** command is executed:
 
