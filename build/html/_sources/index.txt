@@ -18,10 +18,10 @@ Welcome to armacode's documentation!
    ./howto.rst
    
 
-Index
-=====
+.. Index
+.. =====
 
-* :ref:`genindex`
+.. * :ref:`genindex`
 
 .. :ref:`modindex`
 .. :ref:`search`

@@ -1,7 +1,0 @@
-.. index:: Make2D_PerObject (Tool)
-
-.. _tools.make2d_perobject:
-
-Make2D_PerObject
-----------------
-Perform Make2D on each selected objects.
