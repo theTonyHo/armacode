@@ -1,0 +1,7 @@
+.. index:: DisplayCurveLengths (Command)
+
+.. _displaycurvelengths_cmd:
+
+DisplayCurveLengths
+-------------------
+Dynamically display lengths of selected curve objects.

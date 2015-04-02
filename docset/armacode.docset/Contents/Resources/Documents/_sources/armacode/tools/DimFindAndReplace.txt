@@ -1,0 +1,7 @@
+.. index:: DimFindAndReplace (Tool)
+
+.. _tools.dimfindandreplace:
+
+DimFindAndReplace
+-----------------
+Undocumented.

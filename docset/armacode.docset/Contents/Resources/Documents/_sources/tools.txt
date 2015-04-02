@@ -12,3 +12,11 @@ Access the tool with the following::
     import armacode
     line = armacode.tools.AddNameTags.main()
 
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   
+   armacode/tools/*
+
+

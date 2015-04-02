@@ -1,0 +1,7 @@
+.. index:: DimLinearFromPolyline (Tool)
+
+.. _tools.dimlinearfrompolyline:
+
+DimLinearFromPolyline
+---------------------
+Undocumented.

@@ -1,0 +1,7 @@
+.. index:: DimStylesGenerate (Tool)
+
+.. _tools.dimstylesgenerate:
+
+DimStylesGenerate
+-----------------
+Undocumented.

@@ -1,0 +1,7 @@
+.. index:: MinimumBoundingBox2D (Tool)
+
+.. _tools.minimumboundingbox2d:
+
+MinimumBoundingBox2D
+--------------------
+Undocumented.

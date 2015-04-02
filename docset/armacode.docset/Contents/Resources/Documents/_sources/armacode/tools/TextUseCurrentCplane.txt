@@ -1,0 +1,7 @@
+.. index:: TextUseCurrentCplane (Tool)
+
+.. _tools.textusecurrentcplane:
+
+TextUseCurrentCplane
+--------------------
+Undocumented.

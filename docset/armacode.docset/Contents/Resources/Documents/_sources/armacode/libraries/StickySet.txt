@@ -10,5 +10,5 @@ Save the settings to scriptcontext sticky
 :param kwargs: Provide a key=value, pair to assign values to.
 
 
-:returns: If sucessful.
-:rtype: True
+:returns: True if sucessful.
+:rtype: Boolean

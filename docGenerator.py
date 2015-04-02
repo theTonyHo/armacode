@@ -139,21 +139,16 @@ def DescribeTool(filename, customName=None):
     
     message = []
     
-    # Only add default headers to undocumented member
+    # Indexing
+    message.append(".. index:: {} (Tool)\n".format(memberName))
+    # Reference Label
+    message.append(".. _tools.{}:\n".format(str.lower(memberName)))
+    
     if not restDocstring:
-        # Indexing
-        message.append(".. index:: {} (Tool)\n".format(memberName))
-        # Reference Label
-        message.append(".. _tools.{}:\n".format(str.lower(memberName)))
-        message.append(memberName)
-        message.append("-" * len(memberName))
         restDocstring = "Undocumented."
-    else:
-        message.append("\nTool Name: ``{}``\n".format(memberName))
-        # Indexing
-        message.append(".. index:: {} (Tool)\n".format(memberName))
-        # Reference Label
-        message.append(".. _tools.{}:\n".format(str.lower(memberName)))
+    
+    message.append(memberName)
+    message.append("-" * len(memberName))
     
     message.append(restDocstring)
     
@@ -179,12 +174,11 @@ def DescribeCommand(filename, customName=None):
     # Reference label
     message.append(".. _{}_cmd:\n".format(str.lower(memberName)))
     
-    # Only add headers to undocumented commands.
+    if not restDocstring:
+        restDocstring = "Undocumented."
     
     message.append(memberName)
     message.append("-" * len(memberName))
-    if not restDocstring:
-        restDocstring = "Undocumented."
     message.append(restDocstring)
     
     resultMessage = str.join("\n", message)
