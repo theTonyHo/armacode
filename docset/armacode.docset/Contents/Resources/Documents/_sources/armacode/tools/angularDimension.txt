@@ -1,7 +1,7 @@
-.. index:: angularDimension (Tool)
+.. index:: AngularDimension (Tool)
 
 .. _tools.angulardimension:
 
-angularDimension
+AngularDimension
 ----------------
-Undocumented.
+Add Angular Dimension from an Arc object (Experimental).

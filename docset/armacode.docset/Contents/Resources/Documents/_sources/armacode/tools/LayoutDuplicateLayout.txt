@@ -1,0 +1,11 @@
+.. index:: LayoutDuplicateLayout (Tool)
+
+.. _tools.layoutduplicatelayout:
+
+LayoutDuplicateLayout
+---------------------
+Duplicate Existing Layout.
+Multiple methods are being implemented depending on the available input data.
+
+The Tony HO | AR-MA
+Release: July 2014

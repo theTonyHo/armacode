@@ -1,7 +1,7 @@
-.. index:: zAxisSingularityCheck (Tool)
+.. index:: ZAxisSingularityCheck (Tool)
 
 .. _tools.zaxissingularitycheck:
 
-zAxisSingularityCheck
+ZAxisSingularityCheck
 ---------------------
 Undocumented.

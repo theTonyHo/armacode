@@ -1,0 +1,11 @@
+.. index:: Counter Engine (GH)
+
+.. _counter engine_cmd:
+
+Counter Engine |icon| 
+--------------
+
+Counter Engine
+Simple counter with custom increments, limits and looping.
+
+.. |icon| image:: 'Counter Engine.png'

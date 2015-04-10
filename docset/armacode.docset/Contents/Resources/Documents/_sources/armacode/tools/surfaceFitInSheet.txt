@@ -1,7 +1,7 @@
-.. index:: surfaceFitInSheet (Tool)
+.. index:: SurfaceFitInSheet (Tool)
 
 .. _tools.surfacefitinsheet:
 
-surfaceFitInSheet
+SurfaceFitInSheet
 -----------------
 Undocumented.

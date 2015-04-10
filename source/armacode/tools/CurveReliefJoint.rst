@@ -1,0 +1,9 @@
+.. index:: CurveReliefJoint (Tool)
+
+.. _tools.curvereliefjoint:
+
+CurveReliefJoint
+----------------
+Generate Relief Joint for curve profiles.
+
+This is useful for Steel Fabrication.

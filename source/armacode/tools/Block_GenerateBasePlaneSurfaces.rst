@@ -1,7 +1,0 @@
-.. index:: Block_GenerateBasePlaneSurfaces (Tool)
-
-.. _tools.block_generatebaseplanesurfaces:
-
-Block_GenerateBasePlaneSurfaces
--------------------------------
-Generate a Surface representing Block instance baseplane.

@@ -10,6 +10,9 @@ Print selected layouts into single individual PDFs.
 The Tony HO | AR-MA
 Release: May 2013
 
+Dependencies:
+    Bullzip PDF Printer
+
 Update:
     03/05/2013
     Added Page selection Settings and file name format are stored in memory until reset

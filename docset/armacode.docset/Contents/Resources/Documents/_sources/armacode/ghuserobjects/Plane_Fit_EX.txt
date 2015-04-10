@@ -1,0 +1,10 @@
+.. index:: Plane Fit EX (GH)
+
+.. _plane fit ex_gh:
+
+Plane Fit EX |icon| 
+------------
+
+Fit a Plane through a set of points
+
+.. |icon| image:: icon\Plane_Fit_EX.png

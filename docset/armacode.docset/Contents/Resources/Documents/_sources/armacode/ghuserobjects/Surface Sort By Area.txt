@@ -1,0 +1,10 @@
+.. index:: Surface Sort By Area (GH)
+
+.. _surface sort by area_cmd:
+
+Surface Sort By Area |icon| 
+--------------------
+
+Sort a list of surfaces based on the calculated area.
+
+.. |icon| image:: 'Surface Sort By Area.png'

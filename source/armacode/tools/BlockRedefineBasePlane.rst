@@ -4,7 +4,7 @@
 
 BlockRedefineBasePlane
 ----------------------
-Redefine a Block Definition Base Plane.
+Redefine the Base Plane for a Block definition
 
 This is useful to redefine the base plane of a block definition, the assembly
 require a correct base plane for further workflow.

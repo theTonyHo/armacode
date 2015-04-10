@@ -1,7 +1,7 @@
-.. index:: elevationGenerator (Tool)
+.. index:: ElevationGenerator (Tool)
 
 .. _tools.elevationgenerator:
 
-elevationGenerator
+ElevationGenerator
 ------------------
 Undocumented.

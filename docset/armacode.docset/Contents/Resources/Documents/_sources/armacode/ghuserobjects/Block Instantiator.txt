@@ -1,0 +1,10 @@
+.. index:: Block Instantiator (GH)
+
+.. _block instantiator_cmd:
+
+Block Instantiator |icon| 
+------------------
+
+Instantiate a Block Definition by name.
+
+.. |icon| image:: 'Block Instantiator.png'

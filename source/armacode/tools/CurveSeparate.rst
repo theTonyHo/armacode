@@ -4,4 +4,4 @@
 
 CurveSeparate
 -------------
-Undocumented.
+Separate Closed overlapping curves until cleared by a specified distance.

@@ -4,4 +4,4 @@
 
 ConstructionLine
 ----------------
-Undocumented.
+Add a Line to the document, similar to XLine in AutoCAD.

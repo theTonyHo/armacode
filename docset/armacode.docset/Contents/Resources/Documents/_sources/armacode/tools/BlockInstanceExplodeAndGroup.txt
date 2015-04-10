@@ -4,4 +4,4 @@
 
 BlockInstanceExplodeAndGroup
 ----------------------------
-Undocumented.
+Explode block instances and add to group. (Experimental)

@@ -4,4 +4,6 @@
 
 CurveOffset
 -----------
-Undocumented.
+Offset curves with a specified distance.
+
+If surfaces selected, the boundary of the surface is processed.

@@ -1,0 +1,7 @@
+.. index:: SurfaceOffsetBorder (Tool)
+
+.. _tools.surfaceoffsetborder:
+
+SurfaceOffsetBorder
+-------------------
+Undocumented.

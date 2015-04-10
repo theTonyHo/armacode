@@ -4,4 +4,6 @@
 
 BlockCreateFromGroup
 --------------------
-Undocumented.
+Create a block for each group of objects.
+
+.. seealso:: :ref:`blockwithbaseplane_cmd`

@@ -1,0 +1,10 @@
+.. index:: GH Make 2D (GH)
+
+.. _gh make 2d_cmd:
+
+GH Make 2D |icon| 
+----------
+
+Generates Make2D from Grasshopper Geometry.
+
+.. |icon| image:: 'GH Make 2D.png'

@@ -1,0 +1,10 @@
+.. index:: Points Sort (GH)
+
+.. _points sort_cmd:
+
+Points Sort |icon| 
+-----------
+
+Sort Points radially around a base Plane
+
+.. |icon| image:: 'Points Sort.png'

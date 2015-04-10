@@ -1,7 +1,7 @@
-.. index:: copyUserText (Tool)
+.. index:: CopyUserText (Tool)
 
 .. _tools.copyusertext:
 
-copyUserText
+CopyUserText
 ------------
-Undocumented.
+Copy UserText from one object to another.

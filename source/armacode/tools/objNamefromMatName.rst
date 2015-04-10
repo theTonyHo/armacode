@@ -1,7 +1,7 @@
-.. index:: objNamefromMatName (Tool)
+.. index:: ObjNamefromMatName (Tool)
 
 .. _tools.objnamefrommatname:
 
-objNamefromMatName
+ObjNamefromMatName
 ------------------
 Undocumented.

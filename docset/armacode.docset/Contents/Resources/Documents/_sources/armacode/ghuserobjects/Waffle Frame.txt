@@ -1,0 +1,10 @@
+.. index:: Waffle Frame (GH)
+
+.. _waffle frame_cmd:
+
+Waffle Frame |icon| 
+------------
+
+Generate Waffle frame from a closed Brep
+
+.. |icon| image:: 'Waffle Frame.png'

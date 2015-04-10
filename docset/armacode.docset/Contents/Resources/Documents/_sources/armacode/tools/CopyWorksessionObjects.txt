@@ -4,4 +4,4 @@
 
 CopyWorksessionObjects
 ----------------------
-Create a 3D Section from current geometries in Rhino Document.
+Copy Worksession objects to the current document.

@@ -4,9 +4,6 @@
 
 AddBoundingBox
 --------------
-Add Bounding Box
-----------------
-
 Calculate and Add a bounding box for each object using the current CPlane.
 
 Update:

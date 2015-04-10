@@ -4,4 +4,4 @@
 
 brepFaceOrderDisplay
 --------------------
-Undocumented.
+Display Brep Face order

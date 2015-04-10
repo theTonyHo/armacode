@@ -1,7 +1,0 @@
-.. index:: clippingCube_tool (Tool)
-
-.. _tools.clippingcube_tool:
-
-clippingCube_tool
------------------
-Script generates a clipping cube made of a group of 6 clipping planes

@@ -1,0 +1,11 @@
+.. index:: Block Instance Import (GH)
+
+.. _block instance import_cmd:
+
+Block Instance Import |icon| 
+---------------------
+
+Block Instance Importer
+Reference and Import block instances from Rhino Document
+
+.. |icon| image:: 'Block Instance Import.png'

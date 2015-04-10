@@ -1,0 +1,7 @@
+.. index:: NamingAutomationAddCounterFromCurve (Tool)
+
+.. _tools.namingautomationaddcounterfromcurve:
+
+NamingAutomationAddCounterFromCurve
+-----------------------------------
+Undocumented.

@@ -1,0 +1,7 @@
+.. index:: VRayMaterialsToLayersMatchMapping (Tool)
+
+.. _tools.vraymaterialstolayersmatchmapping:
+
+VRayMaterialsToLayersMatchMapping
+---------------------------------
+Undocumented.

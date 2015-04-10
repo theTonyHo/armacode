@@ -1,0 +1,10 @@
+.. index:: Sheet Checker (GH)
+
+.. _sheet checker_cmd:
+
+Sheet Checker |icon| 
+-------------
+
+Check geometries to see if they fit inside a sheet with specified dimension.
+
+.. |icon| image:: 'Sheet Checker.png'

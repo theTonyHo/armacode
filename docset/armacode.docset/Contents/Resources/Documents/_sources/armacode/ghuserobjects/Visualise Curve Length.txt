@@ -1,0 +1,10 @@
+.. index:: Visualise Curve Length (GH)
+
+.. _visualise curve length_cmd:
+
+Visualise Curve Length |icon| 
+----------------------
+
+Display Length value of a curve at its evaluated parameter
+
+.. |icon| image:: 'Visualise Curve Length.png'

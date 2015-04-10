@@ -1,7 +1,7 @@
-.. index:: projectGripPoints (Tool)
+.. index:: ProjectGripPoints (Tool)
 
 .. _tools.projectgrippoints:
 
-projectGripPoints
+ProjectGripPoints
 -----------------
 Undocumented.

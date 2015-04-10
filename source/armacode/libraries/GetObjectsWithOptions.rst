@@ -1,0 +1,64 @@
+GetObjectsWithOptions
+---------------------
+
+.. py:Function:: GetObjectsWithOptions(message=None, filter=0, group=True, preselect=False, select=False, objects=None, minimum_count=1, maximum_count=0, custom_filter=None, custom_options=None)
+
+
+Prompts user to pick or select one or more objects.
+Extended to allow user to pass in other options.
+
+Options is a dictionary of option objects with the key as option Name.
+
+:param message[opt] = a prompt or message.:
+:param filter[opt] = The type(s) of geometry (points, curves, surfaces, meshes,...):
+                                                                                     that can be selected. Object types can be added together to filter
+                                                                                     several different kinds of geometry. use the filter class to get values
+:param group[opt] = Honor object grouping.  If omitted and the user picks a group,:
+                                                                                    the entire group will be picked (True). Note, if filter is set to a
+                                                                                    value other than 0 (All objects), then group selection will be disabled.
+:param preselect[opt] =  Allow for the selection of pre-selected objects.:
+:param select[opt] = Select the picked objects.  If False, the objects that are:
+                                                                                 picked are not selected.
+:param objects[opt] = list of objects that are allowed to be selected:
+:param mimimum_count, maximum_count[out] = limits on number of objects allowed to be selected:
+:param options = Dictionary of Rhino option objects. Options order is sorted by name, use OrderedDict to control the order of the options. On success, the dictionary will contain all the option values with their corresponding keys:
+
+:returns: List of Guids identifying the picked objects. If an string option is selected, the option value is returned.
+
+:rtype: guid
+
+.. rubric:: Example
+
+import Rhino
+import armacode
+import rhinoscriptsyntax as rs
+
+def Hello():
+    print "HELLO"
+    return
+
+def main():
+
+    # Configure options and place in a dictionary.
+    # Set the key as a string, this will be used as the option Name.
+    # Note that the option Name can not contain any space
+    options = {}
+    options["Toggle"] = Rhino.Input.Custom.OptionToggle(True, "No", "Yes")
+    options["Float"] = Rhino.Input.Custom.OptionDouble(0.01)
+    options["Integer"] = Rhino.Input.Custom.OptionInteger(5)
+    options["Color"] = Rhino.Input.Custom.OptionColor(rs.coercecolor((255,0,0), False))
+    options["Operation"] = Hello
+    options["String"] = None
+    options["String2"] = "Proper String Value"
+    options["List"] = ["A","B","C"]
+
+    object_ids = armacode.GetObjectsWithOptions(custom_options=options)
+    print "Selected GUIDs : {}".format(object_ids)
+
+    if object_ids:
+        for name in options:
+            print "{} : {}".format(name, options[name])
+
+
+if __name__ == "__main__":
+    main()

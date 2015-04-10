@@ -1,0 +1,11 @@
+.. index:: Modify Object Attributes (GH)
+
+.. _modify object attributes_cmd:
+
+Modify Object Attributes |icon| 
+------------------------
+
+Modify Object Attributes
+Modify an existing object with custom attributes
+
+.. |icon| image:: 'Modify Object Attributes.png'

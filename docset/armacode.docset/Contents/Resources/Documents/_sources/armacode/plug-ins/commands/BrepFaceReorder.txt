@@ -4,4 +4,4 @@
 
 BrepFaceReorder
 ---------------
-Undocumented.
+Reorder Brep Faces.

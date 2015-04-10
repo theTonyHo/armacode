@@ -1,8 +1,8 @@
-.. index:: objectsLengthAdjustment (Tool)
+.. index:: ObjectsLengthAdjustment (Tool)
 
 .. _tools.objectslengthadjustment:
 
-objectsLengthAdjustment
+ObjectsLengthAdjustment
 -----------------------
 Manipulate multiple geometries based on a reference line to different lines.
 This is similar to the concept of scale1D, however, the geometries do NOT get distorted,

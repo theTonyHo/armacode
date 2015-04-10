@@ -1,0 +1,10 @@
+.. index:: Default If Null (GH)
+
+.. _default if null_cmd:
+
+Default If Null |icon| 
+---------------
+
+Use Default value if Null
+
+.. |icon| image:: 'Default If Null.png'

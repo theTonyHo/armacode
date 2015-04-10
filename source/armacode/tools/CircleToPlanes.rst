@@ -4,4 +4,4 @@
 
 CircleToPlanes
 --------------
-Undocumented.
+Add a surface representing the plane of a Circle curve object.

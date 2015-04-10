@@ -1,7 +1,0 @@
-.. index:: copyToLayouts (Tool)
-
-.. _tools.copytolayouts:
-
-copyToLayouts
--------------
-Copy objects to all layouts in the document

@@ -4,7 +4,7 @@
 
 BrepToBlock
 -----------
-Convert a Brep to a block instance for fabrication.
+Convert a Brep to a block instance. (Experimental)
 
 Each Brep needs to have a defined Top face of index 0 and Front face of index 1.
 Use ReorderBrepFaces to redefine brep faces.

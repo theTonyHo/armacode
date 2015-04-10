@@ -1,0 +1,11 @@
+.. index:: Text Wrapper (GH)
+
+.. _text wrapper_cmd:
+
+Text Wrapper |icon| 
+------------
+
+Text Wrapper
+Wrap single line text strings.
+
+.. |icon| image:: 'Text Wrapper.png'

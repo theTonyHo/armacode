@@ -1,0 +1,11 @@
+.. index:: Bake With Matching Attributes (GH)
+
+.. _bake with matching attributes_cmd:
+
+Bake With Matching Attributes |icon| 
+-----------------------------
+
+Bake with Matching Attributes
+Bake target objects into Rhino document with the same attributes as the source ID object
+
+.. |icon| image:: 'Bake With Matching Attributes.png'

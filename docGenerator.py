@@ -200,9 +200,9 @@ def DescribeGHUserObject(member, customName=None):
     message = []
     
     # Indexing
-    message.append(".. index:: {} (Command)\n".format(memberName))
+    message.append(".. index:: {} (GH)\n".format(memberName))
     # Reference label
-    message.append(".. _{}_cmd:\n".format(str.lower(memberName)))
+    message.append(".. _{}_gh:\n".format(str.lower(memberName)))
     
     if not restDocstring:
         restDocstring = "Undocumented."

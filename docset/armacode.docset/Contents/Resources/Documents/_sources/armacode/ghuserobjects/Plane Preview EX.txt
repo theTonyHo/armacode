@@ -1,0 +1,10 @@
+.. index:: Plane Preview EX (GH)
+
+.. _plane preview ex_cmd:
+
+Plane Preview EX |icon| 
+----------------
+
+Preview a Plane with X and Y axis
+
+.. |icon| image:: 'Plane Preview EX.png'

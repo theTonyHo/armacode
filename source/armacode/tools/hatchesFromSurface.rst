@@ -1,7 +1,7 @@
-.. index:: hatchesFromSurface (Tool)
+.. index:: HatchesFromSurface (Tool)
 
 .. _tools.hatchesfromsurface:
 
-hatchesFromSurface
+HatchesFromSurface
 ------------------
 Undocumented.

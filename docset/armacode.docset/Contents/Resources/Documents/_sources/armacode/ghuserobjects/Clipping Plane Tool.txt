@@ -1,0 +1,11 @@
+.. index:: Clipping Plane Tool (GH)
+
+.. _clipping plane tool_cmd:
+
+Clipping Plane Tool |icon| 
+-------------------
+
+Clipping Plane
+Modify Clipping Planes in Rhino Document
+
+.. |icon| image:: 'Clipping Plane Tool.png'

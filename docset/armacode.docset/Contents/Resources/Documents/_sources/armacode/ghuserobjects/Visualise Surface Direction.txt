@@ -1,0 +1,10 @@
+.. index:: Visualise Surface Direction (GH)
+
+.. _visualise surface direction_cmd:
+
+Visualise Surface Direction |icon| 
+---------------------------
+
+Visualise the direction of the surface panel with a custom Arrow symbol.
+
+.. |icon| image:: 'Visualise Surface Direction.png'

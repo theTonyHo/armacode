@@ -1,0 +1,11 @@
+.. index:: Layout Properties (GH)
+
+.. _layout properties_cmd:
+
+Layout Properties |icon| 
+-----------------
+
+Layout Properties
+Display and Update Text objects with corresponding properties on a Layout.
+
+.. |icon| image:: 'Layout Properties.png'

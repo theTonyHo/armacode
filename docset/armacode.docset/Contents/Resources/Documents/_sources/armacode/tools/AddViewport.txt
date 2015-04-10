@@ -4,4 +4,4 @@
 
 AddViewport
 -----------
-Undocumented.
+Add a viewport to the document.

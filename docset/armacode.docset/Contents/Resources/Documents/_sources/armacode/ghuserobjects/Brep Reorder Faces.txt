@@ -1,0 +1,10 @@
+.. index:: Brep Reorder Faces (GH)
+
+.. _brep reorder faces_cmd:
+
+Brep Reorder Faces |icon| 
+------------------
+
+Reorder Brep Faces based on a new ordered list of indices
+
+.. |icon| image:: 'Brep Reorder Faces.png'
