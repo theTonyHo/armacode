@@ -380,7 +380,7 @@ def ProcessGHUserObjects(category="AR-MA", writeToDirectory=None, sortMembers=Tr
         message.append("")
         message.append(restDocString)
         
-        message.append("\n.. |icon| image:: icon\\{}".format(iconFileName))
+        message.append("\n.. |icon| image:: .\\icon\\{}".format(iconFileName))
         resultString = str.join("\n", message)
         
         if writeToDirectory:

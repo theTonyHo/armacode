@@ -7,4 +7,4 @@ Waffle Frame |icon|
 
 Generate Waffle frame from a closed Brep
 
-.. |icon| image:: icon\Waffle_Frame.png
+.. |icon| image:: .\icon\Waffle_Frame.png

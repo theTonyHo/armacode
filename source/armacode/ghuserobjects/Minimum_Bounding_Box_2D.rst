@@ -17,4 +17,4 @@ Criteria
 Extra Planes:
 Planes that are aligned to the naked edges of the geometry. By definition, if the geometry has straight edges, the minimum boundingBox is aligned to one of those edges
 
-.. |icon| image:: icon\Minimum_Bounding_Box_2D.png
+.. |icon| image:: .\icon\Minimum_Bounding_Box_2D.png

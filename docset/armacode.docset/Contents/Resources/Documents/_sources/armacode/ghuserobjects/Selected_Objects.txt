@@ -8,4 +8,4 @@ Selected Objects |icon|
 Selected Objects
 Returns identifiers of all selected Objects, including referenced objects
 
-.. |icon| image:: icon\Selected_Objects.png
+.. |icon| image:: .\icon\Selected_Objects.png

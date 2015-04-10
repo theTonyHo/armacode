@@ -8,4 +8,4 @@ Bake With Attributes |icon|
 Bake With Attributes
 Bake objects into Rhino Document with custom Attributes
 
-.. |icon| image:: icon\Bake_With_Attributes.png
+.. |icon| image:: .\icon\Bake_With_Attributes.png

@@ -7,4 +7,4 @@ GH Make 2D |icon|
 
 Generates Make2D from Grasshopper Geometry.
 
-.. |icon| image:: icon\GH_Make_2D.png
+.. |icon| image:: .\icon\GH_Make_2D.png

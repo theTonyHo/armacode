@@ -7,4 +7,4 @@ RandomChoice |icon|
 
 Make n random choices from an input datalist. Output the chosen items and their source indices
 
-.. |icon| image:: icon\RandomChoice.png
+.. |icon| image:: .\icon\RandomChoice.png

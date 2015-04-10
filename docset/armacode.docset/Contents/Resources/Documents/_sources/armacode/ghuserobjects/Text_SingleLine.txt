@@ -8,4 +8,4 @@ Text SingleLine |icon|
 Text SingleLine
 Merge Multi line text strings.
 
-.. |icon| image:: icon\Text_SingleLine.png
+.. |icon| image:: .\icon\Text_SingleLine.png

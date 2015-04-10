@@ -7,4 +7,4 @@ Visualise Curve Length |icon|
 
 Display Length value of a curve at its evaluated parameter
 
-.. |icon| image:: icon\Visualise_Curve_Length.png
+.. |icon| image:: .\icon\Visualise_Curve_Length.png

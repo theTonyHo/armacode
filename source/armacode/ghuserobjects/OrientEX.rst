@@ -7,4 +7,4 @@ OrientEX |icon|
 
 Orients geometry with preview
 
-.. |icon| image:: icon\OrientEX.png
+.. |icon| image:: .\icon\OrientEX.png

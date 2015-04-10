@@ -8,4 +8,4 @@ Modify Object Attributes |icon|
 Modify Object Attributes
 Modify an existing object with custom attributes
 
-.. |icon| image:: icon\Modify_Object_Attributes.png
+.. |icon| image:: .\icon\Modify_Object_Attributes.png

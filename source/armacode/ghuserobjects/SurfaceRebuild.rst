@@ -7,4 +7,4 @@ SurfaceRebuild |icon|
 
 Rebuild 3Point and 4Point Surfaces
 
-.. |icon| image:: icon\SurfaceRebuild.png
+.. |icon| image:: .\icon\SurfaceRebuild.png

@@ -9,4 +9,4 @@ Sort a list of surfaces based on the Z Coordinate of the sampled point.
 
 Points are sampled at the uv parameter provided. Default to (0.5,0.5)
 
-.. |icon| image:: icon\Surface_Sort_By_Z_Coordinate.png
+.. |icon| image:: .\icon\Surface_Sort_By_Z_Coordinate.png

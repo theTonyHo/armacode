@@ -8,4 +8,4 @@ Brep Unroll |icon|
 Unroll BREP GHPython Utility - MultiThreaded
 Unroll a Brep and associated geometries (curves, points, text dots)
 
-.. |icon| image:: icon\Brep_Unroll.png
+.. |icon| image:: .\icon\Brep_Unroll.png

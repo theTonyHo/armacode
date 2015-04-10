@@ -7,4 +7,4 @@ Make2D |icon|
 
 Generates Make2D Drawings from Rhino Objects without baking the,. No new layers are being generated.
 
-.. |icon| image:: icon\Make2D.png
+.. |icon| image:: .\icon\Make2D.png

@@ -7,4 +7,4 @@ Shrink Brep |icon|
 
 Shrink Brep Faces
 
-.. |icon| image:: icon\Shrink_Brep.png
+.. |icon| image:: .\icon\Shrink_Brep.png

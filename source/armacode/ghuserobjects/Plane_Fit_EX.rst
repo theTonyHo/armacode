@@ -7,4 +7,4 @@ Plane Fit EX |icon|
 
 Fit a Plane through a set of points
 
-.. |icon| image:: icon\Plane_Fit_EX.png
+.. |icon| image:: .\icon\Plane_Fit_EX.png

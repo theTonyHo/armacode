@@ -7,4 +7,4 @@ Brep Create Shell |icon|
 
 Create a shell from a closed polysurface
 
-.. |icon| image:: icon\Brep_Create_Shell.png
+.. |icon| image:: .\icon\Brep_Create_Shell.png

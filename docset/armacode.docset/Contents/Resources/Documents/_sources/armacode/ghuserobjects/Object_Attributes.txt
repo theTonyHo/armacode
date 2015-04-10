@@ -8,4 +8,4 @@ Object Attributes |icon|
 Object Attributes
 Read Objects Attributes in Rhino Document
 
-.. |icon| image:: icon\Object_Attributes.png
+.. |icon| image:: .\icon\Object_Attributes.png

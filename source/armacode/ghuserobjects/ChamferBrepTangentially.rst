@@ -12,4 +12,4 @@ Notes:
 - Edges of Brep must be straight
 - Works on Single Breps, Lists and Grafted Lists
 
-.. |icon| image:: icon\ChamferBrepTangentially.png
+.. |icon| image:: .\icon\ChamferBrepTangentially.png

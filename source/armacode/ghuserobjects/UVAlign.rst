@@ -7,4 +7,4 @@ UVAlign |icon|
 
 Align UV direction of a surface to a guide line.
 
-.. |icon| image:: icon\UVAlign.png
+.. |icon| image:: .\icon\UVAlign.png

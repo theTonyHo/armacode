@@ -8,4 +8,4 @@ Text Wrapper |icon|
 Text Wrapper
 Wrap single line text strings.
 
-.. |icon| image:: icon\Text_Wrapper.png
+.. |icon| image:: .\icon\Text_Wrapper.png

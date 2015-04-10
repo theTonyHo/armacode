@@ -7,4 +7,4 @@ Brep Pull EX |icon|
 
 Pull Curves on to a Brep
 
-.. |icon| image:: icon\Brep_Pull_EX.png
+.. |icon| image:: .\icon\Brep_Pull_EX.png

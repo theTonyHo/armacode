@@ -7,4 +7,4 @@ MeshVertexColor |icon|
 
 A python scriptable component
 
-.. |icon| image:: icon\MeshVertexColor.png
+.. |icon| image:: .\icon\MeshVertexColor.png

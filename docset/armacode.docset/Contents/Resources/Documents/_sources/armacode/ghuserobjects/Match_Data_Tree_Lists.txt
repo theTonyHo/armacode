@@ -7,4 +7,4 @@ Match Data Tree Lists |icon|
 
 Contains a cluster of Grasshopper components
 
-.. |icon| image:: icon\Match_Data_Tree_Lists.png
+.. |icon| image:: .\icon\Match_Data_Tree_Lists.png

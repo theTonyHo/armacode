@@ -7,4 +7,4 @@ Round_EX |icon|
 
 Round a value to the nearest t value
 
-.. |icon| image:: icon\Round_EX.png
+.. |icon| image:: .\icon\Round_EX.png
