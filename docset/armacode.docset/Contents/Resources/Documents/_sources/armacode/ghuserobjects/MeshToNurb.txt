@@ -3,8 +3,8 @@
 .. _meshtonurb_gh:
 
 MeshToNurb |icon| 
-----------
+------------------
 
 A python scriptable component
 
-.. |icon| image:: .\icon\MeshToNurb.png
+.. |icon| image:: icon/MeshToNurb.png

@@ -3,9 +3,9 @@
 .. _brep extractor_gh:
 
 Brep Extractor |icon| 
---------------
+----------------------
 
 Brep Extractor
 Extract all data of a brep.
 
-.. |icon| image:: .\icon\Brep_Extractor.png
+.. |icon| image:: icon/Brep_Extractor.png

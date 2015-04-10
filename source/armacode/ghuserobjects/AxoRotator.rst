@@ -3,8 +3,8 @@
 .. _axorotator_gh:
 
 AxoRotator |icon| 
-----------
+------------------
 
 Rotate an object around its volume center in order to be viewed axonometrically.
 
-.. |icon| image:: .\icon\AxoRotator.png
+.. |icon| image:: icon/AxoRotator.png

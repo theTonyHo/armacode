@@ -3,8 +3,8 @@
 .. _closest curves_gh:
 
 Closest Curves |icon| 
---------------
+----------------------
 
 Find closest Curves to a point with specified tolerance
 
-.. |icon| image:: .\icon\Closest_Curves.png
+.. |icon| image:: icon/Closest_Curves.png

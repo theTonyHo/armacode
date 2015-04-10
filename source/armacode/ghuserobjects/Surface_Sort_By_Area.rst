@@ -3,8 +3,8 @@
 .. _surface sort by area_gh:
 
 Surface Sort By Area |icon| 
---------------------
+----------------------------
 
 Sort a list of surfaces based on the calculated area.
 
-.. |icon| image:: .\icon\Surface_Sort_By_Area.png
+.. |icon| image:: icon/Surface_Sort_By_Area.png

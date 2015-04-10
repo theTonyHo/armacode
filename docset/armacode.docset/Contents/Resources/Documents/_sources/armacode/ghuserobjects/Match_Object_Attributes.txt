@@ -3,9 +3,9 @@
 .. _match object attributes_gh:
 
 Match Object Attributes |icon| 
------------------------
+-------------------------------
 
 Match Object Attributes
 Modify target Rhino objects attributes to have the same attributes as another Rhino object
 
-.. |icon| image:: .\icon\Match_Object_Attributes.png
+.. |icon| image:: icon/Match_Object_Attributes.png

@@ -3,10 +3,10 @@
 .. _crease angle_gh:
 
 Crease Angle |icon| 
-------------
+--------------------
 
 Brep Edge Crease Angle.
 Compute the crease angle between two faces of a brep at a point on the common edge.
 Angle is calculated from the perpendicular tangent on the two adjacent faces projected on the evaluated perpendicular frame on the edge.
 
-.. |icon| image:: .\icon\Crease_Angle.png
+.. |icon| image:: icon/Crease_Angle.png

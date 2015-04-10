@@ -3,9 +3,9 @@
 .. _offset brep_gh:
 
 Offset Brep |icon| 
------------
+-------------------
 
 Offset Brep
 Offset all faces of a brep.
 
-.. |icon| image:: .\icon\Offset_Brep.png
+.. |icon| image:: icon/Offset_Brep.png

@@ -3,9 +3,9 @@
 .. _curve deviation_gh:
 
 Curve Deviation |icon| 
----------------
+-----------------------
 
 Curve Deviation
 Calculate Maximum and Minimum Deviation between two curve objects.
 
-.. |icon| image:: .\icon\Curve_Deviation.png
+.. |icon| image:: icon/Curve_Deviation.png
