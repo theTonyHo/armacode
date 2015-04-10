@@ -20,6 +20,7 @@ import math
 import armacode
 import os
 import ast
+import shutil
 
 #import sphinx.ext.napoleon #This does not work in IronPython ?
 
@@ -225,6 +226,9 @@ def DescribeObject(_objectName, _object):
 
 def ProcessMethods(dataDict, writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
     
+    if writeToDirectory:
+        shutil.rmtree(writeToDirectory)
+        
     memberData = dataDict
     allMemberNames = dataDict.keys()
     if sortMembers:
@@ -253,6 +257,8 @@ def ProcessMethods(dataDict, writeToDirectory=None, sortMembers=True, indexFile=
 
 def ProcessCommands(dirPath, writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
     
+    if writeToDirectory:
+        shutil.rmtree(writeToDirectory)
     #Get filenames of all tools.
     fileList = []
     for (dirpath, dirname, filenames) in os.walk(dirPath):
@@ -283,6 +289,8 @@ def ProcessCommands(dirPath, writeToDirectory=None, sortMembers=True, indexFile=
 
 def ProcessTools(dirPath, writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
     
+    if writeToDirectory:
+        shutil.rmtree(writeToDirectory)
     #Get filenames of all tools.
     fileList = []
     for (dirpath, dirname, filenames) in os.walk(dirPath):
@@ -298,6 +306,7 @@ def ProcessTools(dirPath, writeToDirectory=None, sortMembers=True, indexFile=Fal
         memberName, ext = os.path.splitext(fname)
         
         if writeToDirectory:
+            
             if isinstance(writeToDirectory, str):
                 fileName = "{}\\{}.rst".format(writeToDirectory, memberName)
             else:
@@ -323,6 +332,13 @@ def ProcessGHUserObjects(category="AR-MA", writeToDirectory=None, sortMembers=Tr
     obj = objs[0]
     
     allMemberNames = []
+    
+    iconDirectory = writeToDirectory + "\\icon"
+    
+    if writeToDirectory:
+        shutil.rmtree(writeToDirectory)
+    if not os.path.isdir(iconDirectory):
+        os.mkdir(iconDirectory)
     for obj in objs:
         catName = obj.Desc.Category
         if not category in catName:
@@ -342,7 +358,6 @@ def ProcessGHUserObjects(category="AR-MA", writeToDirectory=None, sortMembers=Tr
         
         fileName = fileName.replace(" ", "_")
         
-        iconDirectory = writeToDirectory + "\\icon"
         iconFileName = "{}.png".format(fileName)
         iconFilePath = "{}\\icon\\{}".format(writeToDirectory, iconFileName)
         docString = description
@@ -369,10 +384,7 @@ def ProcessGHUserObjects(category="AR-MA", writeToDirectory=None, sortMembers=Tr
         resultString = str.join("\n", message)
         
         if writeToDirectory:
-            
             try:
-                if not os.path.isdir(iconDirectory):
-                    os.mkdir(iconDirectory)
                 obj.Icon.Save(iconFilePath)
             except:
                 print "ERROR: {} could not be extracted".format(iconFilePath)
@@ -384,6 +396,7 @@ def ProcessGHUserObjects(category="AR-MA", writeToDirectory=None, sortMembers=Tr
             rc = StringToFile(resultString, fileName)
             
         allMemberNames.append(memberName)
+        
     if writeToDirectory and indexFile:
         
         indexFilename = "{}\\index.rst".format(writeToDirectory)
@@ -466,21 +479,23 @@ def main():
     moduleName = moduleToDocument.__name__
     sortMembers = True
     
-    moduleDirectory = moduleToDocument.__path__
+    moduleDirectory = moduleToDocument.__path__[0]
     #docDirectory = moduleDirectory[0] + "\\source" + "\\" + moduleName
     
+    docDirectory = os.path.dirname(__file__)
+    print docDirectory
     # Documentation director for all generated docs.
-    docDirectory = "source" + "\\" + moduleName
-    moduleDocDirectory = docDirectory + "\\libraries"
+    moduleDocDirectory = "source" + "\\" + moduleName
+    methodDocDirectory = moduleDocDirectory + "\\libraries"
     # Reference directory for methods to include in index but not to list out.
-    refDirectory = docDirectory + "\\" + "reference"
+    refDirectory = moduleDocDirectory + "\\" + "reference"
     
     # Commands
-    commandPath = armacode.__path__[0] + "\\plug-in\\AR-MA {4dbb1598-76ef-4560-8b04-fd01de706e43}\\dev"
+    commandPath = moduleDirectory + "\\plug-in\\AR-MA {4dbb1598-76ef-4560-8b04-fd01de706e43}\\dev"
     commandDocDirectory = "source" + "\\armacode\\plug-ins\\commands"
     
     # Tools
-    toolPath = armacode.__path__[0] + "\\tools"
+    toolPath = moduleDirectory + "\\tools"
     toolDocDirectory = "source" + "\\armacode\\tools"
     
     # Grasshopper UserObjects
@@ -514,11 +529,14 @@ def main():
     # Methods
     proceed = True
     if proceed:
-        ProcessMethods(allData["methods"], moduleDocDirectory)
+        
+        
+        ProcessMethods(allData["methods"], methodDocDirectory)
         ProcessMethods(additionalMethods, refDirectory, useCustomNames=True)
         
         ProcessCommands(commandPath, commandDocDirectory)
         ProcessTools(toolPath, toolDocDirectory)
+        ProcessGHUserObjects("AR-MA", ghDocDirectory)
         GenerateDocsetFeed()
         GenerateVersionFile()
         print "Document generated for armacode"
@@ -550,6 +568,4 @@ def GenerateVersionFile():
 
 
 if __name__ == "__main__":
-    #main()
-    ghDocDirectory = "source" + "\\armacode\\ghuserobjects"
-    ProcessGHUserObjects("AR-MA", ghDocDirectory)
+    main()
