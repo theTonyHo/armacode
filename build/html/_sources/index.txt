@@ -13,7 +13,7 @@ Welcome to armacode's documentation!
    ./libraries.rst
    ./tools.rst
    ./plug-ins.rst
-   ./grasshopper.rst
+   ./ghuserobjects.rst
    ./conventions.rst
    ./howto.rst
    

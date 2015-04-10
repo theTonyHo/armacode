@@ -1,1 +1,1 @@
-All documentation in this folder is generated.
+All documentation in this folder is generated. Except for plug-ins folder

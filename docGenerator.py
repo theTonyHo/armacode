@@ -185,6 +185,35 @@ def DescribeCommand(filename, customName=None):
     
     return resultMessage
 
+def DescribeGHUserObject(member, customName=None):
+    """
+    Return the string describing the GH User Object.
+    """
+    # Get Values
+    
+    fpath, fname = os.path.split(filename)
+    memberName = fname[:-7]
+    
+    restDocstring = FileDoc(filename)
+    
+    message = []
+    
+    # Indexing
+    message.append(".. index:: {} (Command)\n".format(memberName))
+    # Reference label
+    message.append(".. _{}_cmd:\n".format(str.lower(memberName)))
+    
+    if not restDocstring:
+        restDocstring = "Undocumented."
+    
+    message.append(memberName)
+    message.append("-" * len(memberName))
+    message.append(restDocstring)
+    
+    resultMessage = str.join("\n", message)
+    
+    return resultMessage
+
 def DescribeObject(_objectName, _object):
     
     if inspect.isbuiltin(_object) or inspect.isfunction(_object) or inspect.ismethod(_object):
@@ -282,6 +311,86 @@ def ProcessTools(dirPath, writeToDirectory=None, sortMembers=True, indexFile=Fal
         rc = StringToFile(indexContent, indexFilename)
     print "Processed {} Tools !".format(len(fileList))
 
+def ProcessGHUserObjects(category="AR-MA", writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
+    
+    import Grasshopper
+    
+    objs = list(Grasshopper.GH_InstanceServer.ComponentServer.ObjectProxies)
+    
+    if sortMembers:
+        objs.sort(key=lambda obj: obj.Desc.Name)
+    
+    obj = objs[0]
+    
+    allMemberNames = []
+    for obj in objs:
+        catName = obj.Desc.Category
+        if not category in catName:
+            continue
+        
+        memberName = obj.Desc.Name
+        subCatName = obj.Desc.SubCategory
+        description = obj.Desc.InstanceDescription
+        
+        fileName = memberName
+        #fileName = str.replace(memberName, "[OBSOLETE]", "_OBSOLETE")
+        
+        fileName = str.replace(fileName, "|", "-")
+        fileName = str.replace(fileName, "/", "-")
+        fileName = str.replace(fileName, ":", "-")
+        fileName = str.replace(fileName, "*", "-")
+        
+        fileName = fileName.replace(" ", "_")
+        
+        iconDirectory = writeToDirectory + "\\icon"
+        iconFileName = "{}.png".format(fileName)
+        iconFilePath = "{}\\icon\\{}".format(writeToDirectory, iconFileName)
+        docString = description
+        if not docString:
+            docString = "Undocumented"
+        docString = inspect.cleandoc(docString)
+        restDocString = DocStringFromGoogle(docString)
+        
+        message = []
+        # Indexing
+        message.append(".. index:: {} (GH)\n".format(memberName))
+        # Reference label
+        message.append(".. _{}_gh:\n".format(str.lower(memberName)))
+        
+        if not restDocString:
+            restDocString = "Undocumented."
+        
+        message.append(memberName + " |icon| ")
+        message.append("-" * len(memberName))
+        message.append("")
+        message.append(restDocString)
+        
+        message.append("\n.. |icon| image:: icon\\{}".format(iconFileName))
+        resultString = str.join("\n", message)
+        
+        if writeToDirectory:
+            
+            try:
+                if not os.path.isdir(iconDirectory):
+                    os.mkdir(iconDirectory)
+                obj.Icon.Save(iconFilePath)
+            except:
+                print "ERROR: {} could not be extracted".format(iconFilePath)
+                
+            if isinstance(writeToDirectory, str):
+                fileName = "{}\\{}.rst".format(writeToDirectory, fileName)
+            else:
+                fileName = "{}.rst".format(memberName)
+            rc = StringToFile(resultString, fileName)
+            
+        allMemberNames.append(memberName)
+    if writeToDirectory and indexFile:
+        
+        indexFilename = "{}\\index.rst".format(writeToDirectory)
+        indexContent = CombineFiles(allMemberNames)
+        rc = StringToFile(indexContent, indexFilename)
+    print "Processed {} GH User Objects !".format(len(allMemberNames))
+        
 
 def Toctree(includePaths, maxdepth=2):
     
@@ -374,6 +483,9 @@ def main():
     toolPath = armacode.__path__[0] + "\\tools"
     toolDocDirectory = "source" + "\\armacode\\tools"
     
+    # Grasshopper UserObjects
+    ghDocDirectory = "source" + "\\armacode\\ghuserobjects"
+    
     includeModules = ["classes", ""]
     
     # Go through module
@@ -435,5 +547,9 @@ def GenerateVersionFile():
     
     print "Version File Generated"
 
+
+
 if __name__ == "__main__":
-    main()
+    #main()
+    ghDocDirectory = "source" + "\\armacode\\ghuserobjects"
+    ProcessGHUserObjects("AR-MA", ghDocDirectory)
