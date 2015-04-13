@@ -1,0 +1,12 @@
+EditBox_EX
+----------
+
+.. py:Function:: EditBox_EX(items=None, message=None, title=None)
+
+
+Extended version of EditBox.
+Display dialog box prompting the user to enter a string value. The string value may span multiple lines.
+Dialog will Always ensure the number of lines is the same compared to the original value.
+This is useful to replace a list of items with a new list.
+
+:param list of items: List of items.

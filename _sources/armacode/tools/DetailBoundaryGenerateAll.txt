@@ -1,0 +1,10 @@
+.. index:: DetailBoundaryGenerateAll (Tool)
+
+.. _tools.detailboundarygenerateall:
+
+DetailBoundaryGenerateAll
+-------------------------
+Generate a Bounding Box for every Detail in the document
+Label is also generated with properties of Detail.
+
+Requires DetailBoundary tool to work.

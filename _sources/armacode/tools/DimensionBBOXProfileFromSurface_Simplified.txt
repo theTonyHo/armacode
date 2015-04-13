@@ -1,0 +1,7 @@
+.. index:: DimensionBBOXProfileFromSurface_Simplified (Tool)
+
+.. _tools.dimensionbboxprofilefromsurface_simplified:
+
+DimensionBBOXProfileFromSurface_Simplified
+------------------------------------------
+Undocumented.

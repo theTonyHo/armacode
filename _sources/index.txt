@@ -6,19 +6,23 @@
 Welcome to armacode's documentation!
 ====================================
 
-Contents:
-
 .. toctree::
-   :maxdepth: 5
-   :glob:
+   :maxdepth: 1
    
-   armacode/*
+   ./classes.rst
+   ./libraries.rst
+   ./tools.rst
+   ./plug-ins.rst
+   ./ghuserobjects.rst
+   ./conventions.rst
+   ./howto.rst
+   
 
+.. Index
+.. =====
 
-Indices and tables
-==================
+.. * :ref:`genindex`
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. :ref:`modindex`
+.. :ref:`search`
 

@@ -1,0 +1,7 @@
+.. index:: LayoutMultipleDetails (Tool)
+
+.. _tools.layoutmultipledetails:
+
+LayoutMultipleDetails
+---------------------
+Undocumented.

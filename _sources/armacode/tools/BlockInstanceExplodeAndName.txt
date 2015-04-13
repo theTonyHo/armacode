@@ -1,0 +1,7 @@
+.. index:: BlockInstanceExplodeAndName (Tool)
+
+.. _tools.blockinstanceexplodeandname:
+
+BlockInstanceExplodeAndName
+---------------------------
+Explode block instances and add to group. (Experimental)

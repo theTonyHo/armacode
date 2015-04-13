@@ -1,0 +1,18 @@
+.. index:: TextToSingleLineFont (Tool)
+
+.. _tools.texttosinglelinefont:
+
+TextToSingleLineFont
+--------------------
+#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+#' ConvertTextToGeometry.rvb -- September 2008
+#' If this code works, it was written by Dale Fugier.
+#' With a tiny tweak by Josh Draper -- Oct 15, 2009
+#' If not, I don't know who wrote it.
+#' Works with Rhino 4.0.
+#
+#' Python version by Tony HO JAN 11, 2011
+#' Credit goes to Dale Fugier because it worked.
+#' Features
+#' Auto suggest font to machine fonts
+#' Multi-line support

@@ -1,0 +1,7 @@
+.. index:: MirrorObjectsAboutMidPoint (Tool)
+
+.. _tools.mirrorobjectsaboutmidpoint:
+
+MirrorObjectsAboutMidPoint
+--------------------------
+Mirror multiple objects about their axis

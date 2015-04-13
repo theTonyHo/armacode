@@ -1,0 +1,7 @@
+.. index:: BlockDuplicate (Tool)
+
+.. _tools.blockduplicate:
+
+BlockDuplicate
+--------------
+Duplicate a Block Definition

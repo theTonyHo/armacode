@@ -1,0 +1,9 @@
+.. index:: AddNameTagsRefPt (Tool)
+
+.. _tools.addnametagsrefpt:
+
+AddNameTagsRefPt
+----------------
+Add a Text Dot object as a name tag for a object.
+
+Position of the name tag defined as a Reference Point. Refer to :py_func:armacode.ReferencePoint

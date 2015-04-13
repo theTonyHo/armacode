@@ -1,0 +1,12 @@
+.. index:: ProductionGenerateFixingsFromCurves (Tool)
+
+.. _tools.productiongeneratefixingsfromcurves:
+
+ProductionGenerateFixingsFromCurves
+-----------------------------------
+Generate Fixings from Curve.
+Generate a set of fixing locations on a curve.
+
+:param start: Distance from start of curve
+:param centers: Maximum Distance between fixings
+:param end: Distance from end of curve

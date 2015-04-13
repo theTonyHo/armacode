@@ -1,0 +1,7 @@
+.. index:: BlockRenameLinkedBlocks (Tool)
+
+.. _tools.blockrenamelinkedblocks:
+
+BlockRenameLinkedBlocks
+-----------------------
+Rename all linked block definitions based on the filename.

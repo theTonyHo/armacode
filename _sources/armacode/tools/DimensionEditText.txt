@@ -1,0 +1,7 @@
+.. index:: DimensionEditText (Tool)
+
+.. _tools.dimensionedittext:
+
+DimensionEditText
+-----------------
+Undocumented.

@@ -1,0 +1,10 @@
+SetUserTextFromDict
+-------------------
+
+.. py:Function:: SetUserTextFromDict(object_id, dataDict, attach_to_geometry=False)
+
+
+Sets or removes user text stored on an object using a dictionary
+:param object_id = the object's identifier:
+:param dataDict = dictionary of pairs of key and value:
+:param attach_to_geometry[opt] = location on the object to store the user text:

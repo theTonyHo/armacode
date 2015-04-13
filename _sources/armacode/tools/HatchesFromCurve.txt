@@ -1,0 +1,7 @@
+.. index:: HatchesFromCurve (Tool)
+
+.. _tools.hatchesfromcurve:
+
+HatchesFromCurve
+----------------
+Undocumented.

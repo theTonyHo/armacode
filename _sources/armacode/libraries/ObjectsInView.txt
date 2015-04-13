@@ -1,0 +1,12 @@
+ObjectsInView
+-------------
+
+.. py:Function:: ObjectsInView(view=None, select=False, in_window=True)
+
+
+Return Objects visible in the viewport
+:param view[opt] = view to perform the selection in. Active viewport is used if omitted:
+:param select[opt] = select picked objects:
+:param in_window[opt] = if False, then a crossing window selection is performed:
+
+:returns: list of object ids on success

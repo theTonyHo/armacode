@@ -1,0 +1,10 @@
+.. index:: BrepBooleanDifference (Tool)
+
+.. _tools.brepbooleandifference:
+
+BrepBooleanDifference
+---------------------
+Perform Brep Boolean Difference on a set of polysurfaces using a set of cutters.
+
+The built-in Rhino command `BooleanDifference` does not seem to work properly with multiple cutters.
+This tool iterates through each Brep and each cutter and perform BooleanDifference.

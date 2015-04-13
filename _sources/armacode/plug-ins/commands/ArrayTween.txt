@@ -1,0 +1,11 @@
+.. index:: ArrayTween (Command)
+
+.. _arraytween_cmd:
+
+ArrayTween
+----------
+Array objects from one point to another without exceeding a max distance.
+Useful for arraying fixings at specific centers.
+
+Update to work with multiple objects.
+Reference: http://wiki.mcneel.com/developer/rhinocommonsamples/arraybydistance

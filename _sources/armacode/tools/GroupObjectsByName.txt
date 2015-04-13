@@ -1,0 +1,10 @@
+.. index:: GroupObjectsByName (Tool)
+
+.. _tools.groupobjectsbyname:
+
+GroupObjectsByName
+------------------
+Group Objects by Name
+
+Gabriele Ulacco| AR-MA
+Release: March 2013

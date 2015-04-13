@@ -1,0 +1,7 @@
+.. index:: CopyWorksessionObjects (Tool)
+
+.. _tools.copyworksessionobjects:
+
+CopyWorksessionObjects
+----------------------
+Copy Worksession objects to the current document.

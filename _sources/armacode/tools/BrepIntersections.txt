@@ -1,0 +1,8 @@
+.. index:: BrepIntersections (Tool)
+
+.. _tools.brepintersections:
+
+BrepIntersections
+-----------------
+Calculate the intersection of two sets of Breps.
+The result geometries will inherits the user text attributes of set B

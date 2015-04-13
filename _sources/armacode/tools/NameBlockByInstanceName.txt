@@ -1,0 +1,7 @@
+.. index:: NameBlockByInstanceName (Tool)
+
+.. _tools.nameblockbyinstancename:
+
+NameBlockByInstanceName
+-----------------------
+Undocumented.

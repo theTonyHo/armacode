@@ -1,0 +1,8 @@
+.. index:: SelDetails (Command)
+
+.. _seldetails_cmd:
+
+SelDetails
+----------
+Select all visible details accross all layouts.
+This is useful for editing properties of multiple details

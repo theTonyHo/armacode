@@ -1,0 +1,7 @@
+.. index:: LayoutDeleteAll (Tool)
+
+.. _tools.layoutdeleteall:
+
+LayoutDeleteAll
+---------------
+Undocumented.

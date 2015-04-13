@@ -1,0 +1,7 @@
+.. index:: Apply3DSection (Tool)
+
+.. _tools.apply3dsection:
+
+Apply3DSection
+--------------
+Create a 3D Section from current geometries in Rhino Document.

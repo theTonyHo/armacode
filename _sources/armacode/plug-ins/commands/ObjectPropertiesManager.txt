@@ -1,0 +1,7 @@
+.. index:: ObjectPropertiesManager (Command)
+
+.. _objectpropertiesmanager_cmd:
+
+ObjectPropertiesManager
+-----------------------
+Undocumented.

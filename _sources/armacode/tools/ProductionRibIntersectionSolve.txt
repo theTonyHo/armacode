@@ -1,0 +1,9 @@
+.. index:: ProductionRibIntersectionSolve (Tool)
+
+.. _tools.productionribintersectionsolve:
+
+ProductionRibIntersectionSolve
+------------------------------
+Solve Ribs Intersections.
+This solves two "Fully Intersecting" surfaces.
+Examples of this is the intersecting plates that crosses one another.

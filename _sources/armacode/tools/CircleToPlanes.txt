@@ -1,0 +1,7 @@
+.. index:: CircleToPlanes (Tool)
+
+.. _tools.circletoplanes:
+
+CircleToPlanes
+--------------
+Add a surface representing the plane of a Circle curve object.

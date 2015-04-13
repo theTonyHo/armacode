@@ -1,0 +1,7 @@
+.. index:: NestingCalculateOffcutsZones_CurveBoolean (Tool)
+
+.. _tools.nestingcalculateoffcutszones_curveboolean:
+
+NestingCalculateOffcutsZones_CurveBoolean
+-----------------------------------------
+Undocumented.

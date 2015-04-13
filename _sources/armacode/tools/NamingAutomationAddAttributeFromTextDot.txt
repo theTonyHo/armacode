@@ -1,0 +1,13 @@
+.. index:: NamingAutomationAddAttributeFromTextDot (Tool)
+
+.. _tools.namingautomationaddattributefromtextdot:
+
+NamingAutomationAddAttributeFromTextDot
+---------------------------------------
+Add Attribute to objects from text dot
+
+If an object is found touching the Text Dot object, by a specified distance tolerance, an entry is added to the object Attribute Usertext
+
+Attribute format : `NAME:CONTENT`.
+Attribute `KEY` is defined by name of the text dot object
+Attribute `VALUE` is defined by the content of the text dot object

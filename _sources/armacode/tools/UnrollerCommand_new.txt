@@ -1,0 +1,7 @@
+.. index:: UnrollerCommand_new (Tool)
+
+.. _tools.unrollercommand_new:
+
+UnrollerCommand_new
+-------------------
+Undocumented.

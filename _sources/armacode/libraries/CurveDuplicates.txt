@@ -1,0 +1,11 @@
+CurveDuplicates
+---------------
+
+.. py:Function:: CurveDuplicates(curve_IDs, tolerance=None, return_Duplicate=False)
+
+
+Remove Duplicated curves
+:param curve_IDs = Input Curve GUIDs:
+:param tolerance [opt] = Tolerance for proximity check. If None, document tolerance is used:
+
+:returns: identifier of the duplicated curves on success
