@@ -19,7 +19,7 @@ ReadTheDocs: http://armacode.readthedocs.org/
 
 Zeal/Dash Docset feed: https://raw.githubusercontent.com/theTonyHo/armacode/master/feed/armacode.xml
 
-.. |docs| image:: https://readthedocs.org/projects/docs/badge/
+.. |docs| image:: http://readthedocs.org/projects/armacode/badge/
     :alt: Documentation Status
     :scale: 100%
-    :target: https://readthedocs.org/projects/docs/
+    :target: http://armacode.readthedocs.org/
