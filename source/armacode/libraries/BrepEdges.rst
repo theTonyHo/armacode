@@ -4,7 +4,7 @@ BrepEdges
 .. py:Function:: BrepEdges(object_id, as_CurveObjects=True)
 
 
-Duplicate Brep Edges and place them in the correct layers
+Extract Brep Edges
 
 :param object_id: object extract edges from
 :param as_CurveObjects[opt]: Return as Curve Objects if True. Otherwise return BrepEdge objects.

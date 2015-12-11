@@ -1,7 +1,7 @@
 ProgressBar
 -----------
 
-.. py:Function:: ProgressBar(value, lower, upper, label='', embed_label=True, show_percent=True)
+.. py:Function:: ProgressBar(value, lower, upper, label='', embed_label=True, show_percent=True, allowEscape=1)
 
 
 Display the progress of the script using the built-in Progress Meter in Status Bar.

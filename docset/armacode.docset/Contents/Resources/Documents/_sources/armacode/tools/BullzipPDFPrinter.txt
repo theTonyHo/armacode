@@ -27,3 +27,12 @@ Update:
 Update:
     19/09/2014
     Revert to legacy mode: switch to layout before print. Individual layout settings, (i.e. portrait and landscape orientation) are not used when running in silent mode.
+    21/10/2014
+    Refactoring code to command.
+    Store file name format in the document as user text for future prints.
+Update:
+    24/06/2015
+    Optimised performance.
+    If file name format only require #PAGE_NAME, no need to process text objects on layout.
+    Layout Properties are processed at the very beginning of the script.
+

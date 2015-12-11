@@ -12,5 +12,6 @@ Position of the name tag is a combination of the following options:
 * Curve Mid Point
 * Curve Vertices
 * Surface Center Parameter (0.5,0.5)
+* Area Centroid (Surface, Curve, Mesh)
 * Brep Vertices
 * Brep Closest Point

@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     'v1.1.1 Build 335.0410',
+        VERSION:     'v1.1.2 Build 101.1207',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -53,7 +53,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/ar-ma_logo.png">
           armacode</a>
-        <span class="navbar-text navbar-version pull-left"><b>v1.1.1</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>v1.1.2</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -160,6 +160,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../libraries/PlaneFromObject.html">PlaneFromObject</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../libraries/PlaneFromPolyline.html">PlaneFromPolyline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../libraries/PlaneFromSurface.html">PlaneFromSurface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/PlaneGetFromUserText.html">PlaneGetFromUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/PlaneSetToUserText.html">PlaneSetToUserText</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../libraries/PointClosestObject.html">PointClosestObject</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../libraries/PointClosestObjects.html">PointClosestObjects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../libraries/PrintAll.html">PrintAll</a></li>
@@ -209,7 +211,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/AnnotationDotFromPoint.html">AnnotationDotFromPoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/Apply3DSection.html">Apply3DSection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/BatchConvertFiles.html">BatchConvertFiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/BatchConvertFilesTo3DPDF.html">BatchConvertFilesTo3DPDF</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/BlockCreateFromGroup.html">BlockCreateFromGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/BlockCreateFromObjectName.html">BlockCreateFromObjectName</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/BlockDuplicate.html">BlockDuplicate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/BlockGenerateBasePlaneSurfaces.html">BlockGenerateBasePlaneSurfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/BlockInstanceExplodeAndGroup.html">BlockInstanceExplodeAndGroup</a></li>
@@ -226,12 +230,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/BrepTrim.html">BrepTrim</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/BrepUnfold.html">BrepUnfold</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/BullzipPDFPrinter.html">BullzipPDFPrinter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/ChangeObjectsHue.html">ChangeObjectsHue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/CircleToPlanes.html">CircleToPlanes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ClippingCube.html">ClippingCube</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ClosestObjectsCheck.html">ClosestObjectsCheck</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/CopyObjectsToLayouts.html">CopyObjectsToLayouts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/CopyObjectsToPoints.html">CopyObjectsToPoints</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/CopyUserText.html">CopyUserText</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/CopyWorksessionObjects.html">CopyWorksessionObjects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/CurveAddArrows.html">CurveAddArrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/CurveBooleanDifference.html">CurveBooleanDifference</a></li>
@@ -275,6 +279,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ExportBlocks.html">ExportBlocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ExportObjects.html">ExportObjects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ExportObjectsByGroup.html">ExportObjectsByGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/ExportObjectsByLayer.html">ExportObjectsByLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ExportObjectsByName.html">ExportObjectsByName</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ExtrudeObjects.html">ExtrudeObjects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/FieldsFromStrings.html">FieldsFromStrings</a></li>
@@ -301,6 +306,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/LayoutLockAllDetails.html">LayoutLockAllDetails</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/LayoutMultipleDetails.html">LayoutMultipleDetails</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/LayoutPrintLayoutNames.html">LayoutPrintLayoutNames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/LayoutSortAlphabetically.html">LayoutSortAlphabetically</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/LayoutUpdateDetailsFromCurves.html">LayoutUpdateDetailsFromCurves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/LeaderFromCurve.html">LeaderFromCurve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/Make2D.html">Make2D</a></li>
@@ -343,6 +349,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ProductionExtractFoldLines.html">ProductionExtractFoldLines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ProductionExtractLoopCurves.html">ProductionExtractLoopCurves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ProductionGenerateFixingsFromCurves.html">ProductionGenerateFixingsFromCurves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/ProductionGlassInstantiate.html">ProductionGlassInstantiate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ProductionRibIntersectionSolve.html">ProductionRibIntersectionSolve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ProductionRibSurfaceIntersectionSolve.html">ProductionRibSurfaceIntersectionSolve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ProjectGripPoints.html">ProjectGripPoints</a></li>
@@ -363,6 +370,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/TextAddMask.html">TextAddMask</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/TextBoundingBox.html">TextBoundingBox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/TextFindAndReplace.html">TextFindAndReplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/TextGeneratePlane.html">TextGeneratePlane</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/TextIncrementalTag.html">TextIncrementalTag</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/TextMatchProperties.html">TextMatchProperties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/TextSeparate.html">TextSeparate</a></li>
@@ -379,6 +387,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/VRayMaterialsToLayersMatchMapping.html">VRayMaterialsToLayersMatchMapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ViewportsGenerateFromNamedViews.html">ViewportsGenerateFromNamedViews</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/ZAxisSingularityCheck.html">ZAxisSingularityCheck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/copyUserText.html">copyUserText</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../plug-ins.html">Plug-ins</a><ul>
@@ -397,6 +406,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ClippingCube.html">ClippingCube</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ConstructionLine.html">ConstructionLine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DimSplit.html">DimSplit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DimStyleFromObject.html">DimStyleFromObject</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DisplayBlockInfo.html">DisplayBlockInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DisplayCurveLengths.html">DisplayCurveLengths</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DisplayManager.html">DisplayManager</a></li>
@@ -404,8 +414,10 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="">DisplayUsertext</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DocumentManager.html">DocumentManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DrawSlottedHole.html">DrawSlottedHole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditMultiple.html">EditMultiple</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GrasshopperIcons.html">GrasshopperIcons</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GrasshopperSolve.html">GrasshopperSolve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HatchMatchPattern.html">HatchMatchPattern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="InsertMultiple.html">InsertMultiple</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IsolateLayer.html">IsolateLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IterateObjects.html">IterateObjects</a></li>
@@ -414,11 +426,15 @@
 <li class="toctree-l2"><a class="reference internal" href="LayoutManager.html">LayoutManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LeaderWithAttributes.html">LeaderWithAttributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LoadTool.html">LoadTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MatchDimStyle.html">MatchDimStyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MatchHatchProperties.html">MatchHatchProperties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="NextSelectedObject.html">NextSelectedObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjLayerNameToClipboard.html">ObjLayerNameToClipboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ObjNameToClipboard.html">ObjNameToClipboard</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ObjectNameDisplay.html">ObjectNameDisplay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ObjectPropertiesManager.html">ObjectPropertiesManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Overkill.html">Overkill</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PrintBullzip.html">PrintBullzip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlanarSrfCrvBool.html">PlanarSrfCrvBool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PullDots.html">PullDots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PullPtsToCurve.html">PullPtsToCurve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ReorderBrepFace.html">ReorderBrepFace</a></li>
@@ -428,15 +444,20 @@
 <li class="toctree-l2"><a class="reference internal" href="SelMatchingText.html">SelMatchingText</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SelObjectsByLayer.html">SelObjectsByLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SelUniqueBlocks.html">SelUniqueBlocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SelectMultiple.html">SelectMultiple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SelectSimilar.html">SelectSimilar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SelectUnique.html">SelectUnique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SelectionSet.html">SelectionSet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SetObjectNameFromAttributes.html">SetObjectNameFromAttributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Table.html">Table</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TableAddAllSheets.html">TableAddAllSheets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="TableUpdateAll.html">TableUpdateAll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UserTextInherit.html">UserTextInherit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UserTextInheritMulti.html">UserTextInheritMulti</a></li>
 <li class="toctree-l2"><a class="reference internal" href="UserTextInspector.html">UserTextInspector</a></li>
 <li class="toctree-l2"><a class="reference internal" href="brepFaceOrderDisplay.html">brepFaceOrderDisplay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distributeObjects.html">distributeObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawAngleProfile.html">drawAngleProfile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="export3DPDF.html">export3DPDF</a></li>
 <li class="toctree-l2"><a class="reference internal" href="selUserText.html">selUserText</a></li>
 </ul>
@@ -467,6 +488,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Brep_Unfolder_EX.html">Brep Unfolder EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Brep_Unroll.html">Brep Unroll </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/ChamferBrepTangentially.html">ChamferBrepTangentially </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Clean_Worksession_Layername.html">Clean Worksession Layername </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Clipping_Plane_Tool.html">Clipping Plane Tool </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Closest_Curves.html">Closest Curves </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Cluster.html">Cluster </a></li>
@@ -474,16 +496,26 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Crease_Angle.html">Crease Angle </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/CrvClosestObject.html">CrvClosestObject </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Curve_Deviation.html">Curve Deviation </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Curve_Rationalise_Increment.html">Curve Rationalise Increment </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Curve_Sort_By_Length.html">Curve Sort By Length </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Default_If_Null.html">Default If Null </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Divide_Max_Spacing.html">Divide Max Spacing </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/DocumentBakeNames.html">DocumentBakeNames </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Find_Equal_Panels.html">Find Equal Panels </a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/GH_Make_2D.html">GH Make 2D </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Geometry_Layout.html">Geometry Layout </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Group_Text.html">Group Text </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/HUDList_Keys_Values.html">HUDList Keys Values </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/HUD_Compare_Two_Values.html">HUD Compare Two Values </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/HUD_Grid.html">HUD Grid </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/HUD_Header.html">HUD Header </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/HUD_Horizontal_Bars.html">HUD Horizontal Bars </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/HUD_Single_Value.html">HUD Single Value </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Is_List.html">Is List </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Iso_Curves_EX.html">Iso Curves EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Layout_Names.html">Layout Names </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Layout_Properties.html">Layout Properties </a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Make2D.html">Make2D </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/List_Other_Items.html">List Other Items </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Make_2D.html">Make 2D </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/MatCost.html">MatCost </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Match_Data_Tree_Lists.html">Match Data Tree Lists </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Match_Object_Attributes.html">Match Object Attributes </a></li>
@@ -493,17 +525,30 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Minimum_Bounding_Box_2D.html">Minimum Bounding Box 2D </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Modify_Object_Attributes.html">Modify Object Attributes </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Object_Attributes.html">Object Attributes </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Object_Attributes_Extended.html">Object Attributes Extended </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Objects_On_Brep.html">Objects On Brep </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Offset_Brep.html">Offset Brep </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Optimise_Profile_Surface.html">Optimise Profile Surface </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/OrientEX.html">OrientEX </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/OrientInterp.html">OrientInterp </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/PlaneToPolyline.html">PlaneToPolyline </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/PlaneTransformXYZA.html">PlaneTransformXYZA </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Plane_Fit_EX.html">Plane Fit EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Plane_Preview_EX.html">Plane Preview EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Points_Sort.html">Points Sort </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/PolyLineToPlane.html">PolyLineToPlane </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/RandomChoice.html">RandomChoice </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Round_EX.html">Round_EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Selected_Objects.html">Selected Objects </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Set_User_Text.html">Set User Text </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Sheet_Checker.html">Sheet Checker </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Shrink_Brep.html">Shrink Brep </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Shrink_Curve_From_Guides.html">Shrink Curve From Guides </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/SolidWorksSheetMetalAutomator.html">SolidWorksSheetMetalAutomator </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Srf_Plane_Aligned_to_Longest_Edge.html">Srf Plane Aligned to Longest Edge </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/StretchBrep.html">StretchBrep </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/StretchCurves.html">StretchCurves </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/SubdivPlaneCurveByLength.html">SubdivPlaneCurveByLength </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/SurfaceRebuild.html">SurfaceRebuild </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Surface_Sort_By_Area.html">Surface Sort By Area </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Surface_Sort_By_Z_Coordinate.html">Surface Sort By Z Coordinate </a></li>
@@ -511,12 +556,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Text_Tag_3D_EX.html">Text Tag 3D EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Text_Wrapper.html">Text Wrapper </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/TransformPlane.html">TransformPlane </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Trim_Surfaces_with_Breps.html">Trim Surfaces with Breps </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/UVAlign.html">UVAlign </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/UserTextChecker.html">UserTextChecker </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/User_Text_Tool.html">User Text Tool </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/View_Plane.html">View Plane </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Visualise_Curve_Length.html">Visualise Curve Length </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Visualise_Surface_Direction.html">Visualise Surface Direction </a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Waffle_Frame.html">Waffle Frame </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Waffle.html">Waffle </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/Zoom_Rectangle.html">Zoom Rectangle </a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ghuserobjects/section.html">section </a></li>
 </ul>
 </li>

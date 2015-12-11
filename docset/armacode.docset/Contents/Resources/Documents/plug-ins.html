@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1.1 Build 335.0410',
+        VERSION:     'v1.1.2 Build 101.1207',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <link rel="shortcut icon" href="_static/ar-ma_favicon.ico"/>
     <link rel="top" title="armacode Documentation" href="index.html" />
     <link rel="next" title="Tables" href="armacode/plug-ins/Tables.html" />
-    <link rel="prev" title="ZAxisSingularityCheck" href="armacode/tools/ZAxisSingularityCheck.html" />
+    <link rel="prev" title="copyUserText" href="armacode/tools/copyUserText.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -52,7 +52,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><img src="_static/ar-ma_logo.png">
           armacode</a>
-        <span class="navbar-text navbar-version pull-left"><b>v1.1.1</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>v1.1.2</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -159,6 +159,8 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/libraries/PlaneFromObject.html">PlaneFromObject</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/libraries/PlaneFromPolyline.html">PlaneFromPolyline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/libraries/PlaneFromSurface.html">PlaneFromSurface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/libraries/PlaneGetFromUserText.html">PlaneGetFromUserText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/libraries/PlaneSetToUserText.html">PlaneSetToUserText</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/libraries/PointClosestObject.html">PointClosestObject</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/libraries/PointClosestObjects.html">PointClosestObjects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/libraries/PrintAll.html">PrintAll</a></li>
@@ -208,7 +210,9 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/AnnotationDotFromPoint.html">AnnotationDotFromPoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/Apply3DSection.html">Apply3DSection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/BatchConvertFiles.html">BatchConvertFiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/tools/BatchConvertFilesTo3DPDF.html">BatchConvertFilesTo3DPDF</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/BlockCreateFromGroup.html">BlockCreateFromGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/tools/BlockCreateFromObjectName.html">BlockCreateFromObjectName</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/BlockDuplicate.html">BlockDuplicate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/BlockGenerateBasePlaneSurfaces.html">BlockGenerateBasePlaneSurfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/BlockInstanceExplodeAndGroup.html">BlockInstanceExplodeAndGroup</a></li>
@@ -225,12 +229,12 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/BrepTrim.html">BrepTrim</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/BrepUnfold.html">BrepUnfold</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/BullzipPDFPrinter.html">BullzipPDFPrinter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/tools/ChangeObjectsHue.html">ChangeObjectsHue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/CircleToPlanes.html">CircleToPlanes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ClippingCube.html">ClippingCube</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ClosestObjectsCheck.html">ClosestObjectsCheck</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/CopyObjectsToLayouts.html">CopyObjectsToLayouts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/CopyObjectsToPoints.html">CopyObjectsToPoints</a></li>
-<li class="toctree-l2"><a class="reference internal" href="armacode/tools/CopyUserText.html">CopyUserText</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/CopyWorksessionObjects.html">CopyWorksessionObjects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/CurveAddArrows.html">CurveAddArrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/CurveBooleanDifference.html">CurveBooleanDifference</a></li>
@@ -274,6 +278,7 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ExportBlocks.html">ExportBlocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ExportObjects.html">ExportObjects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ExportObjectsByGroup.html">ExportObjectsByGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/tools/ExportObjectsByLayer.html">ExportObjectsByLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ExportObjectsByName.html">ExportObjectsByName</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ExtrudeObjects.html">ExtrudeObjects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/FieldsFromStrings.html">FieldsFromStrings</a></li>
@@ -300,6 +305,7 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/LayoutLockAllDetails.html">LayoutLockAllDetails</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/LayoutMultipleDetails.html">LayoutMultipleDetails</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/LayoutPrintLayoutNames.html">LayoutPrintLayoutNames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/tools/LayoutSortAlphabetically.html">LayoutSortAlphabetically</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/LayoutUpdateDetailsFromCurves.html">LayoutUpdateDetailsFromCurves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/LeaderFromCurve.html">LeaderFromCurve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/Make2D.html">Make2D</a></li>
@@ -342,6 +348,7 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ProductionExtractFoldLines.html">ProductionExtractFoldLines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ProductionExtractLoopCurves.html">ProductionExtractLoopCurves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ProductionGenerateFixingsFromCurves.html">ProductionGenerateFixingsFromCurves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/tools/ProductionGlassInstantiate.html">ProductionGlassInstantiate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ProductionRibIntersectionSolve.html">ProductionRibIntersectionSolve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ProductionRibSurfaceIntersectionSolve.html">ProductionRibSurfaceIntersectionSolve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ProjectGripPoints.html">ProjectGripPoints</a></li>
@@ -362,6 +369,7 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/TextAddMask.html">TextAddMask</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/TextBoundingBox.html">TextBoundingBox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/TextFindAndReplace.html">TextFindAndReplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/tools/TextGeneratePlane.html">TextGeneratePlane</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/TextIncrementalTag.html">TextIncrementalTag</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/TextMatchProperties.html">TextMatchProperties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/TextSeparate.html">TextSeparate</a></li>
@@ -378,6 +386,7 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/VRayMaterialsToLayersMatchMapping.html">VRayMaterialsToLayersMatchMapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ViewportsGenerateFromNamedViews.html">ViewportsGenerateFromNamedViews</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/tools/ZAxisSingularityCheck.html">ZAxisSingularityCheck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/tools/copyUserText.html">copyUserText</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Plug-ins</a><ul>
@@ -396,6 +405,7 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/ClippingCube.html">ClippingCube</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/ConstructionLine.html">ConstructionLine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/DimSplit.html">DimSplit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/DimStyleFromObject.html">DimStyleFromObject</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/DisplayBlockInfo.html">DisplayBlockInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/DisplayCurveLengths.html">DisplayCurveLengths</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/DisplayManager.html">DisplayManager</a></li>
@@ -403,8 +413,10 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/DisplayUsertext.html">DisplayUsertext</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/DocumentManager.html">DocumentManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/DrawSlottedHole.html">DrawSlottedHole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/EditMultiple.html">EditMultiple</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/GrasshopperIcons.html">GrasshopperIcons</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/GrasshopperSolve.html">GrasshopperSolve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/HatchMatchPattern.html">HatchMatchPattern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/InsertMultiple.html">InsertMultiple</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/IsolateLayer.html">IsolateLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/IterateObjects.html">IterateObjects</a></li>
@@ -413,11 +425,15 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/LayoutManager.html">LayoutManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/LeaderWithAttributes.html">LeaderWithAttributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/LoadTool.html">LoadTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/MatchDimStyle.html">MatchDimStyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/MatchHatchProperties.html">MatchHatchProperties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/NextSelectedObject.html">NextSelectedObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/ObjLayerNameToClipboard.html">ObjLayerNameToClipboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/ObjNameToClipboard.html">ObjNameToClipboard</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/ObjectNameDisplay.html">ObjectNameDisplay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/ObjectPropertiesManager.html">ObjectPropertiesManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/Overkill.html">Overkill</a></li>
-<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/PrintBullzip.html">PrintBullzip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/PlanarSrfCrvBool.html">PlanarSrfCrvBool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/PullDots.html">PullDots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/PullPtsToCurve.html">PullPtsToCurve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/ReorderBrepFace.html">ReorderBrepFace</a></li>
@@ -427,15 +443,20 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/SelMatchingText.html">SelMatchingText</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/SelObjectsByLayer.html">SelObjectsByLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/SelUniqueBlocks.html">SelUniqueBlocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/SelectMultiple.html">SelectMultiple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/SelectSimilar.html">SelectSimilar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/SelectUnique.html">SelectUnique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/SelectionSet.html">SelectionSet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/SetObjectNameFromAttributes.html">SetObjectNameFromAttributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/Table.html">Table</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/TableAddAllSheets.html">TableAddAllSheets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/TableUpdateAll.html">TableUpdateAll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/UserTextInherit.html">UserTextInherit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/UserTextInheritMulti.html">UserTextInheritMulti</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/UserTextInspector.html">UserTextInspector</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/brepFaceOrderDisplay.html">brepFaceOrderDisplay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/distributeObjects.html">distributeObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/drawAngleProfile.html">drawAngleProfile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/export3DPDF.html">export3DPDF</a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/plug-ins/commands/selUserText.html">selUserText</a></li>
 </ul>
@@ -466,6 +487,7 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Brep_Unfolder_EX.html">Brep Unfolder EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Brep_Unroll.html">Brep Unroll </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/ChamferBrepTangentially.html">ChamferBrepTangentially </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Clean_Worksession_Layername.html">Clean Worksession Layername </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Clipping_Plane_Tool.html">Clipping Plane Tool </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Closest_Curves.html">Closest Curves </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Cluster.html">Cluster </a></li>
@@ -473,16 +495,26 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Crease_Angle.html">Crease Angle </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/CrvClosestObject.html">CrvClosestObject </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Curve_Deviation.html">Curve Deviation </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Curve_Rationalise_Increment.html">Curve Rationalise Increment </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Curve_Sort_By_Length.html">Curve Sort By Length </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Default_If_Null.html">Default If Null </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Divide_Max_Spacing.html">Divide Max Spacing </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/DocumentBakeNames.html">DocumentBakeNames </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Find_Equal_Panels.html">Find Equal Panels </a></li>
-<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/GH_Make_2D.html">GH Make 2D </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Geometry_Layout.html">Geometry Layout </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Group_Text.html">Group Text </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/HUDList_Keys_Values.html">HUDList Keys Values </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/HUD_Compare_Two_Values.html">HUD Compare Two Values </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/HUD_Grid.html">HUD Grid </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/HUD_Header.html">HUD Header </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/HUD_Horizontal_Bars.html">HUD Horizontal Bars </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/HUD_Single_Value.html">HUD Single Value </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Is_List.html">Is List </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Iso_Curves_EX.html">Iso Curves EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Layout_Names.html">Layout Names </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Layout_Properties.html">Layout Properties </a></li>
-<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Make2D.html">Make2D </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/List_Other_Items.html">List Other Items </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Make_2D.html">Make 2D </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/MatCost.html">MatCost </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Match_Data_Tree_Lists.html">Match Data Tree Lists </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Match_Object_Attributes.html">Match Object Attributes </a></li>
@@ -492,17 +524,30 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Minimum_Bounding_Box_2D.html">Minimum Bounding Box 2D </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Modify_Object_Attributes.html">Modify Object Attributes </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Object_Attributes.html">Object Attributes </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Object_Attributes_Extended.html">Object Attributes Extended </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Objects_On_Brep.html">Objects On Brep </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Offset_Brep.html">Offset Brep </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Optimise_Profile_Surface.html">Optimise Profile Surface </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/OrientEX.html">OrientEX </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/OrientInterp.html">OrientInterp </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/PlaneToPolyline.html">PlaneToPolyline </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/PlaneTransformXYZA.html">PlaneTransformXYZA </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Plane_Fit_EX.html">Plane Fit EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Plane_Preview_EX.html">Plane Preview EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Points_Sort.html">Points Sort </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/PolyLineToPlane.html">PolyLineToPlane </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/RandomChoice.html">RandomChoice </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Round_EX.html">Round_EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Selected_Objects.html">Selected Objects </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Set_User_Text.html">Set User Text </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Sheet_Checker.html">Sheet Checker </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Shrink_Brep.html">Shrink Brep </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Shrink_Curve_From_Guides.html">Shrink Curve From Guides </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/SolidWorksSheetMetalAutomator.html">SolidWorksSheetMetalAutomator </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Srf_Plane_Aligned_to_Longest_Edge.html">Srf Plane Aligned to Longest Edge </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/StretchBrep.html">StretchBrep </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/StretchCurves.html">StretchCurves </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/SubdivPlaneCurveByLength.html">SubdivPlaneCurveByLength </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/SurfaceRebuild.html">SurfaceRebuild </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Surface_Sort_By_Area.html">Surface Sort By Area </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Surface_Sort_By_Z_Coordinate.html">Surface Sort By Z Coordinate </a></li>
@@ -510,12 +555,15 @@
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Text_Tag_3D_EX.html">Text Tag 3D EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Text_Wrapper.html">Text Wrapper </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/TransformPlane.html">TransformPlane </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Trim_Surfaces_with_Breps.html">Trim Surfaces with Breps </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/UVAlign.html">UVAlign </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/UserTextChecker.html">UserTextChecker </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/User_Text_Tool.html">User Text Tool </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/View_Plane.html">View Plane </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Visualise_Curve_Length.html">Visualise Curve Length </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Visualise_Surface_Direction.html">Visualise Surface Direction </a></li>
-<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Waffle_Frame.html">Waffle Frame </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Waffle.html">Waffle </a></li>
+<li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/Zoom_Rectangle.html">Zoom Rectangle </a></li>
 <li class="toctree-l2"><a class="reference internal" href="armacode/ghuserobjects/section.html">section </a></li>
 </ul>
 </li>
@@ -555,7 +603,7 @@
               
                 
   <li>
-    <a href="armacode/tools/ZAxisSingularityCheck.html" title="Previous Chapter: ZAxisSingularityCheck"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ZAxisSingularity...</span>
+    <a href="armacode/tools/copyUserText.html" title="Previous Chapter: copyUserText"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; copyUserText</span>
     </a>
   </li>
   <li>
@@ -623,6 +671,7 @@
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/ClippingCube.html">ClippingCube</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/ConstructionLine.html">ConstructionLine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/DimSplit.html">DimSplit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/DimStyleFromObject.html">DimStyleFromObject</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/DisplayBlockInfo.html">DisplayBlockInfo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/DisplayCurveLengths.html">DisplayCurveLengths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/DisplayManager.html">DisplayManager</a></li>
@@ -630,8 +679,10 @@
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/DisplayUsertext.html">DisplayUsertext</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/DocumentManager.html">DocumentManager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/DrawSlottedHole.html">DrawSlottedHole</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/EditMultiple.html">EditMultiple</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/GrasshopperIcons.html">GrasshopperIcons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/GrasshopperSolve.html">GrasshopperSolve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/HatchMatchPattern.html">HatchMatchPattern</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/InsertMultiple.html">InsertMultiple</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/IsolateLayer.html">IsolateLayer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/IterateObjects.html">IterateObjects</a></li>
@@ -640,11 +691,15 @@
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/LayoutManager.html">LayoutManager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/LeaderWithAttributes.html">LeaderWithAttributes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/LoadTool.html">LoadTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/MatchDimStyle.html">MatchDimStyle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/MatchHatchProperties.html">MatchHatchProperties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/NextSelectedObject.html">NextSelectedObject</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/ObjLayerNameToClipboard.html">ObjLayerNameToClipboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/ObjNameToClipboard.html">ObjNameToClipboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/ObjectNameDisplay.html">ObjectNameDisplay</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/ObjectPropertiesManager.html">ObjectPropertiesManager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/Overkill.html">Overkill</a></li>
-<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/PrintBullzip.html">PrintBullzip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/PlanarSrfCrvBool.html">PlanarSrfCrvBool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/PullDots.html">PullDots</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/PullPtsToCurve.html">PullPtsToCurve</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/ReorderBrepFace.html">ReorderBrepFace</a></li>
@@ -654,15 +709,20 @@
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/SelMatchingText.html">SelMatchingText</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/SelObjectsByLayer.html">SelObjectsByLayer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/SelUniqueBlocks.html">SelUniqueBlocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/SelectMultiple.html">SelectMultiple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/SelectSimilar.html">SelectSimilar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/SelectUnique.html">SelectUnique</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/SelectionSet.html">SelectionSet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/SetObjectNameFromAttributes.html">SetObjectNameFromAttributes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/Table.html">Table</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/TableAddAllSheets.html">TableAddAllSheets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/TableUpdateAll.html">TableUpdateAll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/UserTextInherit.html">UserTextInherit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/UserTextInheritMulti.html">UserTextInheritMulti</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/UserTextInspector.html">UserTextInspector</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/brepFaceOrderDisplay.html">brepFaceOrderDisplay</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/distributeObjects.html">distributeObjects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/drawAngleProfile.html">drawAngleProfile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/export3DPDF.html">export3DPDF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="armacode/plug-ins/commands/selUserText.html">selUserText</a></li>
 </ul>

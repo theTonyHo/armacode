@@ -1,7 +1,0 @@
-.. index:: Layout_LockAllDetails (Tool)
-
-.. _tools.layout_lockalldetails:
-
-Layout_LockAllDetails
----------------------
-Lock All Details in the document.
