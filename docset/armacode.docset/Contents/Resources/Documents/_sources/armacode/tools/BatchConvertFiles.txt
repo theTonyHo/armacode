@@ -4,10 +4,10 @@
 
 BatchConvertFiles
 -----------------
-Convert all Rhino files in a folder to DXF
+Convert all selected files to a different type.
 
 //INPUT
-source directory
+List of file names
 target directory
 extension
 

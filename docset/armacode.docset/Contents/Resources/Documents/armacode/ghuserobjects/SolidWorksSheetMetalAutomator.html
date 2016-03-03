@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     'v1.1.3 Build 1.1211',
+        VERSION:     'v1.1.3 Build 30.0303',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <link rel="top" title="armacode Documentation" href="../../index.html" />
     <link rel="up" title="GH User Objects" href="../../ghuserobjects.html" />
     <link rel="next" title="Srf Plane Aligned to Longest Edge" href="Srf_Plane_Aligned_to_Longest_Edge.html" />
-    <link rel="prev" title="Shrink Curve From Guides" href="Shrink_Curve_From_Guides.html" />
+    <link rel="prev" title="SmartLeader" href="SmartLeader.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -186,6 +186,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../libraries/StickySet.html">StickySet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/StringFieldNames.html">StringFieldNames</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/StringFromAttributes.html">StringFromAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/StringGroup.html">StringGroup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/TextObjectTextFormula.html">TextObjectTextFormula</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/TextObjectsByFont.html">TextObjectsByFont</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/TextObjectsByProperties.html">TextObjectsByProperties</a></li>
@@ -278,6 +279,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../tools/ExplodeBlockInstances_cmd.html">ExplodeBlockInstances_cmd</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/ExportBlocks.html">ExportBlocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/ExportObjects.html">ExportObjects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/ExportObjectsByAttributes.html">ExportObjectsByAttributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/ExportObjectsByGroup.html">ExportObjectsByGroup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/ExportObjectsByLayer.html">ExportObjectsByLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/ExportObjectsByName.html">ExportObjectsByName</a></li>
@@ -383,7 +385,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../tools/UnrollerCommand.html">UnrollerCommand</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/UnrollerCommandWithReferencePlanes.html">UnrollerCommandWithReferencePlanes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/UnrollerCommandWithReferencePlanes_SCAF.html">UnrollerCommandWithReferencePlanes_SCAF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tools/UnrollerCommand_new.html">UnrollerCommand_new</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/VRayMaterialsToLayersMatchMapping.html">VRayMaterialsToLayersMatchMapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/ViewportsGenerateFromNamedViews.html">ViewportsGenerateFromNamedViews</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/ZAxisSingularityCheck.html">ZAxisSingularityCheck</a></li>
@@ -463,6 +464,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../ghuserobjects.html">GH User Objects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ACP_Unfolder.html">ACP Unfolder </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Align_Geometry.html">Align Geometry </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Align_Plane_Normal.html">Align Plane Normal </a></li>
 <li class="toctree-l2"><a class="reference internal" href="AxoRotator.html">AxoRotator </a></li>
@@ -498,6 +500,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Curve_Deviation.html">Curve Deviation </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Curve_Rationalise_Increment.html">Curve Rationalise Increment </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Curve_Sort_By_Length.html">Curve Sort By Length </a></li>
+<li class="toctree-l2"><a class="reference internal" href="Curves_vs_Curves_Clash.html">Curves vs Curves Clash </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Default_If_Null.html">Default If Null </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Divide_Max_Spacing.html">Divide Max Spacing </a></li>
 <li class="toctree-l2"><a class="reference internal" href="DocumentBakeNames.html">DocumentBakeNames </a></li>
@@ -538,12 +541,14 @@
 <li class="toctree-l2"><a class="reference internal" href="Points_Sort.html">Points Sort </a></li>
 <li class="toctree-l2"><a class="reference internal" href="PolyLineToPlane.html">PolyLineToPlane </a></li>
 <li class="toctree-l2"><a class="reference internal" href="RandomChoice.html">RandomChoice </a></li>
+<li class="toctree-l2"><a class="reference internal" href="Remove_Duplicate_Lines.html">Remove Duplicate Lines </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Round_EX.html">Round_EX </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Selected_Objects.html">Selected Objects </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Set_User_Text.html">Set User Text </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Sheet_Checker.html">Sheet Checker </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Shrink_Brep.html">Shrink Brep </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Shrink_Curve_From_Guides.html">Shrink Curve From Guides </a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmartLeader.html">SmartLeader </a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">SolidWorksSheetMetalAutomator </a></li>
 <li class="toctree-l2"><a class="reference internal" href="Srf_Plane_Aligned_to_Longest_Edge.html">Srf Plane Aligned to Longest Edge </a></li>
 <li class="toctree-l2"><a class="reference internal" href="StretchBrep.html">StretchBrep </a></li>
@@ -603,7 +608,7 @@
               
                 
   <li>
-    <a href="Shrink_Curve_From_Guides.html" title="Previous Chapter: Shrink Curve From Guides"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Shrink Curve Fro...</span>
+    <a href="SmartLeader.html" title="Previous Chapter: SmartLeader"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; SmartLeader</span>
     </a>
   </li>
   <li>
