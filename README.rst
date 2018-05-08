@@ -22,6 +22,17 @@ Zeal/Dash Docset feed: https://raw.githubusercontent.com/theTonyHo/armacode/mast
     :scale: 100%
     :target: http://armacode.readthedocs.org/
 
+Dependencies
+------------
+
+*. Sphinx - ``pip install sphinx``
+*. Sphinxcontrib-napoleon - ``pip install sphinxcontrib-napoleon``
+*. Sphinx Bootstrap Theme - ``pip install sphinx_bootstrap_theme``
+*. doc2dash - ``pip install doc2dash``
+
+Regarding compatibility between Sphinx and napoleon version dependency as described on the official website. Sphinx and napoleon will be working independently. Napoleon is used inside DocGenerator to convert docstring. Sphinx is to build the generated rst.
+
+The required cusomized version of sphinxcontrib-napoleon is already included in this repository.
 
 Instructions
 ------------
