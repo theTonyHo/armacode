@@ -25,19 +25,21 @@ Zeal/Dash Docset feed: https://raw.githubusercontent.com/theTonyHo/armacode/mast
 Dependencies
 ------------
 
-*. doc2dash - ``pip install doc2dash==2.1.0``
-*. Sphinx (1.3.5 installed with doc2dash)
-*. Sphinxcontrib-napoleon - ``pip install sphinxcontrib-napoleon``
+Install the following in order:
 
-..notes::Notes:
+- doc2dash - ``pip install doc2dash==2.1.0``.
+- Sphinx (1.3.5 installed with doc2dash)
+- Sphinxcontrib-napoleon - ``pip install sphinxcontrib-napoleon``
 
-- doc2dash dequires specific version of dependencies. Only dedicate this configuration/computer to build armacode to avoid conflict with other projects.
+**Notes:**
 
-- Regarding compatibility between Sphinx and napoleon version dependency as described on the official website, Sphinx and napoleon will be working independently. Napoleon is used inside DocGenerator to convert Google docstring. Sphinx is to build the generated rst.
+**doc2dash** requires specific version of dependencies. Only dedicate this configuration/computer to build armacode to avoid conflict with other projects.
 
-- The required cusomized version of sphinxcontrib-napoleon is already included in this repository.
+Regarding compatibility between Sphinx and napoleon version dependency as described on the official website, Sphinx and napoleon will be working independently. Napoleon is used inside DocGenerator to convert Google docstring. Sphinx is to build the generated rst.
 
-- Theme customized and adapted from Sphinx Bootstrap Theme https://github.com/ryan-roemer/sphinx-bootstrap-theme . Modify in the following folder ``.\theme\bootstrap\static\bootswatch-3.2.0\ar-ma``
+The required cusomized version of sphinxcontrib-napoleon is already included in this repository. Installing it, will install all of its required dependencies.
+
+Theme customized and adapted from Sphinx Bootstrap Theme https://github.com/ryan-roemer/sphinx-bootstrap-theme . Modify in the following folder ``.\theme\bootstrap\static\bootswatch-3.2.0\ar-ma``
 
 
 Instructions
