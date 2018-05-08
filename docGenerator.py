@@ -6,13 +6,14 @@ Dependencies:
     - Python27. Remember to set PATH Environment System variables
     - pip
     - Sphinx
-    - Sphinxcontrib.napoleon
-    - pockets
+    - Sphinxcontrib-napoleon
+    - pockets (installed with Sphinxcontrib-napoleon)
 
 """
 
 import sys
-sys.path.insert(0, "C:\\Python27\\lib\\site-packages")
+sys.path.insert(0, "C:\\Python27\\Lib\\site-packages") # Other dependencies
+sys.path.insert(0, ".\\dependencies") # Custom dependencies
 
 import sphinxcontrib.napoleon as sphinxNP
 import inspect
@@ -227,7 +228,11 @@ def DescribeObject(_objectName, _object):
 def ProcessMethods(dataDict, writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
     
     if writeToDirectory:
-        shutil.rmtree(writeToDirectory)
+        try:
+            #print "Removing existing directory: {}".format(writeToDirectory)
+            shutil.rmtree(writeToDirectory)
+        except:
+            pass
         
     memberData = dataDict
     allMemberNames = dataDict.keys()
@@ -258,7 +263,11 @@ def ProcessMethods(dataDict, writeToDirectory=None, sortMembers=True, indexFile=
 def ProcessCommands(dirPath, writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
     
     if writeToDirectory:
-        shutil.rmtree(writeToDirectory)
+        try:
+            #print "Removing existing directory: {}".format(writeToDirectory)
+            shutil.rmtree(writeToDirectory)
+        except:
+            pass
     #Get filenames of all tools.
     fileList = []
     for (dirpath, dirname, filenames) in os.walk(dirPath):
@@ -290,7 +299,11 @@ def ProcessCommands(dirPath, writeToDirectory=None, sortMembers=True, indexFile=
 def ProcessTools(dirPath, writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
     
     if writeToDirectory:
-        shutil.rmtree(writeToDirectory)
+        try:
+            #print "Removing existing directory: {}".format(writeToDirectory)
+            shutil.rmtree(writeToDirectory)
+        except:
+            pass
     #Get filenames of all tools.
     fileList = []
     for (dirpath, dirname, filenames) in os.walk(dirPath):
@@ -320,6 +333,46 @@ def ProcessTools(dirPath, writeToDirectory=None, sortMembers=True, indexFile=Fal
         rc = StringToFile(indexContent, indexFilename)
     print "Processed {} Tools !".format(len(fileList))
 
+def ProcessToolsInPackage(package, writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
+    
+    toolNames = package.__all__
+    if sortMembers:
+        toolNames.sort()
+    
+    if writeToDirectory:
+        try:
+            #print "Removing existing directory: {}".format(writeToDirectory)
+            shutil.rmtree(writeToDirectory)
+        except:
+            pass
+    #Get filenames of all tools.
+    fileList = []
+    dirPath = os.path.dirname(armacode.tools.__file__)
+    
+    for toolName in toolNames:
+        filePath = os.path.join(dirPath, toolName+".py")
+        fileList.append(filePath)
+    
+    for item in fileList:
+        resultString = DescribeTool(item)
+        fpath, fname = os.path.split(item)
+        memberName, ext = os.path.splitext(fname)
+        
+        if writeToDirectory:
+            
+            if isinstance(writeToDirectory, str):
+                fileName = "{}\\{}.rst".format(writeToDirectory, memberName)
+            else:
+                fileName = "{}.rst".format(memberName)
+            rc = StringToFile(resultString, fileName)
+            
+    if writeToDirectory and indexFile:
+        
+        indexFilename = "{}\\index.rst".format(writeToDirectory)
+        indexContent = CombineFiles(allMemberNames)
+        rc = StringToFile(indexContent, indexFilename)
+    print "Processed {} Tools in Package!".format(len(fileList))
+
 def ProcessGHUserObjects(category="AR-MA", writeToDirectory=None, sortMembers=True, indexFile=False, useCustomNames=False):
     
     import Grasshopper
@@ -336,7 +389,11 @@ def ProcessGHUserObjects(category="AR-MA", writeToDirectory=None, sortMembers=Tr
     iconDirectory = writeToDirectory + "\\icon"
     
     if writeToDirectory:
-        shutil.rmtree(writeToDirectory)
+        try:
+            #print "Removing existing directory: {}".format(writeToDirectory)
+            shutil.rmtree(writeToDirectory)
+        except:
+            pass
     if not os.path.isdir(iconDirectory):
         os.mkdir(iconDirectory)
     for obj in objs:
@@ -484,7 +541,7 @@ def main():
     #docDirectory = moduleDirectory[0] + "\\source" + "\\" + moduleName
     
     docDirectory = os.path.dirname(__file__)
-    print docDirectory
+    
     # Documentation director for all generated docs.
     moduleDocDirectory = "source" + "\\" + moduleName
     methodDocDirectory = moduleDocDirectory + "\\libraries"
@@ -536,7 +593,8 @@ def main():
         ProcessMethods(additionalMethods, refDirectory, useCustomNames=True)
         
         ProcessCommands(commandPath, commandDocDirectory)
-        ProcessTools(toolPath, toolDocDirectory)
+        # ProcessTools(toolPath, toolDocDirectory) # Describe all tools in directory
+        ProcessToolsInPackage(armacode.tools, toolDocDirectory) #Describe all tools found in package.
         ProcessGHUserObjects("AR-MA", ghDocDirectory)
         GenerateDocsetFeed()
         GenerateVersionFile()
