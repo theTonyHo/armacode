@@ -4,9 +4,6 @@ ARMAcode
 |docs|
 
 armaCode Documentation Repository. 
-
-It contains documentation for a set of  The aim is to provide help and references to a set of Rhinoceros code, library, and tools developed over time.
-
 Note that this is not the actual code repository
 
 Documentation
