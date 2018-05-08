@@ -25,14 +25,20 @@ Zeal/Dash Docset feed: https://raw.githubusercontent.com/theTonyHo/armacode/mast
 Dependencies
 ------------
 
-*. Sphinx - ``pip install sphinx``
+*. doc2dash - ``pip install doc2dash==2.1.0``
+*. Sphinx (1.3.5 installed with doc2dash)
 *. Sphinxcontrib-napoleon - ``pip install sphinxcontrib-napoleon``
-*. Sphinx Bootstrap Theme - ``pip install sphinx_bootstrap_theme``
-*. doc2dash - ``pip install doc2dash``
 
-Regarding compatibility between Sphinx and napoleon version dependency as described on the official website. Sphinx and napoleon will be working independently. Napoleon is used inside DocGenerator to convert docstring. Sphinx is to build the generated rst.
+..notes::Notes:
 
-The required cusomized version of sphinxcontrib-napoleon is already included in this repository.
+- doc2dash dequires specific version of dependencies. Only dedicate this configuration/computer to build armacode to avoid conflict with other projects.
+
+- Regarding compatibility between Sphinx and napoleon version dependency as described on the official website, Sphinx and napoleon will be working independently. Napoleon is used inside DocGenerator to convert Google docstring. Sphinx is to build the generated rst.
+
+- The required cusomized version of sphinxcontrib-napoleon is already included in this repository.
+
+- Theme customized and adapted from Sphinx Bootstrap Theme https://github.com/ryan-roemer/sphinx-bootstrap-theme . Modify in the following folder ``.\theme\bootstrap\static\bootswatch-3.2.0\ar-ma``
+
 
 Instructions
 ------------
@@ -44,10 +50,11 @@ All documentation is generated from armacode repository. The Version of the repo
 #. Run ``make-htmlhelp.bat`` to generate HTMLHELP file
 #. Run ``make-docset-from-html.bat`` to generate docset for Zeal/Dash
 #. Run ``make-docset-tgz.bat`` to create tgz file (package for Zeal/Docset)
-#. Run ``git-publish.sh`` to automatically publish the generated content.
+#. Run ``git-publish.sh`` to automatically publish the generated content. This script automatically synchronize the version of armacode module.
 
-Version Tagging
+Version Tagging - Superseded 
 ---------------
+The instruction below is superseded. Refer to instructions within armacode repository regarding version tagging and incrementation.
 
 This will guide you to increment a new version for armacode repository.
 
