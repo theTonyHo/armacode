@@ -1,14 +1,13 @@
-
-.. toctree::
-   :maxdepth: 2
-   index.rst
-
 ARMAcode
 ========
 
 |docs|
 
-armaCode Documentation Repository. Note that this is not the actual code repository
+armaCode Documentation Repository. 
+
+It contains documentation for a set of  The aim is to provide help and references to a set of Rhinoceros code, library, and tools developed over time.
+
+Note that this is not the actual code repository
 
 Documentation
 -------------
@@ -54,15 +53,11 @@ All documentation is generated from armacode repository. The Version of the repo
 #. Run ``make-docset-tgz.bat`` to create tgz file (package for Zeal/Docset)
 #. Run ``git-publish.sh`` to automatically publish the generated content. This script automatically synchronize the version of armacode module.
 
-Version Tagging - Superseded 
----------------
-The instruction below is superseded. Refer to instructions within armacode repository regarding version tagging and incrementation.
+Code Update
+-----------
 
-This will guide you to increment a new version for armacode repository.
+It is very important to keep the documentation repository up to date.
 
-#. Modify the ``VERSION`` file to the new version i.e. "v.1.1.4". If pre-commit hook is active, it will auto correct the remaining of the file on commit. Otherwise, modify accordingly.
-#. Commit the modification
-#. Push and Merge into Master branch
-#. Add the version tag in the local repository
-#. Push the tags to the remote repository
+Every time armacode has been updated, in master branch only, execute the above instructions immediately to regenerate the documentation.
 
+All documentation should reflect on the master/production branch where everyone has access to, both developers and end users.
