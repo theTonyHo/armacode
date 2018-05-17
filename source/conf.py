@@ -226,7 +226,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'armacodedoc'
+htmlhelp_basename = 'armacode'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -396,7 +396,8 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if not on_rtd:
     #Choose a theme.
     html_theme = "bootstrap" #Default theme
-    # html_theme = "sphinx_rtd_theme" #ReadTheDocs, light theme
+    html_theme = "sphinx_rtd_theme" #ReadTheDocs, light theme
+    html_theme = "basic" #No Theme
 
     if html_theme == "sphinx_rtd_theme":
         print "Applying ReadTheDocs theme (sphinx_rtd_theme)"
