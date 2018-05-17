@@ -15,6 +15,32 @@ import sys
 sys.path.insert(0, "C:\\Python27\\Lib\\site-packages") # Other dependencies
 sys.path.insert(0, ".\\dependencies") # Custom dependencies
 
+def AddReferencesToVS():
+    """The following are required if this is executed under VS. This is for future reference only.
+    """
+    cwd = os.getcwd()
+    
+    armacodePath = cwd
+
+    sys.path.insert(0, "C:\\Python27\\Lib\\site-packages") # Other dependencies
+    sys.path.insert(0, cwd + "\\dependencies") # Custom dependencies
+
+    #armacode
+    sys.path.insert(0, armacodePath) # armacode
+    #IronPython
+    sys.path.insert(0, "C:\\Users\\t.ho\\AppData\\Roaming\\McNeel\\Rhinoceros\\5.0\\Plug-ins\\IronPython (814d908a-e25c-493d-97e9-ee3861957f49)\\settings\\lib")
+    #Rhinocommon
+    sys.path.insert(0, "C:\\Program Files\\Rhinoceros 5 (64-bit)\\System")
+    #RhinoPython
+    sys.path.insert(0, "C:\\Program Files (x86)\\Rhinoceros 5\\Plug-ins\\IronPython") 
+    #Grasshopper
+    sys.path.insert(0, "C:\\Program Files\\Common Files\\McNeel\\Rhinoceros\\5.0\\Plug-ins\\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\\0.9.76.0") 
+    clr.AddReferenceToFileAndPath("C:\\Program Files (x86)\\Rhinoceros 5\\Plug-ins\\IronPython\\RhinoPythonHost.dll")
+
+    clr.AddReference("System.Windows.Forms")
+    clr.AddReference("System.Drawing")
+    clr.AddReference("Grasshopper")
+
 import sphinxcontrib.napoleon as sphinxNP
 import inspect
 import math
@@ -532,6 +558,30 @@ def InspectObject(_object=None, ):
     
     return allData
 
+
+def GenerateDocsetFeed():
+    feedFilePath = "feed\\armacode.xml"
+    feedTemplate = ["<entry>",
+                    "    <version>{versionNumber}</version>",
+                    "    <url>https://github.com/theTonyHo/armacode/raw/master/docset/armacode.tgz</url>",
+                    "</entry>"]
+    feedTemplate = str.join("\n", feedTemplate)
+    feedContent = feedTemplate.format(versionNumber=armacode.__Version__)
+    
+    with open(feedFilePath, 'w') as f:
+        f.write(feedContent)
+    print "Docset Feed Generated"
+
+def GenerateVersionFile():
+    versionFilePath = os.getcwd()+"\\VERSION"
+    
+    with open(versionFilePath, 'w') as f:
+        f.write(armacode.__Version__)
+        f.write("\n")
+        f.write(armacode.__ReleaseDate__)
+    
+    print "Version File Generated"
+
 def main():
     moduleToDocument = armacode
     moduleName = moduleToDocument.__name__
@@ -601,30 +651,13 @@ def main():
         print "Document generated for armacode"
     
 
-def GenerateDocsetFeed():
-    feedFilePath = "feed\\armacode.xml"
-    feedTemplate = ["<entry>",
-                    "    <version>{versionNumber}</version>",
-                    "    <url>https://github.com/theTonyHo/armacode/raw/master/docset/armacode.tgz</url>",
-                    "</entry>"]
-    feedTemplate = str.join("\n", feedTemplate)
-    feedContent = feedTemplate.format(versionNumber=armacode.__Version__)
-    
-    with open(feedFilePath, 'w') as f:
-        f.write(feedContent)
-    print "Docset Feed Generated"
-
-def GenerateVersionFile():
-    versionFilePath = os.getcwd()+"\\VERSION"
-    
-    with open(versionFilePath, 'w') as f:
-        f.write(armacode.__Version__)
-        f.write("\n")
-        f.write(armacode.__ReleaseDate__)
-    
-    print "Version File Generated"
-
-
 
 if __name__ == "__main__":
     main()
+    
+    # Set the path to documentation git repo
+    path = os.path.dirname(__file__)
+    armacode.config.SetOption("ARMACODE_DOC_GIT", "path", path)
+    armacode.config.SetOption("ARMACODE_DOC_GIT", "disable", False)
+    armacode.config.Save()
+    
