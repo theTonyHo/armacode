@@ -43,9 +43,9 @@ Instructions
 
 All documentation is generated from armacode repository. The Version of the repository is synchronised automatically when documentation is generated.
 
-#. Run ``docGenerator.py`` in RhinoPython to generate the **current** documentation source files from the armacode module
+#. Run ``generateDocsInRhino.bat``. This will open an instance of Rhino, generate documentation using ``docGenerator.py`` and exit.
+Once this is executed the first time. Every future build of armacode in Visual Studio will trigger this file and also generate HTML HELP and CHM file.
 #. Run ``make-html-and-test.bat`` to generate HTML files
-#. Run ``make-htmlhelp.bat`` to generate HTMLHELP file
 #. Run ``make-docset-from-html.bat`` to generate docset for Zeal/Dash
 #. Run ``make-docset-tgz.bat`` to create tgz file (package for Zeal/Docset)
 #. Run ``git-publish.sh`` to automatically publish the generated content. This script automatically synchronize the version of armacode module.
@@ -55,6 +55,6 @@ Code Update
 
 It is very important to keep the documentation repository up to date.
 
-Every time armacode has been updated, in master branch only, execute the above instructions immediately to regenerate the documentation.
+Every time armacode has been updated or merged in master branch, execute the above instructions immediately to regenerate the documentation.
 
 All documentation should reflect on the master/production branch where everyone has access to, both developers and end users.
