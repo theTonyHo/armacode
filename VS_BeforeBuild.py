@@ -23,6 +23,7 @@ def Run():
 docDirectory = os.path.dirname(__file__)
 
 def GenerateDocsInRhino():
+    print ""
     print "Generating documentation via Rhino"
     print "---------------------------------------"
     # How to compile a chm file in Python?
@@ -32,6 +33,7 @@ def GenerateDocsInRhino():
     rc = call(command, cwd=docDirectory)
 
 def GenerateHTMLHelp():
+    print ""
     print "Building HTML Help package"
     print "---------------------------------------"
     # How to compile a chm file in Python?
@@ -41,6 +43,7 @@ def GenerateHTMLHelp():
     rc = call(command, cwd=docDirectory)
 
 def GenerateHTMLHelpCHM():
+    print ""
     print "Compiling CHM file from HTML Help package"
     print "---------------------------------------"
     # How to compile a chm file in Python?
