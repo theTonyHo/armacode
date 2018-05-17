@@ -5,6 +5,6 @@
 Round_EX |icon| 
 ----------------
 
-Round a value to the nearest t value
+Round a value to the nearest multiplier of splecified t value
 
 .. |icon| image:: icon/Round_EX.png

@@ -10,5 +10,4 @@ Angle is measured at normalised parameter of edge.
 :param edge: BrepEdge object
 :param parameter: Normalised parameter to evaluate
 
-
 :returns: Crease angle at that point.

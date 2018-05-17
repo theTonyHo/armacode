@@ -11,7 +11,6 @@ If the provided usertext is the same as the display text. Nothing will
 :param object_id = identifier of the object:
 :param usertext[opt] = new user text string value:
 
-
 :returns: False if usertext is provided but unchanged. If usertext is not specified, the current usertext string. If usertext is specified, the previous usertext string.
 
 .. rubric:: Notes

@@ -12,5 +12,7 @@
 	<string>armacode</string>
 	<key>isDashDocset</key>
 	<true/>
+	<key>isJavaScriptEnabled</key>
+	<false/>
 </dict>
 </plist>

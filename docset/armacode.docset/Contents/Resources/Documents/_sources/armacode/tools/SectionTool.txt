@@ -17,3 +17,5 @@ User can update the bounds of the section by clicking on the surface or the sect
 
 //Update 2016-04-01:
     Smart section now works with objects inside block instances.
+//Update 2016-04-01:
+    Layer generated to be children of AR-MA::AUTOMATION::SECTION layer, for consistency.

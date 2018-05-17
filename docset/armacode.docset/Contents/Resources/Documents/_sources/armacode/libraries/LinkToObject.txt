@@ -12,5 +12,4 @@ This is useful for identifying another object with direct relationship.
 :param linkObject_id: Identifier of the object to link with.
 :param key: Name of the key to associate with
 
-
 :returns: (int) Number of objects applied.

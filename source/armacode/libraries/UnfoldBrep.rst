@@ -11,6 +11,5 @@ Unfold a Polysurface by providing face indices.
 :param indexB: Index of Target Brep Face
 :param otherIndices: Additional Indices of faces to unfold together with target face.
 
-
 :returns: Unfolded Brep geometry. If Identifier is provided, the object is modified and identifier is returned.
 :rtype: brep

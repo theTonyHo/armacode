@@ -11,7 +11,6 @@ Fields provided in the formatted string are substrituted by the values from User
 :param object_id = the object's identifier:
 :param strFormat = string Format used to evaluate. Default to use the key attribute "NAME_FORMAT":
 
-
 :returns: A string representing a new name on success. None on error.
 
 .. rubric:: Notes

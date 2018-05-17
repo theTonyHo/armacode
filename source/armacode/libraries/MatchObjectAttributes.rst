@@ -12,7 +12,6 @@ Also work with objects inside a block definition.
 :param source_id[opt] = identifier of object to copy attributes from. If None,:
 :param then the default attributes are copied to the target_ids:
 
-
 :returns: number of objects modified
 
 .. rubric:: Example

@@ -1,8 +1,11 @@
 GetProjectFolder
 ----------------
 
-.. py:Function:: GetProjectFolder()
+.. py:Function:: GetProjectFolder(strict=True)
 
 
-Returns the project folder folder of the current document.
-Compares all the parent folders if any of them contains the same folder structure as the project folder.
+Returns the base project folder of the current document.
+
+:param strict: Default to True, only consider folder with leading number in format of YYXX as project folder.
+
+:returns: Path of the project folder on success.

@@ -11,5 +11,4 @@ If pull is set to True, and an object is a Block instance, the insertion point i
 :param object_id: Identifier of an object.
 :param pull: Optional, If True, the point is pulled to sit on the object.
 
-
 :returns: point in World coordinates.

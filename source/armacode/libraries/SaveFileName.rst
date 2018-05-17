@@ -8,8 +8,7 @@ Display a save dialog box allowing the user to enter a file name.
 Note, this function does not save the file.
 Has ability to detect file name and switch the filter index.
 :param title[opt] = A dialog box title.:
-:param filter[opt] = A filter string. The filter must be in the following form:
-                                                                                "Description1|Filter1|Description2|Filter2||", where "||" terminates filter string.
+:param filter[opt] = A filter string. The filter must be in the following form: "Description1|Filter1|Description2|Filter2||", where "||" terminates filter string.
                                                                                 If omitted, the filter (*.*) is used.
 :param folder[opt] = A default folder.:
 :param filename[opt] = a default file name. Extension can be provided here.:

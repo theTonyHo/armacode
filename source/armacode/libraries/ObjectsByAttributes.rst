@@ -6,9 +6,9 @@ ObjectsByAttributes
 
 Returns identifiers of all objects based on attributes
 
-:param filter[opt] = The type(s) of geometry (points, curves, surfaces, meshes,...):
-                                                                                     that can be selected. Object types can be added together to filter
-                                                                                     several different kinds of geometry. use the filter class to get values
+:param filter[opt] = The type: that can be selected. Object types can be added together to filter
+                               several different kinds of geometry. use the filter class to get values
+:type filter[opt] = The type: s) of geometry (points, curves, surfaces, meshes,...
 :param select[opt] = Select the objects:
 :param state[opt] = Object state. See help:
 

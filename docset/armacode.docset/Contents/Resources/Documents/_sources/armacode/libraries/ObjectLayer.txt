@@ -5,7 +5,8 @@ ObjectLayer
 
 
 Returns or modifies the layer of an object
-:param object_id = the identifier of the object(s):
+:param object_id = the identifier of the object:
+:type object_id = the identifier of the object: s
 :param layer[opt] = name of an existing layer:
 
 :returns: If a layer is not specified, the object's current layer

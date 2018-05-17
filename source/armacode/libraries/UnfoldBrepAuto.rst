@@ -16,5 +16,4 @@ It is best to have important faces with the lowest index. I.e. Most obvious base
 :param brep_id: Indentifier of the brep to unfold.
 :param staticIndices: Index of each static face as separate parameter.
 
-
 :returns: Unfolded Brep on success. Unfold progress may stop at ambiguous solutions.

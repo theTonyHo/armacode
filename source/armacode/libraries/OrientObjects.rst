@@ -11,5 +11,4 @@ Orients a single object based on input points
 :param targetPlane: list of 3-D target points
 :param copy[opt]: True = copy object
 
-
 :returns: Transformed Object Ids on success.

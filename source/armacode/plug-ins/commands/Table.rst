@@ -13,3 +13,9 @@ Update:
 
     2015-09-09
     Multiline support.
+
+    2018-04-11
+    Fixed objects display order.
+    Added table dimstyle. Copy from selected dimstyle.
+    Fixed child table detections.
+    Improved OpenDataLink. Extract table data to a new spreadsheet if source of the table is missing/unavailable.

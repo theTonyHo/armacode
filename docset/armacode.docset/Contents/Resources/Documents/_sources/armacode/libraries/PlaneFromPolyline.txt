@@ -11,5 +11,4 @@ The motion of writing a capital 'L'.
 
 :param pline: Polyline curve
 
-
 :returns: Plane on success

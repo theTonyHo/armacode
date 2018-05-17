@@ -9,5 +9,4 @@ Create an Aligned dimension from a line. Curve needs to be in Clockwise orientat
 :param curve = Curve ID:
 :param dimOffset = Offset of dimension text:
 
-
 :returns: Guid identifying the objects.

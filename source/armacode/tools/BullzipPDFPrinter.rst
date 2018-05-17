@@ -36,3 +36,11 @@ Update:
     If file name format only require #PAGE_NAME, no need to process text objects on layout.
     Layout Properties are processed at the very beginning of the script.
 
+Update:
+    23/04/2018
+    Fixed Rhinoceros 6.
+    Attempted to optimize performance. using WaitForFile.
+    WaitforFile is useful, however, using scriptcontext to react to users Escape key press is preferred.
+    Bullzip writes a package of files into the TEMP folder containing the pdf and some postscript files. This folder gets deleted upon completion.
+    The postscript process takes a long time, however, unable to find a way to optimise the speed of the print.
+    Tried reading the status.ini file inside the TEMP folder.
